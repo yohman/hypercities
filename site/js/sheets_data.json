@@ -1,5 +1,5 @@
 {
-    "work": [
+    "windows": [
         [
             "Main Title \n(required)",
             "Secondary Title \n(required)",
@@ -20,16 +20,52 @@
             "show"
         ],
         [
-            "HyperCities",
-            "Real-time exploration of 3D models",
+            "Los Angeles Ghost Maps",
+            "Phil Ethington",
             "",
-            "A place in time.",
-            "vsim.jpg",
+            "\"Every act recounted by historians literally took place. All human ac- tions and experiences take place, in the sense that, embodied, they cannot be placeless, but also in the sense of seizing the site of their occurrence and marking it for\"\t\t\"generations to come. It becomes a\"\n\t\t\"topos, a reference-point in the vast\"\n\t\t\"network of human knowledge.\"\t\n\t\t\t",
+            "ghost.png",
             "https://idre.ucla.edu/vsim",
             "digital humanities",
             "PIs for the VSim project are Institute for Digital Research and Education technologists Drs. Scott Friedman and Lisa M. Snyder. David Stephan was the lead programmer on the VSim 2.0 development. Other 2.0 team members were Francesca Albrezzi, Aaron J. Taber, and Sam Amin. Dr. Elaine Sullivan and Joy Guey provided UX consultation, and computer science graduate students Eduardo Poyart, Franklin Fang, and XinLi Cai built the VSim prototype. ",
             "National Endowment for the Humanities (HD-50958-10 and HK-50164-14)",
             "https://www.youtube.com/embed/MYYtDTucKL8?si=9VsZj_AZqdFuOJlt",
+            "<p><strong>Posted March 19, 2014</strong>: <a href=\"https://www.youtube.com/watch?v=MYYtDTucKL8&amp;feature=youtu.be\">VSim_TheMovie</a> is a 12 minute video piece that illustrates the key features of the VSim prototype (similar enough to VSim 2.0 to be useful).</p>",
+            "FineArts1_Oct26.jpg,FineArts2_Oct26.jpg,StreetofCairo1_Oct26.jpg,Trans_01_May10.jpg,UST_WCE_6-scaled.jpg,VSim2_DemoImage_Dec2018.jpg,WCE_Agriculture_UCLA_Nov5_2015.jpg,WCE_Bridge_UCLA_Nov5_2015.jpg,WCE_Caravels_UCLA_Nov5_2015.jpg,WCE_ConventofLaRabida1_UCLA_Nov5_2015.jpg,WCE_FestivalHall_UCLA_Nov5_2015.jpg,WCE_FineArtsBldg_Int_UCLA_Nov5_2015.jpg,WCE_FineArtsBldg_UCLA_Nov5_2015.jpg,WCE_Horticulture_UCLA_Nov5_2015.jpg,WCE_Illinois_UCLA_Nov5_2015.jpg,WCE_LouisianaStateBldg_UCLA_Nov5_2015.jpg,WCE_MaineStateBldg_UCLA_Nov5_2015.jpg,WCE_Manufactures_UCLA_Nov5_2015.jpg,WCE_MassStateBldg_UCLA_Nov5_2015.jpg,WCE_RoseGarden_UCLA_Nov5_2015.jpg,WCE_WisconsinStateBldg_UCLA_Nov19_2015.jpg,WomansTerrace1_Oct26.jpg",
+            "Lisa Snyder",
+            "Chicago, Virtual learning environment, three-dimensional space, 3D computer graphics, spatial, history",
+            "http://www.wikidata.org/entity/Q1297; http://www.wikidata.org/entity/Q2349394; http://www.wikidata.org/entity/Q34929; http://www.wikidata.org/entity/Q189177; http://www.wikidata.org/entity/Q122075505; http://www.wikidata.org/entity/Q309",
+            "TRUE"
+        ],
+        [
+            "PDub Productions:\rMapping HiFi",
+            "PDub was designed to deepen\ra sense of place\u2014not simply to\rdescribe, document, and depict\rthat place.",
+            "",
+            "Clutching his electric guitar, eyes\rclosed, Angelo \u201cManok\u201d Bernardo\rmimics the Jimi Hendrix poster\rbehind him. The soundtrack\ris Hendrix\u2019s version of the \u201cStar\rSpangled Banner,\u201d only it\u2019s Manok,\ra recent Filipino immigrant,\rplaying the song. \u201cManok\u201d stands\rfor chicken, he explains. As a\ryoung boy he had a fighting rooster\rand started drawing chickens.\rThe name stuck. These scenes\ropen \u201cAnthem,\u201d Manok\u2019s\rvideo from PDub Productions,\ran innovative media and civic engagement\rprogram in which local\ryouth create digital content about\rHistoric Filipinotown for distribution\ron multiple platforms. \u201cAnthem\u201d\rcuts between Manok\u2019s story\rand his efforts to bring Filipino\rChristmas caroling into Los Angeles\u2019\rHistoric Filipinotown, aka HiFi.\rAs \u201cAnthem\u201d closes, Manok plays\ra Hendrix-style version of\rthe Philippines\u2019 national anthem,\r\u201cLupang Hinirang.\u201d\r\u201cAnthem\u201d is Manok\u2019s personal\rstory; yet it\u2019s the neighborhood\u2019s\rstory, too. Both are full of\rcontradictions, hybridities, and\rconundrums. Designated as such\rin 2002, Historic Filipinotown has\rfew cultural or physical markers to\rindicate the area\u2019s status. It is better\rknown for its proximity to the 101 Freeway and as a shortcut to\rdowntown than as a cultural nexus.\rAlthough only 2.1 square miles,\rthe significance of HiFi extends far\rbeyond its borders. Today, HiFi is\rethnically and culturally diverse,\rwith Filipinos comprising 20% of\rthe population and Latinos the \rmajority.",
+            "hifi.png",
+            "https://idre.ucla.edu/vsim",
+            "digital humanities",
+            "PIs for the VSim project are Institute for Digital Research and Education technologists Drs. Scott Friedman and Lisa M. Snyder. David Stephan was the lead programmer on the VSim 2.0 development. Other 2.0 team members were Francesca Albrezzi, Aaron J. Taber, and Sam Amin. Dr. Elaine Sullivan and Joy Guey provided UX consultation, and computer science graduate students Eduardo Poyart, Franklin Fang, and XinLi Cai built the VSim prototype. ",
+            "National Endowment for the Humanities (HD-50958-10 and HK-50164-14)",
+            "https://www.youtube.com/embed/PEjnZflO9V4?si=oSRiYPCKjBpt-76i",
+            "<p><strong>Posted March 19, 2014</strong>: <a href=\"https://www.youtube.com/watch?v=MYYtDTucKL8&amp;feature=youtu.be\">VSim_TheMovie</a> is a 12 minute video piece that illustrates the key features of the VSim prototype (similar enough to VSim 2.0 to be useful).</p>",
+            "FineArts1_Oct26.jpg,FineArts2_Oct26.jpg,StreetofCairo1_Oct26.jpg,Trans_01_May10.jpg,UST_WCE_6-scaled.jpg,VSim2_DemoImage_Dec2018.jpg,WCE_Agriculture_UCLA_Nov5_2015.jpg,WCE_Bridge_UCLA_Nov5_2015.jpg,WCE_Caravels_UCLA_Nov5_2015.jpg,WCE_ConventofLaRabida1_UCLA_Nov5_2015.jpg,WCE_FestivalHall_UCLA_Nov5_2015.jpg,WCE_FineArtsBldg_Int_UCLA_Nov5_2015.jpg,WCE_FineArtsBldg_UCLA_Nov5_2015.jpg,WCE_Horticulture_UCLA_Nov5_2015.jpg,WCE_Illinois_UCLA_Nov5_2015.jpg,WCE_LouisianaStateBldg_UCLA_Nov5_2015.jpg,WCE_MaineStateBldg_UCLA_Nov5_2015.jpg,WCE_Manufactures_UCLA_Nov5_2015.jpg,WCE_MassStateBldg_UCLA_Nov5_2015.jpg,WCE_RoseGarden_UCLA_Nov5_2015.jpg,WCE_WisconsinStateBldg_UCLA_Nov19_2015.jpg,WomansTerrace1_Oct26.jpg",
+            "Lisa Snyder",
+            "Chicago, Virtual learning environment, three-dimensional space, 3D computer graphics, spatial, history",
+            "http://www.wikidata.org/entity/Q1297; http://www.wikidata.org/entity/Q2349394; http://www.wikidata.org/entity/Q34929; http://www.wikidata.org/entity/Q189177; http://www.wikidata.org/entity/Q122075505; http://www.wikidata.org/entity/Q309",
+            "TRUE"
+        ],
+        [
+            "Mapping the 2009\rElection Protests in Tehran",
+            "X\u00e1rene Eskandar",
+            "",
+            "On June 16, 2009, Iranians took\rto the streets en masse in protests\rnever before seen or experienced\rsince the 1979 Islamic Revolution.\rThe parents and grandparents\rwho had ousted the Shah joined\rtheir children and grandchildren\r30 years later to protest the rigged\rre-election of Mahmoud Ahmadinejad.\rLabeling his regime\ra \u201ccoup government,\u201d they held\rpeaceful, silent demonstrations in\rcontrast to what is by its very nature\ra violent act.\rThe first footage of thousands\rupon thousands of protesters,\rspanning the width of a number\rof grand boulevards across Tehran\u2014\rVali-ye-Asr, Enghelab, and\rAzadi\u2014as far as the eye could see,\rsent chills down my spine. How\rcould the Iranian government suppress\rthis magnitude of discontent?\rQuite simple: by broadcasting the\rsilent footage and claiming they\rare pro-government. Given that all\rmedia in Iran are state-controlled,\rthe protesters cannot broadcast any\rcounter arguments, so they changed\rtheir game: still protesting in silence,\rthey used placards displaying\rrhyming slogans against the rigged\relection. The government played\rback by claiming the anti-government\rprotests were taking place\ronly in northern Tehran, an affluent\rarea with Western educated and\rwell-traveled citizens. (There is a\rstrong class division between north\rand south Tehran, and the government\u2019s\rclaims are easily accepted by\rthe population in other provinces\rwhere they only know of this division\rin Tehran and base many assumptions\ron this fact.) From here,\rthe protests gain momentum, and\ron June 20, they turn violent.\rThis is the point where my\rmapping project begins\u2014an\ranger-infused and emotionally\rdraining task that I saw as my duty\rto a homeland I barely know and\ronly from childhood memories\rof summers spent with grandparents\rand cousins. My goal was to\rdebunk the government\u2019s claims\rby showing that the protests are in\rfact widespread, happening in all\rprovinces across Iran, regardless of\rclass and ethnicity.",
+            "tehran.png",
+            "https://idre.ucla.edu/vsim",
+            "digital humanities",
+            "PIs for the VSim project are Institute for Digital Research and Education technologists Drs. Scott Friedman and Lisa M. Snyder. David Stephan was the lead programmer on the VSim 2.0 development. Other 2.0 team members were Francesca Albrezzi, Aaron J. Taber, and Sam Amin. Dr. Elaine Sullivan and Joy Guey provided UX consultation, and computer science graduate students Eduardo Poyart, Franklin Fang, and XinLi Cai built the VSim prototype. ",
+            "National Endowment for the Humanities (HD-50958-10 and HK-50164-14)",
+            "https://www.youtube.com/embed/U3jJLUXs6_k?si=DslD3coj8K5m2CeZ",
             "<p><strong>Posted March 19, 2014</strong>: <a href=\"https://www.youtube.com/watch?v=MYYtDTucKL8&amp;feature=youtu.be\">VSim_TheMovie</a> is a 12 minute video piece that illustrates the key features of the VSim prototype (similar enough to VSim 2.0 to be useful).</p>",
             "FineArts1_Oct26.jpg,FineArts2_Oct26.jpg,StreetofCairo1_Oct26.jpg,Trans_01_May10.jpg,UST_WCE_6-scaled.jpg,VSim2_DemoImage_Dec2018.jpg,WCE_Agriculture_UCLA_Nov5_2015.jpg,WCE_Bridge_UCLA_Nov5_2015.jpg,WCE_Caravels_UCLA_Nov5_2015.jpg,WCE_ConventofLaRabida1_UCLA_Nov5_2015.jpg,WCE_FestivalHall_UCLA_Nov5_2015.jpg,WCE_FineArtsBldg_Int_UCLA_Nov5_2015.jpg,WCE_FineArtsBldg_UCLA_Nov5_2015.jpg,WCE_Horticulture_UCLA_Nov5_2015.jpg,WCE_Illinois_UCLA_Nov5_2015.jpg,WCE_LouisianaStateBldg_UCLA_Nov5_2015.jpg,WCE_MaineStateBldg_UCLA_Nov5_2015.jpg,WCE_Manufactures_UCLA_Nov5_2015.jpg,WCE_MassStateBldg_UCLA_Nov5_2015.jpg,WCE_RoseGarden_UCLA_Nov5_2015.jpg,WCE_WisconsinStateBldg_UCLA_Nov19_2015.jpg,WomansTerrace1_Oct26.jpg",
             "Lisa Snyder",

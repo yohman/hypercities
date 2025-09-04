@@ -2,7 +2,7 @@ import requests
 import json
 
 # List of sheet names
-sheet_names = ['work']
+sheet_names = ['windows']
 
 # Spreadsheet ID and API key
 spreadsheet_id = '1GCRfWTsWSynXYQTE970dg422pvhIV67MInIy6Gb-pSQ'

@@ -9,7 +9,7 @@ const spreadsheetId = '1GCRfWTsWSynXYQTE970dg422pvhIV67MInIy6Gb-pSQ';
 const apiKey = 'AIzaSyAxlHpEwRMRcj5qobzddd2oN9FNjWAh0RY';
 
 // sections of the data
-const sheetNames = ['work'];
+const sheetNames = ['windows'];
 
 let data = {};
 
