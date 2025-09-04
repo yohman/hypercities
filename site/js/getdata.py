@@ -2,10 +2,10 @@ import requests
 import json
 
 # List of sheet names
-sheet_names = ['work', 'learn', 'consult', 'musings']
+sheet_names = ['work']
 
 # Spreadsheet ID and API key
-spreadsheet_id = '1bQDVVO-R3tt99eR7ageBYu5XK8lnnlxHZLzJghYSLa0'
+spreadsheet_id = '1GCRfWTsWSynXYQTE970dg422pvhIV67MInIy6Gb-pSQ'
 api_key = 'AIzaSyAxlHpEwRMRcj5qobzddd2oN9FNjWAh0RY'
 
 # Output data dictionary

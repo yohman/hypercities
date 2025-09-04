@@ -5,11 +5,11 @@ console.log('Getting data...');
 
 // may not need this, as we are fetching data from a json file
 // instead, use the getdata.py script to get the data from the Google Sheet
-const spreadsheetId = '1bQDVVO-R3tt99eR7ageBYu5XK8lnnlxHZLzJghYSLa0';
+const spreadsheetId = '1GCRfWTsWSynXYQTE970dg422pvhIV67MInIy6Gb-pSQ';
 const apiKey = 'AIzaSyAxlHpEwRMRcj5qobzddd2oN9FNjWAh0RY';
 
 // sections of the data
-const sheetNames = ['work', 'learn', 'consult','musings'];
+const sheetNames = ['windows'];
 
 let data = {};
 
