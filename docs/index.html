@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<!-- redirect after 1 second and fade out -->
+	<!-- <meta http-equiv="refresh" content="1; url=learn/" /> -->
+
+	<style>
+		body {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			margin: 0;
+			background-color: #f3f3f3;
+			font-family: Arial, sans-serif;
+		}
+
+		html, body {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden; /* Hide scrollbars if you like */
+		}
+		.body-background {
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			position: relative;
+		}
+
+		.body-background::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.7); /* Adjust the opacity as needed */
+			z-index: 1;
+		}
+
+		.page-content {
+			position: relative;
+			z-index: 2;
+		}
+		.page-content {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 20px;
+			box-sizing: border-box;
+		}
+		.site-logo-splash {
+			margin-bottom: 20px;
+		}
+		.tagline {
+			font-weight: bold;
+			font-size: 4.5rem;
+			color: white;
+			text-align: center;
+			text-shadow: 1px 1px 2px black;
+			width: 100%;
+			max-width: 900px;
+			margin: 0 auto 20px auto;
+			white-space: nowrap;
+		}
+		.paragraph {
+			color: rgb(226, 226, 226);
+			text-align: center;
+			max-width: 350px;
+			line-height: 1.6;
+			text-shadow: 1px 1px 2px black;
+			margin: 0 auto 20px auto;
+		}
+		.links {
+			margin-top: 20px;
+			text-align: center;
+			max-width: 350px;
+			margin: 0 auto;
+		}
+		.links a {
+			margin-left: 10px;
+			text-decoration: none;
+			color: #ffcc00; /* Change link color */
+			font-weight: bold;
+			text-shadow: 1px 1px 2px black;
+		}
+		.links a:hover {
+			color: #ff6600; /* Change link color on hover */
+		}
+
+		@media (max-width: 500px) {
+			.tagline {
+				font-size: 3rem;
+				max-width: 95vw;
+				white-space: normal;
+			}
+			.paragraph, .links {
+				max-width: 90vw;
+			}
+		}
+
+	</style>
+	<script src="js/getdata.js"></script>
+	<script>
+
+		function init() {
+			console.log('Initializing.......');
+			// Wait for dataLoaded event before setting a splash background image
+			document.addEventListener('dataLoaded', function() {
+				console.log('Data loaded');
+
+				// create a list of splashable background images, from map1.png to map10.png
+				let splashableImages = [];
+				for (let i = 1; i <= 10; i++) {
+					splashableImages.push('map' + i + '.png');
+					// splashableImages.push('map1.png');
+				}
+				console.log('Splashable images:', splashableImages);
+
+
+				let chosen = splashableImages[Math.floor(Math.random() * splashableImages.length)];
+
+				console.log('Chosen image:', chosen);	
+				
+				// Set the background image of the body
+				document.body.style.backgroundImage = 'url("images/splash/' + chosen + '")';
+				// document.body.style.backgroundImage = 'url("js/map1.png")';
+			});
+		}
+	</script>
+
+</head>
+<body>
+	<div id="bgContainer" class="body-background">
+		<div class="page-content">
+			<div class="site-logo-splash">
+				<!-- Replace with actual logo image if available -->
+				<!-- <img src="logo-splash.png" alt="Site Logo" height="50"> -->
+			</div>
+			<div>
+				<div class="tagline">HyperCities</div>
+			</div>
+			<div>
+				<p class="paragraph">
+					A HyperCity is a real city overlaid with thick information networks that not only catalyze the present but also go back in time to document the past and go forward to project future possibilities. HyperCities are always under construction.
+				</p>
+
+			</div>
+			<div class="links">
+				<a href="https://yohman.github.io/maplibrary/">Maps</a>
+				<a href="work/">Gallery</a>
+				<a href="https://escholarship.org/uc/item/3mh5t455">Book</a>
+				<a href="consult/">About</a>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

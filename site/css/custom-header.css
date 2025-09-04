@@ -1,0 +1,69 @@
+/* Custom header styles for mkdocs-material */
+
+.md-header {
+    background: #0E0E0E !important;
+    color: #fff !important;
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+}
+
+.md-header__button.md-logo {
+    display: none !important;
+}
+
+/* Header title: large, white, serif font */
+/* Header title: 2em, white, serif font, with equal vertical padding */
+.md-header__title, .md-header__topic {
+    color: #fff !important;
+    font-family: 'Georgia', 'Times New Roman', Times, serif !important;
+    font-size: 2em !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    display: block !important;
+    line-height: 1.1;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    box-sizing: border-box;
+}
+}
+}
+
+
+/* Restore menu links visibility and color */
+.md-header__nav, .md-header__nav .md-nav, .md-header__nav .md-nav__list {
+    display: flex !important;
+    align-items: center !important;
+}
+.md-header__nav .md-nav__link {
+    color: #D53830 !important;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: inline-block !important;
+    padding: 0 1rem;
+}
+.md-header__nav .md-nav__link:hover {
+    color: #fff !important;
+}
+
+/* Ensure body remains white */
+.md-main, .md-content, body {
+    background: #fff !important;
+}
+
+/* Force header title to show if missing */
+/* If header title missing, inject it styled */
+/* If header title missing, inject it styled */
+.md-header__title:empty::before {
+    content: "HyperCities";
+    color: #fff;
+    font-family: 'Georgia', 'Times New Roman', Times, serif !important;
+    font-size: 2em !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    display: block;
+    line-height: 1.1;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    box-sizing: border-box;
+}
+}
+}
