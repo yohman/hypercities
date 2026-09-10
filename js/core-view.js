@@ -88,7 +88,7 @@ function makeCrossSection(maps, core) {
     entries,
     // The one red temporal annotation names the whole excavation, not every
     // interval between maps. Individual years remain attached to their plates.
-    span: { position: [-84, 0, (entries[0].z + entries.at(-1).z) / 2], text: `${spanYears} years` }
+    span: spanYears ? { position: [-84, 0, (entries[0].z + entries.at(-1).z) / 2], text: `${spanYears} years` } : null
   };
 }
 
@@ -245,7 +245,7 @@ export class CoreView {
     const labels = labelEntries(entries, this.selectedId, this.hoverId);
     const selected = entries.find((entry) => entry.map.id === focusId);
     const labelX = 154;
-    const temporalSpan = {
+    const temporalSpan = this.stack.span && {
       ...this.stack.span,
       position: [this.stack.span.position[0], this.stack.span.position[1], this.stack.span.position[2] * progress]
     };
@@ -363,7 +363,7 @@ export class CoreView {
         onHover: (info) => this.setHover(info),
         parameters: { depthTest: false }
       }),
-      new deck.TextLayer({
+      ...(temporalSpan ? [new deck.TextLayer({
         id: "temporal-span",
         data: [temporalSpan],
         getPosition: (item) => item.position,
@@ -376,7 +376,7 @@ export class CoreView {
         billboard: true,
         fontFamily: "ui-sans-serif, system-ui, sans-serif",
         parameters: { depthTest: false }
-      }),
+      })] : []),
       ...(selected ? [new deck.TextLayer({
         id: "hovered-stratum",
         data: [selected],

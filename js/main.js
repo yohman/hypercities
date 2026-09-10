@@ -44,6 +44,11 @@ function enterCore(maps, lngLat) {
   app.field.enterCore(lngLat, app.coreMaps);
   app.core.enter(app.coreMaps, lngLat);
   app.ui.lockedCore(app.coreMaps);
+  // A core begins at its uppermost surviving layer. The visitor can descend
+  // immediately, without needing a second click in the timewell.
+  selectMap(app.coreMaps.at(-1), {
+    trailWhy: "The newest map opens the core; descend to move into its earlier layers."
+  });
 }
 
 function moveTime(direction) {

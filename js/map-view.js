@@ -3,6 +3,29 @@ import { asPolygon, containsCoordinate, tileDiagnostic, tileTemplate } from "./d
 const RED = [168, 75, 67];
 const RED_BRIGHT = [226, 113, 99];
 
+function grayscale(color) {
+  if (typeof color !== "string") return null;
+  let red; let green; let blue; let alpha = null;
+  const hex = color.match(/^#([0-9a-f]{3,8})$/i);
+  const rgb = color.match(/^rgba?\(([^)]+)\)$/i);
+  if (hex) {
+    const value = hex[1].length <= 4
+      ? [...hex[1]].map((character) => character + character).join("")
+      : hex[1];
+    red = Number.parseInt(value.slice(0, 2), 16);
+    green = Number.parseInt(value.slice(2, 4), 16);
+    blue = Number.parseInt(value.slice(4, 6), 16);
+    alpha = value.length === 8 ? Number.parseInt(value.slice(6, 8), 16) / 255 : null;
+  } else if (rgb) {
+    const values = rgb[1].split(",").map((value) => value.trim());
+    [red, green, blue] = values.slice(0, 3).map(Number);
+    alpha = values[3] === undefined ? null : Number(values[3]);
+  } else return null;
+  if (![red, green, blue].every(Number.isFinite)) return null;
+  const lightness = Math.round((red * 0.2126 + green * 0.7152 + blue * 0.0722) * 0.45);
+  return alpha === null ? `rgb(${lightness}, ${lightness}, ${lightness})` : `rgba(${lightness}, ${lightness}, ${lightness}, ${alpha})`;
+}
+
 export class MapView {
   constructor({ maps, onCore, onDepth, onPreview, onTileStatus }) {
     Object.assign(this, { maps, onCore, onDepth, onPreview, onTileStatus, hoverIds: new Set() });
@@ -17,6 +40,7 @@ export class MapView {
       center: [10, 27], zoom: 1.7, minZoom: 1.25, attributionControl: false
     });
     await new Promise((resolve) => this.map.once("load", resolve));
+    this.neutraliseBasemap();
     this.overlay = new deck.MapboxOverlay({ interleaved: true, layers: [] });
     this.map.addControl(this.overlay);
     this.map.on("mousemove", (event) => this.handleMove(event.lngLat));
@@ -28,6 +52,23 @@ export class MapView {
       }
     });
     this.renderFootprints();
+  }
+
+  neutraliseBasemap() {
+    const colorProperties = {
+      background: ["background-color"],
+      fill: ["fill-color", "fill-outline-color"],
+      line: ["line-color"],
+      circle: ["circle-color", "circle-stroke-color"],
+      symbol: ["text-color", "icon-color"]
+    };
+    for (const layer of this.map.getStyle().layers || []) {
+      for (const property of colorProperties[layer.type] || []) {
+        const neutral = grayscale(this.map.getPaintProperty(layer.id, property));
+        if (neutral) this.map.setPaintProperty(layer.id, property, neutral);
+      }
+      if (layer.type === "raster") this.map.setPaintProperty(layer.id, "raster-saturation", -1);
+    }
   }
 
   handleMove(lngLat) {
@@ -58,14 +99,14 @@ export class MapView {
       id: "historical-map-extents", data: this.maps, pickable: true, stroked: true, filled: false,
       getPolygon: (map) => asPolygon(map),
       getLineColor: (map) => map.id === this.timewellHoverId
-          ? [...RED_BRIGHT, 255]
+          ? [...RED_BRIGHT, 230]
         : map.id === this.selectedMapId
-          ? [241, 237, 228, 255]
+          ? [241, 237, 228, 230]
         : this.coreIds?.has(map.id)
-          ? [...RED_BRIGHT, 150]
-          : this.hoverIds.has(map.id)
-            ? [...RED_BRIGHT, 220]
-            : [...RED, 62],
+          ? [...RED_BRIGHT, 135]
+        : this.hoverIds.has(map.id)
+            ? [...RED_BRIGHT, 198]
+            : [...RED, 81],
       getLineWidth: (map) => map.id === this.timewellHoverId ? 2.2 : map.id === this.selectedMapId ? 2.5 : this.coreIds?.has(map.id) ? 1.4 : 1,
       lineWidthUnits: "pixels",
       updateTriggers: { getLineColor: [[...this.hoverIds].join(","), this.selectedMapId, this.timewellHoverId, [...(this.coreIds || [])].join(",")] }
@@ -111,7 +152,7 @@ export class MapView {
         type: "raster", tiles: [template], tileSize: 256,
         minzoom: Math.max(0, map.minZoom), maxzoom: Math.max(map.minZoom || 0, map.maxZoom || 22), bounds: map.bbox
       });
-      this.map.addLayer({ id: this.rasterLayerId, type: "raster", source: this.rasterSourceId, paint: { "raster-opacity": 0.76 } });
+      this.map.addLayer({ id: this.rasterLayerId, type: "raster", source: this.rasterSourceId, paint: { "raster-opacity": 1 } });
       if (focus) {
         this.map.fitBounds([[map.bbox[0], map.bbox[1]], [map.bbox[2], map.bbox[3]]], {
           padding: this.focusPadding(), duration: 620, maxZoom: 13
