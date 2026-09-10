@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>A Plan of New York Island, part of Long Island &amp; c. showing the Position of the American and British Armies, before, at, and after the Engagement on the Heights, August 27th, 1776.</name>
+    <description>A Plan of New York Island, part of Long Island &amp; c. showing the Position of the American and British Armies, before, at, and after the Engagement on the Heights, August 27th, 1776., New York, 1776. A Plan of New York Island, part of Long Island &amp; c. showing the Position of the American and British Armies, before, at, and after the Engagement on the Heights, August 27th, 1776. (1776). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>A Plan of New York Island, part of Long Island &amp; c. showing the Position of the American and British Armies, before, at, and after the Engagement on the Heights, August 27th, 1776.</name>
+      <description>HyperCities Map Library footprint · New York · 1776</description>
+      <TimeSpan><begin>1776-01-01</begin><end>1776-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:104</value></Data>
+      <Data name="place"><value>New York</value></Data>
+      <Data name="years"><value>1776</value></Data>
+      <Data name="sourceRecordId"><value>104</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>A Plan of New York Island, part of Long Island &amp; c. showing the Position of the American and British Armies, before, at, and after the Engagement on the Heights, August 27th, 1776. (1776). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/NewYork_1776_Army1/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-74.160575,40.572413,0 -73.736162,40.572413,0 -73.736162,40.94993,0 -74.160575,40.94993,0 -74.160575,40.572413,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>A Plan of New York Island, part of Long Island &amp; c. showing the Position of the American and British Armies, before, at, and after the Engagement on the Heights, August 27th, 1776. · raster tile 10/301/384</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1776_Army1/10/301/384.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>40.713956</south>
+        <east>-73.828125</east>
+        <west>-74.179688</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>A Plan of New York Island, part of Long Island &amp; c. showing the Position of the American and British Armies, before, at, and after the Engagement on the Heights, August 27th, 1776. · raster tile 10/302/384</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1776_Army1/10/302/384.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>40.713956</south>
+        <east>-73.476563</east>
+        <west>-73.828125</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>A Plan of New York Island, part of Long Island &amp; c. showing the Position of the American and British Armies, before, at, and after the Engagement on the Heights, August 27th, 1776. · raster tile 10/301/385</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1776_Army1/10/301/385.png</href></Icon>
+      <LatLonBox>
+        <north>40.713956</north>
+        <south>40.446947</south>
+        <east>-73.828125</east>
+        <west>-74.179688</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>A Plan of New York Island, part of Long Island &amp; c. showing the Position of the American and British Armies, before, at, and after the Engagement on the Heights, August 27th, 1776. · raster tile 10/302/385</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1776_Army1/10/302/385.png</href></Icon>
+      <LatLonBox>
+        <north>40.713956</north>
+        <south>40.446947</south>
+        <east>-73.476563</east>
+        <west>-73.828125</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

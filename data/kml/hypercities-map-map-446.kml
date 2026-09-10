@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Los Angeles 5</name>
+    <description>Los Angeles 5, Los Angeles, 1953. Los Angeles 5 (1953). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Los Angeles 5</name>
+      <description>HyperCities Map Library footprint · Los Angeles · 1953</description>
+      <TimeSpan><begin>1953-01-01</begin><end>1953-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:446</value></Data>
+      <Data name="place"><value>Los Angeles</value></Data>
+      <Data name="years"><value>1953</value></Data>
+      <Data name="sourceRecordId"><value>446</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Los Angeles 5 (1953). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/1953_LA_5/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-118.260975,34.004705,0 -118.25633,34.004705,0 -118.25633,34.007977,0 -118.260975,34.007977,0 -118.260975,34.004705,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Los Angeles 5 · raster tile 16/11239/26177</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1953_LA_5/16/11239/26177.png</href></Icon>
+      <LatLonBox>
+        <north>34.011689</north>
+        <south>34.007135</south>
+        <east>-118.256836</east>
+        <west>-118.262329</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Los Angeles 5 · raster tile 16/11240/26177</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1953_LA_5/16/11240/26177.png</href></Icon>
+      <LatLonBox>
+        <north>34.011689</north>
+        <south>34.007135</south>
+        <east>-118.251343</east>
+        <west>-118.256836</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Los Angeles 5 · raster tile 16/11239/26178</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1953_LA_5/16/11239/26178.png</href></Icon>
+      <LatLonBox>
+        <north>34.007135</north>
+        <south>34.002581</south>
+        <east>-118.256836</east>
+        <west>-118.262329</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Los Angeles 5 · raster tile 16/11240/26178</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1953_LA_5/16/11240/26178.png</href></Icon>
+      <LatLonBox>
+        <north>34.007135</north>
+        <south>34.002581</south>
+        <east>-118.251343</east>
+        <west>-118.256836</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

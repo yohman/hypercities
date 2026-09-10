@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>A Plan of the City of New York</name>
+    <description>A Plan of the City of New York, New York, 1776. A Plan of the City of New York (1776). HyperCities Map Library. CUNY Graduate Center - Special Collections.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>A Plan of the City of New York</name>
+      <description>HyperCities Map Library footprint · New York · 1776</description>
+      <TimeSpan><begin>1776-01-01</begin><end>1776-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:46</value></Data>
+      <Data name="place"><value>New York</value></Data>
+      <Data name="years"><value>1776</value></Data>
+      <Data name="sourceRecordId"><value>46</value></Data>
+      <Data name="collection"><value>CUNY Graduate Center - Special Collections</value></Data>
+      <Data name="creator"><value>Major Holland, Surveyor General</value></Data>
+      <Data name="citation"><value>A Plan of the City of New York (1776). HyperCities Map Library. CUNY Graduate Center - Special Collections.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/NewYork_1776/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-74.023347,40.698519,0 -73.984958,40.698519,0 -73.984958,40.724675,0 -74.023347,40.724675,0 -74.023347,40.698519,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>A Plan of the City of New York · raster tile 5/9/12</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1776/5/9/12.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>31.952162</south>
+        <east>-67.500000</east>
+        <west>-78.750000</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

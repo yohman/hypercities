@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Distribution Of Filipinos</name>
+    <description>Distribution Of Filipinos, Los Angeles, 1940. Distribution Of Filipinos (1940). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Distribution Of Filipinos</name>
+      <description>HyperCities Map Library footprint · Los Angeles · 1940</description>
+      <TimeSpan><begin>1940-01-01</begin><end>1940-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:239</value></Data>
+      <Data name="place"><value>Los Angeles</value></Data>
+      <Data name="years"><value>1940</value></Data>
+      <Data name="sourceRecordId"><value>239</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value>Los Angeles City Planning Commission</value></Data>
+      <Data name="citation"><value>Distribution Of Filipinos (1940). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Filipinos_1940_final/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-118.700537,33.677308,0 -118.09362,33.677308,0 -118.09362,34.368466,0 -118.700537,34.368466,0 -118.700537,33.677308,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Distribution Of Filipinos · raster tile 9/87/203</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Filipinos_1940_final/9/87/203.png</href></Icon>
+      <LatLonBox>
+        <north>34.885931</north>
+        <south>34.307144</south>
+        <east>-118.125000</east>
+        <west>-118.828125</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Distribution Of Filipinos · raster tile 9/88/203</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Filipinos_1940_final/9/88/203.png</href></Icon>
+      <LatLonBox>
+        <north>34.885931</north>
+        <south>34.307144</south>
+        <east>-117.421875</east>
+        <west>-118.125000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Distribution Of Filipinos · raster tile 9/87/204</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Filipinos_1940_final/9/87/204.png</href></Icon>
+      <LatLonBox>
+        <north>34.307144</north>
+        <south>33.724340</south>
+        <east>-118.125000</east>
+        <west>-118.828125</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Distribution Of Filipinos · raster tile 9/88/204</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Filipinos_1940_final/9/88/204.png</href></Icon>
+      <LatLonBox>
+        <north>34.307144</north>
+        <south>33.724340</south>
+        <east>-117.421875</east>
+        <west>-118.125000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Distribution Of Filipinos · raster tile 9/87/205</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Filipinos_1940_final/9/87/205.png</href></Icon>
+      <LatLonBox>
+        <north>33.724340</north>
+        <south>33.137551</south>
+        <east>-118.125000</east>
+        <west>-118.828125</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Distribution Of Filipinos · raster tile 9/88/205</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Filipinos_1940_final/9/88/205.png</href></Icon>
+      <LatLonBox>
+        <north>33.724340</north>
+        <south>33.137551</south>
+        <east>-117.421875</east>
+        <west>-118.125000</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

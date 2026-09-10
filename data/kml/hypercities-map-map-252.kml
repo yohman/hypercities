@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Japan Roads And Water Routes</name>
+    <description>Japan Roads And Water Routes, Tokyo, 1944. Japan Roads And Water Routes (1944). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Japan Roads And Water Routes</name>
+      <description>HyperCities Map Library footprint · Tokyo · 1944</description>
+      <TimeSpan><begin>1944-01-01</begin><end>1944-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:252</value></Data>
+      <Data name="place"><value>Tokyo</value></Data>
+      <Data name="years"><value>1944</value></Data>
+      <Data name="sourceRecordId"><value>252</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Japan Roads And Water Routes (1944). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Japan_1944_RoadsAndWaterRoutes/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>134.980177,33.959286,0 142.871938,33.959286,0 142.871938,42.410975,0 134.980177,42.410975,0 134.980177,33.959286,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Japan Roads And Water Routes · raster tile 6/55/23</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Japan_1944_RoadsAndWaterRoutes/6/55/23.png</href></Icon>
+      <LatLonBox>
+        <north>45.089036</north>
+        <south>40.979898</south>
+        <east>135.000000</east>
+        <west>129.375000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Japan Roads And Water Routes · raster tile 6/56/23</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Japan_1944_RoadsAndWaterRoutes/6/56/23.png</href></Icon>
+      <LatLonBox>
+        <north>45.089036</north>
+        <south>40.979898</south>
+        <east>140.625000</east>
+        <west>135.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Japan Roads And Water Routes · raster tile 6/57/23</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Japan_1944_RoadsAndWaterRoutes/6/57/23.png</href></Icon>
+      <LatLonBox>
+        <north>45.089036</north>
+        <south>40.979898</south>
+        <east>146.250000</east>
+        <west>140.625000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Japan Roads And Water Routes · raster tile 6/55/24</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Japan_1944_RoadsAndWaterRoutes/6/55/24.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>36.597889</south>
+        <east>135.000000</east>
+        <west>129.375000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Japan Roads And Water Routes · raster tile 6/56/24</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Japan_1944_RoadsAndWaterRoutes/6/56/24.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>36.597889</south>
+        <east>140.625000</east>
+        <west>135.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Japan Roads And Water Routes · raster tile 6/57/24</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Japan_1944_RoadsAndWaterRoutes/6/57/24.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>36.597889</south>
+        <east>146.250000</east>
+        <west>140.625000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Japan Roads And Water Routes · raster tile 6/55/25</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Japan_1944_RoadsAndWaterRoutes/6/55/25.png</href></Icon>
+      <LatLonBox>
+        <north>36.597889</north>
+        <south>31.952162</south>
+        <east>135.000000</east>
+        <west>129.375000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Japan Roads And Water Routes · raster tile 6/56/25</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Japan_1944_RoadsAndWaterRoutes/6/56/25.png</href></Icon>
+      <LatLonBox>
+        <north>36.597889</north>
+        <south>31.952162</south>
+        <east>140.625000</east>
+        <west>135.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Japan Roads And Water Routes · raster tile 6/57/25</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Japan_1944_RoadsAndWaterRoutes/6/57/25.png</href></Icon>
+      <LatLonBox>
+        <north>36.597889</north>
+        <south>31.952162</south>
+        <east>146.250000</east>
+        <west>140.625000</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

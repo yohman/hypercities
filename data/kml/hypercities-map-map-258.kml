@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Wellington block plan shewing native reserves</name>
+    <description>Wellington block plan shewing native reserves, Wellington, 1870. Wellington block plan shewing native reserves (1870). HyperCities Map Library. Alexander Turnbull Library, Wellington, N.Z..</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Wellington block plan shewing native reserves</name>
+      <description>HyperCities Map Library footprint · Wellington · 1870</description>
+      <TimeSpan><begin>1870-01-01</begin><end>1870-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:258</value></Data>
+      <Data name="place"><value>Wellington</value></Data>
+      <Data name="years"><value>1870</value></Data>
+      <Data name="sourceRecordId"><value>258</value></Data>
+      <Data name="collection"><value>Alexander Turnbull Library, Wellington, N.Z.</value></Data>
+      <Data name="creator"><value>Charles Heaphy</value></Data>
+      <Data name="citation"><value>Wellington block plan shewing native reserves (1870). HyperCities Map Library. Alexander Turnbull Library, Wellington, N.Z..</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Wellington_1870_ACC-34477_mm_final/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>174.735253,-41.336507,0 174.818409,-41.336507,0 174.818409,-41.260717,0 174.735253,-41.260717,0 174.735253,-41.336507,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Wellington block plan shewing native reserves · raster tile 12/4036/2564</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Wellington_1870_ACC-34477_mm_final/12/4036/2564.png</href></Icon>
+      <LatLonBox>
+        <north>-41.244772</north>
+        <south>-41.310824</south>
+        <east>174.814453</east>
+        <west>174.726563</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Wellington block plan shewing native reserves · raster tile 12/4037/2564</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Wellington_1870_ACC-34477_mm_final/12/4037/2564.png</href></Icon>
+      <LatLonBox>
+        <north>-41.244772</north>
+        <south>-41.310824</south>
+        <east>174.902344</east>
+        <west>174.814453</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Wellington block plan shewing native reserves · raster tile 12/4036/2565</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Wellington_1870_ACC-34477_mm_final/12/4036/2565.png</href></Icon>
+      <LatLonBox>
+        <north>-41.310824</north>
+        <south>-41.376809</south>
+        <east>174.814453</east>
+        <west>174.726563</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Wellington block plan shewing native reserves · raster tile 12/4037/2565</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Wellington_1870_ACC-34477_mm_final/12/4037/2565.png</href></Icon>
+      <LatLonBox>
+        <north>-41.310824</north>
+        <south>-41.376809</south>
+        <east>174.902344</east>
+        <west>174.814453</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

@@ -110,9 +110,8 @@ export class CoreView {
     this.selectedId = null;
     this.hoverId = null;
     this.container.classList.add("is-preview");
-    this.caption.classList.add("is-preview");
-    this.caption.hidden = false;
-    this.caption.textContent = `${maps.length} layer${maps.length === 1 ? "" : "s"} · ${this.stack.firstYear}–${this.stack.lastYear}`;
+    this.caption.hidden = true;
+    this.container.setAttribute("aria-label", `TimeWell with ${maps.length} layer${maps.length === 1 ? "" : "s"}, from ${this.stack.firstYear} to ${this.stack.lastYear}`);
     this.viewState = this.fitView();
     if (!this.deck) this.createDeck();
     this.deck.setProps({ viewState: this.viewState });
@@ -131,7 +130,6 @@ export class CoreView {
     if (this.appearanceFrame) cancelAnimationFrame(this.appearanceFrame);
     this.appearanceFrame = null;
     this.container.classList.remove("is-preview");
-    this.caption.classList.remove("is-preview");
     this.caption.hidden = true;
     if (this.deck) this.deck.setProps({ layers: [] });
     this.stack = null;
@@ -148,9 +146,8 @@ export class CoreView {
     this.hoverId = null;
     this.container.classList.remove("is-preview");
     this.container.classList.add("is-active");
-    this.caption.classList.remove("is-preview");
-    this.caption.hidden = false;
-    this.caption.textContent = `${maps.length} layer${maps.length === 1 ? "" : "s"} · ${this.stack.firstYear}–${this.stack.lastYear}`;
+    this.caption.hidden = true;
+    this.container.setAttribute("aria-label", `TimeWell with ${maps.length} layer${maps.length === 1 ? "" : "s"}, from ${this.stack.firstYear} to ${this.stack.lastYear}`);
     this.viewState = this.fitView();
     if (!this.deck) this.createDeck();
     this.deck.setProps({ viewState: this.viewState });
@@ -231,6 +228,10 @@ export class CoreView {
   render() {
     if (!this.deck || !this.stack) return;
     const progress = this.progress ?? 1;
+    // Hovering is the invitation to a core, so it is intentionally more
+    // legible than the quieter, already-entered stack. The TimeWell remains
+    // translucent, but its own temporal lines win over the basemap beneath.
+    const previewing = !this.locked;
     const top = (this.stack.height + 82) * progress;
     const focusId = this.hoverId || this.selectedId;
     const entries = this.stack.entries.map((entry) => ({
@@ -244,6 +245,14 @@ export class CoreView {
     const temporalSpan = this.stack.span && {
       ...this.stack.span,
       position: [this.stack.span.position[0], this.stack.span.position[1], this.stack.span.position[2] * progress]
+    };
+    // The layer span is physically attached to the bore: its marker begins
+    // exactly above the top cap's center, then the text opens to the right.
+    const wellCaption = {
+      position: [0, 0, top + 40],
+      // Keep the deck.gl label ASCII-only so its compact glyph atlas renders
+      // every part of the temporal span consistently.
+      text: `${entries.length} LAYER${entries.length === 1 ? "" : "S"} / ${this.stack.firstYear}-${this.stack.lastYear}`
     };
     const coreCoordinate = this.core && {
       // It sits at the visual base of the cylinder: centered below its lower
@@ -263,8 +272,8 @@ export class CoreView {
         stroked: true,
         filled: true,
         getPolygon: (entry) => entry.polygon,
-        getLineColor: (entry) => entry.map.id === this.selectedId ? [...INK, 255] : entry.map.id === this.hoverId ? [...RED_BRIGHT, 255] : [...RED, 185],
-        getFillColor: (entry) => entry.map.id === this.selectedId ? [...RED_BRIGHT, 64] : [...RED, 28],
+        getLineColor: (entry) => entry.map.id === this.selectedId ? [...INK, 255] : entry.map.id === this.hoverId ? [...RED_BRIGHT, 255] : [...RED, previewing ? 235 : 185],
+        getFillColor: (entry) => entry.map.id === this.selectedId ? [...RED_BRIGHT, 64] : [...RED, previewing ? 50 : 28],
         getLineWidth: (entry) => entry.map.id === this.selectedId ? 3 : entry.map.id === this.hoverId ? 2.2 : 1.15,
         lineWidthUnits: "pixels",
         extruded: true,
@@ -290,7 +299,7 @@ export class CoreView {
         filled: true,
         extruded: true,
         flatShading: false,
-        getFillColor: [173, 78, 68, 170],
+        getFillColor: [173, 78, 68, previewing ? 205 : 170],
         material: { ambient: 0.58, diffuse: 0.62, shininess: 34, specularColor: [255, 184, 166] },
         parameters: { depthTest: true }
       }),
@@ -304,6 +313,37 @@ export class CoreView {
         stroked: true,
         getLineColor: [...INK, 240],
         getLineWidth: 2,
+        parameters: { depthTest: false }
+      }),
+      new deck.TextLayer({
+        id: "well-caption-marker",
+        data: [wellCaption],
+        getPosition: (item) => item.position,
+        getText: () => "|",
+        getColor: [...RED_BRIGHT, 245],
+        getSize: 15,
+        sizeUnits: "pixels",
+        getTextAnchor: "middle",
+        getAlignmentBaseline: "bottom",
+        billboard: true,
+        fontFamily: "ui-sans-serif, system-ui, sans-serif",
+        fontWeight: "600",
+        parameters: { depthTest: false }
+      }),
+      new deck.TextLayer({
+        id: "well-caption-text",
+        data: [wellCaption],
+        getPosition: (item) => item.position,
+        getText: (item) => item.text,
+        getPixelOffset: [8, 0],
+        getColor: [...RED_BRIGHT, 235],
+        getSize: 10,
+        sizeUnits: "pixels",
+        getTextAnchor: "start",
+        getAlignmentBaseline: "bottom",
+        billboard: true,
+        fontFamily: "ui-sans-serif, system-ui, sans-serif",
+        fontWeight: "600",
         parameters: { depthTest: false }
       }),
       ...(coreCoordinate?.text ? [new deck.TextLayer({
@@ -350,7 +390,7 @@ export class CoreView {
         data: labels,
         getSourcePosition: (entry) => [0, 0, entry.z],
         getTargetPosition: (entry) => [labelX, 0, entry.z],
-        getColor: (entry) => entry.map.id === this.selectedId ? [...INK, 230] : entry.map.id === this.hoverId ? [...RED_BRIGHT, 255] : [...INK, 110],
+        getColor: (entry) => entry.map.id === this.selectedId ? [...INK, 230] : entry.map.id === this.hoverId ? [...RED_BRIGHT, 255] : [...INK, previewing ? 170 : 110],
         getWidth: (entry) => entry.map.id === this.selectedId ? 1.7 : entry.map.id === this.hoverId ? 1.5 : 1,
         widthUnits: "pixels",
         parameters: { depthTest: false }
@@ -360,7 +400,7 @@ export class CoreView {
         data: labels,
         getPosition: (entry) => [labelX, 0, entry.z],
         getText: (entry) => String(entry.map.year),
-        getColor: (entry) => entry.map.id === this.selectedId ? [...INK, 255] : entry.map.id === this.hoverId ? [...RED_BRIGHT, 255] : [...INK, 205],
+        getColor: (entry) => entry.map.id === this.selectedId ? [...INK, 255] : entry.map.id === this.hoverId ? [...RED_BRIGHT, 255] : [...INK, previewing ? 238 : 205],
         getSize: (entry) => entry.map.id === this.selectedId ? 18 : entry.map.id === this.hoverId ? 16 : 13,
         sizeUnits: "pixels",
         getTextAnchor: "start",
@@ -410,7 +450,6 @@ export class CoreView {
     this.locked = false;
     this.container.classList.remove("is-active");
     this.container.classList.remove("is-preview");
-    this.caption.classList.remove("is-preview");
     this.caption.hidden = true;
     this.onHover?.(null);
     if (this.deck) this.deck.setProps({ layers: [] });

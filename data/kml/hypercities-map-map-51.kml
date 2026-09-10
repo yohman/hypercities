@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>NEW YORK and VICINITY from U.S. Geological Survey Topographic Atlas Sheets: Surveyed 1887-1889 and 1897 In Cooperation with the States of New York and New Jersey</name>
+    <description>NEW YORK and VICINITY from U.S. Geological Survey Topographic Atlas Sheets: Surveyed 1887-1889 and 1897 In Cooperation with the States of New York and New Jersey, New York, 1901. NEW YORK and VICINITY from U.S. Geological Survey Topographic Atlas Sheets: Surveyed 1887-1889 and 1897 In Cooperation with the States of New York and New Jersey (1901). HyperCities Map Library. UCLA Bruman Map Collection.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>NEW YORK and VICINITY from U.S. Geological Survey Topographic Atlas Sheets: Surveyed 1887-1889 and 1897 In Cooperation with the States of New York and New Jersey</name>
+      <description>HyperCities Map Library footprint · New York · 1901</description>
+      <TimeSpan><begin>1901-01-01</begin><end>1901-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:51</value></Data>
+      <Data name="place"><value>New York</value></Data>
+      <Data name="years"><value>1901</value></Data>
+      <Data name="sourceRecordId"><value>51</value></Data>
+      <Data name="collection"><value>UCLA Bruman Map Collection</value></Data>
+      <Data name="creator"><value>George Otis Smith, Director, U.S. Geological Survey</value></Data>
+      <Data name="citation"><value>NEW YORK and VICINITY from U.S. Geological Survey Topographic Atlas Sheets: Surveyed 1887-1889 and 1897 In Cooperation with the States of New York and New Jersey (1901). HyperCities Map Library. UCLA Bruman Map Collection.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/NewYork_1901/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-74.26762,40.36185,0 -73.654699,40.36185,0 -73.654699,41.013167,0 -74.26762,41.013167,0 -74.26762,40.36185,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>NEW YORK and VICINITY from U.S. Geological Survey Topographic Atlas Sheets: Surveyed 1887-1889 and 1897 In Cooperation with the States of New York and New Jersey · raster tile 4/4/5</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1901/4/4/5.png</href></Icon>
+      <LatLonBox>
+        <north>55.776573</north>
+        <south>40.979898</south>
+        <east>-67.500000</east>
+        <west>-90.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>NEW YORK and VICINITY from U.S. Geological Survey Topographic Atlas Sheets: Surveyed 1887-1889 and 1897 In Cooperation with the States of New York and New Jersey · raster tile 4/4/6</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1901/4/4/6.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>21.943046</south>
+        <east>-67.500000</east>
+        <west>-90.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

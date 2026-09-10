@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Memhard Medieval Overlays</name>
+    <description>Memhard Medieval Overlays, Berlin, 1453. Memhard Medieval Overlays (1453). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Memhard Medieval Overlays</name>
+      <description>HyperCities Map Library footprint · Berlin · 1453</description>
+      <TimeSpan><begin>1453-01-01</begin><end>1453-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:463</value></Data>
+      <Data name="place"><value>Berlin</value></Data>
+      <Data name="years"><value>1453</value></Data>
+      <Data name="sourceRecordId"><value>463</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Memhard Medieval Overlays (1453). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Memhard_Medieval_Overlays_1453_Final/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>13.390414,52.504622,0 13.422638,52.504622,0 13.422638,52.527378,0 13.390414,52.527378,0 13.390414,52.504622,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Memhard Medieval Overlays · raster tile 13/4400/2686</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Memhard_Medieval_Overlays_1453_Final/13/4400/2686.png</href></Icon>
+      <LatLonBox>
+        <north>52.536273</north>
+        <south>52.509535</south>
+        <east>13.403320</east>
+        <west>13.359375</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Memhard Medieval Overlays · raster tile 13/4401/2686</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Memhard_Medieval_Overlays_1453_Final/13/4401/2686.png</href></Icon>
+      <LatLonBox>
+        <north>52.536273</north>
+        <south>52.509535</south>
+        <east>13.447266</east>
+        <west>13.403320</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Memhard Medieval Overlays · raster tile 13/4400/2687</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Memhard_Medieval_Overlays_1453_Final/13/4400/2687.png</href></Icon>
+      <LatLonBox>
+        <north>52.509535</north>
+        <south>52.482780</south>
+        <east>13.403320</east>
+        <west>13.359375</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Memhard Medieval Overlays · raster tile 13/4401/2687</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Memhard_Medieval_Overlays_1453_Final/13/4401/2687.png</href></Icon>
+      <LatLonBox>
+        <north>52.509535</north>
+        <south>52.482780</south>
+        <east>13.447266</east>
+        <west>13.403320</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

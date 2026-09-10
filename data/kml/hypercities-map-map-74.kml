@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>A Plan of the City of New York and its Environs</name>
+    <description>A Plan of the City of New York and its Environs, New York, 1775. A Plan of the City of New York and its Environs (1775). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>A Plan of the City of New York and its Environs</name>
+      <description>HyperCities Map Library footprint · New York · 1775</description>
+      <TimeSpan><begin>1775-01-01</begin><end>1775-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:74</value></Data>
+      <Data name="place"><value>New York</value></Data>
+      <Data name="years"><value>1775</value></Data>
+      <Data name="sourceRecordId"><value>74</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value>John Montresor</value></Data>
+      <Data name="citation"><value>A Plan of the City of New York and its Environs (1775). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/NewYork_1775/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-74.043173,40.691848,0 -73.970653,40.691848,0 -73.970653,40.742939,0 -74.043173,40.742939,0 -74.043173,40.691848,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>A Plan of the City of New York and its Environs · raster tile 12/1205/1539</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1775/12/1205/1539.png</href></Icon>
+      <LatLonBox>
+        <north>40.780541</north>
+        <south>40.713956</south>
+        <east>-74.003906</east>
+        <west>-74.091797</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>A Plan of the City of New York and its Environs · raster tile 12/1206/1539</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1775/12/1206/1539.png</href></Icon>
+      <LatLonBox>
+        <north>40.780541</north>
+        <south>40.713956</south>
+        <east>-73.916016</east>
+        <west>-74.003906</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>A Plan of the City of New York and its Environs · raster tile 12/1205/1540</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1775/12/1205/1540.png</href></Icon>
+      <LatLonBox>
+        <north>40.713956</north>
+        <south>40.647304</south>
+        <east>-74.003906</east>
+        <west>-74.091797</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>A Plan of the City of New York and its Environs · raster tile 12/1206/1540</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1775/12/1206/1540.png</href></Icon>
+      <LatLonBox>
+        <north>40.713956</north>
+        <south>40.647304</south>
+        <east>-73.916016</east>
+        <west>-74.003906</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

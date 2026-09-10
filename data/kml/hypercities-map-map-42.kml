@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Official Map of the County of Los Angeles California 1898</name>
+    <description>Official Map of the County of Los Angeles California 1898, Los Angeles, 1898. Official Map of the County of Los Angeles California 1898 (1898). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Official Map of the County of Los Angeles California 1898</name>
+      <description>HyperCities Map Library footprint · Los Angeles · 1898</description>
+      <TimeSpan><begin>1898-01-01</begin><end>1898-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:42</value></Data>
+      <Data name="place"><value>Los Angeles</value></Data>
+      <Data name="years"><value>1898</value></Data>
+      <Data name="sourceRecordId"><value>42</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value>E.T. Wright, Country Surveyor</value></Data>
+      <Data name="citation"><value>Official Map of the County of Los Angeles California 1898 (1898). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Los_Angeles_1898/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-118.958922,33.60897,0 -117.600549,33.60897,0 -117.600549,34.848268,0 -118.958922,34.848268,0 -118.958922,33.60897,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Official Map of the County of Los Angeles California 1898 · raster tile 7/21/50</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Los_Angeles_1898/7/21/50.png</href></Icon>
+      <LatLonBox>
+        <north>36.597889</north>
+        <south>34.307144</south>
+        <east>-118.125000</east>
+        <west>-120.937500</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Official Map of the County of Los Angeles California 1898 · raster tile 7/22/50</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Los_Angeles_1898/7/22/50.png</href></Icon>
+      <LatLonBox>
+        <north>36.597889</north>
+        <south>34.307144</south>
+        <east>-115.312500</east>
+        <west>-118.125000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Official Map of the County of Los Angeles California 1898 · raster tile 7/21/51</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Los_Angeles_1898/7/21/51.png</href></Icon>
+      <LatLonBox>
+        <north>34.307144</north>
+        <south>31.952162</south>
+        <east>-118.125000</east>
+        <west>-120.937500</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Official Map of the County of Los Angeles California 1898 · raster tile 7/22/51</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Los_Angeles_1898/7/22/51.png</href></Icon>
+      <LatLonBox>
+        <north>34.307144</north>
+        <south>31.952162</south>
+        <east>-115.312500</east>
+        <west>-118.125000</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Indian Land Areas Judicially Established</name>
+    <description>Indian Land Areas Judicially Established, Chicago, 1978. Indian Land Areas Judicially Established (1978). HyperCities Map Library. USGS Education Map Catalog.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Indian Land Areas Judicially Established</name>
+      <description>HyperCities Map Library footprint · Chicago · 1978</description>
+      <TimeSpan><begin>1978-01-01</begin><end>1978-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:267</value></Data>
+      <Data name="place"><value>Chicago</value></Data>
+      <Data name="years"><value>1978</value></Data>
+      <Data name="sourceRecordId"><value>267</value></Data>
+      <Data name="collection"><value>USGS Education Map Catalog</value></Data>
+      <Data name="creator"><value>U.S. Geological Survey (USGS)</value></Data>
+      <Data name="citation"><value>Indian Land Areas Judicially Established (1978). HyperCities Map Library. USGS Education Map Catalog.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Indian_Land_Judicial_Areas/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-132.105427,14.189295,0 -59.837482,14.189295,0 -59.837482,53.177812,0 -132.105427,53.177812,0 -132.105427,14.189295,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Indian Land Areas Judicially Established · raster tile 2/0/1</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Indian_Land_Judicial_Areas/2/0/1.png</href></Icon>
+      <LatLonBox>
+        <north>66.513260</north>
+        <south>0.000000</south>
+        <east>-90.000000</east>
+        <west>-180.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Indian Land Areas Judicially Established · raster tile 2/1/1</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Indian_Land_Judicial_Areas/2/1/1.png</href></Icon>
+      <LatLonBox>
+        <north>66.513260</north>
+        <south>0.000000</south>
+        <east>0.000000</east>
+        <west>-90.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

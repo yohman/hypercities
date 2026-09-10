@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Hammond&apos;s New and Complete Map of the Country Around New York</name>
+    <description>Hammond&apos;s New and Complete Map of the Country Around New York, New York, 1906. Hammond&apos;s New and Complete Map of the Country Around New York (1906). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Hammond&apos;s New and Complete Map of the Country Around New York</name>
+      <description>HyperCities Map Library footprint · New York · 1906</description>
+      <TimeSpan><begin>1906-01-01</begin><end>1906-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:89</value></Data>
+      <Data name="place"><value>New York</value></Data>
+      <Data name="years"><value>1906</value></Data>
+      <Data name="sourceRecordId"><value>89</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Hammond&apos;s New and Complete Map of the Country Around New York (1906). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/NewYork_1906_Greater/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-74.963075,40.436108,0 -73.325157,40.436108,0 -73.325157,41.396665,0 -74.963075,41.396665,0 -74.963075,40.436108,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Hammond&apos;s New and Complete Map of the Country Around New York · raster tile 8/74/95</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1906_Greater/8/74/95.png</href></Icon>
+      <LatLonBox>
+        <north>42.032974</north>
+        <south>40.979898</south>
+        <east>-74.531250</east>
+        <west>-75.937500</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Hammond&apos;s New and Complete Map of the Country Around New York · raster tile 8/75/95</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1906_Greater/8/75/95.png</href></Icon>
+      <LatLonBox>
+        <north>42.032974</north>
+        <south>40.979898</south>
+        <east>-73.125000</east>
+        <west>-74.531250</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Hammond&apos;s New and Complete Map of the Country Around New York · raster tile 8/74/96</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1906_Greater/8/74/96.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>39.909736</south>
+        <east>-74.531250</east>
+        <west>-75.937500</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Hammond&apos;s New and Complete Map of the Country Around New York · raster tile 8/75/96</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1906_Greater/8/75/96.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>39.909736</south>
+        <east>-73.125000</east>
+        <west>-74.531250</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Los Angeles</name>
+    <description>Los Angeles, Los Angeles, 1904. Los Angeles (1904). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Los Angeles</name>
+      <description>HyperCities Map Library footprint · Los Angeles · 1904</description>
+      <TimeSpan><begin>1904-01-01</begin><end>1904-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:341</value></Data>
+      <Data name="place"><value>Los Angeles</value></Data>
+      <Data name="years"><value>1904</value></Data>
+      <Data name="sourceRecordId"><value>341</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Los Angeles (1904). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/LosAngeles_1904/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-118.259298,33.969432,0 -118.18901,33.969432,0 -118.18901,34.050386,0 -118.259298,34.050386,0 -118.259298,33.969432,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Los Angeles · raster tile 13/1404/3271</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/LosAngeles_1904/13/1404/3271.png</href></Icon>
+      <LatLonBox>
+        <north>34.052659</north>
+        <south>34.016242</south>
+        <east>-118.256836</east>
+        <west>-118.300781</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Los Angeles · raster tile 13/1405/3271</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/LosAngeles_1904/13/1405/3271.png</href></Icon>
+      <LatLonBox>
+        <north>34.052659</north>
+        <south>34.016242</south>
+        <east>-118.212891</east>
+        <west>-118.256836</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Los Angeles · raster tile 13/1406/3271</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/LosAngeles_1904/13/1406/3271.png</href></Icon>
+      <LatLonBox>
+        <north>34.052659</north>
+        <south>34.016242</south>
+        <east>-118.168945</east>
+        <west>-118.212891</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Los Angeles · raster tile 13/1404/3272</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/LosAngeles_1904/13/1404/3272.png</href></Icon>
+      <LatLonBox>
+        <north>34.016242</north>
+        <south>33.979809</south>
+        <east>-118.256836</east>
+        <west>-118.300781</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Los Angeles · raster tile 13/1405/3272</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/LosAngeles_1904/13/1405/3272.png</href></Icon>
+      <LatLonBox>
+        <north>34.016242</north>
+        <south>33.979809</south>
+        <east>-118.212891</east>
+        <west>-118.256836</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Los Angeles · raster tile 13/1406/3272</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/LosAngeles_1904/13/1406/3272.png</href></Icon>
+      <LatLonBox>
+        <north>34.016242</north>
+        <south>33.979809</south>
+        <east>-118.168945</east>
+        <west>-118.212891</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Los Angeles · raster tile 13/1404/3273</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/LosAngeles_1904/13/1404/3273.png</href></Icon>
+      <LatLonBox>
+        <north>33.979809</north>
+        <south>33.943360</south>
+        <east>-118.256836</east>
+        <west>-118.300781</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Los Angeles · raster tile 13/1405/3273</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/LosAngeles_1904/13/1405/3273.png</href></Icon>
+      <LatLonBox>
+        <north>33.979809</north>
+        <south>33.943360</south>
+        <east>-118.212891</east>
+        <west>-118.256836</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Los Angeles · raster tile 13/1406/3273</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/LosAngeles_1904/13/1406/3273.png</href></Icon>
+      <LatLonBox>
+        <north>33.979809</north>
+        <south>33.943360</south>
+        <east>-118.168945</east>
+        <west>-118.212891</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

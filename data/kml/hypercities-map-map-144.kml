@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>LA Chronograph 13,000 BP to Present with LegendMap of LosAngeles (1940)</name>
+    <description>LA Chronograph 13,000 BP to Present with LegendMap of LosAngeles (1940), Los Angeles, 2002. LA Chronograph 13,000 BP to Present with LegendMap of LosAngeles (1940) (2002). HyperCities Map Library. Ethington Chronographs.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>LA Chronograph 13,000 BP to Present with LegendMap of LosAngeles (1940)</name>
+      <description>HyperCities Map Library footprint · Los Angeles · 2002</description>
+      <TimeSpan><begin>2002-01-01</begin><end>2002-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:144</value></Data>
+      <Data name="place"><value>Los Angeles</value></Data>
+      <Data name="years"><value>2002</value></Data>
+      <Data name="sourceRecordId"><value>144</value></Data>
+      <Data name="collection"><value>Ethington Chronographs</value></Data>
+      <Data name="creator"><value>Philip J. Ethington 2008</value></Data>
+      <Data name="citation"><value>LA Chronograph 13,000 BP to Present with LegendMap of LosAngeles (1940) (2002). HyperCities Map Library. Ethington Chronographs.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/LosAngeles_1940_Ethington/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-118.614738,33.99359,0 -118.323367,33.99359,0 -118.323367,34.104231,0 -118.614738,34.104231,0 -118.614738,33.99359,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>LA Chronograph 13,000 BP to Present with LegendMap of LosAngeles (1940) · raster tile 11/349/817</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/LosAngeles_1940_Ethington/11/349/817.png</href></Icon>
+      <LatLonBox>
+        <north>34.161818</north>
+        <south>34.016242</south>
+        <east>-118.476563</east>
+        <west>-118.652344</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>LA Chronograph 13,000 BP to Present with LegendMap of LosAngeles (1940) · raster tile 11/350/817</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/LosAngeles_1940_Ethington/11/350/817.png</href></Icon>
+      <LatLonBox>
+        <north>34.161818</north>
+        <south>34.016242</south>
+        <east>-118.300781</east>
+        <west>-118.476563</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>LA Chronograph 13,000 BP to Present with LegendMap of LosAngeles (1940) · raster tile 11/349/818</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/LosAngeles_1940_Ethington/11/349/818.png</href></Icon>
+      <LatLonBox>
+        <north>34.016242</north>
+        <south>33.870416</south>
+        <east>-118.476563</east>
+        <west>-118.652344</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>LA Chronograph 13,000 BP to Present with LegendMap of LosAngeles (1940) · raster tile 11/350/818</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/LosAngeles_1940_Ethington/11/350/818.png</href></Icon>
+      <LatLonBox>
+        <north>34.016242</north>
+        <south>33.870416</south>
+        <east>-118.300781</east>
+        <west>-118.476563</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

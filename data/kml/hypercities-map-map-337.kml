@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Elmwood Park Land Disposition</name>
+    <description>Elmwood Park Land Disposition, Chicago, 1962. Elmwood Park Land Disposition (1962). HyperCities Map Library. Urban Renewal Plan, MO R-10 .</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Elmwood Park Land Disposition</name>
+      <description>HyperCities Map Library footprint · Chicago · 1962</description>
+      <TimeSpan><begin>1962-01-01</begin><end>1962-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:337</value></Data>
+      <Data name="place"><value>Chicago</value></Data>
+      <Data name="years"><value>1962</value></Data>
+      <Data name="sourceRecordId"><value>337</value></Data>
+      <Data name="collection"><value>Urban Renewal Plan, MO R-10 </value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Elmwood Park Land Disposition (1962). HyperCities Map Library. Urban Renewal Plan, MO R-10 .</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Elmwood_Land_Disposition/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-90.386059,38.680484,0 -90.372487,38.680484,0 -90.372487,38.687643,0 -90.386059,38.687643,0 -90.386059,38.680484,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Elmwood Park Land Disposition · raster tile 15/8156/12559</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Elmwood_Land_Disposition/15/8156/12559.png</href></Icon>
+      <LatLonBox>
+        <north>38.694085</north>
+        <south>38.685510</south>
+        <east>-90.384521</east>
+        <west>-90.395508</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Elmwood Park Land Disposition · raster tile 15/8157/12559</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Elmwood_Land_Disposition/15/8157/12559.png</href></Icon>
+      <LatLonBox>
+        <north>38.694085</north>
+        <south>38.685510</south>
+        <east>-90.373535</east>
+        <west>-90.384521</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Elmwood Park Land Disposition · raster tile 15/8158/12559</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Elmwood_Land_Disposition/15/8158/12559.png</href></Icon>
+      <LatLonBox>
+        <north>38.694085</north>
+        <south>38.685510</south>
+        <east>-90.362549</east>
+        <west>-90.373535</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Elmwood Park Land Disposition · raster tile 15/8156/12560</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Elmwood_Land_Disposition/15/8156/12560.png</href></Icon>
+      <LatLonBox>
+        <north>38.685510</north>
+        <south>38.676933</south>
+        <east>-90.384521</east>
+        <west>-90.395508</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Elmwood Park Land Disposition · raster tile 15/8157/12560</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Elmwood_Land_Disposition/15/8157/12560.png</href></Icon>
+      <LatLonBox>
+        <north>38.685510</north>
+        <south>38.676933</south>
+        <east>-90.373535</east>
+        <west>-90.384521</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Elmwood Park Land Disposition · raster tile 15/8158/12560</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Elmwood_Land_Disposition/15/8158/12560.png</href></Icon>
+      <LatLonBox>
+        <north>38.685510</north>
+        <south>38.676933</south>
+        <east>-90.362549</east>
+        <west>-90.373535</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

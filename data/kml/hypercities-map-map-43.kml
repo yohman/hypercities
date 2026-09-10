@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Plan of the City of New-York</name>
+    <description>Plan of the City of New-York, New York, 1817. Plan of the City of New-York (1817). HyperCities Map Library. Humanities and Social Sciences Library / The Lionel Pincus and Princess Firyal Map Division, New York Public Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Plan of the City of New-York</name>
+      <description>HyperCities Map Library footprint · New York · 1817</description>
+      <TimeSpan><begin>1817-01-01</begin><end>1817-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:43</value></Data>
+      <Data name="place"><value>New York</value></Data>
+      <Data name="years"><value>1817</value></Data>
+      <Data name="sourceRecordId"><value>43</value></Data>
+      <Data name="collection"><value>Humanities and Social Sciences Library / The Lionel Pincus and Princess Firyal Map Division, New York Public Library</value></Data>
+      <Data name="creator"><value>Thos. H. Poppleton, City Surveyor</value></Data>
+      <Data name="citation"><value>Plan of the City of New-York (1817). HyperCities Map Library. Humanities and Social Sciences Library / The Lionel Pincus and Princess Firyal Map Division, New York Public Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/NewYork_1817/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-74.023235,40.695866,0 -73.967315,40.695866,0 -73.967315,40.744409,0 -74.023235,40.744409,0 -74.023235,40.695866,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Plan of the City of New-York · raster tile 10/301/384</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1817/10/301/384.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>40.713956</south>
+        <east>-73.828125</east>
+        <west>-74.179688</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Plan of the City of New-York · raster tile 10/301/385</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1817/10/301/385.png</href></Icon>
+      <LatLonBox>
+        <north>40.713956</north>
+        <south>40.446947</south>
+        <east>-73.828125</east>
+        <west>-74.179688</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

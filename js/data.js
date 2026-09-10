@@ -98,5 +98,13 @@ export async function loadData() {
   };
 }
 
+// The Take a Map iframe should remain a lightweight, independently usable
+// example. It needs one map record, not the full Hyperbook and encounter set.
+export async function loadMapById(id) {
+  const graph = await loadJson(sourcePaths.mapGraph);
+  const node = graph.nodes.find((candidate) => candidate.id === id && candidate.kind === "historical-map");
+  return node ? normaliseMap(node) : null;
+}
+
 export function titleFor(data, id) { return data.entities.get(id)?.preferredLabel || data.objects.get(id)?.title || id; }
 export function objectKind(data, id) { return data.entities.get(id)?.type || data.objects.get(id)?.kind || "object"; }

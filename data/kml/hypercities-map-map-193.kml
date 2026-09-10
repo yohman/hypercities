@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Map of Chicago (1942)</name>
+    <description>Map of Chicago (1942), Chicago, 1942. Map of Chicago (1942) (1942). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Map of Chicago (1942)</name>
+      <description>HyperCities Map Library footprint · Chicago · 1942</description>
+      <TimeSpan><begin>1942-01-01</begin><end>1942-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:193</value></Data>
+      <Data name="place"><value>Chicago</value></Data>
+      <Data name="years"><value>1942</value></Data>
+      <Data name="sourceRecordId"><value>193</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Map of Chicago (1942) (1942). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Chicago_1942_LandUseSurvey/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-87.734032,41.627751,0 -87.51376,41.627751,0 -87.51376,41.724494,0 -87.734032,41.724494,0 -87.734032,41.627751,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Map of Chicago (1942) · raster tile 11/524/762</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Chicago_1942_LandUseSurvey/11/524/762.png</href></Icon>
+      <LatLonBox>
+        <north>41.771312</north>
+        <south>41.640078</south>
+        <east>-87.714844</east>
+        <west>-87.890625</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Chicago (1942) · raster tile 11/525/762</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Chicago_1942_LandUseSurvey/11/525/762.png</href></Icon>
+      <LatLonBox>
+        <north>41.771312</north>
+        <south>41.640078</south>
+        <east>-87.539063</east>
+        <west>-87.714844</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Chicago (1942) · raster tile 11/526/762</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Chicago_1942_LandUseSurvey/11/526/762.png</href></Icon>
+      <LatLonBox>
+        <north>41.771312</north>
+        <south>41.640078</south>
+        <east>-87.363281</east>
+        <west>-87.539063</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Chicago (1942) · raster tile 11/524/763</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Chicago_1942_LandUseSurvey/11/524/763.png</href></Icon>
+      <LatLonBox>
+        <north>41.640078</north>
+        <south>41.508577</south>
+        <east>-87.714844</east>
+        <west>-87.890625</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Chicago (1942) · raster tile 11/525/763</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Chicago_1942_LandUseSurvey/11/525/763.png</href></Icon>
+      <LatLonBox>
+        <north>41.640078</north>
+        <south>41.508577</south>
+        <east>-87.539063</east>
+        <west>-87.714844</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Chicago (1942) · raster tile 11/526/763</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Chicago_1942_LandUseSurvey/11/526/763.png</href></Icon>
+      <LatLonBox>
+        <north>41.640078</north>
+        <south>41.508577</south>
+        <east>-87.363281</east>
+        <west>-87.539063</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

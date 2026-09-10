@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Central Section of Los Angeles</name>
+    <description>Central Section of Los Angeles, Los Angeles, 1946. Central Section of Los Angeles (1946). HyperCities Map Library. UCLA Bruman Map Collection.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Central Section of Los Angeles</name>
+      <description>HyperCities Map Library footprint · Los Angeles · 1946</description>
+      <TimeSpan><begin>1946-01-01</begin><end>1946-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:69</value></Data>
+      <Data name="place"><value>Los Angeles</value></Data>
+      <Data name="years"><value>1946</value></Data>
+      <Data name="sourceRecordId"><value>69</value></Data>
+      <Data name="collection"><value>UCLA Bruman Map Collection</value></Data>
+      <Data name="creator"><value>Automobile Club of Southern California; Selwyn Douglas</value></Data>
+      <Data name="citation"><value>Central Section of Los Angeles (1946). HyperCities Map Library. UCLA Bruman Map Collection.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Los_Angeles_1946/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-118.54142,33.906772,0 -118.146018,33.906772,0 -118.146018,34.130812,0 -118.54142,34.130812,0 -118.54142,33.906772,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Central Section of Los Angeles · raster tile 10/174/408</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Los_Angeles_1946/10/174/408.png</href></Icon>
+      <LatLonBox>
+        <north>34.307144</north>
+        <south>34.016242</south>
+        <east>-118.476563</east>
+        <west>-118.828125</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Central Section of Los Angeles · raster tile 10/175/408</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Los_Angeles_1946/10/175/408.png</href></Icon>
+      <LatLonBox>
+        <north>34.307144</north>
+        <south>34.016242</south>
+        <east>-118.125000</east>
+        <west>-118.476563</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Central Section of Los Angeles · raster tile 10/174/409</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Los_Angeles_1946/10/174/409.png</href></Icon>
+      <LatLonBox>
+        <north>34.016242</north>
+        <south>33.724340</south>
+        <east>-118.476563</east>
+        <west>-118.828125</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Central Section of Los Angeles · raster tile 10/175/409</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Los_Angeles_1946/10/175/409.png</href></Icon>
+      <LatLonBox>
+        <north>34.016242</north>
+        <south>33.724340</south>
+        <east>-118.125000</east>
+        <west>-118.476563</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

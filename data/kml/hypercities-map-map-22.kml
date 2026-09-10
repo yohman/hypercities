@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Abriss der Königlichen Preussischen Residentz-Stadt, BERLIN, so wol überhaupt nach ihrem gantzen Umpfang, als auch der sämtlichen Kirchen und vornehmsten Königl. Gebäuuden derselben ins besondere.</name>
+    <description>Abriss der Königlichen Preussischen Residentz-Stadt, BERLIN, so wol überhaupt nach ihrem gantzen Umpfang, als auch der sämtlichen Kirchen und vornehmsten Königl. Gebäuuden derselben ins besondere., Berlin, 1745. Abriss der Königlichen Preussischen Residentz-Stadt, BERLIN, so wol überhaupt nach ihrem gantzen Umpfang, als auch der sämtlichen Kirchen und vornehmsten Königl. Gebäuuden derselben ins besondere. (1745). HyperCities Map Library. UCLA Bruman Map Collection.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Abriss der Königlichen Preussischen Residentz-Stadt, BERLIN, so wol überhaupt nach ihrem gantzen Umpfang, als auch der sämtlichen Kirchen und vornehmsten Königl. Gebäuuden derselben ins besondere.</name>
+      <description>HyperCities Map Library footprint · Berlin · 1745</description>
+      <TimeSpan><begin>1745-01-01</begin><end>1745-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:22</value></Data>
+      <Data name="place"><value>Berlin</value></Data>
+      <Data name="years"><value>1745</value></Data>
+      <Data name="sourceRecordId"><value>22</value></Data>
+      <Data name="collection"><value>UCLA Bruman Map Collection</value></Data>
+      <Data name="creator"><value>I.D. Schleuen</value></Data>
+      <Data name="citation"><value>Abriss der Königlichen Preussischen Residentz-Stadt, BERLIN, so wol überhaupt nach ihrem gantzen Umpfang, als auch der sämtlichen Kirchen und vornehmsten Königl. Gebäuuden derselben ins besondere. (1745). HyperCities Map Library. UCLA Bruman Map Collection.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Berlin_1745/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>13.32745,52.462117,0 13.47569,52.462117,0 13.47569,52.554828,0 13.32745,52.554828,0 13.32745,52.462117,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Abriss der Königlichen Preussischen Residentz-Stadt, BERLIN, so wol überhaupt nach ihrem gantzen Umpfang, als auch der sämtlichen Kirchen und vornehmsten Königl. Gebäuuden derselben ins besondere. · raster tile 12/2199/1342</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Berlin_1745/12/2199/1342.png</href></Icon>
+      <LatLonBox>
+        <north>52.589701</north>
+        <south>52.536273</south>
+        <east>13.359375</east>
+        <west>13.271484</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Abriss der Königlichen Preussischen Residentz-Stadt, BERLIN, so wol überhaupt nach ihrem gantzen Umpfang, als auch der sämtlichen Kirchen und vornehmsten Königl. Gebäuuden derselben ins besondere. · raster tile 12/2200/1342</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Berlin_1745/12/2200/1342.png</href></Icon>
+      <LatLonBox>
+        <north>52.589701</north>
+        <south>52.536273</south>
+        <east>13.447266</east>
+        <west>13.359375</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Abriss der Königlichen Preussischen Residentz-Stadt, BERLIN, so wol überhaupt nach ihrem gantzen Umpfang, als auch der sämtlichen Kirchen und vornehmsten Königl. Gebäuuden derselben ins besondere. · raster tile 12/2201/1342</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Berlin_1745/12/2201/1342.png</href></Icon>
+      <LatLonBox>
+        <north>52.589701</north>
+        <south>52.536273</south>
+        <east>13.535156</east>
+        <west>13.447266</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Abriss der Königlichen Preussischen Residentz-Stadt, BERLIN, so wol überhaupt nach ihrem gantzen Umpfang, als auch der sämtlichen Kirchen und vornehmsten Königl. Gebäuuden derselben ins besondere. · raster tile 12/2199/1343</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Berlin_1745/12/2199/1343.png</href></Icon>
+      <LatLonBox>
+        <north>52.536273</north>
+        <south>52.482780</south>
+        <east>13.359375</east>
+        <west>13.271484</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Abriss der Königlichen Preussischen Residentz-Stadt, BERLIN, so wol überhaupt nach ihrem gantzen Umpfang, als auch der sämtlichen Kirchen und vornehmsten Königl. Gebäuuden derselben ins besondere. · raster tile 12/2200/1343</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Berlin_1745/12/2200/1343.png</href></Icon>
+      <LatLonBox>
+        <north>52.536273</north>
+        <south>52.482780</south>
+        <east>13.447266</east>
+        <west>13.359375</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Abriss der Königlichen Preussischen Residentz-Stadt, BERLIN, so wol überhaupt nach ihrem gantzen Umpfang, als auch der sämtlichen Kirchen und vornehmsten Königl. Gebäuuden derselben ins besondere. · raster tile 12/2201/1343</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Berlin_1745/12/2201/1343.png</href></Icon>
+      <LatLonBox>
+        <north>52.536273</north>
+        <south>52.482780</south>
+        <east>13.535156</east>
+        <west>13.447266</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Abriss der Königlichen Preussischen Residentz-Stadt, BERLIN, so wol überhaupt nach ihrem gantzen Umpfang, als auch der sämtlichen Kirchen und vornehmsten Königl. Gebäuuden derselben ins besondere. · raster tile 12/2199/1344</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Berlin_1745/12/2199/1344.png</href></Icon>
+      <LatLonBox>
+        <north>52.482780</north>
+        <south>52.429222</south>
+        <east>13.359375</east>
+        <west>13.271484</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Abriss der Königlichen Preussischen Residentz-Stadt, BERLIN, so wol überhaupt nach ihrem gantzen Umpfang, als auch der sämtlichen Kirchen und vornehmsten Königl. Gebäuuden derselben ins besondere. · raster tile 12/2200/1344</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Berlin_1745/12/2200/1344.png</href></Icon>
+      <LatLonBox>
+        <north>52.482780</north>
+        <south>52.429222</south>
+        <east>13.447266</east>
+        <west>13.359375</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Abriss der Königlichen Preussischen Residentz-Stadt, BERLIN, so wol überhaupt nach ihrem gantzen Umpfang, als auch der sämtlichen Kirchen und vornehmsten Königl. Gebäuuden derselben ins besondere. · raster tile 12/2201/1344</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Berlin_1745/12/2201/1344.png</href></Icon>
+      <LatLonBox>
+        <north>52.482780</north>
+        <south>52.429222</south>
+        <east>13.535156</east>
+        <west>13.447266</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

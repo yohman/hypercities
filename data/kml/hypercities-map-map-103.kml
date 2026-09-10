@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Map of the &quot;Murray Hill Farm,&quot; &quot;Ogden Place Farm,&quot; Lawrence &amp; Astor, Wiswall &amp; Price, Corporation, Wm. Wright, John Taylor</name>
+    <description>Map of the &quot;Murray Hill Farm,&quot; &quot;Ogden Place Farm,&quot; Lawrence &amp; Astor, Wiswall &amp; Price, Corporation, Wm. Wright, John Taylor, New York, 1866. Map of the &quot;Murray Hill Farm,&quot; &quot;Ogden Place Farm,&quot; Lawrence &amp; Astor, Wiswall &amp; Price, Corporation, Wm. Wright, John Taylor (1866). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Map of the &quot;Murray Hill Farm,&quot; &quot;Ogden Place Farm,&quot; Lawrence &amp; Astor, Wiswall &amp; Price, Corporation, Wm. Wright, John Taylor</name>
+      <description>HyperCities Map Library footprint · New York · 1866</description>
+      <TimeSpan><begin>1866-01-01</begin><end>1866-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:103</value></Data>
+      <Data name="place"><value>New York</value></Data>
+      <Data name="years"><value>1866</value></Data>
+      <Data name="sourceRecordId"><value>103</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value>J.B. Holmes</value></Data>
+      <Data name="citation"><value>Map of the &quot;Murray Hill Farm,&quot; &quot;Ogden Place Farm,&quot; Lawrence &amp; Astor, Wiswall &amp; Price, Corporation, Wm. Wright, John Taylor (1866). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/NewYork_1866_Murray/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-73.993401,40.742404,0 -73.973555,40.742404,0 -73.973555,40.757736,0 -73.993401,40.757736,0 -73.993401,40.742404,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Map of the &quot;Murray Hill Farm,&quot; &quot;Ogden Place Farm,&quot; Lawrence &amp; Astor, Wiswall &amp; Price, Corporation, Wm. Wright, John Taylor · raster tile 14/4824/6157</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1866_Murray/14/4824/6157.png</href></Icon>
+      <LatLonBox>
+        <north>40.763901</north>
+        <south>40.747257</south>
+        <east>-73.981934</east>
+        <west>-74.003906</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of the &quot;Murray Hill Farm,&quot; &quot;Ogden Place Farm,&quot; Lawrence &amp; Astor, Wiswall &amp; Price, Corporation, Wm. Wright, John Taylor · raster tile 14/4825/6157</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1866_Murray/14/4825/6157.png</href></Icon>
+      <LatLonBox>
+        <north>40.763901</north>
+        <south>40.747257</south>
+        <east>-73.959961</east>
+        <west>-73.981934</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of the &quot;Murray Hill Farm,&quot; &quot;Ogden Place Farm,&quot; Lawrence &amp; Astor, Wiswall &amp; Price, Corporation, Wm. Wright, John Taylor · raster tile 14/4824/6158</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1866_Murray/14/4824/6158.png</href></Icon>
+      <LatLonBox>
+        <north>40.747257</north>
+        <south>40.730608</south>
+        <east>-73.981934</east>
+        <west>-74.003906</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of the &quot;Murray Hill Farm,&quot; &quot;Ogden Place Farm,&quot; Lawrence &amp; Astor, Wiswall &amp; Price, Corporation, Wm. Wright, John Taylor · raster tile 14/4825/6158</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1866_Murray/14/4825/6158.png</href></Icon>
+      <LatLonBox>
+        <north>40.747257</north>
+        <south>40.730608</south>
+        <east>-73.959961</east>
+        <west>-73.981934</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

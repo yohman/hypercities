@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Map of Vancouver (1972)</name>
+    <description>Map of Vancouver (1972), Vancouver, 1972. Map of Vancouver (1972) (1972). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Map of Vancouver (1972)</name>
+      <description>HyperCities Map Library footprint · Vancouver · 1972</description>
+      <TimeSpan><begin>1972-01-01</begin><end>1972-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:201</value></Data>
+      <Data name="place"><value>Vancouver</value></Data>
+      <Data name="years"><value>1972</value></Data>
+      <Data name="sourceRecordId"><value>201</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Map of Vancouver (1972) (1972). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Vancouver_1972_final/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-123.282668,49.149645,0 -122.86145,49.149645,0 -122.86145,49.3564,0 -123.282668,49.3564,0 -123.282668,49.149645,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Map of Vancouver (1972) · raster tile 10/161/350</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Vancouver_1972_final/10/161/350.png</href></Icon>
+      <LatLonBox>
+        <north>49.382373</north>
+        <south>49.152970</south>
+        <east>-123.046875</east>
+        <west>-123.398438</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Vancouver (1972) · raster tile 10/162/350</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Vancouver_1972_final/10/162/350.png</href></Icon>
+      <LatLonBox>
+        <north>49.382373</north>
+        <south>49.152970</south>
+        <east>-122.695313</east>
+        <west>-123.046875</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Vancouver (1972) · raster tile 10/161/351</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Vancouver_1972_final/10/161/351.png</href></Icon>
+      <LatLonBox>
+        <north>49.152970</north>
+        <south>48.922499</south>
+        <east>-123.046875</east>
+        <west>-123.398438</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Vancouver (1972) · raster tile 10/162/351</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Vancouver_1972_final/10/162/351.png</href></Icon>
+      <LatLonBox>
+        <north>49.152970</north>
+        <south>48.922499</south>
+        <east>-122.695313</east>
+        <west>-123.046875</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

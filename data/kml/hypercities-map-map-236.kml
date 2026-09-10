@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Wellington Centennial Shell Road Map</name>
+    <description>Wellington Centennial Shell Road Map, Wellington, 1940. Wellington Centennial Shell Road Map (1940). HyperCities Map Library. Wellington City Archives, 00001:1849:50/356 Pt 1.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Wellington Centennial Shell Road Map</name>
+      <description>HyperCities Map Library footprint · Wellington · 1940</description>
+      <TimeSpan><begin>1940-01-01</begin><end>1940-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:236</value></Data>
+      <Data name="place"><value>Wellington</value></Data>
+      <Data name="years"><value>1940</value></Data>
+      <Data name="sourceRecordId"><value>236</value></Data>
+      <Data name="collection"><value>Wellington City Archives, 00001:1849:50/356 Pt 1</value></Data>
+      <Data name="creator"><value>Palmer and Mahood Ltd</value></Data>
+      <Data name="citation"><value>Wellington Centennial Shell Road Map (1940). HyperCities Map Library. Wellington City Archives, 00001:1849:50/356 Pt 1.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Wellington_1940_Shell_Map/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>174.729037,-41.382505,0 174.937218,-41.382505,0 174.937218,-41.188778,0 174.729037,-41.188778,0 174.729037,-41.382505,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Wellington Centennial Shell Road Map · raster tile 11/2018/1281</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Wellington_1940_Shell_Map/11/2018/1281.png</href></Icon>
+      <LatLonBox>
+        <north>-41.112469</north>
+        <south>-41.244772</south>
+        <east>174.902344</east>
+        <west>174.726563</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Wellington Centennial Shell Road Map · raster tile 11/2019/1281</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Wellington_1940_Shell_Map/11/2019/1281.png</href></Icon>
+      <LatLonBox>
+        <north>-41.112469</north>
+        <south>-41.244772</south>
+        <east>175.078125</east>
+        <west>174.902344</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Wellington Centennial Shell Road Map · raster tile 11/2018/1282</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Wellington_1940_Shell_Map/11/2018/1282.png</href></Icon>
+      <LatLonBox>
+        <north>-41.244772</north>
+        <south>-41.376809</south>
+        <east>174.902344</east>
+        <west>174.726563</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Wellington Centennial Shell Road Map · raster tile 11/2019/1282</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Wellington_1940_Shell_Map/11/2019/1282.png</href></Icon>
+      <LatLonBox>
+        <north>-41.244772</north>
+        <south>-41.376809</south>
+        <east>175.078125</east>
+        <west>174.902344</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Wellington Centennial Shell Road Map · raster tile 11/2018/1283</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Wellington_1940_Shell_Map/11/2018/1283.png</href></Icon>
+      <LatLonBox>
+        <north>-41.376809</north>
+        <south>-41.508577</south>
+        <east>174.902344</east>
+        <west>174.726563</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Wellington Centennial Shell Road Map · raster tile 11/2019/1283</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Wellington_1940_Shell_Map/11/2019/1283.png</href></Icon>
+      <LatLonBox>
+        <north>-41.376809</north>
+        <south>-41.508577</south>
+        <east>175.078125</east>
+        <west>174.902344</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

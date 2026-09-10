@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Map of Lima (1902)</name>
+    <description>Map of Lima (1902), Lima, 1902. Map of Lima (1902) (1902). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Map of Lima (1902)</name>
+      <description>HyperCities Map Library footprint · Lima · 1902</description>
+      <TimeSpan><begin>1902-01-01</begin><end>1902-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:159</value></Data>
+      <Data name="place"><value>Lima</value></Data>
+      <Data name="years"><value>1902</value></Data>
+      <Data name="sourceRecordId"><value>159</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Map of Lima (1902) (1902). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Lima_1902/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-79.838294,-7.834061,0 -79.148055,-7.834061,0 -79.148055,-6.850742,0 -79.838294,-6.850742,0 -79.838294,-7.834061,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Map of Lima (1902) · raster tile 9/142/265</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Lima_1902/9/142/265.png</href></Icon>
+      <LatLonBox>
+        <north>-6.315299</north>
+        <south>-7.013668</south>
+        <east>-79.453125</east>
+        <west>-80.156250</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Lima (1902) · raster tile 9/143/265</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Lima_1902/9/143/265.png</href></Icon>
+      <LatLonBox>
+        <north>-6.315299</north>
+        <south>-7.013668</south>
+        <east>-78.750000</east>
+        <west>-79.453125</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Lima (1902) · raster tile 9/142/266</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Lima_1902/9/142/266.png</href></Icon>
+      <LatLonBox>
+        <north>-7.013668</north>
+        <south>-7.710992</south>
+        <east>-79.453125</east>
+        <west>-80.156250</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Lima (1902) · raster tile 9/143/266</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Lima_1902/9/143/266.png</href></Icon>
+      <LatLonBox>
+        <north>-7.013668</north>
+        <south>-7.710992</south>
+        <east>-78.750000</east>
+        <west>-79.453125</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Lima (1902) · raster tile 9/142/267</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Lima_1902/9/142/267.png</href></Icon>
+      <LatLonBox>
+        <north>-7.710992</north>
+        <south>-8.407168</south>
+        <east>-79.453125</east>
+        <west>-80.156250</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Lima (1902) · raster tile 9/143/267</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Lima_1902/9/143/267.png</href></Icon>
+      <LatLonBox>
+        <north>-7.710992</north>
+        <south>-8.407168</south>
+        <east>-78.750000</east>
+        <west>-79.453125</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

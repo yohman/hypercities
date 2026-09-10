@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>False Archaeological Map of Tsegi Canyon</name>
+    <description>False Archaeological Map of Tsegi Canyon, Kayenta, Arizona, 1945. False Archaeological Map of Tsegi Canyon (1945). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>False Archaeological Map of Tsegi Canyon</name>
+      <description>HyperCities Map Library footprint · Kayenta, Arizona · 1945</description>
+      <TimeSpan><begin>1945-01-01</begin><end>1945-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:394</value></Data>
+      <Data name="place"><value>Kayenta, Arizona</value></Data>
+      <Data name="years"><value>1945</value></Data>
+      <Data name="sourceRecordId"><value>394</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>False Archaeological Map of Tsegi Canyon (1945). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/FalseRef_Tsegi_1945_final/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-109.185052,36.948698,0 -109.04506,36.948698,0 -109.04506,36.999076,0 -109.185052,36.999076,0 -109.185052,36.948698,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>False Archaeological Map of Tsegi Canyon · raster tile 12/805/1594</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/FalseRef_Tsegi_1945_final/12/805/1594.png</href></Icon>
+      <LatLonBox>
+        <north>37.020098</north>
+        <south>36.949892</south>
+        <east>-109.160156</east>
+        <west>-109.248047</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>False Archaeological Map of Tsegi Canyon · raster tile 12/806/1594</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/FalseRef_Tsegi_1945_final/12/806/1594.png</href></Icon>
+      <LatLonBox>
+        <north>37.020098</north>
+        <south>36.949892</south>
+        <east>-109.072266</east>
+        <west>-109.160156</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>False Archaeological Map of Tsegi Canyon · raster tile 12/807/1594</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/FalseRef_Tsegi_1945_final/12/807/1594.png</href></Icon>
+      <LatLonBox>
+        <north>37.020098</north>
+        <south>36.949892</south>
+        <east>-108.984375</east>
+        <west>-109.072266</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>False Archaeological Map of Tsegi Canyon · raster tile 12/805/1595</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/FalseRef_Tsegi_1945_final/12/805/1595.png</href></Icon>
+      <LatLonBox>
+        <north>36.949892</north>
+        <south>36.879621</south>
+        <east>-109.160156</east>
+        <west>-109.248047</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>False Archaeological Map of Tsegi Canyon · raster tile 12/806/1595</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/FalseRef_Tsegi_1945_final/12/806/1595.png</href></Icon>
+      <LatLonBox>
+        <north>36.949892</north>
+        <south>36.879621</south>
+        <east>-109.072266</east>
+        <west>-109.160156</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>False Archaeological Map of Tsegi Canyon · raster tile 12/807/1595</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/FalseRef_Tsegi_1945_final/12/807/1595.png</href></Icon>
+      <LatLonBox>
+        <north>36.949892</north>
+        <south>36.879621</south>
+        <east>-108.984375</east>
+        <west>-109.072266</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

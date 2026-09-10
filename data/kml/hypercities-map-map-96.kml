@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Downtown (Williams)</name>
+    <description>Downtown (Williams), New York, 1984. Downtown (Williams) (1984). HyperCities Map Library. UCLA Bruman Map Collection.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Downtown (Williams)</name>
+      <description>HyperCities Map Library footprint · New York · 1984</description>
+      <TimeSpan><begin>1984-01-01</begin><end>1984-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:96</value></Data>
+      <Data name="place"><value>New York</value></Data>
+      <Data name="years"><value>1984</value></Data>
+      <Data name="sourceRecordId"><value>96</value></Data>
+      <Data name="collection"><value>UCLA Bruman Map Collection</value></Data>
+      <Data name="creator"><value>Williams Real Estate Co.</value></Data>
+      <Data name="citation"><value>Downtown (Williams) (1984). HyperCities Map Library. UCLA Bruman Map Collection.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/NewYork_1984/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-74.039764,40.695516,0 -73.988923,40.695516,0 -73.988923,40.732909,0 -74.039764,40.732909,0 -74.039764,40.695516,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Downtown (Williams) · raster tile 13/2411/3079</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1984/13/2411/3079.png</href></Icon>
+      <LatLonBox>
+        <north>40.747257</north>
+        <south>40.713956</south>
+        <east>-74.003906</east>
+        <west>-74.047852</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Downtown (Williams) · raster tile 13/2412/3079</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1984/13/2412/3079.png</href></Icon>
+      <LatLonBox>
+        <north>40.747257</north>
+        <south>40.713956</south>
+        <east>-73.959961</east>
+        <west>-74.003906</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Downtown (Williams) · raster tile 13/2411/3080</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1984/13/2411/3080.png</href></Icon>
+      <LatLonBox>
+        <north>40.713956</north>
+        <south>40.680638</south>
+        <east>-74.003906</east>
+        <west>-74.047852</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Downtown (Williams) · raster tile 13/2412/3080</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1984/13/2412/3080.png</href></Icon>
+      <LatLonBox>
+        <north>40.713956</north>
+        <south>40.680638</south>
+        <east>-73.959961</east>
+        <west>-74.003906</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

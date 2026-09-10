@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Los Angeles 3</name>
+    <description>Los Angeles 3, Los Angeles, 1953. Los Angeles 3 (1953). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Los Angeles 3</name>
+      <description>HyperCities Map Library footprint · Los Angeles · 1953</description>
+      <TimeSpan><begin>1953-01-01</begin><end>1953-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:444</value></Data>
+      <Data name="place"><value>Los Angeles</value></Data>
+      <Data name="years"><value>1953</value></Data>
+      <Data name="sourceRecordId"><value>444</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Los Angeles 3 (1953). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/1953_LA_3/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-118.246286,34.028158,0 -118.239718,34.028158,0 -118.239718,34.033654,0 -118.246286,34.033654,0 -118.246286,34.028158,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Los Angeles 3 · raster tile 16/11241/26172</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1953_LA_3/16/11241/26172.png</href></Icon>
+      <LatLonBox>
+        <north>34.034453</north>
+        <south>34.029900</south>
+        <east>-118.245850</east>
+        <west>-118.251343</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Los Angeles 3 · raster tile 16/11242/26172</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1953_LA_3/16/11242/26172.png</href></Icon>
+      <LatLonBox>
+        <north>34.034453</north>
+        <south>34.029900</south>
+        <east>-118.240356</east>
+        <west>-118.245850</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Los Angeles 3 · raster tile 16/11243/26172</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1953_LA_3/16/11243/26172.png</href></Icon>
+      <LatLonBox>
+        <north>34.034453</north>
+        <south>34.029900</south>
+        <east>-118.234863</east>
+        <west>-118.240356</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Los Angeles 3 · raster tile 16/11241/26173</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1953_LA_3/16/11241/26173.png</href></Icon>
+      <LatLonBox>
+        <north>34.029900</north>
+        <south>34.025348</south>
+        <east>-118.245850</east>
+        <west>-118.251343</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Los Angeles 3 · raster tile 16/11242/26173</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1953_LA_3/16/11242/26173.png</href></Icon>
+      <LatLonBox>
+        <north>34.029900</north>
+        <south>34.025348</south>
+        <east>-118.240356</east>
+        <west>-118.245850</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Los Angeles 3 · raster tile 16/11243/26173</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1953_LA_3/16/11243/26173.png</href></Icon>
+      <LatLonBox>
+        <north>34.029900</north>
+        <south>34.025348</south>
+        <east>-118.234863</east>
+        <west>-118.240356</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

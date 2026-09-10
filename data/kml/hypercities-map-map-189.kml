@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Map of Tokyo (1922)</name>
+    <description>Map of Tokyo (1922), Tokyo, 1922. Map of Tokyo (1922) (1922). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Map of Tokyo (1922)</name>
+      <description>HyperCities Map Library footprint · Tokyo · 1922</description>
+      <TimeSpan><begin>1922-01-01</begin><end>1922-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:189</value></Data>
+      <Data name="place"><value>Tokyo</value></Data>
+      <Data name="years"><value>1922</value></Data>
+      <Data name="sourceRecordId"><value>189</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Map of Tokyo (1922) (1922). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Tokyo_1922/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>139.682336,35.650239,0 140.058752,35.650239,0 140.058752,35.86458,0 139.682336,35.86458,0 139.682336,35.650239,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Map of Tokyo (1922) · raster tile 10/909/402</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tokyo_1922/10/909/402.png</href></Icon>
+      <LatLonBox>
+        <north>36.031332</north>
+        <south>35.746512</south>
+        <east>139.921875</east>
+        <west>139.570313</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Tokyo (1922) · raster tile 10/910/402</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tokyo_1922/10/910/402.png</href></Icon>
+      <LatLonBox>
+        <north>36.031332</north>
+        <south>35.746512</south>
+        <east>140.273438</east>
+        <west>139.921875</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Tokyo (1922) · raster tile 10/909/403</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tokyo_1922/10/909/403.png</href></Icon>
+      <LatLonBox>
+        <north>35.746512</north>
+        <south>35.460670</south>
+        <east>139.921875</east>
+        <west>139.570313</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Tokyo (1922) · raster tile 10/910/403</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tokyo_1922/10/910/403.png</href></Icon>
+      <LatLonBox>
+        <north>35.746512</north>
+        <south>35.460670</south>
+        <east>140.273438</east>
+        <west>139.921875</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

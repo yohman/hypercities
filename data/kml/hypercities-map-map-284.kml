@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Map of St Louis</name>
+    <description>Map of St Louis, Chicago, 1855. Map of St Louis (1855). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Map of St Louis</name>
+      <description>HyperCities Map Library footprint · Chicago · 1855</description>
+      <TimeSpan><begin>1855-01-01</begin><end>1855-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:284</value></Data>
+      <Data name="place"><value>Chicago</value></Data>
+      <Data name="years"><value>1855</value></Data>
+      <Data name="sourceRecordId"><value>284</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Map of St Louis (1855). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/St_Louis_1855/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-90.238282,38.590665,0 -90.166424,38.590665,0 -90.166424,38.663789,0 -90.238282,38.663789,0 -90.238282,38.590665,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Map of St Louis · raster tile 12/1021/1570</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/St_Louis_1855/12/1021/1570.png</href></Icon>
+      <LatLonBox>
+        <north>38.685510</north>
+        <south>38.616870</south>
+        <east>-90.175781</east>
+        <west>-90.263672</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of St Louis · raster tile 12/1022/1570</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/St_Louis_1855/12/1022/1570.png</href></Icon>
+      <LatLonBox>
+        <north>38.685510</north>
+        <south>38.616870</south>
+        <east>-90.087891</east>
+        <west>-90.175781</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of St Louis · raster tile 12/1021/1571</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/St_Louis_1855/12/1021/1571.png</href></Icon>
+      <LatLonBox>
+        <north>38.616870</north>
+        <south>38.548165</south>
+        <east>-90.175781</east>
+        <west>-90.263672</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of St Louis · raster tile 12/1022/1571</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/St_Louis_1855/12/1022/1571.png</href></Icon>
+      <LatLonBox>
+        <north>38.616870</north>
+        <south>38.548165</south>
+        <east>-90.087891</east>
+        <west>-90.175781</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

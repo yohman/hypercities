@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Map of the City and County of New York</name>
+    <description>Map of the City and County of New York, New York, 1832. Map of the City and County of New York (1832). HyperCities Map Library. UCLA Bruman Map Collection.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Map of the City and County of New York</name>
+      <description>HyperCities Map Library footprint · New York · 1832</description>
+      <TimeSpan><begin>1832-01-01</begin><end>1832-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:76</value></Data>
+      <Data name="place"><value>New York</value></Data>
+      <Data name="years"><value>1832</value></Data>
+      <Data name="sourceRecordId"><value>76</value></Data>
+      <Data name="collection"><value>UCLA Bruman Map Collection</value></Data>
+      <Data name="creator"><value>David H. Burr</value></Data>
+      <Data name="citation"><value>Map of the City and County of New York (1832). HyperCities Map Library. UCLA Bruman Map Collection.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/NewYork_1832/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-74.111634,40.638115,0 -73.819377,40.638115,0 -73.819377,40.912458,0 -74.111634,40.912458,0 -74.111634,40.638115,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Map of the City and County of New York · raster tile 11/602/768</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1832/11/602/768.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>40.847060</south>
+        <east>-74.003906</east>
+        <west>-74.179688</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of the City and County of New York · raster tile 11/603/768</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1832/11/603/768.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>40.847060</south>
+        <east>-73.828125</east>
+        <west>-74.003906</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of the City and County of New York · raster tile 11/604/768</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1832/11/604/768.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>40.847060</south>
+        <east>-73.652344</east>
+        <west>-73.828125</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of the City and County of New York · raster tile 11/602/769</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1832/11/602/769.png</href></Icon>
+      <LatLonBox>
+        <north>40.847060</north>
+        <south>40.713956</south>
+        <east>-74.003906</east>
+        <west>-74.179688</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of the City and County of New York · raster tile 11/603/769</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1832/11/603/769.png</href></Icon>
+      <LatLonBox>
+        <north>40.847060</north>
+        <south>40.713956</south>
+        <east>-73.828125</east>
+        <west>-74.003906</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of the City and County of New York · raster tile 11/604/769</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1832/11/604/769.png</href></Icon>
+      <LatLonBox>
+        <north>40.847060</north>
+        <south>40.713956</south>
+        <east>-73.652344</east>
+        <west>-73.828125</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of the City and County of New York · raster tile 11/602/770</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1832/11/602/770.png</href></Icon>
+      <LatLonBox>
+        <north>40.713956</north>
+        <south>40.580585</south>
+        <east>-74.003906</east>
+        <west>-74.179688</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of the City and County of New York · raster tile 11/603/770</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1832/11/603/770.png</href></Icon>
+      <LatLonBox>
+        <north>40.713956</north>
+        <south>40.580585</south>
+        <east>-73.828125</east>
+        <west>-74.003906</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of the City and County of New York · raster tile 11/604/770</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1832/11/604/770.png</href></Icon>
+      <LatLonBox>
+        <north>40.713956</north>
+        <south>40.580585</south>
+        <east>-73.652344</east>
+        <west>-73.828125</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

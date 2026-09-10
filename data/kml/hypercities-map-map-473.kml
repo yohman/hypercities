@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Map of Philae 0344</name>
+    <description>Map of Philae 0344, Shanghai, 2012. Map of Philae 0344 (2012). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Map of Philae 0344</name>
+      <description>HyperCities Map Library footprint · Shanghai · 2012</description>
+      <TimeSpan><begin>2012-01-01</begin><end>2012-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:473</value></Data>
+      <Data name="place"><value>Shanghai</value></Data>
+      <Data name="years"><value>2012</value></Data>
+      <Data name="sourceRecordId"><value>473</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Map of Philae 0344 (2012). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Philae_0344_n/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>32.883342,24.02349,0 32.885528,24.02349,0 32.885528,24.02736,0 32.883342,24.02736,0 32.883342,24.02349,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Map of Philae 0344 · raster tile 17/77508/56519</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Philae_0344_n/17/77508/56519.png</href></Icon>
+      <LatLonBox>
+        <north>24.028905</north>
+        <south>24.026397</south>
+        <east>32.884827</east>
+        <west>32.882080</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Philae 0344 · raster tile 17/77509/56519</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Philae_0344_n/17/77509/56519.png</href></Icon>
+      <LatLonBox>
+        <north>24.028905</north>
+        <south>24.026397</south>
+        <east>32.887573</east>
+        <west>32.884827</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Philae 0344 · raster tile 17/77508/56520</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Philae_0344_n/17/77508/56520.png</href></Icon>
+      <LatLonBox>
+        <north>24.026397</north>
+        <south>24.023888</south>
+        <east>32.884827</east>
+        <west>32.882080</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Philae 0344 · raster tile 17/77509/56520</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Philae_0344_n/17/77509/56520.png</href></Icon>
+      <LatLonBox>
+        <north>24.026397</north>
+        <south>24.023888</south>
+        <east>32.887573</east>
+        <west>32.884827</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Philae 0344 · raster tile 17/77508/56521</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Philae_0344_n/17/77508/56521.png</href></Icon>
+      <LatLonBox>
+        <north>24.023888</north>
+        <south>24.021379</south>
+        <east>32.884827</east>
+        <west>32.882080</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Philae 0344 · raster tile 17/77509/56521</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Philae_0344_n/17/77509/56521.png</href></Icon>
+      <LatLonBox>
+        <north>24.023888</north>
+        <south>24.021379</south>
+        <east>32.887573</east>
+        <west>32.884827</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

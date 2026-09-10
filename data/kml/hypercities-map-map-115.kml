@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Urban Presence</name>
+    <description>Urban Presence, Ollantaytambo, 2008. Urban Presence (2008). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Urban Presence</name>
+      <description>HyperCities Map Library footprint · Ollantaytambo · 2008</description>
+      <TimeSpan><begin>2008-01-01</begin><end>2008-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:115</value></Data>
+      <Data name="place"><value>Ollantaytambo</value></Data>
+      <Data name="years"><value>2008</value></Data>
+      <Data name="sourceRecordId"><value>115</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Urban Presence (2008). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Peru_2008_UrbanPresence/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-72.272701,-13.267356,0 -72.254779,-13.267356,0 -72.254779,-13.25362,0 -72.272701,-13.25362,0 -72.272701,-13.267356,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Urban Presence · raster tile 14/4902/8800</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Peru_2008_UrbanPresence/14/4902/8800.png</href></Icon>
+      <LatLonBox>
+        <north>-13.239945</north>
+        <south>-13.261333</south>
+        <east>-72.268066</east>
+        <west>-72.290039</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Urban Presence · raster tile 14/4903/8800</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Peru_2008_UrbanPresence/14/4903/8800.png</href></Icon>
+      <LatLonBox>
+        <north>-13.239945</north>
+        <south>-13.261333</south>
+        <east>-72.246094</east>
+        <west>-72.268066</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Urban Presence · raster tile 14/4902/8801</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Peru_2008_UrbanPresence/14/4902/8801.png</href></Icon>
+      <LatLonBox>
+        <north>-13.261333</north>
+        <south>-13.282719</south>
+        <east>-72.268066</east>
+        <west>-72.290039</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Urban Presence · raster tile 14/4903/8801</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Peru_2008_UrbanPresence/14/4903/8801.png</href></Icon>
+      <LatLonBox>
+        <north>-13.261333</north>
+        <south>-13.282719</south>
+        <east>-72.246094</east>
+        <west>-72.268066</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

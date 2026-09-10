@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>US Exploration and Settlement</name>
+    <description>US Exploration and Settlement, Chicago, 1820. US Exploration and Settlement (1820). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>US Exploration and Settlement</name>
+      <description>HyperCities Map Library footprint · Chicago · 1820</description>
+      <TimeSpan><begin>1820-01-01</begin><end>1820-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:286</value></Data>
+      <Data name="place"><value>Chicago</value></Data>
+      <Data name="years"><value>1820</value></Data>
+      <Data name="sourceRecordId"><value>286</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>US Exploration and Settlement (1820). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/exploration_18201/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-132.597781,-10.048888,0 -61.246072,-10.048888,0 -61.246072,51.896967,0 -132.597781,51.896967,0 -132.597781,-10.048888,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>US Exploration and Settlement · raster tile 3/1/2</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/exploration_18201/3/1/2.png</href></Icon>
+      <LatLonBox>
+        <north>66.513260</north>
+        <south>40.979898</south>
+        <east>-90.000000</east>
+        <west>-135.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>US Exploration and Settlement · raster tile 3/2/2</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/exploration_18201/3/2/2.png</href></Icon>
+      <LatLonBox>
+        <north>66.513260</north>
+        <south>40.979898</south>
+        <east>-45.000000</east>
+        <west>-90.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>US Exploration and Settlement · raster tile 3/1/3</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/exploration_18201/3/1/3.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>0.000000</south>
+        <east>-90.000000</east>
+        <west>-135.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>US Exploration and Settlement · raster tile 3/2/3</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/exploration_18201/3/2/3.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>0.000000</south>
+        <east>-45.000000</east>
+        <west>-90.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>US Exploration and Settlement · raster tile 3/1/4</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/exploration_18201/3/1/4.png</href></Icon>
+      <LatLonBox>
+        <north>0.000000</north>
+        <south>-40.979898</south>
+        <east>-90.000000</east>
+        <west>-135.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>US Exploration and Settlement · raster tile 3/2/4</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/exploration_18201/3/2/4.png</href></Icon>
+      <LatLonBox>
+        <north>0.000000</north>
+        <south>-40.979898</south>
+        <east>-45.000000</east>
+        <west>-90.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

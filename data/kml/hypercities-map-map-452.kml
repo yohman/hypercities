@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Interstate Highway System California</name>
+    <description>Interstate Highway System California, Los Angeles, 1955. Interstate Highway System California (1955). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Interstate Highway System California</name>
+      <description>HyperCities Map Library footprint · Los Angeles · 1955</description>
+      <TimeSpan><begin>1955-01-01</begin><end>1955-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:452</value></Data>
+      <Data name="place"><value>Los Angeles</value></Data>
+      <Data name="years"><value>1955</value></Data>
+      <Data name="sourceRecordId"><value>452</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Interstate Highway System California (1955). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/1955_InsterstateHighwaySys_CA/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-125.067021,31.260208,0 -113.414112,31.260208,0 -113.414112,43.065287,0 -125.067021,43.065287,0 -125.067021,31.260208,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Interstate Highway System California · raster tile 5/4/11</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1955_InsterstateHighwaySys_CA/5/4/11.png</href></Icon>
+      <LatLonBox>
+        <north>48.922499</north>
+        <south>40.979898</south>
+        <east>-123.750000</east>
+        <west>-135.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Interstate Highway System California · raster tile 5/5/11</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1955_InsterstateHighwaySys_CA/5/5/11.png</href></Icon>
+      <LatLonBox>
+        <north>48.922499</north>
+        <south>40.979898</south>
+        <east>-112.500000</east>
+        <west>-123.750000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Interstate Highway System California · raster tile 5/4/12</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1955_InsterstateHighwaySys_CA/5/4/12.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>31.952162</south>
+        <east>-123.750000</east>
+        <west>-135.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Interstate Highway System California · raster tile 5/5/12</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1955_InsterstateHighwaySys_CA/5/5/12.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>31.952162</south>
+        <east>-112.500000</east>
+        <west>-123.750000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Interstate Highway System California · raster tile 5/4/13</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1955_InsterstateHighwaySys_CA/5/4/13.png</href></Icon>
+      <LatLonBox>
+        <north>31.952162</north>
+        <south>21.943046</south>
+        <east>-123.750000</east>
+        <west>-135.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Interstate Highway System California · raster tile 5/5/13</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1955_InsterstateHighwaySys_CA/5/5/13.png</href></Icon>
+      <LatLonBox>
+        <north>31.952162</north>
+        <south>21.943046</south>
+        <east>-112.500000</east>
+        <west>-123.750000</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

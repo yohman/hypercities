@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Brandenburg Detail Mercator</name>
+    <description>Brandenburg Detail Mercator, Berlin, 1633. Brandenburg Detail Mercator (1633). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Brandenburg Detail Mercator</name>
+      <description>HyperCities Map Library footprint · Berlin · 1633</description>
+      <TimeSpan><begin>1633-01-01</begin><end>1633-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:395</value></Data>
+      <Data name="place"><value>Berlin</value></Data>
+      <Data name="years"><value>1633</value></Data>
+      <Data name="sourceRecordId"><value>395</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Brandenburg Detail Mercator (1633). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/1633_Brandenburg_Detail_Mercator_Final/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>9.441218,51.344844,0 17.06993,51.344844,0 17.06993,55.067073,0 9.441218,55.067073,0 9.441218,51.344844,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Brandenburg Detail Mercator · raster tile 6/33/20</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1633_Brandenburg_Detail_Mercator_Final/6/33/20.png</href></Icon>
+      <LatLonBox>
+        <north>55.776573</north>
+        <south>52.482780</south>
+        <east>11.250000</east>
+        <west>5.625000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Brandenburg Detail Mercator · raster tile 6/34/20</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1633_Brandenburg_Detail_Mercator_Final/6/34/20.png</href></Icon>
+      <LatLonBox>
+        <north>55.776573</north>
+        <south>52.482780</south>
+        <east>16.875000</east>
+        <west>11.250000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Brandenburg Detail Mercator · raster tile 6/35/20</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1633_Brandenburg_Detail_Mercator_Final/6/35/20.png</href></Icon>
+      <LatLonBox>
+        <north>55.776573</north>
+        <south>52.482780</south>
+        <east>22.500000</east>
+        <west>16.875000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Brandenburg Detail Mercator · raster tile 6/33/21</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1633_Brandenburg_Detail_Mercator_Final/6/33/21.png</href></Icon>
+      <LatLonBox>
+        <north>52.482780</north>
+        <south>48.922499</south>
+        <east>11.250000</east>
+        <west>5.625000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Brandenburg Detail Mercator · raster tile 6/34/21</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1633_Brandenburg_Detail_Mercator_Final/6/34/21.png</href></Icon>
+      <LatLonBox>
+        <north>52.482780</north>
+        <south>48.922499</south>
+        <east>16.875000</east>
+        <west>11.250000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Brandenburg Detail Mercator · raster tile 6/35/21</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1633_Brandenburg_Detail_Mercator_Final/6/35/21.png</href></Icon>
+      <LatLonBox>
+        <north>52.482780</north>
+        <south>48.922499</south>
+        <east>22.500000</east>
+        <west>16.875000</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

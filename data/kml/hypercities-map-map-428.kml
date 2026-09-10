@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Miami 231</name>
+    <description>Miami 231, Miami, 1951. Miami 231 (1951). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Miami 231</name>
+      <description>HyperCities Map Library footprint · Miami · 1951</description>
+      <TimeSpan><begin>1951-01-01</begin><end>1951-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:428</value></Data>
+      <Data name="place"><value>Miami</value></Data>
+      <Data name="years"><value>1951</value></Data>
+      <Data name="sourceRecordId"><value>428</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Miami 231 (1951). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/1951_Miami_231_0218S/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-80.255826,25.75815,0 -80.248246,25.75815,0 -80.248246,25.766173,0 -80.255826,25.766173,0 -80.255826,25.75815,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Miami 231 · raster tile 16/18157/27910</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1951_Miami_231_0218S/16/18157/27910.png</href></Icon>
+      <LatLonBox>
+        <north>25.770214</north>
+        <south>25.765267</south>
+        <east>-80.255127</east>
+        <west>-80.260620</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Miami 231 · raster tile 16/18158/27910</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1951_Miami_231_0218S/16/18158/27910.png</href></Icon>
+      <LatLonBox>
+        <north>25.770214</north>
+        <south>25.765267</south>
+        <east>-80.249634</east>
+        <west>-80.255127</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Miami 231 · raster tile 16/18159/27910</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1951_Miami_231_0218S/16/18159/27910.png</href></Icon>
+      <LatLonBox>
+        <north>25.770214</north>
+        <south>25.765267</south>
+        <east>-80.244141</east>
+        <west>-80.249634</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Miami 231 · raster tile 16/18157/27911</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1951_Miami_231_0218S/16/18157/27911.png</href></Icon>
+      <LatLonBox>
+        <north>25.765267</north>
+        <south>25.760320</south>
+        <east>-80.255127</east>
+        <west>-80.260620</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Miami 231 · raster tile 16/18158/27911</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1951_Miami_231_0218S/16/18158/27911.png</href></Icon>
+      <LatLonBox>
+        <north>25.765267</north>
+        <south>25.760320</south>
+        <east>-80.249634</east>
+        <west>-80.255127</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Miami 231 · raster tile 16/18159/27911</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1951_Miami_231_0218S/16/18159/27911.png</href></Icon>
+      <LatLonBox>
+        <north>25.765267</north>
+        <south>25.760320</south>
+        <east>-80.244141</east>
+        <west>-80.249634</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Miami 231 · raster tile 16/18157/27912</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1951_Miami_231_0218S/16/18157/27912.png</href></Icon>
+      <LatLonBox>
+        <north>25.760320</north>
+        <south>25.755372</south>
+        <east>-80.255127</east>
+        <west>-80.260620</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Miami 231 · raster tile 16/18158/27912</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1951_Miami_231_0218S/16/18158/27912.png</href></Icon>
+      <LatLonBox>
+        <north>25.760320</north>
+        <south>25.755372</south>
+        <east>-80.249634</east>
+        <west>-80.255127</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Miami 231 · raster tile 16/18159/27912</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1951_Miami_231_0218S/16/18159/27912.png</href></Icon>
+      <LatLonBox>
+        <north>25.760320</north>
+        <south>25.755372</south>
+        <east>-80.244141</east>
+        <west>-80.249634</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

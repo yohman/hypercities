@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Map of Port Au Prince</name>
+    <description>Map of Port Au Prince, Los Angeles, 1994. Map of Port Au Prince (1994). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Map of Port Au Prince</name>
+      <description>HyperCities Map Library footprint · Los Angeles · 1994</description>
+      <TimeSpan><begin>1994-01-01</begin><end>1994-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:344</value></Data>
+      <Data name="place"><value>Los Angeles</value></Data>
+      <Data name="years"><value>1994</value></Data>
+      <Data name="sourceRecordId"><value>344</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Map of Port Au Prince (1994). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/port_au_prince-1994/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-72.488967,18.440609,0 -72.215369,18.440609,0 -72.215369,18.62228,0 -72.488967,18.62228,0 -72.488967,18.440609,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Map of Port Au Prince · raster tile 11/611/916</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/port_au_prince-1994/11/611/916.png</href></Icon>
+      <LatLonBox>
+        <north>18.646245</north>
+        <south>18.479609</south>
+        <east>-72.421875</east>
+        <west>-72.597656</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Port Au Prince · raster tile 11/612/916</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/port_au_prince-1994/11/612/916.png</href></Icon>
+      <LatLonBox>
+        <north>18.646245</north>
+        <south>18.479609</south>
+        <east>-72.246094</east>
+        <west>-72.421875</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Port Au Prince · raster tile 11/613/916</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/port_au_prince-1994/11/613/916.png</href></Icon>
+      <LatLonBox>
+        <north>18.646245</north>
+        <south>18.479609</south>
+        <east>-72.070313</east>
+        <west>-72.246094</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Port Au Prince · raster tile 11/611/917</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/port_au_prince-1994/11/611/917.png</href></Icon>
+      <LatLonBox>
+        <north>18.479609</north>
+        <south>18.312811</south>
+        <east>-72.421875</east>
+        <west>-72.597656</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Port Au Prince · raster tile 11/612/917</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/port_au_prince-1994/11/612/917.png</href></Icon>
+      <LatLonBox>
+        <north>18.479609</north>
+        <south>18.312811</south>
+        <east>-72.246094</east>
+        <west>-72.421875</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Port Au Prince · raster tile 11/613/917</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/port_au_prince-1994/11/613/917.png</href></Icon>
+      <LatLonBox>
+        <north>18.479609</north>
+        <south>18.312811</south>
+        <east>-72.070313</east>
+        <west>-72.246094</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Japan Waterworks And Springs</name>
+    <description>Japan Waterworks And Springs, Tokyo, 1944. Japan Waterworks And Springs (1944). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Japan Waterworks And Springs</name>
+      <description>HyperCities Map Library footprint · Tokyo · 1944</description>
+      <TimeSpan><begin>1944-01-01</begin><end>1944-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:253</value></Data>
+      <Data name="place"><value>Tokyo</value></Data>
+      <Data name="years"><value>1944</value></Data>
+      <Data name="sourceRecordId"><value>253</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Japan Waterworks And Springs (1944). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Japan_1944_WaterworksAndSprings/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>126.848343,30.255894,0 138.790121,30.255894,0 138.790121,36.657328,0 126.848343,36.657328,0 126.848343,30.255894,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Japan Waterworks And Springs · raster tile 5/27/12</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Japan_1944_WaterworksAndSprings/5/27/12.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>31.952162</south>
+        <east>135.000000</east>
+        <west>123.750000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Japan Waterworks And Springs · raster tile 5/28/12</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Japan_1944_WaterworksAndSprings/5/28/12.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>31.952162</south>
+        <east>146.250000</east>
+        <west>135.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Japan Waterworks And Springs · raster tile 5/27/13</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Japan_1944_WaterworksAndSprings/5/27/13.png</href></Icon>
+      <LatLonBox>
+        <north>31.952162</north>
+        <south>21.943046</south>
+        <east>135.000000</east>
+        <west>123.750000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Japan Waterworks And Springs · raster tile 5/28/13</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Japan_1944_WaterworksAndSprings/5/28/13.png</href></Icon>
+      <LatLonBox>
+        <north>31.952162</north>
+        <south>21.943046</south>
+        <east>146.250000</east>
+        <west>135.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

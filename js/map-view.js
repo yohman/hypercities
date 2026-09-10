@@ -3,7 +3,7 @@ import { asPolygon, containsCoordinate, tileDiagnostic, tileTemplate } from "./d
 const RED = [168, 75, 67];
 const RED_BRIGHT = [226, 113, 99];
 
-function grayscale(color) {
+function grayscale(color, dimming = 0.45) {
   if (typeof color !== "string") return null;
   let red; let green; let blue; let alpha = null;
   const hex = color.match(/^#([0-9a-f]{3,8})$/i);
@@ -22,7 +22,7 @@ function grayscale(color) {
     alpha = values[3] === undefined ? null : Number(values[3]);
   } else return null;
   if (![red, green, blue].every(Number.isFinite)) return null;
-  const lightness = Math.round((red * 0.2126 + green * 0.7152 + blue * 0.0722) * 0.45);
+  const lightness = Math.round((red * 0.2126 + green * 0.7152 + blue * 0.0722) * dimming);
   return alpha === null ? `rgb(${lightness}, ${lightness}, ${lightness})` : `rgba(${lightness}, ${lightness}, ${lightness}, ${alpha})`;
 }
 
@@ -71,8 +71,19 @@ export class MapView {
       symbol: ["text-color", "icon-color"]
     };
     for (const layer of this.map.getStyle().layers || []) {
+      // Carto defines the most visible country line as a zoom-stop expression,
+      // not a literal color. Handle that pair explicitly so it cannot bypass
+      // the generic colour neutralisation below.
+      if (layer.id === "boundary_country_outline" || layer.id === "boundary_country_inner") {
+        this.map.setPaintProperty(layer.id, "line-color", "rgb(48, 48, 48)");
+        this.map.setPaintProperty(layer.id, "line-opacity", layer.id === "boundary_country_inner" ? 0.34 : 0.16);
+        continue;
+      }
       for (const property of colorProperties[layer.type] || []) {
-        const neutral = grayscale(this.map.getPaintProperty(layer.id, property));
+        // Country and administrative boundary lines are context, never a
+        // competing graphic system. Keep fills unchanged, but dim linework
+        // more strongly than the rest of the neutral basemap.
+        const neutral = grayscale(this.map.getPaintProperty(layer.id, property), layer.type === "line" ? 0.24 : 0.45);
         if (neutral) this.map.setPaintProperty(layer.id, property, neutral);
       }
       if (layer.type === "raster") this.map.setPaintProperty(layer.id, "raster-saturation", -1);

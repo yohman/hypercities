@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Shimostsuke</name>
+    <description>Shimostsuke, Tokyo, 1835. Shimostsuke (1835). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Shimostsuke</name>
+      <description>HyperCities Map Library footprint · Tokyo · 1835</description>
+      <TimeSpan><begin>1835-01-01</begin><end>1835-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:441</value></Data>
+      <Data name="place"><value>Tokyo</value></Data>
+      <Data name="years"><value>1835</value></Data>
+      <Data name="sourceRecordId"><value>441</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Shimostsuke (1835). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/1835_Shimotsuke/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>139.298002,36.162571,0 140.347995,36.162571,0 140.347995,37.15346,0 139.298002,37.15346,0 139.298002,36.162571,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Shimostsuke · raster tile 9/454/199</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1835_Shimotsuke/9/454/199.png</href></Icon>
+      <LatLonBox>
+        <north>37.160317</north>
+        <south>36.597889</south>
+        <east>139.921875</east>
+        <west>139.218750</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Shimostsuke · raster tile 9/455/199</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1835_Shimotsuke/9/455/199.png</href></Icon>
+      <LatLonBox>
+        <north>37.160317</north>
+        <south>36.597889</south>
+        <east>140.625000</east>
+        <west>139.921875</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Shimostsuke · raster tile 9/454/200</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1835_Shimotsuke/9/454/200.png</href></Icon>
+      <LatLonBox>
+        <north>36.597889</north>
+        <south>36.031332</south>
+        <east>139.921875</east>
+        <west>139.218750</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Shimostsuke · raster tile 9/455/200</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1835_Shimotsuke/9/455/200.png</href></Icon>
+      <LatLonBox>
+        <north>36.597889</north>
+        <south>36.031332</south>
+        <east>140.625000</east>
+        <west>139.921875</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

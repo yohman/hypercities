@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Indian Land Cessions in the United States - Iowa 2</name>
+    <description>Indian Land Cessions in the United States - Iowa 2, Chicago, 1784–1894. Indian Land Cessions in the United States - Iowa 2 (1784–1894). HyperCities Map Library. Library of Congress.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Indian Land Cessions in the United States - Iowa 2</name>
+      <description>HyperCities Map Library footprint · Chicago · 1784–1894</description>
+      <TimeSpan><begin>1784-01-01</begin><end>1894-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:266</value></Data>
+      <Data name="place"><value>Chicago</value></Data>
+      <Data name="years"><value>1784–1894</value></Data>
+      <Data name="sourceRecordId"><value>266</value></Data>
+      <Data name="collection"><value>Library of Congress</value></Data>
+      <Data name="creator"><value>Charles C. Royce, Bureau of American Ethnology</value></Data>
+      <Data name="citation"><value>Indian Land Cessions in the United States - Iowa 2 (1784–1894). HyperCities Map Library. Library of Congress.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Royce_Iowa_02/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-98.304562,39.015374,0 -88.33273,39.015374,0 -88.33273,44.890012,0 -98.304562,44.890012,0 -98.304562,39.015374,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Indian Land Cessions in the United States - Iowa 2 · raster tile 5/7/11</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Royce_Iowa_02/5/7/11.png</href></Icon>
+      <LatLonBox>
+        <north>48.922499</north>
+        <south>40.979898</south>
+        <east>-90.000000</east>
+        <west>-101.250000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Indian Land Cessions in the United States - Iowa 2 · raster tile 5/8/11</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Royce_Iowa_02/5/8/11.png</href></Icon>
+      <LatLonBox>
+        <north>48.922499</north>
+        <south>40.979898</south>
+        <east>-78.750000</east>
+        <west>-90.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Indian Land Cessions in the United States - Iowa 2 · raster tile 5/7/12</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Royce_Iowa_02/5/7/12.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>31.952162</south>
+        <east>-90.000000</east>
+        <west>-101.250000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Indian Land Cessions in the United States - Iowa 2 · raster tile 5/8/12</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Royce_Iowa_02/5/8/12.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>31.952162</south>
+        <east>-78.750000</east>
+        <west>-90.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

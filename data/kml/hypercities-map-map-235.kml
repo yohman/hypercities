@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Street Map of Wellington</name>
+    <description>Street Map of Wellington, Wellington, 1936. Street Map of Wellington (1936). HyperCities Map Library. Wellington City Archives, 00001:1849:50/356 Pt 1.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Street Map of Wellington</name>
+      <description>HyperCities Map Library footprint · Wellington · 1936</description>
+      <TimeSpan><begin>1936-01-01</begin><end>1936-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:235</value></Data>
+      <Data name="place"><value>Wellington</value></Data>
+      <Data name="years"><value>1936</value></Data>
+      <Data name="sourceRecordId"><value>235</value></Data>
+      <Data name="collection"><value>Wellington City Archives, 00001:1849:50/356 Pt 1</value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Street Map of Wellington (1936). HyperCities Map Library. Wellington City Archives, 00001:1849:50/356 Pt 1.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Wellington_1930/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>174.721268,-41.36258,0 174.858192,-41.36258,0 174.858192,-41.243364,0 174.721268,-41.243364,0 174.721268,-41.36258,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Street Map of Wellington · raster tile 11/2017/1281</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Wellington_1930/11/2017/1281.png</href></Icon>
+      <LatLonBox>
+        <north>-41.112469</north>
+        <south>-41.244772</south>
+        <east>174.726563</east>
+        <west>174.550781</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Street Map of Wellington · raster tile 11/2018/1281</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Wellington_1930/11/2018/1281.png</href></Icon>
+      <LatLonBox>
+        <north>-41.112469</north>
+        <south>-41.244772</south>
+        <east>174.902344</east>
+        <west>174.726563</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Street Map of Wellington · raster tile 11/2017/1282</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Wellington_1930/11/2017/1282.png</href></Icon>
+      <LatLonBox>
+        <north>-41.244772</north>
+        <south>-41.376809</south>
+        <east>174.726563</east>
+        <west>174.550781</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Street Map of Wellington · raster tile 11/2018/1282</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Wellington_1930/11/2018/1282.png</href></Icon>
+      <LatLonBox>
+        <north>-41.244772</north>
+        <south>-41.376809</south>
+        <east>174.902344</east>
+        <west>174.726563</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

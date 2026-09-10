@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Map of Reanne (hifi)</name>
+    <description>Map of Reanne (hifi), Los Angeles, 2010. Map of Reanne (hifi) (2010). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Map of Reanne (hifi)</name>
+      <description>HyperCities Map Library footprint · Los Angeles · 2010</description>
+      <TimeSpan><begin>2010-01-01</begin><end>2010-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:225</value></Data>
+      <Data name="place"><value>Los Angeles</value></Data>
+      <Data name="years"><value>2010</value></Data>
+      <Data name="sourceRecordId"><value>225</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Map of Reanne (hifi) (2010). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Reanne_hifi_map_stitched_final/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-118.286253,34.060622,0 -118.257138,34.060622,0 -118.257138,34.07834,0 -118.286253,34.07834,0 -118.286253,34.060622,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Map of Reanne (hifi) · raster tile 14/2808/6540</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Reanne_hifi_map_stitched_final/14/2808/6540.png</href></Icon>
+      <LatLonBox>
+        <north>34.089061</north>
+        <south>34.070862</south>
+        <east>-118.278809</east>
+        <west>-118.300781</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Reanne (hifi) · raster tile 14/2809/6540</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Reanne_hifi_map_stitched_final/14/2809/6540.png</href></Icon>
+      <LatLonBox>
+        <north>34.089061</north>
+        <south>34.070862</south>
+        <east>-118.256836</east>
+        <west>-118.278809</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Reanne (hifi) · raster tile 14/2808/6541</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Reanne_hifi_map_stitched_final/14/2808/6541.png</href></Icon>
+      <LatLonBox>
+        <north>34.070862</north>
+        <south>34.052659</south>
+        <east>-118.278809</east>
+        <west>-118.300781</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Reanne (hifi) · raster tile 14/2809/6541</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Reanne_hifi_map_stitched_final/14/2809/6541.png</href></Icon>
+      <LatLonBox>
+        <north>34.070862</north>
+        <south>34.052659</south>
+        <east>-118.256836</east>
+        <west>-118.278809</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

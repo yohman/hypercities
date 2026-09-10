@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Rascher Map of Chicago (1886)</name>
+    <description>Rascher Map of Chicago (1886), Chicago, 1886. Rascher Map of Chicago (1886) (1886). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Rascher Map of Chicago (1886)</name>
+      <description>HyperCities Map Library footprint · Chicago · 1886</description>
+      <TimeSpan><begin>1886-01-01</begin><end>1886-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:151</value></Data>
+      <Data name="place"><value>Chicago</value></Data>
+      <Data name="years"><value>1886</value></Data>
+      <Data name="sourceRecordId"><value>151</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Rascher Map of Chicago (1886) (1886). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Chicago_1886_Rascher/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-87.611707,41.68525,0 -87.604384,41.68525,0 -87.604384,41.693252,0 -87.611707,41.693252,0 -87.611707,41.68525,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Rascher Map of Chicago (1886) · raster tile 16/16818/24403</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Chicago_1886_Rascher/16/16818/24403.png</href></Icon>
+      <LatLonBox>
+        <north>41.693424</north>
+        <south>41.689322</south>
+        <east>-87.610474</east>
+        <west>-87.615967</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Rascher Map of Chicago (1886) · raster tile 16/16819/24403</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Chicago_1886_Rascher/16/16819/24403.png</href></Icon>
+      <LatLonBox>
+        <north>41.693424</north>
+        <south>41.689322</south>
+        <east>-87.604980</east>
+        <west>-87.610474</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Rascher Map of Chicago (1886) · raster tile 16/16820/24403</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Chicago_1886_Rascher/16/16820/24403.png</href></Icon>
+      <LatLonBox>
+        <north>41.693424</north>
+        <south>41.689322</south>
+        <east>-87.599487</east>
+        <west>-87.604980</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Rascher Map of Chicago (1886) · raster tile 16/16818/24404</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Chicago_1886_Rascher/16/16818/24404.png</href></Icon>
+      <LatLonBox>
+        <north>41.689322</north>
+        <south>41.685220</south>
+        <east>-87.610474</east>
+        <west>-87.615967</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Rascher Map of Chicago (1886) · raster tile 16/16819/24404</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Chicago_1886_Rascher/16/16819/24404.png</href></Icon>
+      <LatLonBox>
+        <north>41.689322</north>
+        <south>41.685220</south>
+        <east>-87.604980</east>
+        <west>-87.610474</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Rascher Map of Chicago (1886) · raster tile 16/16820/24404</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Chicago_1886_Rascher/16/16820/24404.png</href></Icon>
+      <LatLonBox>
+        <north>41.689322</north>
+        <south>41.685220</south>
+        <east>-87.599487</east>
+        <west>-87.604980</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

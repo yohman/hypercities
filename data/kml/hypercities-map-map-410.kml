@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Dube Hostel</name>
+    <description>Dube Hostel, Soweto-Johannesburg, 1955. Dube Hostel (1955). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Dube Hostel</name>
+      <description>HyperCities Map Library footprint · Soweto-Johannesburg · 1955</description>
+      <TimeSpan><begin>1955-01-01</begin><end>1955-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:410</value></Data>
+      <Data name="place"><value>Soweto-Johannesburg</value></Data>
+      <Data name="years"><value>1955</value></Data>
+      <Data name="sourceRecordId"><value>410</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Dube Hostel (1955). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Dube_Hostel_1955/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>27.887266,-26.241955,0 27.905338,-26.241955,0 27.905338,-26.226945,0 27.887266,-26.226945,0 27.887266,-26.241955,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Dube Hostel · raster tile 15/18922/18859</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Dube_Hostel_1955/15/18922/18859.png</href></Icon>
+      <LatLonBox>
+        <north>-26.224447</north>
+        <south>-26.234302</south>
+        <east>27.894287</east>
+        <west>27.883301</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Dube Hostel · raster tile 15/18923/18859</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Dube_Hostel_1955/15/18923/18859.png</href></Icon>
+      <LatLonBox>
+        <north>-26.224447</north>
+        <south>-26.234302</south>
+        <east>27.905273</east>
+        <west>27.894287</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Dube Hostel · raster tile 15/18924/18859</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Dube_Hostel_1955/15/18924/18859.png</href></Icon>
+      <LatLonBox>
+        <north>-26.224447</north>
+        <south>-26.234302</south>
+        <east>27.916260</east>
+        <west>27.905273</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Dube Hostel · raster tile 15/18922/18860</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Dube_Hostel_1955/15/18922/18860.png</href></Icon>
+      <LatLonBox>
+        <north>-26.234302</north>
+        <south>-26.244156</south>
+        <east>27.894287</east>
+        <west>27.883301</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Dube Hostel · raster tile 15/18923/18860</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Dube_Hostel_1955/15/18923/18860.png</href></Icon>
+      <LatLonBox>
+        <north>-26.234302</north>
+        <south>-26.244156</south>
+        <east>27.905273</east>
+        <west>27.894287</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Dube Hostel · raster tile 15/18924/18860</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Dube_Hostel_1955/15/18924/18860.png</href></Icon>
+      <LatLonBox>
+        <north>-26.234302</north>
+        <south>-26.244156</south>
+        <east>27.916260</east>
+        <west>27.905273</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

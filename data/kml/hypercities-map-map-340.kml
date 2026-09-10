@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Elmwood Park aerial</name>
+    <description>Elmwood Park aerial, Chicago, 1966. Elmwood Park aerial (1966). HyperCities Map Library. St. Louis County .</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Elmwood Park aerial</name>
+      <description>HyperCities Map Library footprint · Chicago · 1966</description>
+      <TimeSpan><begin>1966-01-01</begin><end>1966-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:340</value></Data>
+      <Data name="place"><value>Chicago</value></Data>
+      <Data name="years"><value>1966</value></Data>
+      <Data name="sourceRecordId"><value>340</value></Data>
+      <Data name="collection"><value>St. Louis County </value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Elmwood Park aerial (1966). HyperCities Map Library. St. Louis County .</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Elmwood_1966/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-90.387986,38.674387,0 -90.358408,38.674387,0 -90.358408,38.690601,0 -90.387986,38.690601,0 -90.387986,38.674387,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Elmwood Park aerial · raster tile 13/2039/3139</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Elmwood_1966/13/2039/3139.png</href></Icon>
+      <LatLonBox>
+        <north>38.719805</north>
+        <south>38.685510</south>
+        <east>-90.351563</east>
+        <west>-90.395508</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Elmwood Park aerial · raster tile 13/2039/3140</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Elmwood_1966/13/2039/3140.png</href></Icon>
+      <LatLonBox>
+        <north>38.685510</north>
+        <south>38.651198</south>
+        <east>-90.351563</east>
+        <west>-90.395508</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

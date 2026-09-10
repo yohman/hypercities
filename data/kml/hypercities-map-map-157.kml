@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Panoramic Plan of Lima</name>
+    <description>Panoramic Plan of Lima, Lima, 1824. Panoramic Plan of Lima (1824). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Panoramic Plan of Lima</name>
+      <description>HyperCities Map Library footprint · Lima · 1824</description>
+      <TimeSpan><begin>1824-01-01</begin><end>1824-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:157</value></Data>
+      <Data name="place"><value>Lima</value></Data>
+      <Data name="years"><value>1824</value></Data>
+      <Data name="sourceRecordId"><value>157</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value>Julio E. Berrocal</value></Data>
+      <Data name="citation"><value>Panoramic Plan of Lima (1824). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Lima_1824/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-77.060344,-12.079258,0 -76.999817,-12.079258,0 -76.999817,-12.018645,0 -77.060344,-12.018645,0 -77.060344,-12.079258,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Panoramic Plan of Lima · raster tile 13/2342/4371</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Lima_1824/13/2342/4371.png</href></Icon>
+      <LatLonBox>
+        <north>-11.996338</north>
+        <south>-12.039321</south>
+        <east>-77.036133</east>
+        <west>-77.080078</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Panoramic Plan of Lima · raster tile 13/2343/4371</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Lima_1824/13/2343/4371.png</href></Icon>
+      <LatLonBox>
+        <north>-11.996338</north>
+        <south>-12.039321</south>
+        <east>-76.992188</east>
+        <west>-77.036133</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Panoramic Plan of Lima · raster tile 13/2342/4372</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Lima_1824/13/2342/4372.png</href></Icon>
+      <LatLonBox>
+        <north>-12.039321</north>
+        <south>-12.082296</south>
+        <east>-77.036133</east>
+        <west>-77.080078</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Panoramic Plan of Lima · raster tile 13/2343/4372</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Lima_1824/13/2343/4372.png</href></Icon>
+      <LatLonBox>
+        <north>-12.039321</north>
+        <south>-12.082296</south>
+        <east>-76.992188</east>
+        <west>-77.036133</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

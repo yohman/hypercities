@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Map of West Berlin, according to the Illustrierte Historische Hefte in East Berlin</name>
+    <description>Map of West Berlin, according to the Illustrierte Historische Hefte in East Berlin, Berlin, 1961. Map of West Berlin, according to the Illustrierte Historische Hefte in East Berlin (1961). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Map of West Berlin, according to the Illustrierte Historische Hefte in East Berlin</name>
+      <description>HyperCities Map Library footprint · Berlin · 1961</description>
+      <TimeSpan><begin>1961-01-01</begin><end>1961-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:256</value></Data>
+      <Data name="place"><value>Berlin</value></Data>
+      <Data name="years"><value>1961</value></Data>
+      <Data name="sourceRecordId"><value>256</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value>Dr. Hartmut and Ellen Mehls</value></Data>
+      <Data name="citation"><value>Map of West Berlin, according to the Illustrierte Historische Hefte in East Berlin (1961). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Berlin_1960_West/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>12.953943,52.129648,0 13.649214,52.129648,0 13.649214,52.716577,0 12.953943,52.716577,0 12.953943,52.129648,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Map of West Berlin, according to the Illustrierte Historische Hefte in East Berlin · raster tile 9/274/167</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Berlin_1960_West/9/274/167.png</href></Icon>
+      <LatLonBox>
+        <north>52.908902</north>
+        <south>52.482780</south>
+        <east>13.359375</east>
+        <west>12.656250</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of West Berlin, according to the Illustrierte Historische Hefte in East Berlin · raster tile 9/275/167</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Berlin_1960_West/9/275/167.png</href></Icon>
+      <LatLonBox>
+        <north>52.908902</north>
+        <south>52.482780</south>
+        <east>14.062500</east>
+        <west>13.359375</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of West Berlin, according to the Illustrierte Historische Hefte in East Berlin · raster tile 9/274/168</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Berlin_1960_West/9/274/168.png</href></Icon>
+      <LatLonBox>
+        <north>52.482780</north>
+        <south>52.052490</south>
+        <east>13.359375</east>
+        <west>12.656250</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of West Berlin, according to the Illustrierte Historische Hefte in East Berlin · raster tile 9/275/168</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Berlin_1960_West/9/275/168.png</href></Icon>
+      <LatLonBox>
+        <north>52.482780</north>
+        <south>52.052490</south>
+        <east>14.062500</east>
+        <west>13.359375</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

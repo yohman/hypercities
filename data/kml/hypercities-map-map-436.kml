@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Miami 1B</name>
+    <description>Miami 1B, Miami, 1938. Miami 1B (1938). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Miami 1B</name>
+      <description>HyperCities Map Library footprint · Miami · 1938</description>
+      <TimeSpan><begin>1938-01-01</begin><end>1938-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:436</value></Data>
+      <Data name="place"><value>Miami</value></Data>
+      <Data name="years"><value>1938</value></Data>
+      <Data name="sourceRecordId"><value>436</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Miami 1B (1938). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/1938_Miami_1B_0248S/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-80.26092,25.749345,0 -80.257391,25.749345,0 -80.257391,25.753276,0 -80.26092,25.753276,0 -80.26092,25.749345,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Miami 1B · raster tile 17/36313/55826</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1938_Miami_1B_0248S/17/36313/55826.png</href></Icon>
+      <LatLonBox>
+        <north>25.755372</north>
+        <south>25.752899</south>
+        <east>-80.260620</east>
+        <west>-80.263367</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Miami 1B · raster tile 17/36314/55826</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1938_Miami_1B_0248S/17/36314/55826.png</href></Icon>
+      <LatLonBox>
+        <north>25.755372</north>
+        <south>25.752899</south>
+        <east>-80.257874</east>
+        <west>-80.260620</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Miami 1B · raster tile 17/36315/55826</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1938_Miami_1B_0248S/17/36315/55826.png</href></Icon>
+      <LatLonBox>
+        <north>25.755372</north>
+        <south>25.752899</south>
+        <east>-80.255127</east>
+        <west>-80.257874</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Miami 1B · raster tile 17/36313/55827</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1938_Miami_1B_0248S/17/36313/55827.png</href></Icon>
+      <LatLonBox>
+        <north>25.752899</north>
+        <south>25.750425</south>
+        <east>-80.260620</east>
+        <west>-80.263367</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Miami 1B · raster tile 17/36314/55827</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1938_Miami_1B_0248S/17/36314/55827.png</href></Icon>
+      <LatLonBox>
+        <north>25.752899</north>
+        <south>25.750425</south>
+        <east>-80.257874</east>
+        <west>-80.260620</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Miami 1B · raster tile 17/36315/55827</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1938_Miami_1B_0248S/17/36315/55827.png</href></Icon>
+      <LatLonBox>
+        <north>25.752899</north>
+        <south>25.750425</south>
+        <east>-80.255127</east>
+        <west>-80.257874</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Miami 1B · raster tile 17/36313/55828</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1938_Miami_1B_0248S/17/36313/55828.png</href></Icon>
+      <LatLonBox>
+        <north>25.750425</north>
+        <south>25.747951</south>
+        <east>-80.260620</east>
+        <west>-80.263367</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Miami 1B · raster tile 17/36314/55828</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1938_Miami_1B_0248S/17/36314/55828.png</href></Icon>
+      <LatLonBox>
+        <north>25.750425</north>
+        <south>25.747951</south>
+        <east>-80.257874</east>
+        <west>-80.260620</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Miami 1B · raster tile 17/36315/55828</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1938_Miami_1B_0248S/17/36315/55828.png</href></Icon>
+      <LatLonBox>
+        <north>25.750425</north>
+        <south>25.747951</south>
+        <east>-80.255127</east>
+        <west>-80.257874</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

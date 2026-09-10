@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Plan of Rome</name>
+    <description>Plan of Rome, Rome, 1873. Plan of Rome (1873). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Plan of Rome</name>
+      <description>HyperCities Map Library footprint · Rome · 1873</description>
+      <TimeSpan><begin>1873-01-01</begin><end>1873-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:137</value></Data>
+      <Data name="place"><value>Rome</value></Data>
+      <Data name="years"><value>1873</value></Data>
+      <Data name="sourceRecordId"><value>137</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value>J. &amp; C. Walker</value></Data>
+      <Data name="citation"><value>Plan of Rome (1873). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Rome_1873_Murray/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>12.438931,41.8622,0 12.527474,41.8622,0 12.527474,41.921287,0 12.438931,41.921287,0 12.438931,41.8622,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Plan of Rome · raster tile 12/2189/1521</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Rome_1873_Murray/12/2189/1521.png</href></Icon>
+      <LatLonBox>
+        <north>41.967659</north>
+        <south>41.902277</south>
+        <east>12.480469</east>
+        <west>12.392578</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Plan of Rome · raster tile 12/2190/1521</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Rome_1873_Murray/12/2190/1521.png</href></Icon>
+      <LatLonBox>
+        <north>41.967659</north>
+        <south>41.902277</south>
+        <east>12.568359</east>
+        <west>12.480469</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Plan of Rome · raster tile 12/2189/1522</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Rome_1873_Murray/12/2189/1522.png</href></Icon>
+      <LatLonBox>
+        <north>41.902277</north>
+        <south>41.836828</south>
+        <east>12.480469</east>
+        <west>12.392578</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Plan of Rome · raster tile 12/2190/1522</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Rome_1873_Murray/12/2190/1522.png</href></Icon>
+      <LatLonBox>
+        <north>41.902277</north>
+        <south>41.836828</south>
+        <east>12.568359</east>
+        <west>12.480469</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

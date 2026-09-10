@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Overview map of Berlin</name>
+    <description>Overview map of Berlin, Berlin, 1988. Overview map of Berlin (1988). HyperCities Map Library. UCLA Bruman Map Collection.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Overview map of Berlin</name>
+      <description>HyperCities Map Library footprint · Berlin · 1988</description>
+      <TimeSpan><begin>1988-01-01</begin><end>1988-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:14</value></Data>
+      <Data name="place"><value>Berlin</value></Data>
+      <Data name="years"><value>1988</value></Data>
+      <Data name="sourceRecordId"><value>14</value></Data>
+      <Data name="collection"><value>UCLA Bruman Map Collection</value></Data>
+      <Data name="creator"><value>Der Senator fÃ¼r Bau- und Wohnungswesen V</value></Data>
+      <Data name="citation"><value>Overview map of Berlin (1988). HyperCities Map Library. UCLA Bruman Map Collection.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Berlin_1988_West/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>13.050754,52.350005,0 13.673509,52.350005,0 13.673509,52.683071,0 13.050754,52.683071,0 13.050754,52.350005,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Overview map of Berlin · raster tile 10/549/335</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Berlin_1988_West/10/549/335.png</href></Icon>
+      <LatLonBox>
+        <north>52.696361</north>
+        <south>52.482780</south>
+        <east>13.359375</east>
+        <west>13.007813</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Overview map of Berlin · raster tile 10/550/335</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Berlin_1988_West/10/550/335.png</href></Icon>
+      <LatLonBox>
+        <north>52.696361</north>
+        <south>52.482780</south>
+        <east>13.710938</east>
+        <west>13.359375</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Overview map of Berlin · raster tile 10/549/336</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Berlin_1988_West/10/549/336.png</href></Icon>
+      <LatLonBox>
+        <north>52.482780</north>
+        <south>52.268157</south>
+        <east>13.359375</east>
+        <west>13.007813</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Overview map of Berlin · raster tile 10/550/336</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Berlin_1988_West/10/550/336.png</href></Icon>
+      <LatLonBox>
+        <north>52.482780</north>
+        <south>52.268157</south>
+        <east>13.710938</east>
+        <west>13.359375</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

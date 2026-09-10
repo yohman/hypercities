@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Waltern Central Berlin Map</name>
+    <description>Waltern Central Berlin Map, Berlin, 1739. Waltern Central Berlin Map (1739). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Waltern Central Berlin Map</name>
+      <description>HyperCities Map Library footprint · Berlin · 1739</description>
+      <TimeSpan><begin>1739-01-01</begin><end>1739-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:374</value></Data>
+      <Data name="place"><value>Berlin</value></Data>
+      <Data name="years"><value>1739</value></Data>
+      <Data name="sourceRecordId"><value>374</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Waltern Central Berlin Map (1739). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/1739_Waltern_Central_Berlin_Map/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>13.386016,52.508333,0 13.423323,52.508333,0 13.423323,52.526541,0 13.386016,52.526541,0 13.386016,52.508333,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Waltern Central Berlin Map · raster tile 14/8801/5372</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1739_Waltern_Central_Berlin_Map/14/8801/5372.png</href></Icon>
+      <LatLonBox>
+        <north>52.536273</north>
+        <south>52.522906</south>
+        <east>13.403320</east>
+        <west>13.381348</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Waltern Central Berlin Map · raster tile 14/8802/5372</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1739_Waltern_Central_Berlin_Map/14/8802/5372.png</href></Icon>
+      <LatLonBox>
+        <north>52.536273</north>
+        <south>52.522906</south>
+        <east>13.425293</east>
+        <west>13.403320</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Waltern Central Berlin Map · raster tile 14/8801/5373</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1739_Waltern_Central_Berlin_Map/14/8801/5373.png</href></Icon>
+      <LatLonBox>
+        <north>52.522906</north>
+        <south>52.509535</south>
+        <east>13.403320</east>
+        <west>13.381348</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Waltern Central Berlin Map · raster tile 14/8802/5373</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1739_Waltern_Central_Berlin_Map/14/8802/5373.png</href></Icon>
+      <LatLonBox>
+        <north>52.522906</north>
+        <south>52.509535</south>
+        <east>13.425293</east>
+        <west>13.403320</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Waltern Central Berlin Map · raster tile 14/8801/5374</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1739_Waltern_Central_Berlin_Map/14/8801/5374.png</href></Icon>
+      <LatLonBox>
+        <north>52.509535</north>
+        <south>52.496160</south>
+        <east>13.403320</east>
+        <west>13.381348</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Waltern Central Berlin Map · raster tile 14/8802/5374</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1739_Waltern_Central_Berlin_Map/14/8802/5374.png</href></Icon>
+      <LatLonBox>
+        <north>52.509535</north>
+        <south>52.496160</south>
+        <east>13.425293</east>
+        <west>13.403320</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

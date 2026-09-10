@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Map of Texas 2</name>
+    <description>Map of Texas 2, Dallas-Fort Worth, 2012. Map of Texas 2 (2012). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Map of Texas 2</name>
+      <description>HyperCities Map Library footprint · Dallas-Fort Worth · 2012</description>
+      <TimeSpan><begin>2012-01-01</begin><end>2012-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:389</value></Data>
+      <Data name="place"><value>Dallas-Fort Worth</value></Data>
+      <Data name="years"><value>2012</value></Data>
+      <Data name="sourceRecordId"><value>389</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Map of Texas 2 (2012). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Texas2_Paula/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-106.901917,25.786549,0 -99.887098,25.786549,0 -99.887098,30.088241,0 -106.901917,30.088241,0 -106.901917,25.786549,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Map of Texas 2 · raster tile 6/12/26</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Texas2_Paula/6/12/26.png</href></Icon>
+      <LatLonBox>
+        <north>31.952162</north>
+        <south>27.059126</south>
+        <east>-106.875000</east>
+        <west>-112.500000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Texas 2 · raster tile 6/13/26</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Texas2_Paula/6/13/26.png</href></Icon>
+      <LatLonBox>
+        <north>31.952162</north>
+        <south>27.059126</south>
+        <east>-101.250000</east>
+        <west>-106.875000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Texas 2 · raster tile 6/14/26</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Texas2_Paula/6/14/26.png</href></Icon>
+      <LatLonBox>
+        <north>31.952162</north>
+        <south>27.059126</south>
+        <east>-95.625000</east>
+        <west>-101.250000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Texas 2 · raster tile 6/12/27</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Texas2_Paula/6/12/27.png</href></Icon>
+      <LatLonBox>
+        <north>27.059126</north>
+        <south>21.943046</south>
+        <east>-106.875000</east>
+        <west>-112.500000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Texas 2 · raster tile 6/13/27</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Texas2_Paula/6/13/27.png</href></Icon>
+      <LatLonBox>
+        <north>27.059126</north>
+        <south>21.943046</south>
+        <east>-101.250000</east>
+        <west>-106.875000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Texas 2 · raster tile 6/14/27</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Texas2_Paula/6/14/27.png</href></Icon>
+      <LatLonBox>
+        <north>27.059126</north>
+        <south>21.943046</south>
+        <east>-95.625000</east>
+        <west>-101.250000</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Map of Magnesia (32)</name>
+    <description>Map of Magnesia (32), Magnesia, 1845. Map of Magnesia (32) (1845). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Map of Magnesia (32)</name>
+      <description>HyperCities Map Library footprint · Magnesia · 1845</description>
+      <TimeSpan><begin>1845-01-01</begin><end>1845-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:368</value></Data>
+      <Data name="place"><value>Magnesia</value></Data>
+      <Data name="years"><value>1845</value></Data>
+      <Data name="sourceRecordId"><value>368</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Map of Magnesia (32) (1845). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Magnesia_1845_32_1/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>27.525614,37.852156,0 27.528405,37.852156,0 27.528405,37.854255,0 27.525614,37.854255,0 27.525614,37.852156,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Map of Magnesia (32) · raster tile 17/75557/50625</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Magnesia_1845_32_1/17/75557/50625.png</href></Icon>
+      <LatLonBox>
+        <north>37.855339</north>
+        <south>37.853170</south>
+        <east>27.526245</east>
+        <west>27.523499</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Magnesia (32) · raster tile 17/75558/50625</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Magnesia_1845_32_1/17/75558/50625.png</href></Icon>
+      <LatLonBox>
+        <north>37.855339</north>
+        <south>37.853170</south>
+        <east>27.528992</east>
+        <west>27.526245</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Magnesia (32) · raster tile 17/75557/50626</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Magnesia_1845_32_1/17/75557/50626.png</href></Icon>
+      <LatLonBox>
+        <north>37.853170</north>
+        <south>37.851001</south>
+        <east>27.526245</east>
+        <west>27.523499</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Magnesia (32) · raster tile 17/75558/50626</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Magnesia_1845_32_1/17/75558/50626.png</href></Icon>
+      <LatLonBox>
+        <north>37.853170</north>
+        <south>37.851001</south>
+        <east>27.528992</east>
+        <west>27.526245</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

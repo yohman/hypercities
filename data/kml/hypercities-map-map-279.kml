@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Map of Iowa City</name>
+    <description>Map of Iowa City, Chicago, 1929–1930. Map of Iowa City (1929–1930). HyperCities Map Library. University Of Iowa Campus Maps Collection, University of Iowa (http://digital.lib.uiowa.edu/ucm).</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Map of Iowa City</name>
+      <description>HyperCities Map Library footprint · Chicago · 1929–1930</description>
+      <TimeSpan><begin>1929-01-01</begin><end>1930-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:279</value></Data>
+      <Data name="place"><value>Chicago</value></Data>
+      <Data name="years"><value>1929–1930</value></Data>
+      <Data name="sourceRecordId"><value>279</value></Data>
+      <Data name="collection"><value>University Of Iowa Campus Maps Collection, University of Iowa (http://digital.lib.uiowa.edu/ucm)</value></Data>
+      <Data name="creator"><value>University of Iowa</value></Data>
+      <Data name="citation"><value>Map of Iowa City (1929–1930). HyperCities Map Library. University Of Iowa Campus Maps Collection, University of Iowa (http://digital.lib.uiowa.edu/ucm).</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Iowa_City_1929-1930/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-91.573661,41.648004,0 -91.512369,41.648004,0 -91.512369,41.676518,0 -91.573661,41.676518,0 -91.573661,41.648004,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Map of Iowa City · raster tile 13/2012/3050</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Iowa_City_1929-1930/13/2012/3050.png</href></Icon>
+      <LatLonBox>
+        <north>41.705729</north>
+        <south>41.672912</south>
+        <east>-91.538086</east>
+        <west>-91.582031</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Iowa City · raster tile 13/2013/3050</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Iowa_City_1929-1930/13/2013/3050.png</href></Icon>
+      <LatLonBox>
+        <north>41.705729</north>
+        <south>41.672912</south>
+        <east>-91.494141</east>
+        <west>-91.538086</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Iowa City · raster tile 13/2012/3051</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Iowa_City_1929-1930/13/2012/3051.png</href></Icon>
+      <LatLonBox>
+        <north>41.672912</north>
+        <south>41.640078</south>
+        <east>-91.538086</east>
+        <west>-91.582031</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Iowa City · raster tile 13/2013/3051</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Iowa_City_1929-1930/13/2013/3051.png</href></Icon>
+      <LatLonBox>
+        <north>41.672912</north>
+        <south>41.640078</south>
+        <east>-91.494141</east>
+        <west>-91.538086</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

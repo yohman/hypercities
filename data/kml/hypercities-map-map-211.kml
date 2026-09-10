@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Map of Paris-clerot</name>
+    <description>Map of Paris-clerot, Paris, 1867. Map of Paris-clerot (1867). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Map of Paris-clerot</name>
+      <description>HyperCities Map Library footprint · Paris · 1867</description>
+      <TimeSpan><begin>1867-01-01</begin><end>1867-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:211</value></Data>
+      <Data name="place"><value>Paris</value></Data>
+      <Data name="years"><value>1867</value></Data>
+      <Data name="sourceRecordId"><value>211</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Map of Paris-clerot (1867). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Paris-clerot-1867-BIG_final/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>2.1836,48.793031,0 2.474743,48.793031,0 2.474743,48.92192,0 2.1836,48.92192,0 2.1836,48.793031,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Map of Paris-clerot · raster tile 10/518/352</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Paris-clerot-1867-BIG_final/10/518/352.png</href></Icon>
+      <LatLonBox>
+        <north>48.922499</north>
+        <south>48.690960</south>
+        <east>2.460938</east>
+        <west>2.109375</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Paris-clerot · raster tile 10/519/352</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Paris-clerot-1867-BIG_final/10/519/352.png</href></Icon>
+      <LatLonBox>
+        <north>48.922499</north>
+        <south>48.690960</south>
+        <east>2.812500</east>
+        <west>2.460938</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

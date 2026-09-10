@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Ancient Rome</name>
+    <description>Ancient Rome, Rome, 1663. Ancient Rome (1663). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Ancient Rome</name>
+      <description>HyperCities Map Library footprint · Rome · 1663</description>
+      <TimeSpan><begin>1663-01-01</begin><end>1663-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:131</value></Data>
+      <Data name="place"><value>Rome</value></Data>
+      <Data name="years"><value>1663</value></Data>
+      <Data name="sourceRecordId"><value>131</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Ancient Rome (1663). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Rome_1663_Blaeu/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>12.450446,41.861721,0 12.522429,41.861721,0 12.522429,41.919364,0 12.450446,41.919364,0 12.450446,41.861721,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Ancient Rome · raster tile 13/4379/3043</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Rome_1663_Blaeu/13/4379/3043.png</href></Icon>
+      <LatLonBox>
+        <north>41.934977</north>
+        <south>41.902277</south>
+        <east>12.480469</east>
+        <west>12.436523</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Ancient Rome · raster tile 13/4380/3043</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Rome_1663_Blaeu/13/4380/3043.png</href></Icon>
+      <LatLonBox>
+        <north>41.934977</north>
+        <south>41.902277</south>
+        <east>12.524414</east>
+        <west>12.480469</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Ancient Rome · raster tile 13/4379/3044</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Rome_1663_Blaeu/13/4379/3044.png</href></Icon>
+      <LatLonBox>
+        <north>41.902277</north>
+        <south>41.869561</south>
+        <east>12.480469</east>
+        <west>12.436523</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Ancient Rome · raster tile 13/4380/3044</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Rome_1663_Blaeu/13/4380/3044.png</href></Icon>
+      <LatLonBox>
+        <north>41.902277</north>
+        <south>41.869561</south>
+        <east>12.524414</east>
+        <west>12.480469</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Ancient Rome · raster tile 13/4379/3045</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Rome_1663_Blaeu/13/4379/3045.png</href></Icon>
+      <LatLonBox>
+        <north>41.869561</north>
+        <south>41.836828</south>
+        <east>12.480469</east>
+        <west>12.436523</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Ancient Rome · raster tile 13/4380/3045</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Rome_1663_Blaeu/13/4380/3045.png</href></Icon>
+      <LatLonBox>
+        <north>41.869561</north>
+        <south>41.836828</south>
+        <east>12.524414</east>
+        <west>12.480469</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

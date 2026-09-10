@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Meacham Park aerial</name>
+    <description>Meacham Park aerial, Chicago, 1955. Meacham Park aerial (1955). HyperCities Map Library. St. Louis County.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Meacham Park aerial</name>
+      <description>HyperCities Map Library footprint · Chicago · 1955</description>
+      <TimeSpan><begin>1955-01-01</begin><end>1955-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:329</value></Data>
+      <Data name="place"><value>Chicago</value></Data>
+      <Data name="years"><value>1955</value></Data>
+      <Data name="sourceRecordId"><value>329</value></Data>
+      <Data name="collection"><value>St. Louis County</value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Meacham Park aerial (1955). HyperCities Map Library. St. Louis County.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Meacham_Park_1955/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-90.408916,38.558079,0 -90.381312,38.558079,0 -90.381312,38.570223,0 -90.408916,38.570223,0 -90.408916,38.558079,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Meacham Park aerial · raster tile 14/4077/6286</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Meacham_Park_1955/14/4077/6286.png</href></Icon>
+      <LatLonBox>
+        <north>38.582526</north>
+        <south>38.565348</south>
+        <east>-90.395508</east>
+        <west>-90.417480</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Meacham Park aerial · raster tile 14/4078/6286</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Meacham_Park_1955/14/4078/6286.png</href></Icon>
+      <LatLonBox>
+        <north>38.582526</north>
+        <south>38.565348</south>
+        <east>-90.373535</east>
+        <west>-90.395508</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Meacham Park aerial · raster tile 14/4077/6287</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Meacham_Park_1955/14/4077/6287.png</href></Icon>
+      <LatLonBox>
+        <north>38.565348</north>
+        <south>38.548165</south>
+        <east>-90.395508</east>
+        <west>-90.417480</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Meacham Park aerial · raster tile 14/4078/6287</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Meacham_Park_1955/14/4078/6287.png</href></Icon>
+      <LatLonBox>
+        <north>38.565348</north>
+        <south>38.548165</south>
+        <east>-90.373535</east>
+        <west>-90.395508</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

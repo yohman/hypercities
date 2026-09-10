@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Overview of Area-use planning</name>
+    <description>Overview of Area-use planning, Berlin, 1977. Overview of Area-use planning (1977). HyperCities Map Library. UCLA Bruman Map Collection.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Overview of Area-use planning</name>
+      <description>HyperCities Map Library footprint · Berlin · 1977</description>
+      <TimeSpan><begin>1977-01-01</begin><end>1977-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:11</value></Data>
+      <Data name="place"><value>Berlin</value></Data>
+      <Data name="years"><value>1977</value></Data>
+      <Data name="sourceRecordId"><value>11</value></Data>
+      <Data name="collection"><value>UCLA Bruman Map Collection</value></Data>
+      <Data name="creator"><value>Der Senator fuer Bau- und Wohnungswesen V</value></Data>
+      <Data name="citation"><value>Overview of Area-use planning (1977). HyperCities Map Library. UCLA Bruman Map Collection.</value></Data>
+      <Data name="tileTemplate"><value>https://dev.cdh.ucla.edu/hypermedia/tiles/1977/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>13.058539,52.360225,0 13.554706,52.360225,0 13.554706,52.676328,0 13.058539,52.676328,0 13.058539,52.360225,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Overview of Area-use planning · raster tile 10/549/335</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://dev.cdh.ucla.edu/hypermedia/tiles/1977/10/549/335.png</href></Icon>
+      <LatLonBox>
+        <north>52.696361</north>
+        <south>52.482780</south>
+        <east>13.359375</east>
+        <west>13.007813</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Overview of Area-use planning · raster tile 10/550/335</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://dev.cdh.ucla.edu/hypermedia/tiles/1977/10/550/335.png</href></Icon>
+      <LatLonBox>
+        <north>52.696361</north>
+        <south>52.482780</south>
+        <east>13.710938</east>
+        <west>13.359375</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Overview of Area-use planning · raster tile 10/549/336</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://dev.cdh.ucla.edu/hypermedia/tiles/1977/10/549/336.png</href></Icon>
+      <LatLonBox>
+        <north>52.482780</north>
+        <south>52.268157</south>
+        <east>13.359375</east>
+        <west>13.007813</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Overview of Area-use planning · raster tile 10/550/336</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://dev.cdh.ucla.edu/hypermedia/tiles/1977/10/550/336.png</href></Icon>
+      <LatLonBox>
+        <north>52.482780</north>
+        <south>52.268157</south>
+        <east>13.710938</east>
+        <west>13.359375</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

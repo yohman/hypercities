@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Plan of Edmonton Settlement, N.W.T.</name>
+    <description>Plan of Edmonton Settlement, N.W.T., Edmonton, 1883. Plan of Edmonton Settlement, N.W.T. (1883). HyperCities Map Library. University of Alberta Map Collection.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Plan of Edmonton Settlement, N.W.T.</name>
+      <description>HyperCities Map Library footprint · Edmonton · 1883</description>
+      <TimeSpan><begin>1883-01-01</begin><end>1883-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:299</value></Data>
+      <Data name="place"><value>Edmonton</value></Data>
+      <Data name="years"><value>1883</value></Data>
+      <Data name="sourceRecordId"><value>299</value></Data>
+      <Data name="collection"><value>University of Alberta Map Collection</value></Data>
+      <Data name="creator"><value>M. Deane</value></Data>
+      <Data name="citation"><value>Plan of Edmonton Settlement, N.W.T. (1883). HyperCities Map Library. University of Alberta Map Collection.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Edmonton_1883/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-113.56578,53.506016,0 -113.371415,53.506016,0 -113.371415,53.579387,0 -113.56578,53.579387,0 -113.56578,53.506016,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Plan of Edmonton Settlement, N.W.T. · raster tile 11/377/661</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Edmonton_1883/11/377/661.png</href></Icon>
+      <LatLonBox>
+        <north>53.644638</north>
+        <south>53.540307</south>
+        <east>-113.554688</east>
+        <west>-113.730469</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Plan of Edmonton Settlement, N.W.T. · raster tile 11/378/661</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Edmonton_1883/11/378/661.png</href></Icon>
+      <LatLonBox>
+        <north>53.644638</north>
+        <south>53.540307</south>
+        <east>-113.378906</east>
+        <west>-113.554688</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Plan of Edmonton Settlement, N.W.T. · raster tile 11/379/661</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Edmonton_1883/11/379/661.png</href></Icon>
+      <LatLonBox>
+        <north>53.644638</north>
+        <south>53.540307</south>
+        <east>-113.203125</east>
+        <west>-113.378906</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Plan of Edmonton Settlement, N.W.T. · raster tile 11/377/662</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Edmonton_1883/11/377/662.png</href></Icon>
+      <LatLonBox>
+        <north>53.540307</north>
+        <south>53.435719</south>
+        <east>-113.554688</east>
+        <west>-113.730469</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Plan of Edmonton Settlement, N.W.T. · raster tile 11/378/662</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Edmonton_1883/11/378/662.png</href></Icon>
+      <LatLonBox>
+        <north>53.540307</north>
+        <south>53.435719</south>
+        <east>-113.378906</east>
+        <west>-113.554688</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Plan of Edmonton Settlement, N.W.T. · raster tile 11/379/662</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Edmonton_1883/11/379/662.png</href></Icon>
+      <LatLonBox>
+        <north>53.540307</north>
+        <south>53.435719</south>
+        <east>-113.203125</east>
+        <west>-113.378906</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

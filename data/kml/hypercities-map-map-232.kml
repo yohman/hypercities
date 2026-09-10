@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Plano Topografico del Distrito Federal</name>
+    <description>Plano Topografico del Distrito Federal, Mexico City, 1837. Plano Topografico del Distrito Federal (1837). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Plano Topografico del Distrito Federal</name>
+      <description>HyperCities Map Library footprint · Mexico City · 1837</description>
+      <TimeSpan><begin>1837-01-01</begin><end>1837-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:232</value></Data>
+      <Data name="place"><value>Mexico City</value></Data>
+      <Data name="years"><value>1837</value></Data>
+      <Data name="sourceRecordId"><value>232</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Plano Topografico del Distrito Federal (1837). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/G4590_371_final/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-99.23585,19.325851,0 -99.020958,19.325851,0 -99.020958,19.555488,0 -99.23585,19.555488,0 -99.23585,19.325851,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Plano Topografico del Distrito Federal · raster tile 11/459/910</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/G4590_371_final/11/459/910.png</href></Icon>
+      <LatLonBox>
+        <north>19.642588</north>
+        <south>19.476950</south>
+        <east>-99.140625</east>
+        <west>-99.316406</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Plano Topografico del Distrito Federal · raster tile 11/460/910</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/G4590_371_final/11/460/910.png</href></Icon>
+      <LatLonBox>
+        <north>19.642588</north>
+        <south>19.476950</south>
+        <east>-98.964844</east>
+        <west>-99.140625</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Plano Topografico del Distrito Federal · raster tile 11/459/911</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/G4590_371_final/11/459/911.png</href></Icon>
+      <LatLonBox>
+        <north>19.476950</north>
+        <south>19.311143</south>
+        <east>-99.140625</east>
+        <west>-99.316406</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Plano Topografico del Distrito Federal · raster tile 11/460/911</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/G4590_371_final/11/460/911.png</href></Icon>
+      <LatLonBox>
+        <north>19.476950</north>
+        <south>19.311143</south>
+        <east>-98.964844</east>
+        <west>-99.140625</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Map of Chicago (1852)</name>
+    <description>Map of Chicago (1852), Chicago, 1852. Map of Chicago (1852) (1852). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Map of Chicago (1852)</name>
+      <description>HyperCities Map Library footprint · Chicago · 1852</description>
+      <TimeSpan><begin>1852-01-01</begin><end>1852-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:182</value></Data>
+      <Data name="place"><value>Chicago</value></Data>
+      <Data name="years"><value>1852</value></Data>
+      <Data name="sourceRecordId"><value>182</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Map of Chicago (1852) (1852). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Chicago_1852/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-87.872641,41.571859,0 -87.480889,41.571859,0 -87.480889,42.008999,0 -87.872641,42.008999,0 -87.872641,41.571859,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Map of Chicago (1852) · raster tile 10/262/380</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Chicago_1852/10/262/380.png</href></Icon>
+      <LatLonBox>
+        <north>42.032974</north>
+        <south>41.771312</south>
+        <east>-87.539063</east>
+        <west>-87.890625</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Chicago (1852) · raster tile 10/263/380</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Chicago_1852/10/263/380.png</href></Icon>
+      <LatLonBox>
+        <north>42.032974</north>
+        <south>41.771312</south>
+        <east>-87.187500</east>
+        <west>-87.539063</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Chicago (1852) · raster tile 10/262/381</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Chicago_1852/10/262/381.png</href></Icon>
+      <LatLonBox>
+        <north>41.771312</north>
+        <south>41.508577</south>
+        <east>-87.539063</east>
+        <west>-87.890625</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Chicago (1852) · raster tile 10/263/381</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Chicago_1852/10/263/381.png</href></Icon>
+      <LatLonBox>
+        <north>41.771312</north>
+        <south>41.508577</south>
+        <east>-87.187500</east>
+        <west>-87.539063</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

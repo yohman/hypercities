@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Newest Layout of Berlin</name>
+    <description>Newest Layout of Berlin, Berlin, 1835. Newest Layout of Berlin (1835). HyperCities Map Library. UCLA Bruman Map Collection.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Newest Layout of Berlin</name>
+      <description>HyperCities Map Library footprint · Berlin · 1835</description>
+      <TimeSpan><begin>1835-01-01</begin><end>1835-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:29</value></Data>
+      <Data name="place"><value>Berlin</value></Data>
+      <Data name="years"><value>1835</value></Data>
+      <Data name="sourceRecordId"><value>29</value></Data>
+      <Data name="collection"><value>UCLA Bruman Map Collection</value></Data>
+      <Data name="creator"><value>D.G. Reymann</value></Data>
+      <Data name="citation"><value>Newest Layout of Berlin (1835). HyperCities Map Library. UCLA Bruman Map Collection.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Berlin_1835/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>13.363965,52.493612,0 13.454176,52.493612,0 13.454176,52.534719,0 13.363965,52.534719,0 13.363965,52.493612,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Newest Layout of Berlin · raster tile 10/550/335</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Berlin_1835/10/550/335.png</href></Icon>
+      <LatLonBox>
+        <north>52.696361</north>
+        <south>52.482780</south>
+        <east>13.710938</east>
+        <west>13.359375</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

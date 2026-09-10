@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Early Twentieth Century El Paso</name>
+    <description>Early Twentieth Century El Paso, Kayenta, Arizona, 1925. Early Twentieth Century El Paso (1925). HyperCities Map Library. Stewart Title of El Paso .</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Early Twentieth Century El Paso</name>
+      <description>HyperCities Map Library footprint · Kayenta, Arizona · 1925</description>
+      <TimeSpan><begin>1925-01-01</begin><end>1925-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:291</value></Data>
+      <Data name="place"><value>Kayenta, Arizona</value></Data>
+      <Data name="years"><value>1925</value></Data>
+      <Data name="sourceRecordId"><value>291</value></Data>
+      <Data name="collection"><value>Stewart Title of El Paso </value></Data>
+      <Data name="creator"><value>Aaron Margolis, doctoral student in History under the supervision of assistant professor of history Dr. Adam Arenson at the University of Texas at El Paso, with assistance from Dr. Raed Aldouri and Abdiel Quezada of, Geographical Informational Systems, at</value></Data>
+      <Data name="citation"><value>Early Twentieth Century El Paso (1925). HyperCities Map Library. Stewart Title of El Paso .</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/El_Paso_1925-1935/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-106.489098,31.777604,0 -106.477175,31.777604,0 -106.477175,31.788075,0 -106.489098,31.788075,0 -106.489098,31.777604,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Early Twentieth Century El Paso · raster tile 15/6691/13329</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/El_Paso_1925-1935/15/6691/13329.png</href></Icon>
+      <LatLonBox>
+        <north>31.793555</north>
+        <south>31.784217</south>
+        <east>-106.479492</east>
+        <west>-106.490479</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Early Twentieth Century El Paso · raster tile 15/6692/13329</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/El_Paso_1925-1935/15/6692/13329.png</href></Icon>
+      <LatLonBox>
+        <north>31.793555</north>
+        <south>31.784217</south>
+        <east>-106.468506</east>
+        <west>-106.479492</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Early Twentieth Century El Paso · raster tile 15/6691/13330</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/El_Paso_1925-1935/15/6691/13330.png</href></Icon>
+      <LatLonBox>
+        <north>31.784217</north>
+        <south>31.774878</south>
+        <east>-106.479492</east>
+        <west>-106.490479</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Early Twentieth Century El Paso · raster tile 15/6692/13330</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/El_Paso_1925-1935/15/6692/13330.png</href></Icon>
+      <LatLonBox>
+        <north>31.784217</north>
+        <south>31.774878</south>
+        <east>-106.468506</east>
+        <west>-106.479492</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

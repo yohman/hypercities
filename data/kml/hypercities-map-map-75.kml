@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Population Density, 1980</name>
+    <description>Population Density, 1980, New York, 1980. Population Density, 1980 (1980). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Population Density, 1980</name>
+      <description>HyperCities Map Library footprint · New York · 1980</description>
+      <TimeSpan><begin>1980-01-01</begin><end>1980-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:75</value></Data>
+      <Data name="place"><value>New York</value></Data>
+      <Data name="years"><value>1980</value></Data>
+      <Data name="sourceRecordId"><value>75</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value>National Geographic</value></Data>
+      <Data name="citation"><value>Population Density, 1980 (1980). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/NewYork_1980_PopDensity_a/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-74.269874,40.424086,0 -73.678606,40.424086,0 -73.678606,40.939729,0 -74.269874,40.939729,0 -74.269874,40.424086,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Population Density, 1980 · raster tile 9/150/192</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1980_PopDensity_a/9/150/192.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>40.446947</south>
+        <east>-73.828125</east>
+        <west>-74.531250</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Population Density, 1980 · raster tile 9/151/192</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1980_PopDensity_a/9/151/192.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>40.446947</south>
+        <east>-73.125000</east>
+        <west>-73.828125</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Population Density, 1980 · raster tile 9/150/193</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1980_PopDensity_a/9/150/193.png</href></Icon>
+      <LatLonBox>
+        <north>40.446947</north>
+        <south>39.909736</south>
+        <east>-73.828125</east>
+        <west>-74.531250</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Population Density, 1980 · raster tile 9/151/193</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1980_PopDensity_a/9/151/193.png</href></Icon>
+      <LatLonBox>
+        <north>40.446947</north>
+        <south>39.909736</south>
+        <east>-73.125000</east>
+        <west>-73.828125</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

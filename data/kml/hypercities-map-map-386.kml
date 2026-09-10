@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Palace Site Plan</name>
+    <description>Palace Site Plan, Berlin, 1685. Palace Site Plan (1685). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Palace Site Plan</name>
+      <description>HyperCities Map Library footprint · Berlin · 1685</description>
+      <TimeSpan><begin>1685-01-01</begin><end>1685-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:386</value></Data>
+      <Data name="place"><value>Berlin</value></Data>
+      <Data name="years"><value>1685</value></Data>
+      <Data name="sourceRecordId"><value>386</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Palace Site Plan (1685). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/1685_Palace_Site_Plan_Final/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>13.398345,52.515489,0 13.404583,52.515489,0 13.404583,52.519576,0 13.398345,52.519576,0 13.398345,52.515489,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Palace Site Plan · raster tile 16/35207/21492</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1685_Palace_Site_Plan_Final/16/35207/21492.png</href></Icon>
+      <LatLonBox>
+        <north>52.522906</north>
+        <south>52.519564</south>
+        <east>13.403320</east>
+        <west>13.397827</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Palace Site Plan · raster tile 16/35208/21492</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1685_Palace_Site_Plan_Final/16/35208/21492.png</href></Icon>
+      <LatLonBox>
+        <north>52.522906</north>
+        <south>52.519564</south>
+        <east>13.408813</east>
+        <west>13.403320</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Palace Site Plan · raster tile 16/35207/21493</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1685_Palace_Site_Plan_Final/16/35207/21493.png</href></Icon>
+      <LatLonBox>
+        <north>52.519564</north>
+        <south>52.516221</south>
+        <east>13.403320</east>
+        <west>13.397827</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Palace Site Plan · raster tile 16/35208/21493</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1685_Palace_Site_Plan_Final/16/35208/21493.png</href></Icon>
+      <LatLonBox>
+        <north>52.519564</north>
+        <south>52.516221</south>
+        <east>13.408813</east>
+        <west>13.403320</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Palace Site Plan · raster tile 16/35207/21494</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1685_Palace_Site_Plan_Final/16/35207/21494.png</href></Icon>
+      <LatLonBox>
+        <north>52.516221</north>
+        <south>52.512878</south>
+        <east>13.403320</east>
+        <west>13.397827</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Palace Site Plan · raster tile 16/35208/21494</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1685_Palace_Site_Plan_Final/16/35208/21494.png</href></Icon>
+      <LatLonBox>
+        <north>52.516221</north>
+        <south>52.512878</south>
+        <east>13.408813</east>
+        <west>13.403320</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

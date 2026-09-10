@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Plan der Königl. Preussischen Residenz-Stadt Berlin wie solche im Monath Octobr A: 1760 von einem Kässerl. Russil. Corps unter Commando des Generals Majors von Tottleben, attaquiret und eingenommen worden.</name>
+    <description>Plan der Königl. Preussischen Residenz-Stadt Berlin wie solche im Monath Octobr A: 1760 von einem Kässerl. Russil. Corps unter Commando des Generals Majors von Tottleben, attaquiret und eingenommen worden., Berlin, 1760. Plan der Königl. Preussischen Residenz-Stadt Berlin wie solche im Monath Octobr A: 1760 von einem Kässerl. Russil. Corps unter Commando des Generals Majors von Tottleben, attaquiret und eingenommen worden. (1760). HyperCities Map Library. UCLA Bruman Map Collection.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Plan der Königl. Preussischen Residenz-Stadt Berlin wie solche im Monath Octobr A: 1760 von einem Kässerl. Russil. Corps unter Commando des Generals Majors von Tottleben, attaquiret und eingenommen worden.</name>
+      <description>HyperCities Map Library footprint · Berlin · 1760</description>
+      <TimeSpan><begin>1760-01-01</begin><end>1760-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:23</value></Data>
+      <Data name="place"><value>Berlin</value></Data>
+      <Data name="years"><value>1760</value></Data>
+      <Data name="sourceRecordId"><value>23</value></Data>
+      <Data name="collection"><value>UCLA Bruman Map Collection</value></Data>
+      <Data name="creator"><value>Major von Tottleben</value></Data>
+      <Data name="citation"><value>Plan der Königl. Preussischen Residenz-Stadt Berlin wie solche im Monath Octobr A: 1760 von einem Kässerl. Russil. Corps unter Commando des Generals Majors von Tottleben, attaquiret und eingenommen worden. (1760). HyperCities Map Library. UCLA Bruman Map Collection.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Berlin_1760/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>13.344652,52.486293,0 13.469875,52.486293,0 13.469875,52.546042,0 13.344652,52.546042,0 13.344652,52.486293,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Plan der Königl. Preussischen Residenz-Stadt Berlin wie solche im Monath Octobr A: 1760 von einem Kässerl. Russil. Corps unter Commando des Generals Majors von Tottleben, attaquiret und eingenommen worden. · raster tile 12/2199/1342</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Berlin_1760/12/2199/1342.png</href></Icon>
+      <LatLonBox>
+        <north>52.589701</north>
+        <south>52.536273</south>
+        <east>13.359375</east>
+        <west>13.271484</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Plan der Königl. Preussischen Residenz-Stadt Berlin wie solche im Monath Octobr A: 1760 von einem Kässerl. Russil. Corps unter Commando des Generals Majors von Tottleben, attaquiret und eingenommen worden. · raster tile 12/2200/1342</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Berlin_1760/12/2200/1342.png</href></Icon>
+      <LatLonBox>
+        <north>52.589701</north>
+        <south>52.536273</south>
+        <east>13.447266</east>
+        <west>13.359375</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Plan der Königl. Preussischen Residenz-Stadt Berlin wie solche im Monath Octobr A: 1760 von einem Kässerl. Russil. Corps unter Commando des Generals Majors von Tottleben, attaquiret und eingenommen worden. · raster tile 12/2201/1342</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Berlin_1760/12/2201/1342.png</href></Icon>
+      <LatLonBox>
+        <north>52.589701</north>
+        <south>52.536273</south>
+        <east>13.535156</east>
+        <west>13.447266</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Plan der Königl. Preussischen Residenz-Stadt Berlin wie solche im Monath Octobr A: 1760 von einem Kässerl. Russil. Corps unter Commando des Generals Majors von Tottleben, attaquiret und eingenommen worden. · raster tile 12/2199/1343</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Berlin_1760/12/2199/1343.png</href></Icon>
+      <LatLonBox>
+        <north>52.536273</north>
+        <south>52.482780</south>
+        <east>13.359375</east>
+        <west>13.271484</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Plan der Königl. Preussischen Residenz-Stadt Berlin wie solche im Monath Octobr A: 1760 von einem Kässerl. Russil. Corps unter Commando des Generals Majors von Tottleben, attaquiret und eingenommen worden. · raster tile 12/2200/1343</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Berlin_1760/12/2200/1343.png</href></Icon>
+      <LatLonBox>
+        <north>52.536273</north>
+        <south>52.482780</south>
+        <east>13.447266</east>
+        <west>13.359375</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Plan der Königl. Preussischen Residenz-Stadt Berlin wie solche im Monath Octobr A: 1760 von einem Kässerl. Russil. Corps unter Commando des Generals Majors von Tottleben, attaquiret und eingenommen worden. · raster tile 12/2201/1343</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Berlin_1760/12/2201/1343.png</href></Icon>
+      <LatLonBox>
+        <north>52.536273</north>
+        <south>52.482780</south>
+        <east>13.535156</east>
+        <west>13.447266</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

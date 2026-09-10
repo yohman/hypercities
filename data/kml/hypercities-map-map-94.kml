@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Greater New York</name>
+    <description>Greater New York, New York, 1965. Greater New York (1965). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Greater New York</name>
+      <description>HyperCities Map Library footprint · New York · 1965</description>
+      <TimeSpan><begin>1965-01-01</begin><end>1965-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:94</value></Data>
+      <Data name="place"><value>New York</value></Data>
+      <Data name="years"><value>1965</value></Data>
+      <Data name="sourceRecordId"><value>94</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value>Cartographic Division of the National Geographic Society, Melville Bell Grosvenor, editor; Ralph E. McAleer, chief cartographer</value></Data>
+      <Data name="citation"><value>Greater New York (1965). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/NewYork_1965_Greater/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-74.341587,40.491355,0 -73.716683,40.491355,0 -73.716683,41.10947,0 -74.341587,41.10947,0 -74.341587,40.491355,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Greater New York · raster tile 9/150/191</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1965_Greater/9/150/191.png</href></Icon>
+      <LatLonBox>
+        <north>41.508577</north>
+        <south>40.979898</south>
+        <east>-73.828125</east>
+        <west>-74.531250</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Greater New York · raster tile 9/151/191</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1965_Greater/9/151/191.png</href></Icon>
+      <LatLonBox>
+        <north>41.508577</north>
+        <south>40.979898</south>
+        <east>-73.125000</east>
+        <west>-73.828125</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Greater New York · raster tile 9/150/192</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1965_Greater/9/150/192.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>40.446947</south>
+        <east>-73.828125</east>
+        <west>-74.531250</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Greater New York · raster tile 9/151/192</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1965_Greater/9/151/192.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>40.446947</south>
+        <east>-73.125000</east>
+        <west>-73.828125</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

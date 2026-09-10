@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Residential Security Map-- Los Angeles and Vicinity</name>
+    <description>Residential Security Map-- Los Angeles and Vicinity, Los Angeles, 1939. Residential Security Map-- Los Angeles and Vicinity (1939). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Residential Security Map-- Los Angeles and Vicinity</name>
+      <description>HyperCities Map Library footprint · Los Angeles · 1939</description>
+      <TimeSpan><begin>1939-01-01</begin><end>1939-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:155</value></Data>
+      <Data name="place"><value>Los Angeles</value></Data>
+      <Data name="years"><value>1939</value></Data>
+      <Data name="sourceRecordId"><value>155</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value>Division of Research and Statistics, Federal Home-Loan Bank Board</value></Data>
+      <Data name="citation"><value>Residential Security Map-- Los Angeles and Vicinity (1939). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/LosAngeles_1939_Redlining2/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-118.545933,34.103878,0 -118.133786,34.103878,0 -118.133786,34.352106,0 -118.545933,34.352106,0 -118.545933,34.103878,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Residential Security Map-- Los Angeles and Vicinity · raster tile 10/174/407</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/LosAngeles_1939_Redlining2/10/174/407.png</href></Icon>
+      <LatLonBox>
+        <north>34.597042</north>
+        <south>34.307144</south>
+        <east>-118.476563</east>
+        <west>-118.828125</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Residential Security Map-- Los Angeles and Vicinity · raster tile 10/175/407</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/LosAngeles_1939_Redlining2/10/175/407.png</href></Icon>
+      <LatLonBox>
+        <north>34.597042</north>
+        <south>34.307144</south>
+        <east>-118.125000</east>
+        <west>-118.476563</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Residential Security Map-- Los Angeles and Vicinity · raster tile 10/174/408</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/LosAngeles_1939_Redlining2/10/174/408.png</href></Icon>
+      <LatLonBox>
+        <north>34.307144</north>
+        <south>34.016242</south>
+        <east>-118.476563</east>
+        <west>-118.828125</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Residential Security Map-- Los Angeles and Vicinity · raster tile 10/175/408</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/LosAngeles_1939_Redlining2/10/175/408.png</href></Icon>
+      <LatLonBox>
+        <north>34.307144</north>
+        <south>34.016242</south>
+        <east>-118.125000</east>
+        <west>-118.476563</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

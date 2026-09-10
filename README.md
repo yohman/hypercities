@@ -6,41 +6,44 @@ This is not a recreation of the original GIS platform or a conventional academic
 
 ## The current build
 
-- A dark, label-free world field reveals the real extents of historical maps as restrained red traces.
+- A dark, label-free world map reveals the real extents of historical maps as restrained red traces.
+- The map remains the landing experience. A quiet **EXPLORE** opens a sparse constellation of HyperCities entrances and lays down a different dashed dérive toward one possible future path each time; MAP, READ, and Take a Map are active now, while Windows and Origins remain visibly staged as later phases.
+- **TAKE A MAP** is an archival action available whenever a historical layer is selected; Explore remains an optional archive-led entrance. Its floating source panel has three focused tabs—an interactive MapLibre map and complete HTML recipe, Google Earth/KML instructions, and QGIS instructions. It never implies a raster download or rights grant.
 - Hovering a location with overlapping maps previews a **TimeWell**; clicking locks a CORE at that coordinate.
-- The TimeWell is a floating three-dimensional temporal cross-section. Its strata preserve each map's geographic aspect ratio, while a central pillar marks the drilled coordinate and the vertical axis names the available years.
+- The **TimeWell** is this prototype's temporal-CORE innovation: a floating three-dimensional cross-section generated when a visitor cuts into a location. Its strata preserve each map's geographic aspect ratio, a central pillar fixes the drilled coordinate, and the vertical axis makes the available dates traversable.
 - Selecting a layer moves the map to that historical map's actual geographic extent and attempts to display its original raster tiles. The map remains freely pannable and zoomable.
 - The full-book Hyperbook supplies encounters through direct place evidence, cartographic and temporal resonance, visitor actions, concepts, and deliberately labelled editorial routes. It may also remain silent.
-- Clicking a quotation opens its scanned source page with the source passage highlighted. Left and Right arrows page through all 212 source images; returning to the cited page restores the highlight.
-- The **TRACE** holds a fading record of the current dérive. Arrow keys mirror the offered movements: Up/Down move through time, Right accepts a lateral route, and Left/Esc returns toward the field. In the book reader, Left/Right instead turn pages.
+- **READ** opens the book as a 212-page facsimile. Its visible Previous/Next controls and Left/Right keys turn pages. A quotation or title opens this same reader at its cited page; an exact quotation locator is highlighted when one is available.
+- The **TRACE** holds a fading record of the current dérive. Arrow keys mirror the offered movements: Up/Down move through time, Right accepts a lateral route, and Left/Esc returns toward the map. In the book reader, Left/Right instead turn pages.
 
 ## Screens
 
-### 1. The world field
+### 1. The map field
 
 Historical-map extents remain quiet until a visitor chooses a place to enter.
 
-![Dark world map with muted historical-map extents](assets/readme/world-field.jpg)
+![Dark world map with restrained historical-map extents](assets/readme/world-field-current.png)
 
-### 2. A TimeWell / CORE in Berlin
+### 2. TimeWell: a temporal CORE
 
-A selected historical raster occupies its true geographic footprint on the map while the TimeWell keeps the place's available dates and layers visible to the right.
+The TimeWell is not a timeline placed beside a map, nor a generic tilted map. It begins at the coordinate the visitor has cored. Its central cylinder holds that location while every available historical map clings to it as an actual, differently proportioned footprint: X/Y remains geographic extent; Z becomes historical position.
 
-![Berlin historical map with a floating TimeWell and layered dates](assets/readme/timewell-berlin.jpg)
+Older strata descend into the well; later maps rise toward the present. Large gaps are expanded enough to remain perceptible, while clusters of nearby dates stay traversable. Selecting a stratum moves the map itself to that map's real extent and, where available, loads its original raster tiles. The TimeWell therefore makes an excavation in place and time, rather than turning the archive into a sequence of cards.
 
-### 3. The Hyperbook as a source encounter
+![Berlin TimeWell showing a drilled coordinate, time strata, selected layer, and a minimal Hyperbook encounter](assets/readme/timewell-core-current.png)
 
-A quotation opens the original book page as a floating facsimile. The tinted mark is a locator, not a replacement for the source text.
+### 3. Hyperbook encounters
 
-![A highlighted source quotation floating above the Berlin TimeWell](assets/readme/source-page-reader.jpg)
+A short source-grounded encounter may surface alongside a selected historical layer. The excerpt opens the appropriate page of the book in **READ**; the map remains the primary surface.
 
 ## Interaction grammar
 
-1. Pan or zoom anywhere in the world field.
-2. Hover over historical-map depth to preview a TimeWell; tap or click to cut a CORE.
-3. Choose a stratum, a year, or use Up/Down to move across available maps in time.
-4. Follow a named idea or accept a quiet lateral invitation; use TRACE to see where the dérive has passed.
-5. Open a quotation to inspect the book page. Esc, the close mark, or clicking outside returns to the map.
+1. Pan or zoom anywhere in the world map; choose EXPLORE to orient yourself without leaving it.
+2. Choose **TAKE A MAP** in Explore to enter an archive-led route: core a place, select a layer, and open its map slip.
+3. Hover over historical-map depth to preview a TimeWell; tap or click to cut a CORE.
+4. Choose a stratum, a year, or use Up/Down to move across available maps in time.
+5. Follow a named idea or accept a quiet lateral invitation; use TRACE to see where the dérive has passed.
+6. Choose **READ** to move through the book page by page, or open a quotation/title to enter READ at its cited page. Esc, the close mark, or clicking outside returns to the map.
 
 The `?` affordance in the prototype keeps this same grammar available without an onboarding sequence. Pointer and touch interactions remain primary; keyboard navigation is an optional echo.
 
@@ -76,6 +79,16 @@ The prototype is designed to remain publishable from GitHub Pages:
 - no database, backend, authentication, framework, or build pipeline
 
 Use GitHub Pages or any local static HTTP server for preview. Do not open `index.html` through `file://`: browsers isolate that origin and block the JSON data reads the prototype needs.
+
+### Taking a map outward
+
+Take a Map is a full floating panel rather than a small map-corner export menu. It separates three realistic routes into tabs and exposes only transfer paths that preserve what the collection actually supplies:
+
+- **MapLibre**: a live, pan-and-zoom embed with a complete, copyable HTML page containing this map's XYZ template, geographic bounds, zoom range, and citation.
+- **Google Earth / KML**: a downloaded Network-Link KML plus both routes into Google Earth Pro: `File → Open…` for the download, or `Add → Network Link…` with the supplied hosted KML URL. The KML draws the source XYZ tiles as geographic overlays at the recorded minimum zoom, then refreshes its hosted record hourly; MapLibre and QGIS retain the full interactive tile pyramid.
+- **QGIS**: the exact XYZ template and steps to create a QGIS Browser-panel connection for the selected historical raster.
+
+GeoJSON, generic map-record, and TileJSON downloads are intentionally not surfaced: by themselves they only expose an outline or a technical descriptor, not the historical map. Current source records do not establish uniform rights, CORS policy, full raster-download paths, or georeferencing control points, so the panel retains the source condition and asks users to verify the original collection's terms before making derivatives or overlays.
 
 ## Source and rebuild notes
 

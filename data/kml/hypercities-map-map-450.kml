@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Preliminary Map of the Monument Valley-Navaho Mountain Country</name>
+    <description>Preliminary Map of the Monument Valley-Navaho Mountain Country, Kayenta, Arizona, 1933–1940. Preliminary Map of the Monument Valley-Navaho Mountain Country (1933–1940). HyperCities Map Library. Rainbow Bridge Monument Valley Archives, Fowler Museum, UCLA .</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Preliminary Map of the Monument Valley-Navaho Mountain Country</name>
+      <description>HyperCities Map Library footprint · Kayenta, Arizona · 1933–1940</description>
+      <TimeSpan><begin>1933-01-01</begin><end>1940-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:450</value></Data>
+      <Data name="place"><value>Kayenta, Arizona</value></Data>
+      <Data name="years"><value>1933–1940</value></Data>
+      <Data name="sourceRecordId"><value>450</value></Data>
+      <Data name="collection"><value>Rainbow Bridge Monument Valley Archives, Fowler Museum, UCLA </value></Data>
+      <Data name="creator"><value>Thom L. Mayes</value></Data>
+      <Data name="citation"><value>Preliminary Map of the Monument Valley-Navaho Mountain Country (1933–1940). HyperCities Map Library. Rainbow Bridge Monument Valley Archives, Fowler Museum, UCLA .</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/RMBVE_prelim_1933/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-111.482158,36.322046,0 -109.436041,36.322046,0 -109.436041,37.506878,0 -111.482158,37.506878,0 -111.482158,36.322046,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Preliminary Map of the Monument Valley-Navaho Mountain Country · raster tile 7/24/49</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/RMBVE_prelim_1933/7/24/49.png</href></Icon>
+      <LatLonBox>
+        <north>38.822591</north>
+        <south>36.597889</south>
+        <east>-109.687500</east>
+        <west>-112.500000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Preliminary Map of the Monument Valley-Navaho Mountain Country · raster tile 7/25/49</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/RMBVE_prelim_1933/7/25/49.png</href></Icon>
+      <LatLonBox>
+        <north>38.822591</north>
+        <south>36.597889</south>
+        <east>-106.875000</east>
+        <west>-109.687500</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Preliminary Map of the Monument Valley-Navaho Mountain Country · raster tile 7/24/50</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/RMBVE_prelim_1933/7/24/50.png</href></Icon>
+      <LatLonBox>
+        <north>36.597889</north>
+        <south>34.307144</south>
+        <east>-109.687500</east>
+        <west>-112.500000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Preliminary Map of the Monument Valley-Navaho Mountain Country · raster tile 7/25/50</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/RMBVE_prelim_1933/7/25/50.png</href></Icon>
+      <LatLonBox>
+        <north>36.597889</north>
+        <south>34.307144</south>
+        <east>-106.875000</east>
+        <west>-109.687500</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

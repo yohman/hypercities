@@ -1,0 +1,1023 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>American Fur Trade</name>
+    <description>American Fur Trade, Los Angeles, 1807–1843. American Fur Trade (1807–1843). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>American Fur Trade</name>
+      <description>HyperCities Map Library footprint · Los Angeles · 1807–1843</description>
+      <TimeSpan><begin>1807-01-01</begin><end>1843-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:273</value></Data>
+      <Data name="place"><value>Los Angeles</value></Data>
+      <Data name="years"><value>1807–1843</value></Data>
+      <Data name="sourceRecordId"><value>273</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value>Hiram Martin Chittenden</value></Data>
+      <Data name="citation"><value>American Fur Trade (1807–1843). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-132.401966,19.401986,0 -81.858373,19.401986,0 -81.858373,53.790328,0 -132.401966,53.790328,0 -132.401966,19.401986,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/8/20</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/8/20.png</href></Icon>
+      <LatLonBox>
+        <north>55.776573</north>
+        <south>52.482780</south>
+        <east>-129.375000</east>
+        <west>-135.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/9/20</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/9/20.png</href></Icon>
+      <LatLonBox>
+        <north>55.776573</north>
+        <south>52.482780</south>
+        <east>-123.750000</east>
+        <west>-129.375000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/10/20</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/10/20.png</href></Icon>
+      <LatLonBox>
+        <north>55.776573</north>
+        <south>52.482780</south>
+        <east>-118.125000</east>
+        <west>-123.750000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/11/20</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/11/20.png</href></Icon>
+      <LatLonBox>
+        <north>55.776573</north>
+        <south>52.482780</south>
+        <east>-112.500000</east>
+        <west>-118.125000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/12/20</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/12/20.png</href></Icon>
+      <LatLonBox>
+        <north>55.776573</north>
+        <south>52.482780</south>
+        <east>-106.875000</east>
+        <west>-112.500000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/13/20</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/13/20.png</href></Icon>
+      <LatLonBox>
+        <north>55.776573</north>
+        <south>52.482780</south>
+        <east>-101.250000</east>
+        <west>-106.875000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/14/20</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/14/20.png</href></Icon>
+      <LatLonBox>
+        <north>55.776573</north>
+        <south>52.482780</south>
+        <east>-95.625000</east>
+        <west>-101.250000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/15/20</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/15/20.png</href></Icon>
+      <LatLonBox>
+        <north>55.776573</north>
+        <south>52.482780</south>
+        <east>-90.000000</east>
+        <west>-95.625000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/16/20</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/16/20.png</href></Icon>
+      <LatLonBox>
+        <north>55.776573</north>
+        <south>52.482780</south>
+        <east>-84.375000</east>
+        <west>-90.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/17/20</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/17/20.png</href></Icon>
+      <LatLonBox>
+        <north>55.776573</north>
+        <south>52.482780</south>
+        <east>-78.750000</east>
+        <west>-84.375000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/8/21</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/8/21.png</href></Icon>
+      <LatLonBox>
+        <north>52.482780</north>
+        <south>48.922499</south>
+        <east>-129.375000</east>
+        <west>-135.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/9/21</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/9/21.png</href></Icon>
+      <LatLonBox>
+        <north>52.482780</north>
+        <south>48.922499</south>
+        <east>-123.750000</east>
+        <west>-129.375000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/10/21</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/10/21.png</href></Icon>
+      <LatLonBox>
+        <north>52.482780</north>
+        <south>48.922499</south>
+        <east>-118.125000</east>
+        <west>-123.750000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/11/21</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/11/21.png</href></Icon>
+      <LatLonBox>
+        <north>52.482780</north>
+        <south>48.922499</south>
+        <east>-112.500000</east>
+        <west>-118.125000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/12/21</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/12/21.png</href></Icon>
+      <LatLonBox>
+        <north>52.482780</north>
+        <south>48.922499</south>
+        <east>-106.875000</east>
+        <west>-112.500000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/13/21</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/13/21.png</href></Icon>
+      <LatLonBox>
+        <north>52.482780</north>
+        <south>48.922499</south>
+        <east>-101.250000</east>
+        <west>-106.875000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/14/21</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/14/21.png</href></Icon>
+      <LatLonBox>
+        <north>52.482780</north>
+        <south>48.922499</south>
+        <east>-95.625000</east>
+        <west>-101.250000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/15/21</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/15/21.png</href></Icon>
+      <LatLonBox>
+        <north>52.482780</north>
+        <south>48.922499</south>
+        <east>-90.000000</east>
+        <west>-95.625000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/16/21</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/16/21.png</href></Icon>
+      <LatLonBox>
+        <north>52.482780</north>
+        <south>48.922499</south>
+        <east>-84.375000</east>
+        <west>-90.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/17/21</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/17/21.png</href></Icon>
+      <LatLonBox>
+        <north>52.482780</north>
+        <south>48.922499</south>
+        <east>-78.750000</east>
+        <west>-84.375000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/8/22</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/8/22.png</href></Icon>
+      <LatLonBox>
+        <north>48.922499</north>
+        <south>45.089036</south>
+        <east>-129.375000</east>
+        <west>-135.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/9/22</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/9/22.png</href></Icon>
+      <LatLonBox>
+        <north>48.922499</north>
+        <south>45.089036</south>
+        <east>-123.750000</east>
+        <west>-129.375000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/10/22</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/10/22.png</href></Icon>
+      <LatLonBox>
+        <north>48.922499</north>
+        <south>45.089036</south>
+        <east>-118.125000</east>
+        <west>-123.750000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/11/22</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/11/22.png</href></Icon>
+      <LatLonBox>
+        <north>48.922499</north>
+        <south>45.089036</south>
+        <east>-112.500000</east>
+        <west>-118.125000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/12/22</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/12/22.png</href></Icon>
+      <LatLonBox>
+        <north>48.922499</north>
+        <south>45.089036</south>
+        <east>-106.875000</east>
+        <west>-112.500000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/13/22</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/13/22.png</href></Icon>
+      <LatLonBox>
+        <north>48.922499</north>
+        <south>45.089036</south>
+        <east>-101.250000</east>
+        <west>-106.875000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/14/22</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/14/22.png</href></Icon>
+      <LatLonBox>
+        <north>48.922499</north>
+        <south>45.089036</south>
+        <east>-95.625000</east>
+        <west>-101.250000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/15/22</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/15/22.png</href></Icon>
+      <LatLonBox>
+        <north>48.922499</north>
+        <south>45.089036</south>
+        <east>-90.000000</east>
+        <west>-95.625000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/16/22</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/16/22.png</href></Icon>
+      <LatLonBox>
+        <north>48.922499</north>
+        <south>45.089036</south>
+        <east>-84.375000</east>
+        <west>-90.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/17/22</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/17/22.png</href></Icon>
+      <LatLonBox>
+        <north>48.922499</north>
+        <south>45.089036</south>
+        <east>-78.750000</east>
+        <west>-84.375000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/8/23</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/8/23.png</href></Icon>
+      <LatLonBox>
+        <north>45.089036</north>
+        <south>40.979898</south>
+        <east>-129.375000</east>
+        <west>-135.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/9/23</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/9/23.png</href></Icon>
+      <LatLonBox>
+        <north>45.089036</north>
+        <south>40.979898</south>
+        <east>-123.750000</east>
+        <west>-129.375000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/10/23</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/10/23.png</href></Icon>
+      <LatLonBox>
+        <north>45.089036</north>
+        <south>40.979898</south>
+        <east>-118.125000</east>
+        <west>-123.750000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/11/23</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/11/23.png</href></Icon>
+      <LatLonBox>
+        <north>45.089036</north>
+        <south>40.979898</south>
+        <east>-112.500000</east>
+        <west>-118.125000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/12/23</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/12/23.png</href></Icon>
+      <LatLonBox>
+        <north>45.089036</north>
+        <south>40.979898</south>
+        <east>-106.875000</east>
+        <west>-112.500000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/13/23</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/13/23.png</href></Icon>
+      <LatLonBox>
+        <north>45.089036</north>
+        <south>40.979898</south>
+        <east>-101.250000</east>
+        <west>-106.875000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/14/23</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/14/23.png</href></Icon>
+      <LatLonBox>
+        <north>45.089036</north>
+        <south>40.979898</south>
+        <east>-95.625000</east>
+        <west>-101.250000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/15/23</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/15/23.png</href></Icon>
+      <LatLonBox>
+        <north>45.089036</north>
+        <south>40.979898</south>
+        <east>-90.000000</east>
+        <west>-95.625000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/16/23</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/16/23.png</href></Icon>
+      <LatLonBox>
+        <north>45.089036</north>
+        <south>40.979898</south>
+        <east>-84.375000</east>
+        <west>-90.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/17/23</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/17/23.png</href></Icon>
+      <LatLonBox>
+        <north>45.089036</north>
+        <south>40.979898</south>
+        <east>-78.750000</east>
+        <west>-84.375000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/8/24</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/8/24.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>36.597889</south>
+        <east>-129.375000</east>
+        <west>-135.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/9/24</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/9/24.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>36.597889</south>
+        <east>-123.750000</east>
+        <west>-129.375000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/10/24</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/10/24.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>36.597889</south>
+        <east>-118.125000</east>
+        <west>-123.750000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/11/24</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/11/24.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>36.597889</south>
+        <east>-112.500000</east>
+        <west>-118.125000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/12/24</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/12/24.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>36.597889</south>
+        <east>-106.875000</east>
+        <west>-112.500000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/13/24</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/13/24.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>36.597889</south>
+        <east>-101.250000</east>
+        <west>-106.875000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/14/24</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/14/24.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>36.597889</south>
+        <east>-95.625000</east>
+        <west>-101.250000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/15/24</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/15/24.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>36.597889</south>
+        <east>-90.000000</east>
+        <west>-95.625000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/16/24</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/16/24.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>36.597889</south>
+        <east>-84.375000</east>
+        <west>-90.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/17/24</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/17/24.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>36.597889</south>
+        <east>-78.750000</east>
+        <west>-84.375000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/8/25</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/8/25.png</href></Icon>
+      <LatLonBox>
+        <north>36.597889</north>
+        <south>31.952162</south>
+        <east>-129.375000</east>
+        <west>-135.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/9/25</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/9/25.png</href></Icon>
+      <LatLonBox>
+        <north>36.597889</north>
+        <south>31.952162</south>
+        <east>-123.750000</east>
+        <west>-129.375000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/10/25</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/10/25.png</href></Icon>
+      <LatLonBox>
+        <north>36.597889</north>
+        <south>31.952162</south>
+        <east>-118.125000</east>
+        <west>-123.750000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/11/25</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/11/25.png</href></Icon>
+      <LatLonBox>
+        <north>36.597889</north>
+        <south>31.952162</south>
+        <east>-112.500000</east>
+        <west>-118.125000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/12/25</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/12/25.png</href></Icon>
+      <LatLonBox>
+        <north>36.597889</north>
+        <south>31.952162</south>
+        <east>-106.875000</east>
+        <west>-112.500000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/13/25</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/13/25.png</href></Icon>
+      <LatLonBox>
+        <north>36.597889</north>
+        <south>31.952162</south>
+        <east>-101.250000</east>
+        <west>-106.875000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/14/25</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/14/25.png</href></Icon>
+      <LatLonBox>
+        <north>36.597889</north>
+        <south>31.952162</south>
+        <east>-95.625000</east>
+        <west>-101.250000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/15/25</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/15/25.png</href></Icon>
+      <LatLonBox>
+        <north>36.597889</north>
+        <south>31.952162</south>
+        <east>-90.000000</east>
+        <west>-95.625000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/16/25</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/16/25.png</href></Icon>
+      <LatLonBox>
+        <north>36.597889</north>
+        <south>31.952162</south>
+        <east>-84.375000</east>
+        <west>-90.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/17/25</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/17/25.png</href></Icon>
+      <LatLonBox>
+        <north>36.597889</north>
+        <south>31.952162</south>
+        <east>-78.750000</east>
+        <west>-84.375000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/8/26</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/8/26.png</href></Icon>
+      <LatLonBox>
+        <north>31.952162</north>
+        <south>27.059126</south>
+        <east>-129.375000</east>
+        <west>-135.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/9/26</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/9/26.png</href></Icon>
+      <LatLonBox>
+        <north>31.952162</north>
+        <south>27.059126</south>
+        <east>-123.750000</east>
+        <west>-129.375000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/10/26</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/10/26.png</href></Icon>
+      <LatLonBox>
+        <north>31.952162</north>
+        <south>27.059126</south>
+        <east>-118.125000</east>
+        <west>-123.750000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/11/26</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/11/26.png</href></Icon>
+      <LatLonBox>
+        <north>31.952162</north>
+        <south>27.059126</south>
+        <east>-112.500000</east>
+        <west>-118.125000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/12/26</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/12/26.png</href></Icon>
+      <LatLonBox>
+        <north>31.952162</north>
+        <south>27.059126</south>
+        <east>-106.875000</east>
+        <west>-112.500000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/13/26</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/13/26.png</href></Icon>
+      <LatLonBox>
+        <north>31.952162</north>
+        <south>27.059126</south>
+        <east>-101.250000</east>
+        <west>-106.875000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/14/26</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/14/26.png</href></Icon>
+      <LatLonBox>
+        <north>31.952162</north>
+        <south>27.059126</south>
+        <east>-95.625000</east>
+        <west>-101.250000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/15/26</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/15/26.png</href></Icon>
+      <LatLonBox>
+        <north>31.952162</north>
+        <south>27.059126</south>
+        <east>-90.000000</east>
+        <west>-95.625000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/16/26</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/16/26.png</href></Icon>
+      <LatLonBox>
+        <north>31.952162</north>
+        <south>27.059126</south>
+        <east>-84.375000</east>
+        <west>-90.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/17/26</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/17/26.png</href></Icon>
+      <LatLonBox>
+        <north>31.952162</north>
+        <south>27.059126</south>
+        <east>-78.750000</east>
+        <west>-84.375000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/8/27</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/8/27.png</href></Icon>
+      <LatLonBox>
+        <north>27.059126</north>
+        <south>21.943046</south>
+        <east>-129.375000</east>
+        <west>-135.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/9/27</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/9/27.png</href></Icon>
+      <LatLonBox>
+        <north>27.059126</north>
+        <south>21.943046</south>
+        <east>-123.750000</east>
+        <west>-129.375000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/10/27</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/10/27.png</href></Icon>
+      <LatLonBox>
+        <north>27.059126</north>
+        <south>21.943046</south>
+        <east>-118.125000</east>
+        <west>-123.750000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/11/27</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/11/27.png</href></Icon>
+      <LatLonBox>
+        <north>27.059126</north>
+        <south>21.943046</south>
+        <east>-112.500000</east>
+        <west>-118.125000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/12/27</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/12/27.png</href></Icon>
+      <LatLonBox>
+        <north>27.059126</north>
+        <south>21.943046</south>
+        <east>-106.875000</east>
+        <west>-112.500000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/13/27</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/13/27.png</href></Icon>
+      <LatLonBox>
+        <north>27.059126</north>
+        <south>21.943046</south>
+        <east>-101.250000</east>
+        <west>-106.875000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/14/27</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/14/27.png</href></Icon>
+      <LatLonBox>
+        <north>27.059126</north>
+        <south>21.943046</south>
+        <east>-95.625000</east>
+        <west>-101.250000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/15/27</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/15/27.png</href></Icon>
+      <LatLonBox>
+        <north>27.059126</north>
+        <south>21.943046</south>
+        <east>-90.000000</east>
+        <west>-95.625000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/16/27</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/16/27.png</href></Icon>
+      <LatLonBox>
+        <north>27.059126</north>
+        <south>21.943046</south>
+        <east>-84.375000</east>
+        <west>-90.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/17/27</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/17/27.png</href></Icon>
+      <LatLonBox>
+        <north>27.059126</north>
+        <south>21.943046</south>
+        <east>-78.750000</east>
+        <west>-84.375000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/8/28</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/8/28.png</href></Icon>
+      <LatLonBox>
+        <north>21.943046</north>
+        <south>16.636192</south>
+        <east>-129.375000</east>
+        <west>-135.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/9/28</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/9/28.png</href></Icon>
+      <LatLonBox>
+        <north>21.943046</north>
+        <south>16.636192</south>
+        <east>-123.750000</east>
+        <west>-129.375000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/10/28</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/10/28.png</href></Icon>
+      <LatLonBox>
+        <north>21.943046</north>
+        <south>16.636192</south>
+        <east>-118.125000</east>
+        <west>-123.750000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/11/28</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/11/28.png</href></Icon>
+      <LatLonBox>
+        <north>21.943046</north>
+        <south>16.636192</south>
+        <east>-112.500000</east>
+        <west>-118.125000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/12/28</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/12/28.png</href></Icon>
+      <LatLonBox>
+        <north>21.943046</north>
+        <south>16.636192</south>
+        <east>-106.875000</east>
+        <west>-112.500000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/13/28</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/13/28.png</href></Icon>
+      <LatLonBox>
+        <north>21.943046</north>
+        <south>16.636192</south>
+        <east>-101.250000</east>
+        <west>-106.875000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/14/28</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/14/28.png</href></Icon>
+      <LatLonBox>
+        <north>21.943046</north>
+        <south>16.636192</south>
+        <east>-95.625000</east>
+        <west>-101.250000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/15/28</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/15/28.png</href></Icon>
+      <LatLonBox>
+        <north>21.943046</north>
+        <south>16.636192</south>
+        <east>-90.000000</east>
+        <west>-95.625000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/16/28</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/16/28.png</href></Icon>
+      <LatLonBox>
+        <north>21.943046</north>
+        <south>16.636192</south>
+        <east>-84.375000</east>
+        <west>-90.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>American Fur Trade · raster tile 6/17/28</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Fur_Trade_1807_1843/6/17/28.png</href></Icon>
+      <LatLonBox>
+        <north>21.943046</north>
+        <south>16.636192</south>
+        <east>-78.750000</east>
+        <west>-84.375000</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

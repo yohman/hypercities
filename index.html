@@ -4,24 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#101111" />
-    <title>HyperCities — a field prototype</title>
+    <title>HyperCities — a map prototype</title>
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <main id="app" aria-label="HyperCities field prototype">
+    <main id="app" aria-label="HyperCities map prototype">
       <div id="map" aria-label="World map with historical map extents"></div>
       <div id="core-renderer" aria-label="Three-dimensional historical time core"></div>
       <p id="well-caption" class="well-caption" hidden></p>
       <header class="masthead">
-        <a class="wordmark" href="./" aria-label="Return to the world field">HYPERCITIES</a>
-        <button id="surface" class="surface" type="button" hidden>← FIELD</button>
+        <div class="masthead-left">
+          <a class="wordmark" href="./" aria-label="Return to the world map">HYPERCITIES</a>
+          <button id="index-toggle" class="index-toggle" type="button" aria-haspopup="dialog" aria-controls="site-index" aria-expanded="false">EXPLORE</button>
+        </div>
+        <button id="surface" class="surface" type="button" hidden>← MAP</button>
         <button id="help-toggle" class="help-toggle" type="button" aria-haspopup="dialog" aria-controls="help-dialog">?</button>
       </header>
       <div id="depth-indicator" class="depth-indicator" aria-live="polite" hidden></div>
-      <section id="field-prompt" class="field-prompt" aria-live="polite"><p>Move across the field. Press into a place to find its depths.</p></section>
+      <section id="field-prompt" class="field-prompt" aria-live="polite"><p>Move across the map. Press into a place to find its depths.</p></section>
       <aside id="field-encounter" class="field-encounter" aria-live="polite" hidden></aside>
       <aside id="encounter" class="encounter" aria-live="polite" hidden></aside>
+      <section id="take-prompt" class="take-prompt" aria-live="polite" hidden>
+        <p>TAKE A MAP</p>
+        <span>Enter a place. Choose a layer. Carry its trace outward.</span>
+      </section>
       <div id="journey" class="journey" hidden>
         <button id="journey-toggle" type="button" aria-expanded="false">TRACE</button>
         <div id="journey-content" class="journey-content" hidden></div>
@@ -30,11 +37,27 @@
         <button id="help-close" class="dialog-close" type="button" aria-label="Close help">×</button>
         <p class="eyebrow">A SMALL GRAMMAR</p>
         <p>Move across the map. Press into a place to cut a time well. Choose a layer; the map will move with it. Follow the thread of an idea, or take a side street.</p>
-        <p class="quiet">The map remains free to pan and zoom. Esc returns toward the field. Arrow keys echo the offered movements.</p>
+        <p class="quiet">The map remains free to pan and zoom. Esc returns toward the map. Arrow keys echo the offered movements.</p>
       </dialog>
-      <dialog id="hyperbook-window" class="hyperbook-window">
-        <button id="hyperbook-window-close" class="window-close" type="button" aria-label="Close Hyperbook Window">×</button>
+      <section id="site-index" class="site-index" role="dialog" aria-modal="true" aria-label="Ways into HyperCities" tabindex="-1" hidden>
+        <svg id="index-drift" class="index-drift" aria-hidden="true"></svg>
+        <nav class="site-index-nav" aria-label="Ways into HyperCities">
+          <button id="index-close" class="index-close" type="button" aria-label="Close Explore">×</button>
+          <p class="index-intro">Ways into HyperCities</p>
+          <button class="index-route index-route--field" type="button" data-index-field><span>MAP</span><small>enter through place and time</small></button>
+          <button class="index-route index-route--read" type="button" data-index-read><span>READ</span><small>enter through the book</small></button>
+          <p class="index-route index-route--future index-route--windows"><span>WINDOWS</span><small>enter through a project · next</small></p>
+          <button class="index-route index-route--take" type="button" data-index-take><span>TAKE A MAP</span><small>enter through the archive</small></button>
+          <p class="index-route index-route--future index-route--origins"><span>ORIGINS</span><small>how HyperCities began · next</small></p>
+        </nav>
+      </section>
+      <dialog id="hyperbook-window" class="hyperbook-window" aria-label="Read HyperCities">
+        <button id="hyperbook-window-close" class="window-close" type="button" aria-label="Close book">×</button>
         <article id="hyperbook-window-content"></article>
+      </dialog>
+      <dialog id="take-map-window" class="take-map-window" aria-label="Take this historical map">
+        <button id="take-map-window-close" class="window-close" type="button" aria-label="Close Take a Map">×</button>
+        <article id="take-map-window-content"></article>
       </dialog>
     </main>
     <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>

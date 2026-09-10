@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Map of Mexico (City)</name>
+    <description>Map of Mexico (City), Mexico City, 1984. Map of Mexico (City) (1984). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Map of Mexico (City)</name>
+      <description>HyperCities Map Library footprint · Mexico City · 1984</description>
+      <TimeSpan><begin>1984-01-01</begin><end>1984-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:246</value></Data>
+      <Data name="place"><value>Mexico City</value></Data>
+      <Data name="years"><value>1984</value></Data>
+      <Data name="sourceRecordId"><value>246</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Map of Mexico (City) (1984). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Mexico_City_Delegaciones_1984a1/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-99.282143,19.239259,0 -99.022401,19.239259,0 -99.022401,19.580549,0 -99.282143,19.580549,0 -99.282143,19.239259,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Map of Mexico (City) · raster tile 10/229/455</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Mexico_City_Delegaciones_1984a1/10/229/455.png</href></Icon>
+      <LatLonBox>
+        <north>19.642588</north>
+        <south>19.311143</south>
+        <east>-99.140625</east>
+        <west>-99.492188</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Mexico (City) · raster tile 10/230/455</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Mexico_City_Delegaciones_1984a1/10/230/455.png</href></Icon>
+      <LatLonBox>
+        <north>19.642588</north>
+        <south>19.311143</south>
+        <east>-98.789063</east>
+        <west>-99.140625</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Mexico (City) · raster tile 10/229/456</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Mexico_City_Delegaciones_1984a1/10/229/456.png</href></Icon>
+      <LatLonBox>
+        <north>19.311143</north>
+        <south>18.979026</south>
+        <east>-99.140625</east>
+        <west>-99.492188</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Mexico (City) · raster tile 10/230/456</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Mexico_City_Delegaciones_1984a1/10/230/456.png</href></Icon>
+      <LatLonBox>
+        <north>19.311143</north>
+        <south>18.979026</south>
+        <east>-98.789063</east>
+        <west>-99.140625</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Hudson&apos;s Bay Co.&apos;s Reserve</name>
+    <description>Hudson&apos;s Bay Co.&apos;s Reserve, Edmonton, 1912. Hudson&apos;s Bay Co.&apos;s Reserve (1912). HyperCities Map Library. University of Alberta Map Collection.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Hudson&apos;s Bay Co.&apos;s Reserve</name>
+      <description>HyperCities Map Library footprint · Edmonton · 1912</description>
+      <TimeSpan><begin>1912-01-01</begin><end>1912-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:305</value></Data>
+      <Data name="place"><value>Edmonton</value></Data>
+      <Data name="years"><value>1912</value></Data>
+      <Data name="sourceRecordId"><value>305</value></Data>
+      <Data name="collection"><value>University of Alberta Map Collection</value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Hudson&apos;s Bay Co.&apos;s Reserve (1912). HyperCities Map Library. University of Alberta Map Collection.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Edmonton_1912/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-113.540587,53.537439,0 -113.516007,53.537439,0 -113.516007,53.555127,0 -113.540587,53.555127,0 -113.540587,53.537439,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Hudson&apos;s Bay Co.&apos;s Reserve · raster tile 14/3024/5294</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Edmonton_1912/14/3024/5294.png</href></Icon>
+      <LatLonBox>
+        <north>53.566414</north>
+        <south>53.553363</south>
+        <east>-113.532715</east>
+        <west>-113.554688</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Hudson&apos;s Bay Co.&apos;s Reserve · raster tile 14/3025/5294</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Edmonton_1912/14/3025/5294.png</href></Icon>
+      <LatLonBox>
+        <north>53.566414</north>
+        <south>53.553363</south>
+        <east>-113.510742</east>
+        <west>-113.532715</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Hudson&apos;s Bay Co.&apos;s Reserve · raster tile 14/3024/5295</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Edmonton_1912/14/3024/5295.png</href></Icon>
+      <LatLonBox>
+        <north>53.553363</north>
+        <south>53.540307</south>
+        <east>-113.532715</east>
+        <west>-113.554688</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Hudson&apos;s Bay Co.&apos;s Reserve · raster tile 14/3025/5295</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Edmonton_1912/14/3025/5295.png</href></Icon>
+      <LatLonBox>
+        <north>53.553363</north>
+        <south>53.540307</south>
+        <east>-113.510742</east>
+        <west>-113.532715</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Hudson&apos;s Bay Co.&apos;s Reserve · raster tile 14/3024/5296</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Edmonton_1912/14/3024/5296.png</href></Icon>
+      <LatLonBox>
+        <north>53.540307</north>
+        <south>53.527248</south>
+        <east>-113.532715</east>
+        <west>-113.554688</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Hudson&apos;s Bay Co.&apos;s Reserve · raster tile 14/3025/5296</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Edmonton_1912/14/3025/5296.png</href></Icon>
+      <LatLonBox>
+        <north>53.540307</north>
+        <south>53.527248</south>
+        <east>-113.510742</east>
+        <west>-113.532715</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

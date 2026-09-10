@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Guide to Downtown Los Angeles</name>
+    <description>Guide to Downtown Los Angeles, Los Angeles, 1996. Guide to Downtown Los Angeles (1996). HyperCities Map Library. UCLA Bruman Map Collection.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Guide to Downtown Los Angeles</name>
+      <description>HyperCities Map Library footprint · Los Angeles · 1996</description>
+      <TimeSpan><begin>1996-01-01</begin><end>1996-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:61</value></Data>
+      <Data name="place"><value>Los Angeles</value></Data>
+      <Data name="years"><value>1996</value></Data>
+      <Data name="sourceRecordId"><value>61</value></Data>
+      <Data name="collection"><value>UCLA Bruman Map Collection</value></Data>
+      <Data name="creator"><value>Automobile Club of Southern California; Selwyn Douglas</value></Data>
+      <Data name="citation"><value>Guide to Downtown Los Angeles (1996). HyperCities Map Library. UCLA Bruman Map Collection.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Los_Angeles_1996/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-118.304366,33.990946,0 -118.199221,33.990946,0 -118.199221,34.086186,0 -118.304366,34.086186,0 -118.304366,33.990946,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Guide to Downtown Los Angeles · raster tile 12/701/1635</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Los_Angeles_1996/12/701/1635.png</href></Icon>
+      <LatLonBox>
+        <north>34.089061</north>
+        <south>34.016242</south>
+        <east>-118.300781</east>
+        <west>-118.388672</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Guide to Downtown Los Angeles · raster tile 12/702/1635</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Los_Angeles_1996/12/702/1635.png</href></Icon>
+      <LatLonBox>
+        <north>34.089061</north>
+        <south>34.016242</south>
+        <east>-118.212891</east>
+        <west>-118.300781</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Guide to Downtown Los Angeles · raster tile 12/703/1635</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Los_Angeles_1996/12/703/1635.png</href></Icon>
+      <LatLonBox>
+        <north>34.089061</north>
+        <south>34.016242</south>
+        <east>-118.125000</east>
+        <west>-118.212891</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Guide to Downtown Los Angeles · raster tile 12/701/1636</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Los_Angeles_1996/12/701/1636.png</href></Icon>
+      <LatLonBox>
+        <north>34.016242</north>
+        <south>33.943360</south>
+        <east>-118.300781</east>
+        <west>-118.388672</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Guide to Downtown Los Angeles · raster tile 12/702/1636</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Los_Angeles_1996/12/702/1636.png</href></Icon>
+      <LatLonBox>
+        <north>34.016242</north>
+        <south>33.943360</south>
+        <east>-118.212891</east>
+        <west>-118.300781</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Guide to Downtown Los Angeles · raster tile 12/703/1636</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Los_Angeles_1996/12/703/1636.png</href></Icon>
+      <LatLonBox>
+        <north>34.016242</north>
+        <south>33.943360</south>
+        <east>-118.125000</east>
+        <west>-118.212891</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

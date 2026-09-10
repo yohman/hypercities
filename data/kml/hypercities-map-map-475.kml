@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Map of Aegaron (0248)</name>
+    <description>Map of Aegaron (0248), Tehran, 2012. Map of Aegaron (0248) (2012). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Map of Aegaron (0248)</name>
+      <description>HyperCities Map Library footprint · Tehran · 2012</description>
+      <TimeSpan><begin>2012-01-01</begin><end>2012-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:475</value></Data>
+      <Data name="place"><value>Tehran</value></Data>
+      <Data name="years"><value>2012</value></Data>
+      <Data name="sourceRecordId"><value>475</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Map of Aegaron (0248) (2012). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Aegaron_0248/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>31.220965,29.875606,0 31.221424,29.875606,0 31.221424,29.87612,0 31.220965,29.87612,0 31.220965,29.875606,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Map of Aegaron (0248) · raster tile 19/307612/216516</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Aegaron_0248/19/307612/216516.png</href></Icon>
+      <LatLonBox>
+        <north>29.876374</north>
+        <south>29.875778</south>
+        <east>31.221085</east>
+        <west>31.220398</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Aegaron (0248) · raster tile 19/307613/216516</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Aegaron_0248/19/307613/216516.png</href></Icon>
+      <LatLonBox>
+        <north>29.876374</north>
+        <south>29.875778</south>
+        <east>31.221771</east>
+        <west>31.221085</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Aegaron (0248) · raster tile 19/307612/216517</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Aegaron_0248/19/307612/216517.png</href></Icon>
+      <LatLonBox>
+        <north>29.875778</north>
+        <south>29.875183</south>
+        <east>31.221085</east>
+        <west>31.220398</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Aegaron (0248) · raster tile 19/307613/216517</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Aegaron_0248/19/307613/216517.png</href></Icon>
+      <LatLonBox>
+        <north>29.875778</north>
+        <south>29.875183</south>
+        <east>31.221771</east>
+        <west>31.221085</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

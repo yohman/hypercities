@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Jaffa-Tel Aviv</name>
+    <description>Jaffa-Tel Aviv, Tel Aviv, 1930. Jaffa-Tel Aviv (1930). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Jaffa-Tel Aviv</name>
+      <description>HyperCities Map Library footprint · Tel Aviv · 1930</description>
+      <TimeSpan><begin>1930-01-01</begin><end>1930-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:44</value></Data>
+      <Data name="place"><value>Tel Aviv</value></Data>
+      <Data name="years"><value>1930</value></Data>
+      <Data name="sourceRecordId"><value>44</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value>Survey Office, Jaffa</value></Data>
+      <Data name="citation"><value>Jaffa-Tel Aviv (1930). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Tel_Aviv_1930/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>32.107736,32.024555,0 34.800582,32.024555,0 34.800582,34.736801,0 32.107736,34.736801,0 32.107736,32.024555,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Jaffa-Tel Aviv · raster tile 9/301/203</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tel_Aviv_1930/9/301/203.png</href></Icon>
+      <LatLonBox>
+        <north>34.885931</north>
+        <south>34.307144</south>
+        <east>32.343750</east>
+        <west>31.640625</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Jaffa-Tel Aviv · raster tile 9/302/203</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tel_Aviv_1930/9/302/203.png</href></Icon>
+      <LatLonBox>
+        <north>34.885931</north>
+        <south>34.307144</south>
+        <east>33.046875</east>
+        <west>32.343750</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Jaffa-Tel Aviv · raster tile 9/303/203</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tel_Aviv_1930/9/303/203.png</href></Icon>
+      <LatLonBox>
+        <north>34.885931</north>
+        <south>34.307144</south>
+        <east>33.750000</east>
+        <west>33.046875</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Jaffa-Tel Aviv · raster tile 9/304/203</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tel_Aviv_1930/9/304/203.png</href></Icon>
+      <LatLonBox>
+        <north>34.885931</north>
+        <south>34.307144</south>
+        <east>34.453125</east>
+        <west>33.750000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Jaffa-Tel Aviv · raster tile 9/305/203</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tel_Aviv_1930/9/305/203.png</href></Icon>
+      <LatLonBox>
+        <north>34.885931</north>
+        <south>34.307144</south>
+        <east>35.156250</east>
+        <west>34.453125</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Jaffa-Tel Aviv · raster tile 9/301/204</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tel_Aviv_1930/9/301/204.png</href></Icon>
+      <LatLonBox>
+        <north>34.307144</north>
+        <south>33.724340</south>
+        <east>32.343750</east>
+        <west>31.640625</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Jaffa-Tel Aviv · raster tile 9/302/204</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tel_Aviv_1930/9/302/204.png</href></Icon>
+      <LatLonBox>
+        <north>34.307144</north>
+        <south>33.724340</south>
+        <east>33.046875</east>
+        <west>32.343750</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Jaffa-Tel Aviv · raster tile 9/303/204</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tel_Aviv_1930/9/303/204.png</href></Icon>
+      <LatLonBox>
+        <north>34.307144</north>
+        <south>33.724340</south>
+        <east>33.750000</east>
+        <west>33.046875</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Jaffa-Tel Aviv · raster tile 9/304/204</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tel_Aviv_1930/9/304/204.png</href></Icon>
+      <LatLonBox>
+        <north>34.307144</north>
+        <south>33.724340</south>
+        <east>34.453125</east>
+        <west>33.750000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Jaffa-Tel Aviv · raster tile 9/305/204</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tel_Aviv_1930/9/305/204.png</href></Icon>
+      <LatLonBox>
+        <north>34.307144</north>
+        <south>33.724340</south>
+        <east>35.156250</east>
+        <west>34.453125</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Jaffa-Tel Aviv · raster tile 9/301/205</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tel_Aviv_1930/9/301/205.png</href></Icon>
+      <LatLonBox>
+        <north>33.724340</north>
+        <south>33.137551</south>
+        <east>32.343750</east>
+        <west>31.640625</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Jaffa-Tel Aviv · raster tile 9/302/205</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tel_Aviv_1930/9/302/205.png</href></Icon>
+      <LatLonBox>
+        <north>33.724340</north>
+        <south>33.137551</south>
+        <east>33.046875</east>
+        <west>32.343750</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Jaffa-Tel Aviv · raster tile 9/303/205</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tel_Aviv_1930/9/303/205.png</href></Icon>
+      <LatLonBox>
+        <north>33.724340</north>
+        <south>33.137551</south>
+        <east>33.750000</east>
+        <west>33.046875</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Jaffa-Tel Aviv · raster tile 9/304/205</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tel_Aviv_1930/9/304/205.png</href></Icon>
+      <LatLonBox>
+        <north>33.724340</north>
+        <south>33.137551</south>
+        <east>34.453125</east>
+        <west>33.750000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Jaffa-Tel Aviv · raster tile 9/305/205</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tel_Aviv_1930/9/305/205.png</href></Icon>
+      <LatLonBox>
+        <north>33.724340</north>
+        <south>33.137551</south>
+        <east>35.156250</east>
+        <west>34.453125</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Jaffa-Tel Aviv · raster tile 9/301/206</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tel_Aviv_1930/9/301/206.png</href></Icon>
+      <LatLonBox>
+        <north>33.137551</north>
+        <south>32.546813</south>
+        <east>32.343750</east>
+        <west>31.640625</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Jaffa-Tel Aviv · raster tile 9/302/206</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tel_Aviv_1930/9/302/206.png</href></Icon>
+      <LatLonBox>
+        <north>33.137551</north>
+        <south>32.546813</south>
+        <east>33.046875</east>
+        <west>32.343750</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Jaffa-Tel Aviv · raster tile 9/303/206</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tel_Aviv_1930/9/303/206.png</href></Icon>
+      <LatLonBox>
+        <north>33.137551</north>
+        <south>32.546813</south>
+        <east>33.750000</east>
+        <west>33.046875</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Jaffa-Tel Aviv · raster tile 9/304/206</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tel_Aviv_1930/9/304/206.png</href></Icon>
+      <LatLonBox>
+        <north>33.137551</north>
+        <south>32.546813</south>
+        <east>34.453125</east>
+        <west>33.750000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Jaffa-Tel Aviv · raster tile 9/305/206</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tel_Aviv_1930/9/305/206.png</href></Icon>
+      <LatLonBox>
+        <north>33.137551</north>
+        <south>32.546813</south>
+        <east>35.156250</east>
+        <west>34.453125</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Jaffa-Tel Aviv · raster tile 9/301/207</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tel_Aviv_1930/9/301/207.png</href></Icon>
+      <LatLonBox>
+        <north>32.546813</north>
+        <south>31.952162</south>
+        <east>32.343750</east>
+        <west>31.640625</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Jaffa-Tel Aviv · raster tile 9/302/207</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tel_Aviv_1930/9/302/207.png</href></Icon>
+      <LatLonBox>
+        <north>32.546813</north>
+        <south>31.952162</south>
+        <east>33.046875</east>
+        <west>32.343750</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Jaffa-Tel Aviv · raster tile 9/303/207</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tel_Aviv_1930/9/303/207.png</href></Icon>
+      <LatLonBox>
+        <north>32.546813</north>
+        <south>31.952162</south>
+        <east>33.750000</east>
+        <west>33.046875</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Jaffa-Tel Aviv · raster tile 9/304/207</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tel_Aviv_1930/9/304/207.png</href></Icon>
+      <LatLonBox>
+        <north>32.546813</north>
+        <south>31.952162</south>
+        <east>34.453125</east>
+        <west>33.750000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Jaffa-Tel Aviv · raster tile 9/305/207</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tel_Aviv_1930/9/305/207.png</href></Icon>
+      <LatLonBox>
+        <north>32.546813</north>
+        <south>31.952162</south>
+        <east>35.156250</east>
+        <west>34.453125</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

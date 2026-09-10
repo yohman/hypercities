@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Spanish and Mexican Rancho Land Grants</name>
+    <description>Spanish and Mexican Rancho Land Grants, Los Angeles, 1784–1846. Spanish and Mexican Rancho Land Grants (1784–1846). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Spanish and Mexican Rancho Land Grants</name>
+      <description>HyperCities Map Library footprint · Los Angeles · 1784–1846</description>
+      <TimeSpan><begin>1784-01-01</begin><end>1846-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:122</value></Data>
+      <Data name="place"><value>Los Angeles</value></Data>
+      <Data name="years"><value>1784–1846</value></Data>
+      <Data name="sourceRecordId"><value>122</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value>Philip Ethington</value></Data>
+      <Data name="citation"><value>Spanish and Mexican Rancho Land Grants (1784–1846). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/LosAngeles/1784/Layers/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-123.7,32.5,0 -116.3,32.5,0 -116.3,40.5,0 -123.7,40.5,0 -123.7,32.5,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Spanish and Mexican Rancho Land Grants · raster tile 7/20/48</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/LosAngeles/1784/Layers/7/20/48.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>38.822591</south>
+        <east>-120.937500</east>
+        <west>-123.750000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Spanish and Mexican Rancho Land Grants · raster tile 7/21/48</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/LosAngeles/1784/Layers/7/21/48.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>38.822591</south>
+        <east>-118.125000</east>
+        <west>-120.937500</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Spanish and Mexican Rancho Land Grants · raster tile 7/22/48</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/LosAngeles/1784/Layers/7/22/48.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>38.822591</south>
+        <east>-115.312500</east>
+        <west>-118.125000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Spanish and Mexican Rancho Land Grants · raster tile 7/20/49</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/LosAngeles/1784/Layers/7/20/49.png</href></Icon>
+      <LatLonBox>
+        <north>38.822591</north>
+        <south>36.597889</south>
+        <east>-120.937500</east>
+        <west>-123.750000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Spanish and Mexican Rancho Land Grants · raster tile 7/21/49</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/LosAngeles/1784/Layers/7/21/49.png</href></Icon>
+      <LatLonBox>
+        <north>38.822591</north>
+        <south>36.597889</south>
+        <east>-118.125000</east>
+        <west>-120.937500</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Spanish and Mexican Rancho Land Grants · raster tile 7/22/49</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/LosAngeles/1784/Layers/7/22/49.png</href></Icon>
+      <LatLonBox>
+        <north>38.822591</north>
+        <south>36.597889</south>
+        <east>-115.312500</east>
+        <west>-118.125000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Spanish and Mexican Rancho Land Grants · raster tile 7/20/50</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/LosAngeles/1784/Layers/7/20/50.png</href></Icon>
+      <LatLonBox>
+        <north>36.597889</north>
+        <south>34.307144</south>
+        <east>-120.937500</east>
+        <west>-123.750000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Spanish and Mexican Rancho Land Grants · raster tile 7/21/50</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/LosAngeles/1784/Layers/7/21/50.png</href></Icon>
+      <LatLonBox>
+        <north>36.597889</north>
+        <south>34.307144</south>
+        <east>-118.125000</east>
+        <west>-120.937500</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Spanish and Mexican Rancho Land Grants · raster tile 7/22/50</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/LosAngeles/1784/Layers/7/22/50.png</href></Icon>
+      <LatLonBox>
+        <north>36.597889</north>
+        <south>34.307144</south>
+        <east>-115.312500</east>
+        <west>-118.125000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Spanish and Mexican Rancho Land Grants · raster tile 7/20/51</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/LosAngeles/1784/Layers/7/20/51.png</href></Icon>
+      <LatLonBox>
+        <north>34.307144</north>
+        <south>31.952162</south>
+        <east>-120.937500</east>
+        <west>-123.750000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Spanish and Mexican Rancho Land Grants · raster tile 7/21/51</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/LosAngeles/1784/Layers/7/21/51.png</href></Icon>
+      <LatLonBox>
+        <north>34.307144</north>
+        <south>31.952162</south>
+        <east>-118.125000</east>
+        <west>-120.937500</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Spanish and Mexican Rancho Land Grants · raster tile 7/22/51</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/LosAngeles/1784/Layers/7/22/51.png</href></Icon>
+      <LatLonBox>
+        <north>34.307144</north>
+        <south>31.952162</south>
+        <east>-115.312500</east>
+        <west>-118.125000</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

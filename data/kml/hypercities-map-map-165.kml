@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Map of Saigon (1860)</name>
+    <description>Map of Saigon (1860), Saigon, 1860. Map of Saigon (1860) (1860). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Map of Saigon (1860)</name>
+      <description>HyperCities Map Library footprint · Saigon · 1860</description>
+      <TimeSpan><begin>1860-01-01</begin><end>1860-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:165</value></Data>
+      <Data name="place"><value>Saigon</value></Data>
+      <Data name="years"><value>1860</value></Data>
+      <Data name="sourceRecordId"><value>165</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Map of Saigon (1860) (1860). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Saigon_1860/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>106.645158,10.736086,0 106.722748,10.736086,0 106.722748,10.806594,0 106.645158,10.806594,0 106.645158,10.736086,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Map of Saigon (1860) · raster tile 12/3261/1924</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Saigon_1860/12/3261/1924.png</href></Icon>
+      <LatLonBox>
+        <north>10.833306</north>
+        <south>10.746969</south>
+        <east>106.699219</east>
+        <west>106.611328</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Saigon (1860) · raster tile 12/3262/1924</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Saigon_1860/12/3262/1924.png</href></Icon>
+      <LatLonBox>
+        <north>10.833306</north>
+        <south>10.746969</south>
+        <east>106.787109</east>
+        <west>106.699219</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Saigon (1860) · raster tile 12/3261/1925</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Saigon_1860/12/3261/1925.png</href></Icon>
+      <LatLonBox>
+        <north>10.746969</north>
+        <south>10.660608</south>
+        <east>106.699219</east>
+        <west>106.611328</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Saigon (1860) · raster tile 12/3262/1925</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Saigon_1860/12/3262/1925.png</href></Icon>
+      <LatLonBox>
+        <north>10.746969</north>
+        <south>10.660608</south>
+        <east>106.787109</east>
+        <west>106.699219</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

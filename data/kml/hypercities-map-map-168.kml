@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Map of Tokyo (1945)</name>
+    <description>Map of Tokyo (1945), Tokyo, 1945. Map of Tokyo (1945) (1945). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Map of Tokyo (1945)</name>
+      <description>HyperCities Map Library footprint · Tokyo · 1945</description>
+      <TimeSpan><begin>1945-01-01</begin><end>1945-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:168</value></Data>
+      <Data name="place"><value>Tokyo</value></Data>
+      <Data name="years"><value>1945</value></Data>
+      <Data name="sourceRecordId"><value>168</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Map of Tokyo (1945) (1945). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Tokyo_1945_1/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>139.602911,35.458029,0 139.684076,35.458029,0 139.684076,35.539728,0 139.602911,35.539728,0 139.602911,35.458029,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Map of Tokyo (1945) · raster tile 12/3636/1614</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tokyo_1945_1/12/3636/1614.png</href></Icon>
+      <LatLonBox>
+        <north>35.603719</north>
+        <south>35.532226</south>
+        <east>139.658203</east>
+        <west>139.570313</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Tokyo (1945) · raster tile 12/3637/1614</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tokyo_1945_1/12/3637/1614.png</href></Icon>
+      <LatLonBox>
+        <north>35.603719</north>
+        <south>35.532226</south>
+        <east>139.746094</east>
+        <west>139.658203</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Tokyo (1945) · raster tile 12/3636/1615</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tokyo_1945_1/12/3636/1615.png</href></Icon>
+      <LatLonBox>
+        <north>35.532226</north>
+        <south>35.460670</south>
+        <east>139.658203</east>
+        <west>139.570313</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Tokyo (1945) · raster tile 12/3637/1615</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tokyo_1945_1/12/3637/1615.png</href></Icon>
+      <LatLonBox>
+        <north>35.532226</north>
+        <south>35.460670</south>
+        <east>139.746094</east>
+        <west>139.658203</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Tokyo (1945) · raster tile 12/3636/1616</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tokyo_1945_1/12/3636/1616.png</href></Icon>
+      <LatLonBox>
+        <north>35.460670</north>
+        <south>35.389050</south>
+        <east>139.658203</east>
+        <west>139.570313</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Tokyo (1945) · raster tile 12/3637/1616</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Tokyo_1945_1/12/3637/1616.png</href></Icon>
+      <LatLonBox>
+        <north>35.460670</north>
+        <south>35.389050</south>
+        <east>139.746094</east>
+        <west>139.658203</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Elmwood Park original Plat</name>
+    <description>Elmwood Park original Plat, Chicago, 1896. Elmwood Park original Plat (1896). HyperCities Map Library. St. Louis County Assessor.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Elmwood Park original Plat</name>
+      <description>HyperCities Map Library footprint · Chicago · 1896</description>
+      <TimeSpan><begin>1896-01-01</begin><end>1896-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:334</value></Data>
+      <Data name="place"><value>Chicago</value></Data>
+      <Data name="years"><value>1896</value></Data>
+      <Data name="sourceRecordId"><value>334</value></Data>
+      <Data name="collection"><value>St. Louis County Assessor</value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Elmwood Park original Plat (1896). HyperCities Map Library. St. Louis County Assessor.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Elmwood_1896/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-90.3867,38.679972,0 -90.370816,38.679972,0 -90.370816,38.688592,0 -90.3867,38.688592,0 -90.3867,38.679972,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Elmwood Park original Plat · raster tile 15/8156/12559</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Elmwood_1896/15/8156/12559.png</href></Icon>
+      <LatLonBox>
+        <north>38.694085</north>
+        <south>38.685510</south>
+        <east>-90.384521</east>
+        <west>-90.395508</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Elmwood Park original Plat · raster tile 15/8157/12559</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Elmwood_1896/15/8157/12559.png</href></Icon>
+      <LatLonBox>
+        <north>38.694085</north>
+        <south>38.685510</south>
+        <east>-90.373535</east>
+        <west>-90.384521</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Elmwood Park original Plat · raster tile 15/8158/12559</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Elmwood_1896/15/8158/12559.png</href></Icon>
+      <LatLonBox>
+        <north>38.694085</north>
+        <south>38.685510</south>
+        <east>-90.362549</east>
+        <west>-90.373535</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Elmwood Park original Plat · raster tile 15/8156/12560</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Elmwood_1896/15/8156/12560.png</href></Icon>
+      <LatLonBox>
+        <north>38.685510</north>
+        <south>38.676933</south>
+        <east>-90.384521</east>
+        <west>-90.395508</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Elmwood Park original Plat · raster tile 15/8157/12560</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Elmwood_1896/15/8157/12560.png</href></Icon>
+      <LatLonBox>
+        <north>38.685510</north>
+        <south>38.676933</south>
+        <east>-90.373535</east>
+        <west>-90.384521</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Elmwood Park original Plat · raster tile 15/8158/12560</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Elmwood_1896/15/8158/12560.png</href></Icon>
+      <LatLonBox>
+        <north>38.685510</north>
+        <south>38.676933</south>
+        <east>-90.362549</east>
+        <west>-90.373535</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

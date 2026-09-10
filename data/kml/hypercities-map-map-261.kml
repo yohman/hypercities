@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Indian Land Cessions in the United States - Wisconsin 1</name>
+    <description>Indian Land Cessions in the United States - Wisconsin 1, Chicago, 1784–1894. Indian Land Cessions in the United States - Wisconsin 1 (1784–1894). HyperCities Map Library. Library of Congress.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Indian Land Cessions in the United States - Wisconsin 1</name>
+      <description>HyperCities Map Library footprint · Chicago · 1784–1894</description>
+      <TimeSpan><begin>1784-01-01</begin><end>1894-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:261</value></Data>
+      <Data name="place"><value>Chicago</value></Data>
+      <Data name="years"><value>1784–1894</value></Data>
+      <Data name="sourceRecordId"><value>261</value></Data>
+      <Data name="collection"><value>Library of Congress</value></Data>
+      <Data name="creator"><value>Bureau of American Ethnology, Charles C. Royce</value></Data>
+      <Data name="citation"><value>Indian Land Cessions in the United States - Wisconsin 1 (1784–1894). HyperCities Map Library. Library of Congress.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Royce_Wisconsin_01/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-94.410062,40.991025,0 -85.663739,40.991025,0 -85.663739,48.407338,0 -94.410062,48.407338,0 -94.410062,40.991025,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Indian Land Cessions in the United States - Wisconsin 1 · raster tile 6/15/22</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Royce_Wisconsin_01/6/15/22.png</href></Icon>
+      <LatLonBox>
+        <north>48.922499</north>
+        <south>45.089036</south>
+        <east>-90.000000</east>
+        <west>-95.625000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Indian Land Cessions in the United States - Wisconsin 1 · raster tile 6/16/22</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Royce_Wisconsin_01/6/16/22.png</href></Icon>
+      <LatLonBox>
+        <north>48.922499</north>
+        <south>45.089036</south>
+        <east>-84.375000</east>
+        <west>-90.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Indian Land Cessions in the United States - Wisconsin 1 · raster tile 6/15/23</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Royce_Wisconsin_01/6/15/23.png</href></Icon>
+      <LatLonBox>
+        <north>45.089036</north>
+        <south>40.979898</south>
+        <east>-90.000000</east>
+        <west>-95.625000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Indian Land Cessions in the United States - Wisconsin 1 · raster tile 6/16/23</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Royce_Wisconsin_01/6/16/23.png</href></Icon>
+      <LatLonBox>
+        <north>45.089036</north>
+        <south>40.979898</south>
+        <east>-84.375000</east>
+        <west>-90.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Map of Miami</name>
+    <description>Map of Miami, Miami, 1973. Map of Miami (1973). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Map of Miami</name>
+      <description>HyperCities Map Library footprint · Miami · 1973</description>
+      <TimeSpan><begin>1973-01-01</begin><end>1973-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:417</value></Data>
+      <Data name="place"><value>Miami</value></Data>
+      <Data name="years"><value>1973</value></Data>
+      <Data name="sourceRecordId"><value>417</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Map of Miami (1973). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/1973_Miami/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-80.370428,25.698906,0 -80.090304,25.698906,0 -80.090304,25.940285,0 -80.370428,25.940285,0 -80.370428,25.698906,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Map of Miami · raster tile 10/283/435</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1973_Miami/10/283/435.png</href></Icon>
+      <LatLonBox>
+        <north>26.115986</north>
+        <south>25.799891</south>
+        <east>-80.156250</east>
+        <west>-80.507813</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Miami · raster tile 10/284/435</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1973_Miami/10/284/435.png</href></Icon>
+      <LatLonBox>
+        <north>26.115986</north>
+        <south>25.799891</south>
+        <east>-79.804688</east>
+        <west>-80.156250</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Miami · raster tile 10/283/436</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1973_Miami/10/283/436.png</href></Icon>
+      <LatLonBox>
+        <north>25.799891</north>
+        <south>25.482951</south>
+        <east>-80.156250</east>
+        <west>-80.507813</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map of Miami · raster tile 10/284/436</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/1973_Miami/10/284/436.png</href></Icon>
+      <LatLonBox>
+        <north>25.799891</north>
+        <south>25.482951</south>
+        <east>-79.804688</east>
+        <west>-80.156250</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

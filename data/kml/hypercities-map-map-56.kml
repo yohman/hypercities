@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Mannahatta, 1609</name>
+    <description>Mannahatta, 1609, New York, 1609. Mannahatta, 1609 (1609). HyperCities Map Library. Eric W. Sanderson.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Mannahatta, 1609</name>
+      <description>HyperCities Map Library footprint · New York · 1609</description>
+      <TimeSpan><begin>1609-01-01</begin><end>1609-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:56</value></Data>
+      <Data name="place"><value>New York</value></Data>
+      <Data name="years"><value>1609</value></Data>
+      <Data name="sourceRecordId"><value>56</value></Data>
+      <Data name="collection"><value>Eric W. Sanderson</value></Data>
+      <Data name="creator"><value>Eric W. Sanderson with Markley Boyer</value></Data>
+      <Data name="citation"><value>Mannahatta, 1609 (1609). HyperCities Map Library. Eric W. Sanderson.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/NewYork_1609/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-74.064979,40.678645,0 -73.886657,40.678645,0 -73.886657,40.886022,0 -74.064979,40.886022,0 -74.064979,40.678645,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Mannahatta, 1609 · raster tile 4/4/6</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1609/4/4/6.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>21.943046</south>
+        <east>-67.500000</east>
+        <west>-90.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

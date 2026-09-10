@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Map Of Istanbul</name>
+    <description>Map Of Istanbul, Magnesia, 1922. Map Of Istanbul (1922). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Map Of Istanbul</name>
+      <description>HyperCities Map Library footprint · Magnesia · 1922</description>
+      <TimeSpan><begin>1922-01-01</begin><end>1922-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:346</value></Data>
+      <Data name="place"><value>Magnesia</value></Data>
+      <Data name="years"><value>1922</value></Data>
+      <Data name="sourceRecordId"><value>346</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value>W. ‪Müller-Wiener drafted the sketch, and final version was drawn by F.J.Henninger, C. Menz, KI. Müller, and W.Müller-Wiener</value></Data>
+      <Data name="citation"><value>Map Of Istanbul (1922). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Muller_Wiener_Istanbul/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>28.914742,40.985761,0 29.029572,40.985761,0 29.029572,41.044361,0 28.914742,41.044361,0 28.914742,40.985761,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Map Of Istanbul · raster tile 12/2376/1535</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Muller_Wiener_Istanbul/12/2376/1535.png</href></Icon>
+      <LatLonBox>
+        <north>41.046217</north>
+        <south>40.979898</south>
+        <east>28.916016</east>
+        <west>28.828125</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map Of Istanbul · raster tile 12/2377/1535</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Muller_Wiener_Istanbul/12/2377/1535.png</href></Icon>
+      <LatLonBox>
+        <north>41.046217</north>
+        <south>40.979898</south>
+        <east>29.003906</east>
+        <west>28.916016</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Map Of Istanbul · raster tile 12/2378/1535</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Muller_Wiener_Istanbul/12/2378/1535.png</href></Icon>
+      <LatLonBox>
+        <north>41.046217</north>
+        <south>40.979898</south>
+        <east>29.091797</east>
+        <west>29.003906</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

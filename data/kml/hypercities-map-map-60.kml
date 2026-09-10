@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Los Angeles Southern Area</name>
+    <description>Los Angeles Southern Area, Los Angeles, 2002. Los Angeles Southern Area (2002). HyperCities Map Library. UCLA Bruman Map Collection.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Los Angeles Southern Area</name>
+      <description>HyperCities Map Library footprint · Los Angeles · 2002</description>
+      <TimeSpan><begin>2002-01-01</begin><end>2002-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:60</value></Data>
+      <Data name="place"><value>Los Angeles</value></Data>
+      <Data name="years"><value>2002</value></Data>
+      <Data name="sourceRecordId"><value>60</value></Data>
+      <Data name="collection"><value>UCLA Bruman Map Collection</value></Data>
+      <Data name="creator"><value>Automobile Club of Southern California; Selwyn Douglas</value></Data>
+      <Data name="citation"><value>Los Angeles Southern Area (2002). HyperCities Map Library. UCLA Bruman Map Collection.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Los_Angeles_2002b/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-118.441694,33.691454,0 -118.068826,33.691454,0 -118.068826,33.925692,0 -118.441694,33.925692,0 -118.441694,33.691454,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Los Angeles Southern Area · raster tile 10/175/409</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Los_Angeles_2002b/10/175/409.png</href></Icon>
+      <LatLonBox>
+        <north>34.016242</north>
+        <south>33.724340</south>
+        <east>-118.125000</east>
+        <west>-118.476563</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Los Angeles Southern Area · raster tile 10/176/409</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Los_Angeles_2002b/10/176/409.png</href></Icon>
+      <LatLonBox>
+        <north>34.016242</north>
+        <south>33.724340</south>
+        <east>-117.773438</east>
+        <west>-118.125000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Los Angeles Southern Area · raster tile 10/175/410</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Los_Angeles_2002b/10/175/410.png</href></Icon>
+      <LatLonBox>
+        <north>33.724340</north>
+        <south>33.431441</south>
+        <east>-118.125000</east>
+        <west>-118.476563</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Los Angeles Southern Area · raster tile 10/176/410</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Los_Angeles_2002b/10/176/410.png</href></Icon>
+      <LatLonBox>
+        <north>33.724340</north>
+        <south>33.431441</south>
+        <east>-117.773438</east>
+        <west>-118.125000</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Berlin 1650: Nach Memhard umgearbeiteter Plan von Schleuen; erste Beikarte</name>
+    <description>Berlin 1650: Nach Memhard umgearbeiteter Plan von Schleuen; erste Beikarte, Berlin, 1650. Berlin 1650: Nach Memhard umgearbeiteter Plan von Schleuen; erste Beikarte (1650). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Berlin 1650: Nach Memhard umgearbeiteter Plan von Schleuen; erste Beikarte</name>
+      <description>HyperCities Map Library footprint · Berlin · 1650</description>
+      <TimeSpan><begin>1650-01-01</begin><end>1650-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:18</value></Data>
+      <Data name="place"><value>Berlin</value></Data>
+      <Data name="years"><value>1650</value></Data>
+      <Data name="sourceRecordId"><value>18</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Berlin 1650: Nach Memhard umgearbeiteter Plan von Schleuen; erste Beikarte (1650). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/Berlin_1650/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>13.391891,52.508868,0 13.418146,52.508868,0 13.418146,52.526054,0 13.391891,52.526054,0 13.391891,52.508868,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Berlin 1650: Nach Memhard umgearbeiteter Plan von Schleuen; erste Beikarte · raster tile 12/2200/1343</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/Berlin_1650/12/2200/1343.png</href></Icon>
+      <LatLonBox>
+        <north>52.536273</north>
+        <south>52.482780</south>
+        <east>13.447266</east>
+        <west>13.359375</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

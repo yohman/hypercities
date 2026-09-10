@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Yamashiro</name>
+    <description>Yamashiro, Tokyo, 1696. Yamashiro (1696). HyperCities Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Yamashiro</name>
+      <description>HyperCities Map Library footprint · Tokyo · 1696</description>
+      <TimeSpan><begin>1696-01-01</begin><end>1696-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:460</value></Data>
+      <Data name="place"><value>Tokyo</value></Data>
+      <Data name="years"><value>1696</value></Data>
+      <Data name="sourceRecordId"><value>460</value></Data>
+      <Data name="collection"><value></value></Data>
+      <Data name="creator"><value></value></Data>
+      <Data name="citation"><value>Yamashiro (1696). HyperCities Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/yamashiro_japan_1696/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>135.525115,34.5762,0 136.191975,34.5762,0 136.191975,35.360626,0 135.525115,35.360626,0 135.525115,34.5762,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Yamashiro · raster tile 10/897/404</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/yamashiro_japan_1696/10/897/404.png</href></Icon>
+      <LatLonBox>
+        <north>35.460670</north>
+        <south>35.173808</south>
+        <east>135.703125</east>
+        <west>135.351563</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Yamashiro · raster tile 10/898/404</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/yamashiro_japan_1696/10/898/404.png</href></Icon>
+      <LatLonBox>
+        <north>35.460670</north>
+        <south>35.173808</south>
+        <east>136.054688</east>
+        <west>135.703125</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Yamashiro · raster tile 10/899/404</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/yamashiro_japan_1696/10/899/404.png</href></Icon>
+      <LatLonBox>
+        <north>35.460670</north>
+        <south>35.173808</south>
+        <east>136.406250</east>
+        <west>136.054688</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Yamashiro · raster tile 10/897/405</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/yamashiro_japan_1696/10/897/405.png</href></Icon>
+      <LatLonBox>
+        <north>35.173808</north>
+        <south>34.885931</south>
+        <east>135.703125</east>
+        <west>135.351563</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Yamashiro · raster tile 10/898/405</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/yamashiro_japan_1696/10/898/405.png</href></Icon>
+      <LatLonBox>
+        <north>35.173808</north>
+        <south>34.885931</south>
+        <east>136.054688</east>
+        <west>135.703125</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Yamashiro · raster tile 10/899/405</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/yamashiro_japan_1696/10/899/405.png</href></Icon>
+      <LatLonBox>
+        <north>35.173808</north>
+        <south>34.885931</south>
+        <east>136.406250</east>
+        <west>136.054688</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Yamashiro · raster tile 10/897/406</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/yamashiro_japan_1696/10/897/406.png</href></Icon>
+      <LatLonBox>
+        <north>34.885931</north>
+        <south>34.597042</south>
+        <east>135.703125</east>
+        <west>135.351563</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Yamashiro · raster tile 10/898/406</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/yamashiro_japan_1696/10/898/406.png</href></Icon>
+      <LatLonBox>
+        <north>34.885931</north>
+        <south>34.597042</south>
+        <east>136.054688</east>
+        <west>135.703125</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Yamashiro · raster tile 10/899/406</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/yamashiro_japan_1696/10/899/406.png</href></Icon>
+      <LatLonBox>
+        <north>34.885931</north>
+        <south>34.597042</south>
+        <east>136.406250</east>
+        <west>136.054688</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Yamashiro · raster tile 10/897/407</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/yamashiro_japan_1696/10/897/407.png</href></Icon>
+      <LatLonBox>
+        <north>34.597042</north>
+        <south>34.307144</south>
+        <east>135.703125</east>
+        <west>135.351563</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Yamashiro · raster tile 10/898/407</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/yamashiro_japan_1696/10/898/407.png</href></Icon>
+      <LatLonBox>
+        <north>34.597042</north>
+        <south>34.307144</south>
+        <east>136.054688</east>
+        <west>135.703125</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Yamashiro · raster tile 10/899/407</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/yamashiro_japan_1696/10/899/407.png</href></Icon>
+      <LatLonBox>
+        <north>34.597042</north>
+        <south>34.307144</south>
+        <east>136.406250</east>
+        <west>136.054688</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

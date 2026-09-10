@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>U.S. Geological Survey New York and Vicinity</name>
+    <description>U.S. Geological Survey New York and Vicinity, New York, 1894. U.S. Geological Survey New York and Vicinity (1894). HyperCities Map Library. UCLA Bruman Map Collection.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>U.S. Geological Survey New York and Vicinity</name>
+      <description>HyperCities Map Library footprint · New York · 1894</description>
+      <TimeSpan><begin>1894-01-01</begin><end>1894-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:87</value></Data>
+      <Data name="place"><value>New York</value></Data>
+      <Data name="years"><value>1894</value></Data>
+      <Data name="sourceRecordId"><value>87</value></Data>
+      <Data name="collection"><value>UCLA Bruman Map Collection</value></Data>
+      <Data name="creator"><value>Henry Gannett, et al.</value></Data>
+      <Data name="citation"><value>U.S. Geological Survey New York and Vicinity (1894). HyperCities Map Library. UCLA Bruman Map Collection.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/NewYork_1894/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-74.347515,40.296137,0 -73.736278,40.296137,0 -73.736278,41.006169,0 -74.347515,41.006169,0 -74.347515,40.296137,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>U.S. Geological Survey New York and Vicinity · raster tile 10/300/383</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1894/10/300/383.png</href></Icon>
+      <LatLonBox>
+        <north>41.244772</north>
+        <south>40.979898</south>
+        <east>-74.179688</east>
+        <west>-74.531250</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>U.S. Geological Survey New York and Vicinity · raster tile 10/301/383</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1894/10/301/383.png</href></Icon>
+      <LatLonBox>
+        <north>41.244772</north>
+        <south>40.979898</south>
+        <east>-73.828125</east>
+        <west>-74.179688</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>U.S. Geological Survey New York and Vicinity · raster tile 10/302/383</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1894/10/302/383.png</href></Icon>
+      <LatLonBox>
+        <north>41.244772</north>
+        <south>40.979898</south>
+        <east>-73.476563</east>
+        <west>-73.828125</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>U.S. Geological Survey New York and Vicinity · raster tile 10/300/384</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1894/10/300/384.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>40.713956</south>
+        <east>-74.179688</east>
+        <west>-74.531250</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>U.S. Geological Survey New York and Vicinity · raster tile 10/301/384</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1894/10/301/384.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>40.713956</south>
+        <east>-73.828125</east>
+        <west>-74.179688</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>U.S. Geological Survey New York and Vicinity · raster tile 10/302/384</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1894/10/302/384.png</href></Icon>
+      <LatLonBox>
+        <north>40.979898</north>
+        <south>40.713956</south>
+        <east>-73.476563</east>
+        <west>-73.828125</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>U.S. Geological Survey New York and Vicinity · raster tile 10/300/385</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1894/10/300/385.png</href></Icon>
+      <LatLonBox>
+        <north>40.713956</north>
+        <south>40.446947</south>
+        <east>-74.179688</east>
+        <west>-74.531250</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>U.S. Geological Survey New York and Vicinity · raster tile 10/301/385</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1894/10/301/385.png</href></Icon>
+      <LatLonBox>
+        <north>40.713956</north>
+        <south>40.446947</south>
+        <east>-73.828125</east>
+        <west>-74.179688</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>U.S. Geological Survey New York and Vicinity · raster tile 10/302/385</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1894/10/302/385.png</href></Icon>
+      <LatLonBox>
+        <north>40.713956</north>
+        <south>40.446947</south>
+        <east>-73.476563</east>
+        <west>-73.828125</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>U.S. Geological Survey New York and Vicinity · raster tile 10/300/386</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1894/10/300/386.png</href></Icon>
+      <LatLonBox>
+        <north>40.446947</north>
+        <south>40.178873</south>
+        <east>-74.179688</east>
+        <west>-74.531250</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>U.S. Geological Survey New York and Vicinity · raster tile 10/301/386</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1894/10/301/386.png</href></Icon>
+      <LatLonBox>
+        <north>40.446947</north>
+        <south>40.178873</south>
+        <east>-73.828125</east>
+        <west>-74.179688</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>U.S. Geological Survey New York and Vicinity · raster tile 10/302/386</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/NewYork_1894/10/302/386.png</href></Icon>
+      <LatLonBox>
+        <north>40.446947</north>
+        <south>40.178873</south>
+        <east>-73.476563</east>
+        <west>-73.828125</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

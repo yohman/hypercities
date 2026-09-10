@@ -2,9 +2,10 @@ import { loadData, tileDiagnostic } from "./data.js";
 import { CoreView } from "./core-view.js";
 import { apertureFor, driftOffer, fieldFragment, isPlaceNode, mapContext, mapEncounter, nodeEncounter, strayOffer } from "./graph.js";
 import { MapView } from "./map-view.js";
+import { downloadText, kmlFilenameFor, kmlFor } from "./take-map.js";
 import { Interface } from "./ui.js";
 
-const app = { data: null, field: null, core: null, ui: null, coreMaps: [], corePoint: null, selected: null, context: null, bookEncounter: null, activeEncounter: null, tile: null, stray: null, drift: null, trail: [], history: [], seenEncounterIds: [], seenPassageIds: [], seenNodeIds: [], recentConceptIds: [] };
+const app = { data: null, field: null, core: null, ui: null, coreMaps: [], corePoint: null, selected: null, context: null, bookEncounter: null, activeEncounter: null, tile: null, stray: null, drift: null, takeMode: false, trail: [], history: [], seenEncounterIds: [], seenPassageIds: [], seenNodeIds: [], recentConceptIds: [] };
 
 function pushTrail(label, id, why = null) {
   const last = app.trail.at(-1);
@@ -60,6 +61,7 @@ function render() {
 
 function selectMap(map, { keepEncounter = false, trailWhy = null, focus = true, interaction = "select-map" } = {}) {
   if (!map) return;
+  if (app.takeMode) app.ui.closeTakeMap(false);
   app.selected = map;
   app.context = mapContext(app.data, map);
   app.bookEncounter = mapEncounter(app.data, map, selectionOptions(map, interaction));
@@ -91,7 +93,7 @@ function discoverField(maps, point, lngLat) {
 }
 
 function enterCore(maps, lngLat) {
-  if (!maps.length) { app.ui.field("No sampled historical layer holds this point. Keep moving; the field remains open."); return; }
+  if (!maps.length) { app.ui.field("No sampled historical layer holds this point. Keep moving; the map remains open."); return; }
   app.history.push({ type: "field" });
   app.corePoint = lngLat;
   app.coreMaps = [...maps].sort((a, b) => a.year - b.year || a.title.localeCompare(b.title));
@@ -192,7 +194,25 @@ function acceptDrift(mapId) {
 }
 
 function leaveCore() {
-  app.core.leave(); app.field.leaveCore(); app.coreMaps = []; app.corePoint = null; app.selected = null; app.context = null; app.bookEncounter = null; app.activeEncounter = null; app.stray = null; app.drift = null; app.history = []; app.ui.field();
+  app.core.leave(); app.field.leaveCore(); app.coreMaps = []; app.corePoint = null; app.selected = null; app.context = null; app.bookEncounter = null; app.activeEncounter = null; app.stray = null; app.drift = null; app.takeMode = false; app.history = []; app.ui.clearTakeMap(); app.ui.field();
+}
+
+function beginTakeMap() {
+  app.takeMode = true;
+  app.ui.beginTakeMap(app.selected);
+  if (app.selected) render();
+}
+
+function openTakeMap() {
+  if (!app.selected) return;
+  app.ui.openTakeMap(app.selected);
+}
+
+function resumeTakeMap() { render(); }
+
+function exportMap(kind) {
+  if (!app.selected) return;
+  if (kind === "kml") downloadText(kmlFilenameFor(app.selected), kmlFor(app.selected), "application/vnd.google-earth.kml+xml");
 }
 
 function stepBack() {
@@ -213,7 +233,7 @@ function respondToMapGesture(cue) {
 }
 
 function keyboard(event) {
-  if (document.querySelector("#help-dialog").open || document.querySelector("#hyperbook-window").open) return;
+  if (document.querySelector("#help-dialog").open || !document.querySelector("#site-index").hidden || document.querySelector("#hyperbook-window").open || document.querySelector("#take-map-window").open) return;
   if (event.key === "Escape" || event.key === "ArrowLeft") { event.preventDefault(); stepBack(); return; }
   if (!app.selected) return;
   if (event.key === "ArrowDown") { event.preventDefault(); moveTime("older"); }
@@ -224,7 +244,7 @@ function keyboard(event) {
 async function start() {
   try {
     app.data = await loadData();
-    app.ui = new Interface({ node: followNode, time: moveTime, stray: acceptStray, drift: acceptDrift, aperture: openAperture, surface: leaveCore });
+    app.ui = new Interface({ node: followNode, time: moveTime, stray: acceptStray, drift: acceptDrift, aperture: openAperture, read: () => app.ui.openRead(), surface: leaveCore, take: beginTakeMap, takeSelected: openTakeMap, resumeTake: resumeTakeMap, exportMap });
     app.core = new CoreView({
       onSelect: (map) => selectMap(map),
       onHover: (map) => app.field.highlightTimewellMap(map)
@@ -244,10 +264,15 @@ async function start() {
   } catch (error) {
     const directFile = window.location.protocol === "file:";
     document.querySelector("#field-prompt").innerHTML = directFile
-      ? "<p>This field needs a static web preview. Open it through GitHub Pages or a local HTTP server so the book graph and map records can be read.</p>"
-      : `<p>Unable to open the field: ${error.message}</p>`;
+      ? "<p>This map needs a static web preview. Open it through GitHub Pages or a local HTTP server so the book graph and map records can be read.</p>"
+      : `<p>Unable to open the map: ${error.message}</p>`;
     console.error(error);
   }
 }
 
-start();
+// A module should evaluate once, but this guard keeps embedded-browser reload
+// quirks from registering a second set of map and interface listeners.
+if (!window.__hypercitiesPrototypeStarted) {
+  window.__hypercitiesPrototypeStarted = true;
+  start();
+}

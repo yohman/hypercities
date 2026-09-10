@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Berlin Through Roads</name>
+    <description>Berlin Through Roads, Berlin, 1945. Berlin Through Roads (1945). HyperCities Map Library. Arthur H. Robinson Map Library.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Berlin Through Roads</name>
+      <description>HyperCities Map Library footprint · Berlin · 1945</description>
+      <TimeSpan><begin>1945-01-01</begin><end>1945-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:227</value></Data>
+      <Data name="place"><value>Berlin</value></Data>
+      <Data name="years"><value>1945</value></Data>
+      <Data name="sourceRecordId"><value>227</value></Data>
+      <Data name="collection"><value>Arthur H. Robinson Map Library</value></Data>
+      <Data name="creator"><value>Branch of Research and Analysis, OSS</value></Data>
+      <Data name="citation"><value>Berlin Through Roads (1945). HyperCities Map Library. Arthur H. Robinson Map Library.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/berlin_roadsFinal/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>13.110171,52.337953,0 13.699302,52.337953,0 13.699302,52.663955,0 13.110171,52.663955,0 13.110171,52.337953,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Berlin Through Roads · raster tile 9/274/167</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/berlin_roadsFinal/9/274/167.png</href></Icon>
+      <LatLonBox>
+        <north>52.908902</north>
+        <south>52.482780</south>
+        <east>13.359375</east>
+        <west>12.656250</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Berlin Through Roads · raster tile 9/275/167</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/berlin_roadsFinal/9/275/167.png</href></Icon>
+      <LatLonBox>
+        <north>52.908902</north>
+        <south>52.482780</south>
+        <east>14.062500</east>
+        <west>13.359375</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Berlin Through Roads · raster tile 9/274/168</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/berlin_roadsFinal/9/274/168.png</href></Icon>
+      <LatLonBox>
+        <north>52.482780</north>
+        <south>52.052490</south>
+        <east>13.359375</east>
+        <west>12.656250</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Berlin Through Roads · raster tile 9/275/168</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/berlin_roadsFinal/9/275/168.png</href></Icon>
+      <LatLonBox>
+        <north>52.482780</north>
+        <south>52.052490</south>
+        <east>14.062500</east>
+        <west>13.359375</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>

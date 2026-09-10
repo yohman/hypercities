@@ -1,0 +1,5 @@
+html,body,#preview-map { width:100%; height:100%; margin:0; }
+body { overflow:hidden; background:#111; color:#e9e2d6; }
+#preview-map { position:absolute; inset:0; }
+#preview-status { position:absolute; right:10px; bottom:9px; left:10px; margin:0; color:rgba(237,229,216,.78); font:10px/1.3 ui-sans-serif,system-ui,sans-serif; letter-spacing:.08em; text-align:center; text-transform:uppercase; pointer-events:none; text-shadow:0 1px 6px #000; }
+#preview-status[hidden] { display:none; }

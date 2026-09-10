@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Geological Map of the St. Louis Quadrangle</name>
+    <description>Geological Map of the St. Louis Quadrangle, Chicago, 1911. Geological Map of the St. Louis Quadrangle (1911). HyperCities Map Library. N.M Fenneman, Geology and Mineral Resources of the St. Louis Quadrangle, USGS Bulletin 438.</description>
+    <Style id="hypercities-footprint">
+      <LineStyle><color>ff5e6ad6</color><width>2</width></LineStyle>
+      <PolyStyle><color>285e6ad6</color><fill>1</fill><outline>1</outline></PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Geological Map of the St. Louis Quadrangle</name>
+      <description>HyperCities Map Library footprint · Chicago · 1911</description>
+      <TimeSpan><begin>1911-01-01</begin><end>1911-12-31</end></TimeSpan>
+      <ExtendedData>
+      <Data name="mapId"><value>map:333</value></Data>
+      <Data name="place"><value>Chicago</value></Data>
+      <Data name="years"><value>1911</value></Data>
+      <Data name="sourceRecordId"><value>333</value></Data>
+      <Data name="collection"><value>N.M Fenneman, Geology and Mineral Resources of the St. Louis Quadrangle, USGS Bulletin 438</value></Data>
+      <Data name="creator"><value>H.M Wilson</value></Data>
+      <Data name="citation"><value>Geological Map of the St. Louis Quadrangle (1911). HyperCities Map Library. N.M Fenneman, Geology and Mineral Resources of the St. Louis Quadrangle, USGS Bulletin 438.</value></Data>
+      <Data name="tileTemplate"><value>https://tiles.ats.ucla.edu/tiles/St_Louis_1911_USGS/{z}/{x}/{y}.png</value></Data>
+      <Data name="groundOverlayTiles"><value>Source XYZ tiles included as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="rasterAvailability"><value>Original XYZ tiles, rendered here as KML GroundOverlays at the recorded minimum zoom.</value></Data>
+      <Data name="exportScope"><value>Georeferenced footprint, provenance, and a source-tile raster overview at the recorded minimum zoom.</value></Data>
+      </ExtendedData>
+      <styleUrl>#hypercities-footprint</styleUrl>
+      <Polygon><tessellate>1</tessellate><outerBoundaryIs><LinearRing><coordinates>-90.522899,38.470206,0 -89.942837,38.470206,0 -89.942837,38.76738,0 -90.522899,38.76738,0 -90.522899,38.470206,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <GroundOverlay>
+      <name>Geological Map of the St. Louis Quadrangle · raster tile 10/254/392</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/St_Louis_1911_USGS/10/254/392.png</href></Icon>
+      <LatLonBox>
+        <north>38.822591</north>
+        <south>38.548165</south>
+        <east>-90.351563</east>
+        <west>-90.703125</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Geological Map of the St. Louis Quadrangle · raster tile 10/255/392</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/St_Louis_1911_USGS/10/255/392.png</href></Icon>
+      <LatLonBox>
+        <north>38.822591</north>
+        <south>38.548165</south>
+        <east>-90.000000</east>
+        <west>-90.351563</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Geological Map of the St. Louis Quadrangle · raster tile 10/256/392</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/St_Louis_1911_USGS/10/256/392.png</href></Icon>
+      <LatLonBox>
+        <north>38.822591</north>
+        <south>38.548165</south>
+        <east>-89.648438</east>
+        <west>-90.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Geological Map of the St. Louis Quadrangle · raster tile 10/254/393</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/St_Louis_1911_USGS/10/254/393.png</href></Icon>
+      <LatLonBox>
+        <north>38.548165</north>
+        <south>38.272689</south>
+        <east>-90.351563</east>
+        <west>-90.703125</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Geological Map of the St. Louis Quadrangle · raster tile 10/255/393</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/St_Louis_1911_USGS/10/255/393.png</href></Icon>
+      <LatLonBox>
+        <north>38.548165</north>
+        <south>38.272689</south>
+        <east>-90.000000</east>
+        <west>-90.351563</west>
+      </LatLonBox>
+    </GroundOverlay>
+    <GroundOverlay>
+      <name>Geological Map of the St. Louis Quadrangle · raster tile 10/256/393</name>
+      <drawOrder>1</drawOrder>
+      <Icon><href>https://tiles.ats.ucla.edu/tiles/St_Louis_1911_USGS/10/256/393.png</href></Icon>
+      <LatLonBox>
+        <north>38.548165</north>
+        <south>38.272689</south>
+        <east>-89.648438</east>
+        <west>-90.000000</west>
+      </LatLonBox>
+    </GroundOverlay>
+
+  </Document>
+</kml>
