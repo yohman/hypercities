@@ -1,60 +1,95 @@
-# HyperCities Hyperbook Graph
+# HyperCities
 
-## Current phase: full-book Hyperbook + TimeWell prototype
+A static research prototype for experiencing *HyperCities: Thick Mapping in the Digital Humanities* through historical maps, time, and a source-grounded Hyperbook.
 
-This repository contains a reviewable full-book Hyperbook Graph and Encounter Fragment Library drawn from *HyperCities: Thick Mapping in the Digital Humanities*, together with the existing static map/TimeWell prototype. It does not introduce a backend, normalize the full Map Library, or modify the current interaction during the extraction phase.
+This is not a recreation of the original GIS platform or a conventional academic website. It is an experiment in the HyperCities proposition: a visitor can enter a place, descend through its cartographic past, and encounter ideas, voices, and source pages that the movement itself evokes.
 
-The canonical full-book review artifacts are:
+## The current build
 
-- [hyperbook.json](data/hyperbook/hyperbook.json) - source-book hierarchy, passages, quotations, figure references, and code fragments.
-- [entities.json](data/hyperbook/entities.json) - controlled vocabulary with aliases, entity types, geography scale, and source provenance.
-- [edges.json](data/hyperbook/edges.json) - explicit and explicitly-labelled inferred source relationships.
-- [encounters.json](data/hyperbook/encounters.json) - encounter-sized source objects linked back to the scholarly passages.
-- [experience-affordances.json](data/hyperbook/experience-affordances.json) - separate, editorial activation proposals for a future Experience Graph.
-- [analysis.json](data/hyperbook/analysis.json) - diversity, repetition, hub, and review analysis.
-- [derives.json](data/hyperbook/derives.json) - four auditable, data-level dérive simulations.
-- [book-page-locations.json](data/book-page-locations.json) - visual source-page locations for the exact quotation encounters.
-- [book-pages](assets/book-pages) - 212 source-faithful WebP page images used by the quotation reader.
-- [full schema / policy](docs/hyperbook-full-schema.md) and [dérive tests](docs/hyperbook-derives.md).
+- A dark, label-free world field reveals the real extents of historical maps as restrained red traces.
+- Hovering a location with overlapping maps previews a **TimeWell**; clicking locks a CORE at that coordinate.
+- The TimeWell is a floating three-dimensional temporal cross-section. Its strata preserve each map's geographic aspect ratio, while a central pillar marks the drilled coordinate and the vertical axis names the available years.
+- Selecting a layer moves the map to that historical map's actual geographic extent and attempts to display its original raster tiles. The map remains freely pannable and zoomable.
+- The full-book Hyperbook supplies encounters through direct place evidence, cartographic and temporal resonance, visitor actions, concepts, and deliberately labelled editorial routes. It may also remain silent.
+- Clicking a quotation opens its scanned source page with the source passage highlighted. Left and Right arrows page through all 212 source images; returning to the cited page restores the highlight.
+- The **TRACE** holds a fading record of the current dérive. Arrow keys mirror the offered movements: Up/Down move through time, Right accepts a lateral route, and Left/Esc returns toward the field. In the book reader, Left/Right instead turn pages.
 
-The earlier Phase 1 sample remains as a historical ontology specimen:
+## Screens
 
-- [hyperbook.json](data/phase-1-sample/hyperbook.json) - book-native objects: sections, passages, quotations, figures, and a code-fragment specimen.
-- [entities.json](data/phase-1-sample/entities.json) - controlled vocabulary for people, voices, concepts, places, dates, events, projects, Windows, and technologies.
-- [edges.json](data/phase-1-sample/edges.json) - typed relationships with strength, confidence, assertion status, and page-level evidence.
-- [ontology/schema](schema/hyperbook-phase1.schema.json) - the portable artifact shapes and relation vocabulary.
-- [review guide](docs/phase-1-sample-review.md) - the proposed ontology, sample coverage, and decisions needed before scaling.
+### 1. The world field
 
-Generate the full-book draft and run its integrity check with:
+Historical-map extents remain quiet until a visitor chooses a place to enter.
+
+![Dark world map with muted historical-map extents](assets/readme/world-field.jpg)
+
+### 2. A TimeWell / CORE in Berlin
+
+A selected historical raster occupies its true geographic footprint on the map while the TimeWell keeps the place's available dates and layers visible to the right.
+
+![Berlin historical map with a floating TimeWell and layered dates](assets/readme/timewell-berlin.jpg)
+
+### 3. The Hyperbook as a source encounter
+
+A quotation opens the original book page as a floating facsimile. The tinted mark is a locator, not a replacement for the source text.
+
+![A highlighted source quotation floating above the Berlin TimeWell](assets/readme/source-page-reader.jpg)
+
+## Interaction grammar
+
+1. Pan or zoom anywhere in the world field.
+2. Hover over historical-map depth to preview a TimeWell; tap or click to cut a CORE.
+3. Choose a stratum, a year, or use Up/Down to move across available maps in time.
+4. Follow a named idea or accept a quiet lateral invitation; use TRACE to see where the dérive has passed.
+5. Open a quotation to inspect the book page. Esc, the close mark, or clicking outside returns to the map.
+
+The `?` affordance in the prototype keeps this same grammar available without an onboarding sequence. Pointer and touch interactions remain primary; keyboard navigation is an optional echo.
+
+## Hyperbook data
+
+The prototype is backed by a reviewable, static full-book graph. The scholarly passage stays primary; encounter fragments are smaller source-grounded entrances into passages, quotations, concepts, people, projects, Windows, events, figures, and technical material.
+
+| Artifact | Purpose |
+| --- | --- |
+| [hyperbook.json](data/hyperbook/hyperbook.json) | Book hierarchy and source objects |
+| [entities.json](data/hyperbook/entities.json) | Controlled vocabulary and aliases |
+| [edges.json](data/hyperbook/edges.json) | Explicit and carefully labelled inferred relationships |
+| [encounters.json](data/hyperbook/encounters.json) | Encounter-sized source objects linked to their parent passages |
+| [experience-affordances.json](data/hyperbook/experience-affordances.json) | Separate editorial proposals for future state-aware activation |
+| [analysis.json](data/hyperbook/analysis.json) | Diversity, repetition, hubs, and human-review priorities |
+| [derives.json](data/hyperbook/derives.json) | Auditable conceptual dérive simulations |
+| [book-page locations](data/book-page-locations.json) | Page-local quotation locators for the reader |
+| [book pages](assets/book-pages) | 212 WebP facsimiles from the supplied edition |
+
+Current extraction totals: **56 passages**, **160 quotations**, **291 encounter fragments**, **138 controlled entities**, **1,481 source-graph edges**, and **1,850 editorial affordances**.
+
+The data deliberately separates `book-explicit`, `book-inferred`, and `editorial` claims. Geographic activation is conservative: country-scale entities are never used as a spatial fallback, and the system can return no encounter rather than pretend a passage is about the current map. The narrow Japan thread is explicitly editorial and favors Yoh Kawano's Mapping Events / Tohoku / Fukushima material without claiming that every Japanese map depicts those places.
+
+See the [full schema and editorial policy](docs/hyperbook-full-schema.md) and [four conceptual dérive tests](docs/hyperbook-derives.md) for the evidence model, safeguards, and review priorities.
+
+## Static architecture
+
+The prototype is designed to remain publishable from GitHub Pages:
+
+- HTML, CSS, vanilla JavaScript ES modules, and static JSON
+- MapLibre GL JS for the navigable basemap
+- deck.gl for historical footprints and the TimeWell's three-dimensional layers
+- no database, backend, authentication, framework, or build pipeline
+
+Use GitHub Pages or any local static HTTP server for preview. Do not open `index.html` through `file://`: browsers isolate that origin and block the JSON data reads the prototype needs.
+
+## Source and rebuild notes
+
+The source edition is `eScholarship UC item 3mh5t455.pdf`. The committed graph covers printed pp. 6–203; its later apparatus remains source material but is not passage-extracted. Page images cover all 212 scanned pages.
+
+The graph and facsimiles can be regenerated with the repository scripts:
 
 ```sh
+mkdir -p tmp/hyperbook-extraction
 pdftotext -raw "eScholarship UC item 3mh5t455.pdf" tmp/hyperbook-extraction/book-raw.txt
 node scripts/build-hyperbook-full.mjs tmp/hyperbook-extraction/book-raw.txt
-node scripts/simulate-hyperbook-derives.mjs
 node scripts/validate-hyperbook-full.mjs tmp/hyperbook-extraction/book-raw.txt
+node scripts/simulate-hyperbook-derives.mjs
 node scripts/build-book-page-assets.mjs
 ```
 
-It verifies cross-file IDs, exact quoted-page matches, complete passage coverage, typed evidence, the editorial boundary, and the no-country-geographic-fallback rule.
-
-## Extraction boundary
-
-The full-book draft covers the substantive book (printed pp. 6–203). Its scholarly passage hierarchy includes:
-
-1. Preface and Lexicon
-2. The Humanities in the Digital Humanities, including Berlin and Thick Mapping
-3. Los Angeles Ghost Maps and PDub
-4. The View from Above / Below, Counter-Mapping, and georeferencing
-5. Rome and Tehran Windows
-6. Mapping Events / Mapping Social Media
-7. Tohoku gallery
-
-The pre-existing [exploratory aggregate](data/hyperbook-graph.json) remains a map-source convenience for the prototype. It is not an input to the full-book source graph. The TimeWell now selects from the full Encounter Fragment Library using direct place evidence where it exists, then explicitly labelled cartographic, interactional, temporal, conceptual, and editorial resonances. It maintains encounter and passage cooldowns so one familiar quotation does not dominate a dérive.
-
-An intentional, visibly labelled regional activation exists for a core whose clicked coordinate is in Japan: it selects only Yoh Kawano's *Mapping Events* passages (including Tohoku/Fukushima) as an editorial Japan thread. This does not assert that each selected map is of Fukushima, and it never turns a country name into an otherwise-general geographic fallback.
-
-## Field prototype
-
-`index.html` is a no-build, GitHub Pages-ready prototype. Serve the repository as static files and open its root URL. (A `file://` preview is intentionally not supported because browsers block the JSON graph/map reads.) It uses MapLibre GL JS for the dark geographic field and deck.gl's Cartesian `OrbitView` for an unbounded floating temporal cross-section. The well previews transparently on hover wherever historical-map depth exists; a click locks it to that coordinate. Each stratum preserves the footprint's aspect ratio and the core's relative position. Its temporal scale is elastic: every stratum receives room to be selected, while logarithmically compressed large intervals are named as gaps rather than dominating the well. Hovering a stratum or its year illuminates the corresponding true footprint in the map. Selecting a stratum moves the freely navigable map to its full, unscaled geographic bounds and attempts its legacy raster source, with fit padding that keeps the selected map outside the well's floating area. Clicking a quotation opens the original source page with the source text highlighted; Escape or a click outside returns to the same dérive. The full Encounter Fragment Library supplies Hyperbook encounters/evidence; the pre-existing exploratory map records are used only as an available historical-map source.
-
-Stored legacy tile bases are HTTP. The prototype preserves each source value but upgrades the same host to HTTPS and derives the existing `{z}/{x}/{y}.png` pattern at display time. Its expandable map-data detail records that decision and any browser raster failure.
+`tmp/` contains local extraction intermediates and is intentionally not a source of runtime behavior.
