@@ -1,7 +1,8 @@
 import { asPolygon, containsCoordinate, tileDiagnostic, tileTemplate } from "./data.js";
 
-const RED = [168, 75, 67];
-const RED_BRIGHT = [226, 113, 99];
+// HyperCities book-cover red, with a quieter shade for unselected extents.
+const RED = [166, 42, 38];
+const RED_BRIGHT = [218, 56, 51];
 
 function grayscale(color, dimming = 0.45) {
   if (typeof color !== "string") return null;

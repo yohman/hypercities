@@ -1,5 +1,6 @@
 import { tileTemplate } from "./data.js";
 import { hostedNetworkKmlUrlFor, mapLibreSnippetFor } from "./take-map.js";
+import { openingQuotes } from "./opening-quotes.js";
 
 function escapeHtml(value) { return String(value ?? "").replace(/[&<>'"]/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" }[char])); }
 function pages(provenance) { if (!provenance?.printedPages) return ""; const [start, end] = provenance.printedPages; return start === end ? `book p. ${start}` : `book pp. ${start}–${end}`; }
@@ -17,8 +18,20 @@ const BOOK_PAGE_COUNT = 212;
 // complete scanned sequence.
 const BOOK_READ_START_PAGE = 5;
 const SVG_NS = "http://www.w3.org/2000/svg";
+const BOOK_ENTRY_QUOTE_IDS = Object.freeze([
+  "quote:001-a-hypercity-is-a-real-city-overlaid-with-thick-infor", "quote:002-hyper-adds-to-extends-and-proliferates-many-tex", "quote:003-to-address-the-first-question-the-book-brings-toget", "quote:006-as-the-book-progresses-the-long-form-narratives-bre", "quote:009-the-book-also-features-contributions-written-and-des",
+  "quote:011-every-story-matters-every-voice-can-be-heard-every", "quote:012-imagine-a-search-and-discovery-tool-for-this-web-in", "quote:010-in-this-respect-hypercities-are-much-larger-than-tw", "quote:154-mapping-is-not-a-one-time-thing-and-maps-are-not-st", "quote:014-thick-maps-are-sometimes-called-deep-maps-because-t", "quote:013-thick-maps-are-not-simply-more-data-on-maps-but-in", "quote:016-this-is-why-hypercities-is-not-primarily-a-technolog",
+  "quote:019-in-other-words-maybe-the-past-is-always-there-quiet", "quote:155-as-the-flaneur-walked-along-the-streets-he-was-cond", "quote:018-i-wonder-what-would-it-mean-to-drive-downward-into", "quote:024-that-s-because-all-of-these-pasts-co-exist-in-vario", "quote:029-but-rather-than-taking-chronology-as-the-sole-organi", "quote:030-through-the-google-maps-and-earth-apis-hypercities",
+  "quote:036-the-project-began-with-the-protests-in-tahrir-square", "quote:038-this-shifted-the-problem-of-preservation-from-one-of", "quote:044-instead-they-offer-various-optics-for-seeing-remem", "quote:048-thick-mapping-begins-to-look-like-an-ever-expanding", "quote:156-the-historian-who-maps-the-past-makes-these-ghosts-v", "quote:090-as-much-as-thick-mapping-is-interested-in-denatural", "quote:093-google-maps-makes-choices-about-what-counts-for-accu", "quote:096-from-its-inception-the-dynamic-hypercities-platform", "quote:099-looking-forward-it-is-not-enough-to-fly-from-paragr",
+  "quote:105-many-are-very-hard-to-watch-as-they-are-maps-of-eve", "quote:112-these-archives-are-not-simply-documents-of-the-past", "quote:159-the-event-has-no-end-time", "quote:119-events-are-ever-thicker-networks-of-events-no-matte", "quote:123-the-database-of-tweets-thus-represents-a-geographica", "quote:126-in-every-case-the-archive-is-less-than-the-event-a", "quote:130-it-is-no-longer-a-question-of-whether-or-not-social", "quote:132-at-the-same-time-the-team-used-the-perspectives-and", "quote:137-living-abroad-gave-me-the-opportunity-to-analyze-the", "quote:139-the-memories-of-the-past-from-so-many-distant-locati", "quote:145-the-openness-of-the-data-remains-an-important-long", "quote:153-the-event-has-many-lives-and-afterlives-through-haun", "quote:160-the-event-remains"
+]);
 
 function randomBetween(min, max) { return min + Math.random() * (max - min); }
+function sourceQuoteText(text) {
+  // The extraction occasionally closes a word onto an opening or closing curly
+  // quote. Restore that missing typographic whitespace without changing words.
+  return String(text).replace(/([\p{L}\p{N}])“/gu, "$1 “").replace(/”([\p{L}\p{N}])/gu, "” $1");
+}
 
 function meanderingPath(start, end) {
   const dx = end.x - start.x;
@@ -50,6 +63,11 @@ export class Interface {
   constructor(actions) {
     this.actions = actions;
     this.depth = document.querySelector("#depth-indicator");
+    this.bookEntry = document.querySelector("#book-entry");
+    this.bookEntryDismiss = document.querySelector("#book-entry-dismiss");
+    this.bookEntryCopy = document.querySelector(".book-entry-copy");
+    this.bookEntryQuote = document.querySelector("#book-entry-quote");
+    this.bookEntryRead = document.querySelector("#book-entry-read");
     this.fieldPrompt = document.querySelector("#field-prompt");
     this.fieldEncounter = document.querySelector("#field-encounter");
     this.encounter = document.querySelector("#encounter");
@@ -68,6 +86,11 @@ export class Interface {
     this.window = document.querySelector("#hyperbook-window");
     this.windowContent = document.querySelector("#hyperbook-window-content");
     this.bookReader = null;
+    this.bookEntryQuotes = openingQuotes;
+    this.currentBookEntryQuote = null;
+    this.renderBookEntryQuote();
+    this.bookEntryDismiss.addEventListener("click", () => this.dismissBookEntry());
+    this.bookEntryRead.addEventListener("click", () => this.openBookEntryQuote());
     document.querySelector("#help-toggle").addEventListener("click", () => this.help.showModal());
     document.querySelector("#help-close").addEventListener("click", () => this.help.close());
     this.indexToggle.addEventListener("click", () => {
@@ -113,6 +136,7 @@ export class Interface {
     });
     this.window.addEventListener("close", () => {
       this.window.classList.remove("is-book-page");
+      this.window.classList.remove("is-book-spread");
       this.bookReader = null;
     });
     this.takeMap.addEventListener("cancel", () => { this.takeMapReturnOnClose = true; });
@@ -130,6 +154,14 @@ export class Interface {
       if (resume) this.actions.resumeTake();
     });
     document.addEventListener("keydown", (event) => {
+      if (!this.bookEntry.hidden) {
+        if (["Enter", " ", "Escape"].includes(event.key)) {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+          this.dismissBookEntry();
+        }
+        return;
+      }
       if (!this.index.hidden) {
         if (event.key === "Escape") {
           event.preventDefault();
@@ -153,6 +185,62 @@ export class Interface {
       this.journeyContent.hidden = !open;
       this.journeyToggle.setAttribute("aria-expanded", String(open));
     });
+    window.addEventListener("resize", () => {
+      if (!this.window.open || !this.bookReader) return;
+      const shouldSpread = this.shouldUseBookSpread();
+      if (shouldSpread !== this.bookReader.isSpread) this.renderBookPage();
+    });
+  }
+
+  bookEntryIsVisible() {
+    return !this.bookEntry.hidden;
+  }
+
+  setBookEntryQuotes(data) {
+    const quotes = BOOK_ENTRY_QUOTE_IDS
+      .map((id) => data.objects.get(id))
+      .filter((quote) => quote?.kind === "quotation" && quote.provenance?.printedPages?.[0])
+      .map((quote) => ({
+        id: quote.id,
+        page: quote.provenance.printedPages[0],
+        text: sourceQuoteText(quote.text),
+        pageLocation: data.bookPageLocations?.[quote.id] || null
+      }));
+    if (!quotes.length) return;
+    this.bookEntryQuotes = quotes;
+    this.renderBookEntryQuote(this.currentBookEntryQuote?.id);
+  }
+
+  renderBookEntryQuote(avoidId = null) {
+    let previousId = null;
+    try { previousId = sessionStorage.getItem("hypercities-book-entry-quote"); } catch { /* file origins may deny storage */ }
+    const choices = this.bookEntryQuotes.filter((quote) => quote.id !== previousId && quote.id !== avoidId);
+    const quote = choices[Math.floor(Math.random() * choices.length)] || this.bookEntryQuotes[0];
+    try { sessionStorage.setItem("hypercities-book-entry-quote", quote.id); } catch { /* the current quotation is still usable */ }
+    this.currentBookEntryQuote = quote;
+    this.bookEntryCopy.dataset.sourceQuote = quote.id;
+    this.bookEntryQuote.textContent = `“${sourceQuoteText(quote.text)}”`;
+    this.bookEntryRead.innerHTML = `${quote.page} <span aria-hidden="true">↗</span>`;
+    this.bookEntryRead.setAttribute("aria-label", `Open page ${quote.page} in READ`);
+  }
+
+  openBookEntryQuote() {
+    const quote = this.currentBookEntryQuote;
+    if (!quote) return;
+    this.openRead(quote.page, { id: quote.id, page: quote.page, pageImage: true, pageLocation: quote.pageLocation });
+  }
+
+  dismissBookEntry() {
+    if (this.bookEntry.hidden || this.bookEntry.classList.contains("is-dismissing")) return;
+    this.bookEntry.classList.add("is-dismissing");
+    this.bookEntryDismiss.tabIndex = -1;
+    // Keep the quotation in the document until its fade completes, then make
+    // the map the only active surface again. A first click opens the field;
+    // it does not silently turn into a core at an accidental coordinate.
+    window.setTimeout(() => {
+      this.bookEntry.hidden = true;
+      this.bookEntry.setAttribute("aria-hidden", "true");
+    }, 720);
   }
 
   toggleIndex() {
@@ -380,6 +468,7 @@ export class Interface {
       this.openRead(aperture.page, aperture);
     } else {
       this.window.classList.remove("is-book-page");
+      this.window.classList.remove("is-book-spread");
       this.bookReader = null;
       this.windowContent.innerHTML = `<p class="window-kind">${escapeHtml(aperture.kind)}</p><h1>${escapeHtml(aperture.title)}</h1>${aperture.quote ? `<blockquote>“${escapeHtml(aperture.quote)}”</blockquote>` : ""}<p class="window-source">${escapeHtml(aperture.source || "HyperCities")}</p>${figure}${sourceDetails(aperture.provenance, null, null)}`;
       if (!this.window.open) this.window.showModal();
@@ -394,20 +483,40 @@ export class Interface {
     if (!this.window.open) this.window.showModal();
   }
 
-  renderBookPage() {
-    const reader = this.bookReader;
-    if (!reader) return;
-    const { aperture, page } = reader;
-    // A quotation only receives an overlay on its own source page. Adjacent
-    // pages are deliberately left as uninterrupted facsimiles.
+  shouldUseBookSpread() {
+    return window.matchMedia("(min-width: 920px)").matches;
+  }
+
+  bookSpreadPages(page, isSpread) {
+    if (!isSpread || page === 1) return [page];
+    const first = page % 2 === 0 ? page : page - 1;
+    return [first, first + 1].filter((item) => item <= BOOK_PAGE_COUNT);
+  }
+
+  bookPageFrame(page, aperture) {
+    // A quotation only receives an overlay on its own source page. Its facing
+    // page remains an uninterrupted facsimile.
     const rect = aperture && page === aperture.page ? aperture.pageLocation?.rect : null;
     const highlight = rect
       ? `<span class="book-page-highlight" aria-label="The selected quotation on this page" style="--highlight-left:${rect.left * 100}%;--highlight-top:${rect.top * 100}%;--highlight-width:${rect.width * 100}%;--highlight-height:${rect.height * 100}%"></span>`
       : "";
     const image = `./assets/book-pages/page-${String(page).padStart(3, "0")}.webp`;
-    const previousDisabled = page === 1 ? " disabled" : "";
-    const nextDisabled = page === BOOK_PAGE_COUNT ? " disabled" : "";
-    this.windowContent.innerHTML = `<section class="book-page-viewer" aria-label="HyperCities book page ${escapeHtml(page)} of ${BOOK_PAGE_COUNT}"><div class="book-page-frame"><img src="${image}" alt="Scanned book page ${escapeHtml(page)} of ${BOOK_PAGE_COUNT} from HyperCities: Thick Mapping in the Digital Humanities">${highlight}</div><nav class="book-page-controls" aria-label="Turn book pages"><button class="book-page-turn" type="button" data-book-page="-1" aria-label="Previous page"${previousDisabled}><span aria-hidden="true">←</span><small>PREV</small></button><p aria-live="polite">${escapeHtml(page)} <span>/</span> ${BOOK_PAGE_COUNT}</p><button class="book-page-turn book-page-turn--next" type="button" data-book-page="1" aria-label="Next page"${nextDisabled}><small>NEXT</small><span aria-hidden="true">→</span></button></nav></section>`;
+    return `<div class="book-page-frame"><img src="${image}" alt="Scanned book page ${escapeHtml(page)} of ${BOOK_PAGE_COUNT} from HyperCities: Thick Mapping in the Digital Humanities">${highlight}</div>`;
+  }
+
+  renderBookPage() {
+    const reader = this.bookReader;
+    if (!reader) return;
+    const { aperture, page } = reader;
+    const isSpread = this.shouldUseBookSpread();
+    const spreadPages = this.bookSpreadPages(page, isSpread);
+    const [firstPage, lastPage] = [spreadPages[0], spreadPages.at(-1)];
+    const pageLabel = firstPage === lastPage ? String(firstPage) : `${firstPage}–${lastPage}`;
+    const previousDisabled = firstPage === 1 ? " disabled" : "";
+    const nextDisabled = lastPage === BOOK_PAGE_COUNT ? " disabled" : "";
+    reader.isSpread = isSpread;
+    this.window.classList.toggle("is-book-spread", isSpread);
+    this.windowContent.innerHTML = `<section class="book-page-viewer${isSpread ? " is-spread" : ""}" aria-label="HyperCities book ${isSpread ? "pages" : "page"} ${escapeHtml(pageLabel)} of ${BOOK_PAGE_COUNT}"><div class="book-page-spread">${spreadPages.map((item) => this.bookPageFrame(item, aperture)).join("")}</div><nav class="book-page-controls" aria-label="Turn book ${isSpread ? "spreads" : "pages"}"><button class="book-page-turn" type="button" data-book-page="-1" aria-label="Previous ${isSpread ? "spread" : "page"}"${previousDisabled}><span aria-hidden="true">←</span><small>PREV</small></button><p aria-live="polite">${escapeHtml(pageLabel)} <span>/</span> ${BOOK_PAGE_COUNT}</p><button class="book-page-turn book-page-turn--next" type="button" data-book-page="1" aria-label="Next ${isSpread ? "spread" : "page"}"${nextDisabled}><small>NEXT</small><span aria-hidden="true">→</span></button></nav></section>`;
     this.windowContent.querySelectorAll("[data-book-page]").forEach((button) => {
       button.addEventListener("click", () => this.turnBookPage(Number(button.dataset.bookPage)));
     });
@@ -416,7 +525,7 @@ export class Interface {
   turnBookPage(direction) {
     const reader = this.bookReader;
     if (!reader) return;
-    const nextPage = Math.max(1, Math.min(BOOK_PAGE_COUNT, reader.page + direction));
+    const nextPage = Math.max(1, Math.min(BOOK_PAGE_COUNT, reader.page + direction * (reader.isSpread ? 2 : 1)));
     if (nextPage === reader.page) return;
     reader.page = nextPage;
     this.renderBookPage();

@@ -1,5 +1,8 @@
-const RED = [173, 78, 68];
-const RED_BRIGHT = [235, 126, 110];
+// The temporal core uses the book-cover red family: dark in depth, the
+// cover colour at interaction points, and a restrained light on its surface.
+const RED = [159, 40, 37];
+const RED_BRIGHT = [218, 56, 51];
+const RED_LIGHT = [239, 113, 106];
 const INK = [241, 237, 228];
 
 const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
@@ -250,9 +253,7 @@ export class CoreView {
     // exactly above the top cap's center, then the text opens to the right.
     const wellCaption = {
       position: [0, 0, top + 40],
-      // Keep the deck.gl label ASCII-only so its compact glyph atlas renders
-      // every part of the temporal span consistently.
-      text: `${entries.length} LAYER${entries.length === 1 ? "" : "S"} / ${this.stack.firstYear}-${this.stack.lastYear}`
+      text: `${entries.length} LAYER${entries.length === 1 ? "" : "S"} · ${this.stack.firstYear}–${this.stack.lastYear}`
     };
     const coreCoordinate = this.core && {
       // It sits at the visual base of the cylinder: centered below its lower
@@ -299,8 +300,8 @@ export class CoreView {
         filled: true,
         extruded: true,
         flatShading: false,
-        getFillColor: [173, 78, 68, previewing ? 205 : 170],
-        material: { ambient: 0.58, diffuse: 0.62, shininess: 34, specularColor: [255, 184, 166] },
+        getFillColor: [...RED, previewing ? 205 : 170],
+        material: { ambient: 0.58, diffuse: 0.62, shininess: 34, specularColor: RED_LIGHT },
         parameters: { depthTest: true }
       }),
       new deck.ScatterplotLayer({
@@ -321,13 +322,13 @@ export class CoreView {
         getPosition: (item) => item.position,
         getText: () => "|",
         getColor: [...RED_BRIGHT, 245],
-        getSize: 15,
+        getSize: 11,
         sizeUnits: "pixels",
         getTextAnchor: "middle",
         getAlignmentBaseline: "bottom",
         billboard: true,
-        fontFamily: "ui-sans-serif, system-ui, sans-serif",
-        fontWeight: "600",
+        fontFamily: "Avenir Next, Avenir, Helvetica Neue, sans-serif",
+        fontWeight: "500",
         parameters: { depthTest: false }
       }),
       new deck.TextLayer({
@@ -337,13 +338,14 @@ export class CoreView {
         getText: (item) => item.text,
         getPixelOffset: [8, 0],
         getColor: [...RED_BRIGHT, 235],
-        getSize: 10,
+        getSize: 8.5,
         sizeUnits: "pixels",
         getTextAnchor: "start",
         getAlignmentBaseline: "bottom",
         billboard: true,
-        fontFamily: "ui-sans-serif, system-ui, sans-serif",
-        fontWeight: "600",
+        fontFamily: "Avenir Next, Avenir, Helvetica Neue, sans-serif",
+        fontWeight: "500",
+        characterSet: "0123456789 LAYERS·–",
         parameters: { depthTest: false }
       }),
       ...(coreCoordinate?.text ? [new deck.TextLayer({

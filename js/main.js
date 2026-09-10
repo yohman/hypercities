@@ -233,6 +233,7 @@ function respondToMapGesture(cue) {
 }
 
 function keyboard(event) {
+  if (app.ui.bookEntryIsVisible()) return;
   if (document.querySelector("#help-dialog").open || !document.querySelector("#site-index").hidden || document.querySelector("#hyperbook-window").open || document.querySelector("#take-map-window").open) return;
   if (event.key === "Escape" || event.key === "ArrowLeft") { event.preventDefault(); stepBack(); return; }
   if (!app.selected) return;
@@ -243,8 +244,9 @@ function keyboard(event) {
 
 async function start() {
   try {
-    app.data = await loadData();
     app.ui = new Interface({ node: followNode, time: moveTime, stray: acceptStray, drift: acceptDrift, aperture: openAperture, read: () => app.ui.openRead(), surface: leaveCore, take: beginTakeMap, takeSelected: openTakeMap, resumeTake: resumeTakeMap, exportMap });
+    app.data = await loadData();
+    app.ui.setBookEntryQuotes(app.data);
     app.core = new CoreView({
       onSelect: (map) => selectMap(map),
       onHover: (map) => app.field.highlightTimewellMap(map)
@@ -266,6 +268,7 @@ async function start() {
     document.querySelector("#field-prompt").innerHTML = directFile
       ? "<p>This map needs a static web preview. Open it through GitHub Pages or a local HTTP server so the book graph and map records can be read.</p>"
       : `<p>Unable to open the map: ${error.message}</p>`;
+    document.querySelector("#field-prompt").hidden = false;
     console.error(error);
   }
 }

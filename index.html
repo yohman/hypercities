@@ -13,6 +13,13 @@
       <div id="map" aria-label="World map with historical map extents"></div>
       <div id="core-renderer" aria-label="Three-dimensional historical time core"></div>
       <p id="well-caption" class="well-caption" hidden></p>
+      <section id="book-entry" class="book-entry" aria-label="A passage from HyperCities">
+        <button id="book-entry-dismiss" class="book-entry-dismiss" type="button" aria-label="Enter the map"></button>
+        <div class="book-entry-copy" data-source-quote="quote:010-in-this-respect-hypercities-are-much-larger-than-tw">
+          <blockquote id="book-entry-quote">“In this respect, HyperCities are much larger than twenty million inhabitants, since they might embody the entire (largely erased or absent) history of a city—potentially every life, every structure, every street, every voice over time.”</blockquote>
+          <button id="book-entry-read" class="book-entry-read" type="button" aria-label="Open page 14 in READ">14 <span aria-hidden="true">↗</span></button>
+        </div>
+      </section>
       <header class="masthead">
         <div class="masthead-left">
           <a class="wordmark" href="./" aria-label="Return to the world map">HYPERCITIES</a>
@@ -22,7 +29,7 @@
         <button id="help-toggle" class="help-toggle" type="button" aria-haspopup="dialog" aria-controls="help-dialog">?</button>
       </header>
       <div id="depth-indicator" class="depth-indicator" aria-live="polite" hidden></div>
-      <section id="field-prompt" class="field-prompt" aria-live="polite"><p>Move across the map. Press into a place to find its depths.</p></section>
+      <section id="field-prompt" class="field-prompt" aria-live="polite" hidden><p>Move across the map. Press into a place to find its depths.</p></section>
       <aside id="field-encounter" class="field-encounter" aria-live="polite" hidden></aside>
       <aside id="encounter" class="encounter" aria-live="polite" hidden></aside>
       <section id="take-prompt" class="take-prompt" aria-live="polite" hidden>
