@@ -1,0 +1,2903 @@
+{
+  "schemaVersion": "0.3.0-draft",
+  "id": "vocabulary:hypercities-full-book",
+  "status": "review-required",
+  "identityPolicy": "One preferred label per recurring entity; aliases are literal source forms. Geographic entities retain their scale.",
+  "geographicSafety": "Country-scale entities must not create spatial encounter eligibility. Spatial matching requires a direct named city, district, site, or region match in the passage.",
+  "entities": [
+    {
+      "id": "voice:todd-presner",
+      "type": "narrative-voice",
+      "preferredLabel": "Todd Presner",
+      "aliases": [
+        "TP",
+        "Todd Presner"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 24,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          6,
+          6
+        ],
+        "locator": "Printed pp. 6",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "voice:david-shepard",
+      "type": "narrative-voice",
+      "preferredLabel": "David Shepard",
+      "aliases": [
+        "DS",
+        "David Shepard"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 20,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          10,
+          10
+        ],
+        "locator": "Printed pp. 10",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "voice:yoh-kawano",
+      "type": "narrative-voice",
+      "preferredLabel": "Yoh Kawano",
+      "aliases": [
+        "YK",
+        "Yoh Kawano"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 8,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          10,
+          10
+        ],
+        "locator": "Printed pp. 10",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "voice:phil-ethington",
+      "type": "narrative-voice",
+      "preferredLabel": "Phil Ethington",
+      "aliases": [
+        "Phil Ethington",
+        "Philip Ethington"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 6,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          10,
+          10
+        ],
+        "locator": "Printed pp. 10",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "voice:pdub-contributors",
+      "type": "narrative-voice",
+      "preferredLabel": "PDub contributors",
+      "aliases": [
+        "PDub",
+        "PDub Productions"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 40,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:windows-los-angeles",
+        "printedPages": [
+          74,
+          74
+        ],
+        "locator": "Printed pp. 74",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "voice:rome-window",
+      "type": "narrative-voice",
+      "preferredLabel": "Rome window contributors",
+      "aliases": [
+        "Rome: Jumping over the Line",
+        "Rome: Jumping Over the Line"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 2,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:windows-rome-tehran",
+        "printedPages": [
+          128,
+          128
+        ],
+        "locator": "Printed pp. 128",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "voice:xarene-eskandar",
+      "type": "narrative-voice",
+      "preferredLabel": "Xárene Eskandar",
+      "aliases": [
+        "Xárene Eskandar",
+        "Eskandar"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 7,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          10,
+          10
+        ],
+        "locator": "Printed pp. 10",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:hypercities",
+      "type": "concept",
+      "preferredLabel": "HyperCities",
+      "aliases": [
+        "HyperCities"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 189,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          6,
+          6
+        ],
+        "locator": "Printed pp. 6",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:thick-mapping",
+      "type": "concept",
+      "preferredLabel": "thick mapping",
+      "aliases": [
+        "thick mapping",
+        "Thick Mapping"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 172,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          7,
+          7
+        ],
+        "locator": "Printed pp. 7",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:flaneur",
+      "type": "concept",
+      "preferredLabel": "flâneur",
+      "aliases": [
+        "flâneur",
+        "flaneur"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 16,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          22,
+          22
+        ],
+        "locator": "Printed pp. 22",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:multiplicity",
+      "type": "concept",
+      "preferredLabel": "multiplicity",
+      "aliases": [
+        "multiplicity",
+        "multiple",
+        "multitudes"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 32,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          6,
+          6
+        ],
+        "locator": "Printed pp. 6",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:heterogeneity",
+      "type": "concept",
+      "preferredLabel": "heterogeneity",
+      "aliases": [
+        "heterogeneity",
+        "heterogeneous"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 3,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          6,
+          6
+        ],
+        "locator": "Printed pp. 6",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:ambiguity",
+      "type": "concept",
+      "preferredLabel": "ambiguity",
+      "aliases": [
+        "ambiguity",
+        "ambiguous"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 3,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          7,
+          7
+        ],
+        "locator": "Printed pp. 7",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:palimpsest",
+      "type": "concept",
+      "preferredLabel": "palimpsest",
+      "aliases": [
+        "palimpsest",
+        "palimpsests"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 3,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          28,
+          28
+        ],
+        "locator": "Printed pp. 28",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:ghosts",
+      "type": "concept",
+      "preferredLabel": "ghosts",
+      "aliases": [
+        "ghosts",
+        "ghost map",
+        "Ghost Maps"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 18,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          10,
+          10
+        ],
+        "locator": "Printed pp. 10",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:time-layers",
+      "type": "concept",
+      "preferredLabel": "time-layers",
+      "aliases": [
+        "time-layers",
+        "time layers",
+        "temporal topographies"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 9,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          31,
+          31
+        ],
+        "locator": "Printed pp. 31",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:temporality",
+      "type": "concept",
+      "preferredLabel": "temporality",
+      "aliases": [
+        "temporality",
+        "temporalities",
+        "non-simultaneous",
+        "simultaneity"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 19,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          27,
+          27
+        ],
+        "locator": "Printed pp. 27",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:zoom",
+      "type": "concept",
+      "preferredLabel": "zoom",
+      "aliases": [
+        "zoom",
+        "Zoom"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 24,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          34,
+          34
+        ],
+        "locator": "Printed pp. 34",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:georeferencing",
+      "type": "concept",
+      "preferredLabel": "georeferencing",
+      "aliases": [
+        "georeferencing",
+        "georectify",
+        "georectified",
+        "georectification"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 20,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:view-above-below",
+        "printedPages": [
+          110,
+          110
+        ],
+        "locator": "Printed pp. 110",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:basemap",
+      "type": "concept",
+      "preferredLabel": "basemap",
+      "aliases": [
+        "basemap",
+        "base-map",
+        "base map"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 9,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:windows-los-angeles",
+        "printedPages": [
+          72,
+          72
+        ],
+        "locator": "Printed pp. 72",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:turtles",
+      "type": "concept",
+      "preferredLabel": "turtles all the way down",
+      "aliases": [
+        "turtles all the way down",
+        "turtle to another turtle"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 3,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:view-above-below",
+        "printedPages": [
+          110,
+          110
+        ],
+        "locator": "Printed pp. 110",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:counter-mapping",
+      "type": "concept",
+      "preferredLabel": "counter-mapping",
+      "aliases": [
+        "counter-mapping",
+        "Counter-Mapping"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 12,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:lexicon",
+        "printedPages": [
+          19,
+          19
+        ],
+        "locator": "Printed pp. 19",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:spatial-deformance",
+      "type": "concept",
+      "preferredLabel": "spatial deformance",
+      "aliases": [
+        "spatial deformance",
+        "productive deformance"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 3,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:view-above-below",
+        "printedPages": [
+          112,
+          112
+        ],
+        "locator": "Printed pp. 112",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:representation",
+      "type": "concept",
+      "preferredLabel": "representation",
+      "aliases": [
+        "representation",
+        "representations",
+        "representational"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 54,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          7,
+          7
+        ],
+        "locator": "Printed pp. 7",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:memory",
+      "type": "concept",
+      "preferredLabel": "memory",
+      "aliases": [
+        "memory",
+        "memories",
+        "remember"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 26,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          10,
+          10
+        ],
+        "locator": "Printed pp. 10",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:archive",
+      "type": "concept",
+      "preferredLabel": "archive",
+      "aliases": [
+        "archive",
+        "archiving",
+        "archival"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 40,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:lexicon",
+        "printedPages": [
+          20,
+          20
+        ],
+        "locator": "Printed pp. 20",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:participation",
+      "type": "concept",
+      "preferredLabel": "participation",
+      "aliases": [
+        "participation",
+        "participatory"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 28,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          6,
+          6
+        ],
+        "locator": "Printed pp. 6",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:witnessing",
+      "type": "concept",
+      "preferredLabel": "witnessing",
+      "aliases": [
+        "witness",
+        "witnesses",
+        "eyewitness"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 18,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          8,
+          8
+        ],
+        "locator": "Printed pp. 8",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:event",
+      "type": "concept",
+      "preferredLabel": "event",
+      "aliases": [
+        "event",
+        "events"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 157,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          8,
+          8
+        ],
+        "locator": "Printed pp. 8",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:contingency",
+      "type": "concept",
+      "preferredLabel": "contingency",
+      "aliases": [
+        "contingency",
+        "contingent"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 13,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:lexicon",
+        "printedPages": [
+          19,
+          19
+        ],
+        "locator": "Printed pp. 19",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:open-future",
+      "type": "concept",
+      "preferredLabel": "open future",
+      "aliases": [
+        "open to possibilities",
+        "future remains open",
+        "future to come"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 3,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:lexicon",
+        "printedPages": [
+          21,
+          21
+        ],
+        "locator": "Printed pp. 21",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:polyvocality",
+      "type": "concept",
+      "preferredLabel": "polyvocality",
+      "aliases": [
+        "polyvocal",
+        "many voices",
+        "every voice"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 5,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          7,
+          7
+        ],
+        "locator": "Printed pp. 7",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:network",
+      "type": "concept",
+      "preferredLabel": "networks",
+      "aliases": [
+        "network",
+        "networks"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 42,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          6,
+          6
+        ],
+        "locator": "Printed pp. 6",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:public-humanities",
+      "type": "concept",
+      "preferredLabel": "public humanities",
+      "aliases": [
+        "public humanities",
+        "public mission",
+        "public sphere"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 13,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          36,
+          36
+        ],
+        "locator": "Printed pp. 36",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:authority",
+      "type": "concept",
+      "preferredLabel": "authority",
+      "aliases": [
+        "authority",
+        "authoritative"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 2,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          42,
+          42
+        ],
+        "locator": "Printed pp. 42",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:accuracy",
+      "type": "concept",
+      "preferredLabel": "accuracy",
+      "aliases": [
+        "accuracy",
+        "accurate"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 23,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:lexicon",
+        "printedPages": [
+          15,
+          15
+        ],
+        "locator": "Printed pp. 15",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:scale",
+      "type": "concept",
+      "preferredLabel": "scale",
+      "aliases": [
+        "scale",
+        "macro-level",
+        "micro-level",
+        "global view"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 32,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:lexicon",
+        "printedPages": [
+          17,
+          17
+        ],
+        "locator": "Printed pp. 17",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:relation",
+      "type": "concept",
+      "preferredLabel": "relation",
+      "aliases": [
+        "relation",
+        "relations",
+        "relational"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 11,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:lexicon",
+        "printedPages": [
+          15,
+          15
+        ],
+        "locator": "Printed pp. 15",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:absence",
+      "type": "concept",
+      "preferredLabel": "absence",
+      "aliases": [
+        "absence",
+        "erasure",
+        "erased"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 7,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:lexicon",
+        "printedPages": [
+          14,
+          14
+        ],
+        "locator": "Printed pp. 14",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:presence",
+      "type": "concept",
+      "preferredLabel": "presence",
+      "aliases": [
+        "presence",
+        "present"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 28,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          6,
+          6
+        ],
+        "locator": "Printed pp. 6",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:care",
+      "type": "concept",
+      "preferredLabel": "care",
+      "aliases": [
+        "care",
+        "curation",
+        "stewardship"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 13,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:lexicon",
+        "printedPages": [
+          20,
+          20
+        ],
+        "locator": "Printed pp. 20",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:embodiment",
+      "type": "concept",
+      "preferredLabel": "embodiment",
+      "aliases": [
+        "embodied",
+        "body-at-risk",
+        "bodies"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 21,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          9,
+          9
+        ],
+        "locator": "Printed pp. 9",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:openness",
+      "type": "concept",
+      "preferredLabel": "openness",
+      "aliases": [
+        "open-ended",
+        "unbounded",
+        "open field"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 11,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          6,
+          6
+        ],
+        "locator": "Printed pp. 6",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:digital-humanities",
+      "type": "concept",
+      "preferredLabel": "digital humanities",
+      "aliases": [
+        "digital humanities",
+        "Digital Humanities"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 230,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          7,
+          7
+        ],
+        "locator": "Printed pp. 7",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:spatial-turn",
+      "type": "concept",
+      "preferredLabel": "spatial turn",
+      "aliases": [
+        "spatial turn",
+        "spatiality"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 6,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:lexicon",
+        "printedPages": [
+          18,
+          18
+        ],
+        "locator": "Printed pp. 18",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:media-archaeology",
+      "type": "concept",
+      "preferredLabel": "media archaeology",
+      "aliases": [
+        "media archaeology",
+        "Media Archaeology"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 6,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          8,
+          8
+        ],
+        "locator": "Printed pp. 8",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:spatial-epistemology",
+      "type": "concept",
+      "preferredLabel": "spatial epistemology",
+      "aliases": [
+        "spatial epistemology",
+        "epistemologies"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 9,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          8,
+          8
+        ],
+        "locator": "Printed pp. 8",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:ideology",
+      "type": "concept",
+      "preferredLabel": "ideology",
+      "aliases": [
+        "ideology",
+        "ideologies",
+        "ideological"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 11,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          49,
+          49
+        ],
+        "locator": "Printed pp. 49",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:decolonization",
+      "type": "concept",
+      "preferredLabel": "decolonization",
+      "aliases": [
+        "decolonization",
+        "decolonize"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 2,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:view-above-below",
+        "printedPages": [
+          100,
+          100
+        ],
+        "locator": "Printed pp. 100",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:public-sphere",
+      "type": "concept",
+      "preferredLabel": "public sphere",
+      "aliases": [
+        "public sphere"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 12,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          42,
+          42
+        ],
+        "locator": "Printed pp. 42",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "concept:social-media",
+      "type": "concept",
+      "preferredLabel": "social media",
+      "aliases": [
+        "social media",
+        "Social Media"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 110,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          8,
+          8
+        ],
+        "locator": "Printed pp. 8",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "person:walter-benjamin",
+      "type": "person",
+      "preferredLabel": "Walter Benjamin",
+      "aliases": [
+        "Walter Benjamin",
+        "Benjamin"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 31,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          9,
+          9
+        ],
+        "locator": "Printed pp. 9",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "person:charles-baudelaire",
+      "type": "person",
+      "preferredLabel": "Charles Baudelaire",
+      "aliases": [
+        "Charles Baudelaire",
+        "Baudelaire"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 3,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          22,
+          22
+        ],
+        "locator": "Printed pp. 22",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "person:edgar-allan-poe",
+      "type": "person",
+      "preferredLabel": "Edgar Allan Poe",
+      "aliases": [
+        "Edgar Allan Poe",
+        "Poe"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 3,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          22,
+          22
+        ],
+        "locator": "Printed pp. 22",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "person:theodor-nelson",
+      "type": "person",
+      "preferredLabel": "Theodor Nelson",
+      "aliases": [
+        "Theodor Nelson",
+        "Nelson"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 5,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:lexicon",
+        "printedPages": [
+          14,
+          14
+        ],
+        "locator": "Printed pp. 14",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "person:clifford-geertz",
+      "type": "person",
+      "preferredLabel": "Clifford Geertz",
+      "aliases": [
+        "Clifford Geertz",
+        "Geertz"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 4,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:lexicon",
+        "printedPages": [
+          18,
+          18
+        ],
+        "locator": "Printed pp. 18",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "person:edward-said",
+      "type": "person",
+      "preferredLabel": "Edward Said",
+      "aliases": [
+        "Edward Said",
+        "Said"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 7,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          51,
+          51
+        ],
+        "locator": "Printed pp. 51",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "person:susan-sontag",
+      "type": "person",
+      "preferredLabel": "Susan Sontag",
+      "aliases": [
+        "Susan Sontag",
+        "Sontag"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 2,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:view-above-below",
+        "printedPages": [
+          88,
+          88
+        ],
+        "locator": "Printed pp. 88",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "person:paul-virilio",
+      "type": "person",
+      "preferredLabel": "Paul Virilio",
+      "aliases": [
+        "Paul Virilio",
+        "Virilio"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 4,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:view-above-below",
+        "printedPages": [
+          100,
+          100
+        ],
+        "locator": "Printed pp. 100",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "person:william-gibson",
+      "type": "person",
+      "preferredLabel": "William Gibson",
+      "aliases": [
+        "William Gibson",
+        "Gibson"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 2,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:view-above-below",
+        "printedPages": [
+          104,
+          104
+        ],
+        "locator": "Printed pp. 104",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "person:lev-manovich",
+      "type": "person",
+      "preferredLabel": "Lev Manovich",
+      "aliases": [
+        "Lev Manovich",
+        "Manovich"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 5,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:view-above-below",
+        "printedPages": [
+          89,
+          89
+        ],
+        "locator": "Printed pp. 89",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "person:john-scott-railton",
+      "type": "person",
+      "preferredLabel": "John Scott-Railton",
+      "aliases": [
+        "John Scott-Railton",
+        "Scott-Railton"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 9,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:mapping-events",
+        "printedPages": [
+          144,
+          144
+        ],
+        "locator": "Printed pp. 144",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "person:yugo-shobugawa",
+      "type": "person",
+      "preferredLabel": "Yugo Shobugawa",
+      "aliases": [
+        "Yugo Shobugawa",
+        "Yugo"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 9,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:gallery-tohoku",
+        "printedPages": [
+          184,
+          184
+        ],
+        "locator": "Printed pp. 184",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "person:mahmoud-ahmadinejad",
+      "type": "person",
+      "preferredLabel": "Mahmoud Ahmadinejad",
+      "aliases": [
+        "Mahmoud Ah- madinejad",
+        "Mahmoud Ahmadinejad"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 1,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:windows-rome-tehran",
+        "printedPages": [
+          134,
+          134
+        ],
+        "locator": "Printed pp. 134",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "person:romulus",
+      "type": "person",
+      "preferredLabel": "Romulus",
+      "aliases": [
+        "Romulus"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 2,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:windows-rome-tehran",
+        "printedPages": [
+          128,
+          128
+        ],
+        "locator": "Printed pp. 128",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "place:berlin",
+      "type": "place",
+      "preferredLabel": "Berlin",
+      "aliases": [
+        "Berlin"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 75,
+      "placeScale": "city",
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          24,
+          24
+        ],
+        "locator": "Printed pp. 24",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "place:los-angeles",
+      "type": "place",
+      "preferredLabel": "Los Angeles",
+      "aliases": [
+        "Los Angeles"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 29,
+      "placeScale": "city",
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          10,
+          10
+        ],
+        "locator": "Printed pp. 10",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "place:downtown-los-angeles",
+      "type": "place",
+      "preferredLabel": "Downtown Los Angeles",
+      "aliases": [
+        "Downtown Los Angeles",
+        "downtown Los Angeles"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 2,
+      "placeScale": "district",
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          10,
+          10
+        ],
+        "locator": "Printed pp. 10",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "place:historic-filipinotown",
+      "type": "place",
+      "preferredLabel": "Historic Filipinotown",
+      "aliases": [
+        "Historic Filipinotown",
+        "HiFi"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 32,
+      "placeScale": "district",
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          10,
+          10
+        ],
+        "locator": "Printed pp. 10",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "place:rome",
+      "type": "place",
+      "preferredLabel": "Rome",
+      "aliases": [
+        "Rome"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 6,
+      "placeScale": "city",
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:lexicon",
+        "printedPages": [
+          17,
+          17
+        ],
+        "locator": "Printed pp. 17",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "place:tehran",
+      "type": "place",
+      "preferredLabel": "Tehran",
+      "aliases": [
+        "Tehran"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 14,
+      "placeScale": "city",
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          10,
+          10
+        ],
+        "locator": "Printed pp. 10",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "place:cairo",
+      "type": "place",
+      "preferredLabel": "Cairo",
+      "aliases": [
+        "Cairo",
+        "Tahrir Square"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 11,
+      "placeScale": "city",
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          43,
+          43
+        ],
+        "locator": "Printed pp. 43",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "place:egypt",
+      "type": "place",
+      "preferredLabel": "Egypt",
+      "aliases": [
+        "Egypt",
+        "Egyptian"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 43,
+      "placeScale": "country",
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          8,
+          8
+        ],
+        "locator": "Printed pp. 8",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "place:libya",
+      "type": "place",
+      "preferredLabel": "Libya",
+      "aliases": [
+        "Libya",
+        "Libyan"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 14,
+      "placeScale": "country",
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          8,
+          8
+        ],
+        "locator": "Printed pp. 8",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "place:tohoku",
+      "type": "place",
+      "preferredLabel": "Tohoku",
+      "aliases": [
+        "Tohoku"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 5,
+      "placeScale": "region",
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:mapping-events",
+        "printedPages": [
+          151,
+          151
+        ],
+        "locator": "Printed pp. 151",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "place:fukushima",
+      "type": "place",
+      "preferredLabel": "Fukushima",
+      "aliases": [
+        "Fukushima"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 13,
+      "placeScale": "region",
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          9,
+          9
+        ],
+        "locator": "Printed pp. 9",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "place:onagawa",
+      "type": "place",
+      "preferredLabel": "Onagawa",
+      "aliases": [
+        "Onagawa"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 1,
+      "placeScale": "city",
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:gallery-tohoku",
+        "printedPages": [
+          184,
+          184
+        ],
+        "locator": "Printed pp. 184",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "place:yuriage",
+      "type": "place",
+      "preferredLabel": "Yuriage",
+      "aliases": [
+        "Yuriage"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 2,
+      "placeScale": "site",
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:gallery-tohoku",
+        "printedPages": [
+          186,
+          186
+        ],
+        "locator": "Printed pp. 186",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "place:ishinomaki",
+      "type": "place",
+      "preferredLabel": "Ishinomaki",
+      "aliases": [
+        "Ishinomaki"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 2,
+      "placeScale": "city",
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:mapping-events",
+        "printedPages": [
+          172,
+          172
+        ],
+        "locator": "Printed pp. 172",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "place:okawa",
+      "type": "place",
+      "preferredLabel": "Okawa Elementary School",
+      "aliases": [
+        "Okawa"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 6,
+      "placeScale": "site",
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:gallery-tohoku",
+        "printedPages": [
+          189,
+          189
+        ],
+        "locator": "Printed pp. 189",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "place:sendai",
+      "type": "place",
+      "preferredLabel": "Sendai",
+      "aliases": [
+        "Sendai"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 6,
+      "placeScale": "city",
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:mapping-events",
+        "printedPages": [
+          157,
+          157
+        ],
+        "locator": "Printed pp. 157",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "place:namie",
+      "type": "place",
+      "preferredLabel": "Namie",
+      "aliases": [
+        "Namie"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 2,
+      "placeScale": "city",
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:gallery-tohoku",
+        "printedPages": [
+          200,
+          200
+        ],
+        "locator": "Printed pp. 200",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "place:iwaki",
+      "type": "place",
+      "preferredLabel": "Iwaki",
+      "aliases": [
+        "Iwaki"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 2,
+      "placeScale": "city",
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:gallery-tohoku",
+        "printedPages": [
+          198,
+          198
+        ],
+        "locator": "Printed pp. 198",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "place:niigata",
+      "type": "place",
+      "preferredLabel": "Niigata",
+      "aliases": [
+        "Niigata"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 10,
+      "placeScale": "city",
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:mapping-events",
+        "printedPages": [
+          149,
+          149
+        ],
+        "locator": "Printed pp. 149",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "place:tokyo",
+      "type": "place",
+      "preferredLabel": "Tokyo",
+      "aliases": [
+        "Tokyo"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 3,
+      "placeScale": "city",
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:mapping-events",
+        "printedPages": [
+          171,
+          171
+        ],
+        "locator": "Printed pp. 171",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "place:omi",
+      "type": "place",
+      "preferredLabel": "Ōmi province",
+      "aliases": [
+        "Ōmi",
+        "Omi province"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 7,
+      "placeScale": "region",
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:view-above-below",
+        "printedPages": [
+          112,
+          112
+        ],
+        "locator": "Printed pp. 112",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "place:paris",
+      "type": "place",
+      "preferredLabel": "Paris",
+      "aliases": [
+        "Paris"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 12,
+      "placeScale": "city",
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          23,
+          23
+        ],
+        "locator": "Printed pp. 23",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "place:london",
+      "type": "place",
+      "preferredLabel": "London",
+      "aliases": [
+        "London"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 6,
+      "placeScale": "city",
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          23,
+          23
+        ],
+        "locator": "Printed pp. 23",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "place:west-berlin",
+      "type": "place",
+      "preferredLabel": "West Berlin",
+      "aliases": [
+        "West Berlin"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 4,
+      "placeScale": "district",
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          26,
+          26
+        ],
+        "locator": "Printed pp. 26",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "place:east-berlin",
+      "type": "place",
+      "preferredLabel": "East Berlin",
+      "aliases": [
+        "East Berlin"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 8,
+      "placeScale": "district",
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          26,
+          26
+        ],
+        "locator": "Printed pp. 26",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "project:berlin-temporal-topographies",
+      "type": "project",
+      "preferredLabel": "Berlin: Temporal Topographies",
+      "aliases": [
+        "Berlin: Temporal Topographies"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 1,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          31,
+          31
+        ],
+        "locator": "Printed pp. 31",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "project:hypermedia-berlin",
+      "type": "project",
+      "preferredLabel": "Hypermedia Berlin",
+      "aliases": [
+        "Hypermedia Berlin"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 4,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          32,
+          32
+        ],
+        "locator": "Printed pp. 32",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "window:los-angeles-ghost-maps",
+      "type": "window",
+      "preferredLabel": "Los Angeles Ghost Maps",
+      "aliases": [
+        "Los Angeles Ghost Maps"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 1,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:windows-los-angeles",
+        "printedPages": [
+          66,
+          66
+        ],
+        "locator": "Printed pp. 66",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "project:pdub",
+      "type": "project",
+      "preferredLabel": "PDub Productions",
+      "aliases": [
+        "PDub Productions",
+        "PDub"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 40,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:windows-los-angeles",
+        "printedPages": [
+          74,
+          74
+        ],
+        "locator": "Printed pp. 74",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "window:rome-jumping-over-line",
+      "type": "window",
+      "preferredLabel": "Rome: Jumping over the Line",
+      "aliases": [
+        "Rome: Jumping over the Line",
+        "Rome: Jumping Over the Line"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 2,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:windows-rome-tehran",
+        "printedPages": [
+          128,
+          128
+        ],
+        "locator": "Printed pp. 128",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "window:tehran-election-protests",
+      "type": "window",
+      "preferredLabel": "Mapping the 2009 Election Protests in Tehran",
+      "aliases": [
+        "Mapping the 2009 Election Protests in Tehran"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 1,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:windows-rome-tehran",
+        "printedPages": [
+          134,
+          134
+        ],
+        "locator": "Printed pp. 134",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "project:hypercities-now",
+      "type": "project",
+      "preferredLabel": "HyperCities Now",
+      "aliases": [
+        "HyperCities Now"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 11,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          43,
+          43
+        ],
+        "locator": "Printed pp. 43",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "project:voices-january-25",
+      "type": "project",
+      "preferredLabel": "Voices of January 25th",
+      "aliases": [
+        "Voices of January 25th"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 3,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:mapping-events",
+        "printedPages": [
+          143,
+          143
+        ],
+        "locator": "Printed pp. 143",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "project:voices-february-17",
+      "type": "project",
+      "preferredLabel": "Voices of February 17th",
+      "aliases": [
+        "Voices of February 17th"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 1,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:mapping-events",
+        "printedPages": [
+          143,
+          143
+        ],
+        "locator": "Printed pp. 143",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "project:digital-archive-japan-2011",
+      "type": "project",
+      "preferredLabel": "Digital Archive of Japan’s 2011 Disasters",
+      "aliases": [
+        "Digital Archive of Japan’s 2011 Disasters",
+        "Digital Archive of Japan's 2011 Disasters"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 1,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:mapping-events",
+        "printedPages": [
+          150,
+          150
+        ],
+        "locator": "Printed pp. 150",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "project:bishamon",
+      "type": "project",
+      "preferredLabel": "Bishamon",
+      "aliases": [
+        "Bishamon"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 13,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:mapping-events",
+        "printedPages": [
+          149,
+          149
+        ],
+        "locator": "Printed pp. 149",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "project:t-races",
+      "type": "project",
+      "preferredLabel": "T-RACES",
+      "aliases": [
+        "T-RACES"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 1,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          50,
+          50
+        ],
+        "locator": "Printed pp. 50",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "technology:google-earth",
+      "type": "technology",
+      "preferredLabel": "Google Earth",
+      "aliases": [
+        "Google Earth"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 49,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          8,
+          8
+        ],
+        "locator": "Printed pp. 8",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "technology:google-maps",
+      "type": "technology",
+      "preferredLabel": "Google Maps",
+      "aliases": [
+        "Google Maps"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 38,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          23,
+          23
+        ],
+        "locator": "Printed pp. 23",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "technology:gis",
+      "type": "technology",
+      "preferredLabel": "GIS",
+      "aliases": [
+        "GIS",
+        "Geographic Information Systems"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 32,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:lexicon",
+        "printedPages": [
+          16,
+          16
+        ],
+        "locator": "Printed pp. 16",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "technology:arcgis",
+      "type": "technology",
+      "preferredLabel": "ArcGIS / ArcMap",
+      "aliases": [
+        "ArcGIS",
+        "ArcMap"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 7,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          35,
+          35
+        ],
+        "locator": "Printed pp. 35",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "technology:openstreetmap",
+      "type": "technology",
+      "preferredLabel": "OpenStreetMap",
+      "aliases": [
+        "OpenStreetMap"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 2,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:lexicon",
+        "printedPages": [
+          16,
+          16
+        ],
+        "locator": "Printed pp. 16",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "technology:openlayers",
+      "type": "technology",
+      "preferredLabel": "OpenLayers",
+      "aliases": [
+        "OpenLayers"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 4,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          48,
+          48
+        ],
+        "locator": "Printed pp. 48",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "technology:ajax",
+      "type": "technology",
+      "preferredLabel": "AJAX",
+      "aliases": [
+        "AJAX",
+        "XmlHttpRequest"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 9,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          37,
+          37
+        ],
+        "locator": "Printed pp. 37",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "technology:api",
+      "type": "technology",
+      "preferredLabel": "API",
+      "aliases": [
+        "API",
+        "APIs"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 44,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          34,
+          34
+        ],
+        "locator": "Printed pp. 34",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "technology:twitter",
+      "type": "technology",
+      "preferredLabel": "Twitter",
+      "aliases": [
+        "Twitter",
+        "tweet",
+        "tweets",
+        "retweet"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 127,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          8,
+          8
+        ],
+        "locator": "Printed pp. 8",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "technology:youtube",
+      "type": "technology",
+      "preferredLabel": "YouTube",
+      "aliases": [
+        "YouTube"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 8,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          40,
+          40
+        ],
+        "locator": "Printed pp. 40",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "technology:gps",
+      "type": "technology",
+      "preferredLabel": "GPS",
+      "aliases": [
+        "GPS"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 10,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:lexicon",
+        "printedPages": [
+          16,
+          16
+        ],
+        "locator": "Printed pp. 16",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "technology:mercator",
+      "type": "technology",
+      "preferredLabel": "Mercator projection",
+      "aliases": [
+        "Mercator",
+        "Spherical Mercator"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 15,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:view-above-below",
+        "printedPages": [
+          95,
+          95
+        ],
+        "locator": "Printed pp. 95",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "technology:wgs84",
+      "type": "technology",
+      "preferredLabel": "WGS 84",
+      "aliases": [
+        "WGS:84",
+        "WGS 84"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 3,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:view-above-below",
+        "printedPages": [
+          104,
+          104
+        ],
+        "locator": "Printed pp. 104",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "event:berlin-wall-fall",
+      "type": "event",
+      "preferredLabel": "Fall of the Berlin Wall",
+      "aliases": [
+        "Berlin Wall tumble",
+        "fall of the Berlin Wall"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 1,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          24,
+          24
+        ],
+        "locator": "Printed pp. 24",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "event:tehran-election-protests-2009",
+      "type": "event",
+      "preferredLabel": "2009 Tehran election protests",
+      "aliases": [
+        "election protests",
+        "June 16, 2009"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 6,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          10,
+          10
+        ],
+        "locator": "Printed pp. 10",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "event:egyptian-revolution-2011",
+      "type": "event",
+      "preferredLabel": "Egyptian Revolution",
+      "aliases": [
+        "Egyptian revolution",
+        "January 25, 2011"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 7,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:mapping-events",
+        "printedPages": [
+          147,
+          147
+        ],
+        "locator": "Printed pp. 147",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "event:japan-earthquake-tsunami-2011",
+      "type": "event",
+      "preferredLabel": "2011 Japan earthquake and tsunami",
+      "aliases": [
+        "earthquake and tsunami",
+        "March 11, 2011"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 8,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          8,
+          8
+        ],
+        "locator": "Printed pp. 8",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "event:fukushima-nuclear-disaster",
+      "type": "event",
+      "preferredLabel": "Fukushima nuclear disaster",
+      "aliases": [
+        "nuclear meltdown",
+        "nuclear evacuation zone",
+        "nuclear emergency"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 6,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:mapping-events",
+        "printedPages": [
+          177,
+          177
+        ],
+        "locator": "Printed pp. 177",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "time-range:mid-nineteenth-century",
+      "type": "time-range",
+      "preferredLabel": "mid-nineteenth century",
+      "aliases": [
+        "mid-nineteenth century"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 2,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          22,
+          22
+        ],
+        "locator": "Printed pp. 22",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "time-range:twentieth-century",
+      "type": "time-range",
+      "preferredLabel": "twentieth century",
+      "aliases": [
+        "twentieth century"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 2,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:view-above-below",
+        "printedPages": [
+          89,
+          89
+        ],
+        "locator": "Printed pp. 89",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "time-range:twenty-first-century",
+      "type": "time-range",
+      "preferredLabel": "twenty-first century",
+      "aliases": [
+        "twenty-first century"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 1,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:windows-rome-tehran",
+        "printedPages": [
+          128,
+          128
+        ],
+        "locator": "Printed pp. 128",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "date:1237",
+      "type": "date",
+      "preferredLabel": "1237",
+      "aliases": [
+        "1237"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 1,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          33,
+          33
+        ],
+        "locator": "Printed pp. 33",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "date:1811",
+      "type": "date",
+      "preferredLabel": "1811",
+      "aliases": [
+        "1811"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 1,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          34,
+          34
+        ],
+        "locator": "Printed pp. 34",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "date:1850",
+      "type": "date",
+      "preferredLabel": "1850",
+      "aliases": [
+        "1850"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 1,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          34,
+          34
+        ],
+        "locator": "Printed pp. 34",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "date:1920",
+      "type": "date",
+      "preferredLabel": "1920",
+      "aliases": [
+        "1920"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 1,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          37,
+          37
+        ],
+        "locator": "Printed pp. 37",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "date:1926",
+      "type": "date",
+      "preferredLabel": "1926",
+      "aliases": [
+        "1926"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 3,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          54,
+          54
+        ],
+        "locator": "Printed pp. 54",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "date:1936",
+      "type": "date",
+      "preferredLabel": "1936",
+      "aliases": [
+        "1936"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 2,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          34,
+          34
+        ],
+        "locator": "Printed pp. 34",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "date:1945",
+      "type": "date",
+      "preferredLabel": "1945",
+      "aliases": [
+        "1945"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 3,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          37,
+          37
+        ],
+        "locator": "Printed pp. 37",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "date:1990",
+      "type": "date",
+      "preferredLabel": "1990",
+      "aliases": [
+        "1990"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 1,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          28,
+          28
+        ],
+        "locator": "Printed pp. 28",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "date:2000",
+      "type": "date",
+      "preferredLabel": "2000",
+      "aliases": [
+        "2000"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 4,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          31,
+          31
+        ],
+        "locator": "Printed pp. 31",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "date:2004",
+      "type": "date",
+      "preferredLabel": "2004",
+      "aliases": [
+        "2004"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 5,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          32,
+          32
+        ],
+        "locator": "Printed pp. 32",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "date:2009",
+      "type": "date",
+      "preferredLabel": "2009",
+      "aliases": [
+        "2009"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 9,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          10,
+          10
+        ],
+        "locator": "Printed pp. 10",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "date:2010",
+      "type": "date",
+      "preferredLabel": "2010",
+      "aliases": [
+        "2010"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 3,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:windows-los-angeles",
+        "printedPages": [
+          66,
+          66
+        ],
+        "locator": "Printed pp. 66",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "date:2011",
+      "type": "date",
+      "preferredLabel": "2011",
+      "aliases": [
+        "2011"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 22,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:preface",
+        "printedPages": [
+          8,
+          8
+        ],
+        "locator": "Printed pp. 8",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "date:2012",
+      "type": "date",
+      "preferredLabel": "2012",
+      "aliases": [
+        "2012"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 7,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:lexicon",
+        "printedPages": [
+          17,
+          17
+        ],
+        "locator": "Printed pp. 17",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    },
+    {
+      "id": "date:2013",
+      "type": "date",
+      "preferredLabel": "2013",
+      "aliases": [
+        "2013"
+      ],
+      "assertion": "book-explicit",
+      "mentionCount": 2,
+      "provenance": {
+        "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+        "sectionId": "section:humanities-digital-humanities",
+        "printedPages": [
+          44,
+          44
+        ],
+        "locator": "Printed pp. 44",
+        "note": "First literal or named mention detected in the supplied edition."
+      }
+    }
+  ]
+}

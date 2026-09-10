@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hypercities.org/schema/hyperbook-full.schema.json",
+  "title": "HyperCities full-book Hyperbook / Encounter artifacts",
+  "description": "Portable shape documentation for static full-book data. Cross-artifact integrity is enforced by scripts/validate-hyperbook-full.mjs.",
+  "$defs": {
+    "pageRange": {"type":"array","prefixItems":[{"type":"integer","minimum":1},{"type":"integer","minimum":1}],"items":false},
+    "provenance": {"type":"object","required":["sourceDocumentId","sectionId","printedPages","locator"],"properties":{"sourceDocumentId":{"type":"string","pattern":"^source:"},"sectionId":{"type":"string","pattern":"^section:"},"printedPages":{"$ref":"#/$defs/pageRange"},"locator":{"type":"string"}},"additionalProperties":true},
+    "bookObject": {"type":"object","required":["id","kind","provenance"],"properties":{"id":{"type":"string"},"kind":{"enum":["section","chapter","windows","gallery","apparatus","passage","quotation","figure-reference","code-fragment"]},"provenance":{"$ref":"#/$defs/provenance"}},"additionalProperties":true},
+    "entity": {"type":"object","required":["id","type","preferredLabel","aliases","provenance"],"properties":{"id":{"type":"string"},"type":{"enum":["person","narrative-voice","concept","place","date","time-range","event","project","window","technology"]},"preferredLabel":{"type":"string"},"aliases":{"type":"array","items":{"type":"string"}},"provenance":{"$ref":"#/$defs/provenance"}},"additionalProperties":true},
+    "edge": {"type":"object","required":["id","from","to","relationType","assertion","confidence","strength","evidence"],"properties":{"assertion":{"enum":["book-explicit","book-inferred"]},"confidence":{"enum":["high","medium","low"]},"strength":{"enum":["strong","moderate","light"]},"evidence":{"$ref":"#/$defs/provenance"}},"additionalProperties":true},
+    "affordance": {"type":"object","required":["id","encounterId","dimension","tag","assertion","sourceBasis","activation"],"properties":{"dimension":{"enum":["spatial","temporal","cartographic","interactional","conceptual"]},"assertion":{"const":"editorial"}},"additionalProperties":true}
+  }
+}

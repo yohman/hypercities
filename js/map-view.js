@@ -27,8 +27,8 @@ function grayscale(color) {
 }
 
 export class MapView {
-  constructor({ maps, onCore, onDepth, onPreview, onTileStatus }) {
-    Object.assign(this, { maps, onCore, onDepth, onPreview, onTileStatus, hoverIds: new Set() });
+  constructor({ maps, onCore, onDepth, onPreview, onFieldEncounter, onInteraction, onTileStatus }) {
+    Object.assign(this, { maps, onCore, onDepth, onPreview, onFieldEncounter, onInteraction, onTileStatus, hoverIds: new Set() });
     this.rasterLayerId = "historical-raster";
     this.rasterSourceId = "historical-raster-source";
   }
@@ -37,7 +37,10 @@ export class MapView {
     this.map = new maplibregl.Map({
       container: "map",
       style: "https://basemaps.cartocdn.com/gl/dark-matter-nolabels-gl-style/style.json",
-      center: [10, 27], zoom: 1.7, minZoom: 1.25, attributionControl: false
+      center: [10, 27], zoom: 1.7, minZoom: 1.25, attributionControl: false,
+      // Arrow keys belong to HyperCities: up/down move through the TimeWell
+      // and left/right follow the current conceptual path, never the basemap.
+      keyboard: false
     });
     await new Promise((resolve) => this.map.once("load", resolve));
     this.neutraliseBasemap();
@@ -45,6 +48,11 @@ export class MapView {
     this.map.addControl(this.overlay);
     this.map.on("mousemove", (event) => this.handleMove(event.lngLat));
     this.map.on("click", (event) => this.handleClick(event.lngLat));
+    this.map.on("zoomstart", (event) => { this.visitorZooming = Boolean(event.originalEvent); });
+    this.map.on("zoomend", () => {
+      if (this.coreActive && this.visitorZooming) this.onInteraction?.("zoom-change");
+      this.visitorZooming = false;
+    });
     this.map.on("error", (event) => this.handleMapError(event));
     this.map.on("sourcedata", (event) => {
       if (event.sourceId === this.rasterSourceId && event.isSourceLoaded && this.activeTile) {
@@ -79,6 +87,7 @@ export class MapView {
     if (changed) {
       this.hoverIds = ids;
       this.onDepth(matches, lngLat);
+      this.onFieldEncounter?.(matches, this.map.project(lngLat), lngLat);
       this.renderFootprints();
     }
     this.onPreview(matches, lngLat);

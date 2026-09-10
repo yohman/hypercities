@@ -1,0 +1,1775 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "hyperbook-page-locations",
+  "generatedFrom": {
+    "sourceFile": "eScholarship UC item 3mh5t455.pdf",
+    "sourceDocumentId": "source:hypercities-thick-mapping-2014",
+    "pageCount": 212,
+    "renderResolution": 144,
+    "pageImagePattern": "./assets/book-pages/page-###.webp"
+  },
+  "evidencePolicy": "Highlight rectangles are derived from the source PDF text layer. Their purpose is visual orientation; printed page provenance in the Hyperbook remains authoritative.",
+  "highlights": {
+    "quote:001-a-hypercity-is-a-real-city-overlaid-with-thick-infor": {
+      "page": 6,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.75093,
+        "width": 0.62486,
+        "height": 0.11683
+      }
+    },
+    "quote:002-hyper-adds-to-extends-and-proliferates-many-tex": {
+      "page": 6,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.68024,
+        "width": 0.62255,
+        "height": 0.09326
+      }
+    },
+    "quote:003-to-address-the-first-question-the-book-brings-toget": {
+      "page": 7,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12956,
+        "top": 0.16172,
+        "width": 0.62178,
+        "height": 0.09326
+      }
+    },
+    "quote:004-the-final-chapter-focuses-on-two-world-historical-ev": {
+      "page": 8,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22332,
+        "top": 0.32666,
+        "width": 0.63191,
+        "height": 0.11683
+      }
+    },
+    "quote:005-after-that-the-book-presents-a-media-archaeology-of": {
+      "page": 8,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22332,
+        "top": 0.20885,
+        "width": 0.64556,
+        "height": 0.09326
+      }
+    },
+    "quote:006-as-the-book-progresses-the-long-form-narratives-bre": {
+      "page": 9,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12956,
+        "top": 0.42092,
+        "width": 0.6313,
+        "height": 0.09326
+      }
+    },
+    "quote:007-in-the-case-of-tehran-the-maps-are-attempts-to-cura": {
+      "page": 10,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22333,
+        "top": 0.7508,
+        "width": 0.63947,
+        "height": 0.09326
+      }
+    },
+    "quote:008-they-are-each-told-through-the-voices-of-the-primary": {
+      "page": 10,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22333,
+        "top": 0.5623,
+        "width": 0.63111,
+        "height": 0.0697
+      }
+    },
+    "quote:009-the-book-also-features-contributions-written-and-des": {
+      "page": 10,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22333,
+        "top": 0.16172,
+        "width": 0.61465,
+        "height": 0.09326
+      }
+    },
+    "quote:010-in-this-respect-hypercities-are-much-larger-than-tw": {
+      "page": 14,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22333,
+        "top": 0.70369,
+        "width": 0.64042,
+        "height": 0.11683
+      }
+    },
+    "quote:011-every-story-matters-every-voice-can-be-heard-every": {
+      "page": 13,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12956,
+        "top": 0.09022,
+        "width": 0.62334,
+        "height": 0.06971
+      }
+    },
+    "quote:012-imagine-a-search-and-discovery-tool-for-this-web-in": {
+      "page": 13,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12956,
+        "top": 0.18529,
+        "width": 0.61467,
+        "height": 0.0697
+      }
+    },
+    "quote:013-thick-maps-are-not-simply-more-data-on-maps-but-in": {
+      "page": 19,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12956,
+        "top": 0.44448,
+        "width": 0.64564,
+        "height": 0.0697
+      }
+    },
+    "quote:014-thick-maps-are-sometimes-called-deep-maps-because-t": {
+      "page": 17,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12956,
+        "top": 0.53873,
+        "width": 0.64222,
+        "height": 0.09326
+      }
+    },
+    "quote:015-postmodernism-on-the-other-hand-is-supposedly-all": {
+      "page": 18,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.1146,
+        "width": 0.64135,
+        "height": 0.14039
+      }
+    },
+    "quote:016-this-is-why-hypercities-is-not-primarily-a-technolog": {
+      "page": 20,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.70368,
+        "width": 0.63761,
+        "height": 0.09326
+      }
+    },
+    "quote:017-but-over-the-past-decade-the-methods-media-and-ma": {
+      "page": 20,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.25598,
+        "width": 0.6317,
+        "height": 0.11683
+      }
+    },
+    "quote:018-i-wonder-what-would-it-mean-to-drive-downward-into": {
+      "page": 24,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.44448,
+        "width": 0.64286,
+        "height": 0.11683
+      }
+    },
+    "quote:019-in-other-words-maybe-the-past-is-always-there-quiet": {
+      "page": 23,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12956,
+        "top": 0.46774,
+        "width": 0.62995,
+        "height": 0.11683
+      }
+    },
+    "quote:020-but-for-walter-benjamin-the-german-jewish-cultural": {
+      "page": 23,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12956,
+        "top": 0.18498,
+        "width": 0.62578,
+        "height": 0.14039
+      }
+    },
+    "quote:021-subway-stops-located-in-the-east-turned-into-ghost-s": {
+      "page": 26,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22333,
+        "top": 0.32668,
+        "width": 0.64347,
+        "height": 0.09326
+      }
+    },
+    "quote:022-they-are-man-made-mountains-of-debris-the-remains-o": {
+      "page": 26,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22333,
+        "top": 0.63301,
+        "width": 0.62334,
+        "height": 0.0697
+      }
+    },
+    "quote:023-it-s-still-there-today-you-can-see-it-in-google-ear": {
+      "page": 26,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22333,
+        "top": 0.13816,
+        "width": 0.63787,
+        "height": 0.0697
+      }
+    },
+    "quote:024-that-s-because-all-of-these-pasts-co-exist-in-vario": {
+      "page": 29,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12956,
+        "top": 0.13771,
+        "width": 0.62478,
+        "height": 0.09326
+      }
+    },
+    "quote:025-not-only-is-space-transformed-by-new-media-allowing": {
+      "page": 30,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22336,
+        "top": 0.3267,
+        "width": 0.62499,
+        "height": 0.11683
+      }
+    },
+    "quote:026-in-the-mid-1990s-i-was-hardly-the-only-one-to-engag": {
+      "page": 28,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22216,
+        "top": 0.5631,
+        "width": 0.63244,
+        "height": 0.04614
+      }
+    },
+    "quote:027-applying-the-theory-of-the-simultaneity-of-the-non-s": {
+      "page": 34,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.44448,
+        "width": 0.64413,
+        "height": 0.14039
+      }
+    },
+    "quote:028-tracing-its-historical-genealogy-back-to-database-p": {
+      "page": 32,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22335,
+        "top": 0.68024,
+        "width": 0.62353,
+        "height": 0.14039
+      }
+    },
+    "quote:029-but-rather-than-taking-chronology-as-the-sole-organi": {
+      "page": 33,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12957,
+        "top": 0.70379,
+        "width": 0.61902,
+        "height": 0.09326
+      }
+    },
+    "quote:030-through-the-google-maps-and-earth-apis-hypercities": {
+      "page": 35,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12957,
+        "top": 0.58593,
+        "width": 0.63909,
+        "height": 0.11683
+      }
+    },
+    "quote:031-each-time-the-user-moves-the-map-zooms-in-pans-ju": {
+      "page": 36,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.37379,
+        "width": 0.6471,
+        "height": 0.11683
+      }
+    },
+    "quote:032-although-a-web-based-platform-hypercities-behaves-m": {
+      "page": 37,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12957,
+        "top": 0.72738,
+        "width": 0.64395,
+        "height": 0.11683
+      }
+    },
+    "quote:033-the-google-maps-earth-apis-define-a-set-of-javascrip": {
+      "page": 38,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.11459,
+        "width": 0.63284,
+        "height": 0.11683
+      }
+    },
+    "quote:034-facebook-google-maps-yelp-twitter-and-flickr-to": {
+      "page": 41,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12982,
+        "top": 0.68402,
+        "width": 0.63636,
+        "height": 0.0616
+      }
+    },
+    "quote:035-these-servers-range-from-commercially-available-plat": {
+      "page": 40,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.20885,
+        "width": 0.64331,
+        "height": 0.11683
+      }
+    },
+    "quote:036-the-project-began-with-the-protests-in-tahrir-square": {
+      "page": 43,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12957,
+        "top": 0.16172,
+        "width": 0.64355,
+        "height": 0.11683
+      }
+    },
+    "quote:037-because-the-front-end-relied-on-components-we-could": {
+      "page": 48,
+      "matchConfidence": "partial-page",
+      "matchCoverage": 0.516,
+      "rect": {
+        "left": 0.22332,
+        "top": 0.11459,
+        "width": 0.61693,
+        "height": 0.04614
+      }
+    },
+    "quote:038-this-shifted-the-problem-of-preservation-from-one-of": {
+      "page": 48,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22332,
+        "top": 0.25597,
+        "width": 0.62987,
+        "height": 0.09326
+      }
+    },
+    "quote:039-other-projects-such-as-the-us-holocaust-memorial-mus": {
+      "page": 50,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22333,
+        "top": 0.53881,
+        "width": 0.6422,
+        "height": 0.14039
+      }
+    },
+    "quote:040-beyond-google-openlayers-an-open-source-mapping-pl": {
+      "page": 50,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22333,
+        "top": 0.68019,
+        "width": 0.6291,
+        "height": 0.14039
+      }
+    },
+    "quote:041-another-project-digital-harlem-also-a-historical": {
+      "page": 50,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22335,
+        "top": 0.27956,
+        "width": 0.64495,
+        "height": 0.16395
+      }
+    },
+    "quote:042-at-the-same-time-that-he-made-use-of-zoom-benjamin": {
+      "page": 56,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22333,
+        "top": 0.18528,
+        "width": 0.64143,
+        "height": 0.11683
+      }
+    },
+    "quote:043-in-one-way-street-for-example-the-narrative-begins": {
+      "page": 55,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12956,
+        "top": 0.39737,
+        "width": 0.64506,
+        "height": 0.11686
+      }
+    },
+    "quote:044-instead-they-offer-various-optics-for-seeing-remem": {
+      "page": 55,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12956,
+        "top": 0.60947,
+        "width": 0.63273,
+        "height": 0.09326
+      }
+    },
+    "quote:045-it-would-have-made-little-sense-to-indicate-paris-b": {
+      "page": 59,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12955,
+        "top": 0.11459,
+        "width": 0.63469,
+        "height": 0.09326
+      }
+    },
+    "quote:046-in-recollecting-images-of-his-childhood-in-berlin": {
+      "page": 61,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12955,
+        "top": 0.68023,
+        "width": 0.64469,
+        "height": 0.0697
+      }
+    },
+    "quote:047-on-this-map-the-railway-stations-are-like-worm-hole": {
+      "page": 59,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12955,
+        "top": 0.23241,
+        "width": 0.64249,
+        "height": 0.0697
+      }
+    },
+    "quote:048-thick-mapping-begins-to-look-like-an-ever-expanding": {
+      "page": 65,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12955,
+        "top": 0.39735,
+        "width": 0.64389,
+        "height": 0.09326
+      }
+    },
+    "quote:049-it-makes-little-sense-to-speak-of-before-or-after": {
+      "page": 65,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12955,
+        "top": 0.20885,
+        "width": 0.64079,
+        "height": 0.11683
+      }
+    },
+    "quote:050-in-this-sense-the-time-layers-of-the-anhalter-stati": {
+      "page": 64,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22333,
+        "top": 0.16172,
+        "width": 0.63379,
+        "height": 0.09326
+      }
+    },
+    "quote:051-cartography-as-a-pictorial-form-operates-by-simultan": {
+      "page": 69,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.53531,
+        "top": 0.70512,
+        "width": 0.36864,
+        "height": 0.09326
+      }
+    },
+    "quote:052-pictorial-representations-of-social-forms-can-be-tho": {
+      "page": 69,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12849,
+        "top": 0.7053,
+        "width": 0.36612,
+        "height": 0.09326
+      }
+    },
+    "quote:053-history-has-always-seemed-so-obviously-to-operate-in": {
+      "page": 69,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12849,
+        "top": 0.39898,
+        "width": 0.3683,
+        "height": 0.18752
+      }
+    },
+    "quote:054-these-scenes-open-anthem-manok-s-video-from-pdub-p": {
+      "page": 74,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12885,
+        "top": 0.20866,
+        "width": 0.71901,
+        "height": 0.75234
+      }
+    },
+    "quote:055-the-census-data-series-on-this-ghost-map-tracks-the": {
+      "page": 72,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12879,
+        "top": 0.68069,
+        "width": 0.36737,
+        "height": 0.11683
+      }
+    },
+    "quote:056-as-a-work-of-both-interpretive-humanities-and-geogra": {
+      "page": 72,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12879,
+        "top": 0.16212,
+        "width": 0.74574,
+        "height": 0.79887
+      }
+    },
+    "quote:057-it-deepened-their-interest-and-investment-in-their-n": {
+      "page": 76,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12879,
+        "top": 0.49173,
+        "width": 0.35833,
+        "height": 0.16395
+      }
+    },
+    "quote:058-pdub-was-hypercities-most-in-depth-exploration-of-a": {
+      "page": 77,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.53545,
+        "top": 0.30309,
+        "width": 0.36723,
+        "height": 0.0933
+      }
+    },
+    "quote:059-pdub-uses-digital-technology-in-a-creative-educatio": {
+      "page": 76,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.53545,
+        "top": 0.44444,
+        "width": 0.36832,
+        "height": 0.11686
+      }
+    },
+    "quote:060-the-team-s-community-mapping-projects-are-published": {
+      "page": 79,
+      "matchConfidence": "review",
+      "matchCoverage": 0.75,
+      "rect": {
+        "left": 0.53545,
+        "top": 0.39766,
+        "width": 0.34875,
+        "height": 0.11683
+      }
+    },
+    "quote:061-cruising-through-hifi-in-the-iconic-orange-pwc-jeepn": {
+      "page": 81,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.53545,
+        "top": 0.16318,
+        "width": 0.36816,
+        "height": 0.11683
+      }
+    },
+    "quote:062-as-a-collaboration-between-ucla-students-and-pdub-hi": {
+      "page": 79,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.53545,
+        "top": 0.25628,
+        "width": 0.36291,
+        "height": 0.16395
+      }
+    },
+    "quote:063-it-is-precisely-through-thick-mapping-that-such-fri": {
+      "page": 82,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.53545,
+        "top": 0.44434,
+        "width": 0.36119,
+        "height": 0.14039
+      }
+    },
+    "quote:064-they-form-new-discursive-registers-through-their-int": {
+      "page": 82,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.53545,
+        "top": 0.18514,
+        "width": 0.36708,
+        "height": 0.14039
+      }
+    },
+    "quote:065-they-all-bear-witness-to-social-political-and-econ": {
+      "page": 82,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12879,
+        "top": 0.23238,
+        "width": 0.37087,
+        "height": 0.14039
+      }
+    },
+    "quote:066-to-begin-to-unpack-this-cultural-form-we-might-cons": {
+      "page": 87,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12955,
+        "top": 0.58594,
+        "width": 0.63785,
+        "height": 0.11683
+      }
+    },
+    "quote:067-google-earth-valorizes-external-spectatorship-on-the": {
+      "page": 86,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22333,
+        "top": 0.65667,
+        "width": 0.6343,
+        "height": 0.09326
+      }
+    },
+    "quote:068-in-other-words-google-earth-is-apollonian-and-diony": {
+      "page": 87,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12955,
+        "top": 0.53882,
+        "width": 0.63037,
+        "height": 0.04614
+      }
+    },
+    "quote:069-the-situationist-aesthetic-of-detournement-of-tak": {
+      "page": 89,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.18472,
+        "top": 0.53881,
+        "width": 0.58948,
+        "height": 0.0933
+      }
+    },
+    "quote:070-an-ethic-of-curation-and-responsibility-to-otherne": {
+      "page": 89,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.18472,
+        "top": 0.63312,
+        "width": 0.5758,
+        "height": 0.09326
+      }
+    },
+    "quote:071-focused-on-berlin-after-the-fall-of-the-wall-art-com": {
+      "page": 90,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22332,
+        "top": 0.60952,
+        "width": 0.64562,
+        "height": 0.11683
+      }
+    },
+    "quote:072-using-comprehensive-imagery-obtained-over-years-by-a": {
+      "page": 92,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.60951,
+        "width": 0.64575,
+        "height": 0.11683
+      }
+    },
+    "quote:073-in-2005-google-and-microsoft-launched-their-own-dig": {
+      "page": 92,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.56238,
+        "width": 0.64572,
+        "height": 0.0697
+      }
+    },
+    "quote:074-google-earth-is-simply-the-next-generation-of-hyper": {
+      "page": 94,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.68024,
+        "width": 0.64591,
+        "height": 0.11683
+      }
+    },
+    "quote:075-one-can-see-a-strikingly-similar-image-upon-zooming": {
+      "page": 97,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12956,
+        "top": 0.23241,
+        "width": 0.64599,
+        "height": 0.09326
+      }
+    },
+    "quote:076-predating-google-earth-by-four-and-half-centuries-b": {
+      "page": 96,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22333,
+        "top": 0.18528,
+        "width": 0.63811,
+        "height": 0.14039
+      }
+    },
+    "quote:077-the-very-representation-of-the-earth-from-a-distance": {
+      "page": 100,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22335,
+        "top": 0.63305,
+        "width": 0.64148,
+        "height": 0.14039
+      }
+    },
+    "quote:078-google-earth-represented-a-significant-change-from-e": {
+      "page": 104,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.32863,
+        "width": 0.63434,
+        "height": 0.0616
+      }
+    },
+    "quote:079-based-on-wgs-84-the-spherical-mercator-projection": {
+      "page": 104,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22501,
+        "top": 0.73122,
+        "width": 0.62566,
+        "height": 0.10874
+      }
+    },
+    "quote:080-earthviewer3d-achieved-public-recognition-when-news": {
+      "page": 104,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.11651,
+        "width": 0.60182,
+        "height": 0.13231
+      }
+    },
+    "quote:081-might-it-be-possible-then-to-take-geo-visualizatio": {
+      "page": 106,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22335,
+        "top": 0.70379,
+        "width": 0.6471,
+        "height": 0.14039
+      }
+    },
+    "quote:082-hypercities-is-software-built-on-a-dominant-industry": {
+      "page": 107,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12955,
+        "top": 0.09103,
+        "width": 0.64366,
+        "height": 0.14039
+      }
+    },
+    "quote:083-in-much-the-same-way-that-walter-benjamin-s-urban-fl": {
+      "page": 109,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12956,
+        "top": 0.09103,
+        "width": 0.64214,
+        "height": 0.14039
+      }
+    },
+    "quote:084-to-do-so-we-will-give-a-few-examples-of-spatial-de": {
+      "page": 112,
+      "matchConfidence": "partial-page",
+      "matchCoverage": 0.586,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.82163,
+        "width": 0.62894,
+        "height": 0.04614
+      }
+    },
+    "quote:085-as-long-as-the-basemap-is-considered-a-representati": {
+      "page": 111,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12956,
+        "top": 0.23241,
+        "width": 0.62905,
+        "height": 0.0697
+      }
+    },
+    "quote:086-but-this-basemap-is-fundamentally-a-representation": {
+      "page": 111,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12956,
+        "top": 0.53874,
+        "width": 0.62329,
+        "height": 0.0697
+      }
+    },
+    "quote:087-this-map-has-been-partially-georectified-to-google-m": {
+      "page": 114,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.58586,
+        "width": 0.63162,
+        "height": 0.0697
+      }
+    },
+    "quote:088-as-accurate-as-the-shape-of-the-european-and-african": {
+      "page": 117,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12956,
+        "top": 0.53883,
+        "width": 0.64138,
+        "height": 0.09326
+      }
+    },
+    "quote:089-if-we-take-the-map-s-epistemology-as-normative-we-c": {
+      "page": 115,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12966,
+        "top": 0.60954,
+        "width": 0.64673,
+        "height": 0.0697
+      }
+    },
+    "quote:090-as-much-as-thick-mapping-is-interested-in-denatural": {
+      "page": 118,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22335,
+        "top": 0.56241,
+        "width": 0.64533,
+        "height": 0.11683
+      }
+    },
+    "quote:091-in-other-words-east-berlin-is-presented-as-larger": {
+      "page": 123,
+      "matchConfidence": "partial-page",
+      "matchCoverage": 0.419,
+      "rect": {
+        "left": 0.12956,
+        "top": 0.09103,
+        "width": 0.61011,
+        "height": 0.04614
+      }
+    },
+    "quote:092-only-through-georeferencing-this-map-is-it-possible": {
+      "page": 123,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12956,
+        "top": 0.16172,
+        "width": 0.64708,
+        "height": 0.0697
+      }
+    },
+    "quote:093-google-maps-makes-choices-about-what-counts-for-accu": {
+      "page": 124,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.18529,
+        "width": 0.64111,
+        "height": 0.11683
+      }
+    },
+    "quote:094-ultimately-what-counts-as-accuracy-is-a-function-o": {
+      "page": 124,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.09103,
+        "width": 0.63856,
+        "height": 0.09327
+      }
+    },
+    "quote:095-these-thick-maps-exist-in-a-platform-built-on-googl": {
+      "page": 125,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12956,
+        "top": 0.1146,
+        "width": 0.63536,
+        "height": 0.0697
+      }
+    },
+    "quote:096-from-its-inception-the-dynamic-hypercities-platform": {
+      "page": 128,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12854,
+        "top": 0.21366,
+        "width": 0.75727,
+        "height": 0.74733
+      }
+    },
+    "quote:097-digital-modeling-capabilities-geo-browsers-remote": {
+      "page": 128,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12854,
+        "top": 0.63796,
+        "width": 0.36355,
+        "height": 0.11683
+      }
+    },
+    "quote:098-the-narrative-overlaid-in-a-google-earth-environmen": {
+      "page": 130,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12879,
+        "top": 0.65718,
+        "width": 0.34531,
+        "height": 0.09326
+      }
+    },
+    "quote:099-looking-forward-it-is-not-enough-to-fly-from-paragr": {
+      "page": 131,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.53544,
+        "top": 0.44439,
+        "width": 0.36808,
+        "height": 0.11683
+      }
+    },
+    "quote:100-rather-than-fly-above-we-will-soon-drop-down-to-gro": {
+      "page": 131,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.53544,
+        "top": 0.63289,
+        "width": 0.35798,
+        "height": 0.09326
+      }
+    },
+    "quote:101-as-always-hypercities-has-no-truck-with-hypothetica": {
+      "page": 133,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12879,
+        "top": 0.23432,
+        "width": 0.3723,
+        "height": 0.04614
+      }
+    },
+    "quote:102-indeed-twitter-youtube-and-facebook-played-a-major": {
+      "page": 135,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12879,
+        "top": 0.30301,
+        "width": 0.37066,
+        "height": 0.23464
+      }
+    },
+    "quote:103-to-bring-the-events-together-and-to-successfully-dis": {
+      "page": 135,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12879,
+        "top": 0.51508,
+        "width": 0.36008,
+        "height": 0.16395
+      }
+    },
+    "quote:104-this-is-the-point-where-my-mapping-project-begins-an": {
+      "page": 134,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.53545,
+        "top": 0.60916,
+        "width": 0.36745,
+        "height": 0.18752
+      }
+    },
+    "quote:105-many-are-very-hard-to-watch-as-they-are-maps-of-eve": {
+      "page": 139,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12727,
+        "top": 0.70431,
+        "width": 0.35456,
+        "height": 0.09326
+      }
+    },
+    "quote:106-emergent-information-placing-the-information-in-visu": {
+      "page": 137,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12879,
+        "top": 0.16168,
+        "width": 0.76149,
+        "height": 0.79931
+      }
+    },
+    "quote:107-this-is-both-a-retrospective-and-prospective-record": {
+      "page": 141,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12956,
+        "top": 0.13215,
+        "width": 0.64702,
+        "height": 0.14039
+      }
+    },
+    "quote:108-around-the-same-time-that-scott-railton-began-the-vo": {
+      "page": 146,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.68017,
+        "width": 0.63703,
+        "height": 0.09326
+      }
+    },
+    "quote:109-as-such-the-event-is-no-longer-the-same-event-becau": {
+      "page": 146,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.13816,
+        "width": 0.64145,
+        "height": 0.09326
+      }
+    },
+    "quote:110-the-project-hypercities-now-made-live-calls-to-th": {
+      "page": 146,
+      "matchConfidence": "partial-page",
+      "matchCoverage": 0.625,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.75086,
+        "width": 0.6436,
+        "height": 0.0697
+      }
+    },
+    "quote:111-unlike-the-algorithmically-aggregated-displayed-an": {
+      "page": 148,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22333,
+        "top": 0.13816,
+        "width": 0.6449,
+        "height": 0.14039
+      }
+    },
+    "quote:112-these-archives-are-not-simply-documents-of-the-past": {
+      "page": 149,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12956,
+        "top": 0.27954,
+        "width": 0.63748,
+        "height": 0.11683
+      }
+    },
+    "quote:113-in-addition-to-egypt-the-hypercities-team-mapped-an": {
+      "page": 149,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12956,
+        "top": 0.44448,
+        "width": 0.64323,
+        "height": 0.0697
+      }
+    },
+    "quote:114-the-second-kind-of-temporality-is-that-harbored-in-t": {
+      "page": 153,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12956,
+        "top": 0.58597,
+        "width": 0.64153,
+        "height": 0.09326
+      }
+    },
+    "quote:115-there-are-three-kinds-of-temporality-at-work-in-hype": {
+      "page": 152,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.58586,
+        "width": 0.63061,
+        "height": 0.14041
+      }
+    },
+    "quote:116-it-s-a-raw-live-and-unpredictable-cacophony-of-voi": {
+      "page": 151,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.13099,
+        "top": 0.68022,
+        "width": 0.6444,
+        "height": 0.09326
+      }
+    },
+    "quote:117-it-is-the-archive-of-tweets-searchable-by-hour-and": {
+      "page": 154,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.51525,
+        "width": 0.64074,
+        "height": 0.14039
+      }
+    },
+    "quote:118-the-hypercities-team-developed-hypercities-now-over": {
+      "page": 156,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22335,
+        "top": 0.7045,
+        "width": 0.64708,
+        "height": 0.09326
+      }
+    },
+    "quote:119-events-are-ever-thicker-networks-of-events-no-matte": {
+      "page": 156,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.44448,
+        "width": 0.62836,
+        "height": 0.04614
+      }
+    },
+    "quote:120-the-latter-does-not-represent-the-reality-of-tahrir": {
+      "page": 158,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.3031,
+        "width": 0.64259,
+        "height": 0.11683
+      }
+    },
+    "quote:121-at-first-twitter-feeds-on-maps-functioned-as-real-t": {
+      "page": 157,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12956,
+        "top": 0.633,
+        "width": 0.64387,
+        "height": 0.11683
+      }
+    },
+    "quote:122-this-is-not-entirely-distinct-from-what-historians-a": {
+      "page": 158,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.39736,
+        "width": 0.64045,
+        "height": 0.09326
+      }
+    },
+    "quote:123-the-database-of-tweets-thus-represents-a-geographica": {
+      "page": 167,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12956,
+        "top": 0.51527,
+        "width": 0.64141,
+        "height": 0.14041
+      }
+    },
+    "quote:124-the-discourse-connects-these-events-yet-on-the-larg": {
+      "page": 166,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.80271,
+        "width": 0.64709,
+        "height": 0.0616
+      }
+    },
+    "quote:125-network-theory-helps-us-discover-and-discuss-the-pol": {
+      "page": 167,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12956,
+        "top": 0.2612,
+        "width": 0.64727,
+        "height": 0.08517
+      }
+    },
+    "quote:126-in-every-case-the-archive-is-less-than-the-event-a": {
+      "page": 168,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.09103,
+        "width": 0.61642,
+        "height": 0.09327
+      }
+    },
+    "quote:127-but-there-is-something-else-that-can-be-found-in-the": {
+      "page": 168,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.18529,
+        "width": 0.6331,
+        "height": 0.11683
+      }
+    },
+    "quote:128-such-points-of-inflection-or-states-of-surfeit-canno": {
+      "page": 168,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.42092,
+        "width": 0.64845,
+        "height": 0.09326
+      }
+    },
+    "quote:129-following-the-earthquake-in-haiti-in-2010-tweets-be": {
+      "page": 173,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12956,
+        "top": 0.37448,
+        "width": 0.4276,
+        "height": 0.18424
+      }
+    },
+    "quote:130-it-is-no-longer-a-question-of-whether-or-not-social": {
+      "page": 174,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.0916,
+        "width": 0.62961,
+        "height": 0.11352
+      }
+    },
+    "quote:131-part-of-the-intrigue-and-power-of-the-social-web-lie": {
+      "page": 174,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22332,
+        "top": 0.51584,
+        "width": 0.62556,
+        "height": 0.08995
+      }
+    },
+    "quote:132-at-the-same-time-the-team-used-the-perspectives-and": {
+      "page": 176,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22332,
+        "top": 0.25661,
+        "width": 0.63077,
+        "height": 0.08995
+      }
+    },
+    "quote:133-these-visualizations-reveal-real-time-patterns-throu": {
+      "page": 176,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22332,
+        "top": 0.18589,
+        "width": 0.64689,
+        "height": 0.08995
+      }
+    },
+    "quote:134-by-aggregating-the-match-rate-per-day-twitter-s-dat": {
+      "page": 178,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22726,
+        "top": 0.30373,
+        "width": 0.60678,
+        "height": 0.06637
+      }
+    },
+    "quote:135-as-such-the-chart-below-was-generated-to-better-exp": {
+      "page": 183,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.1303,
+        "top": 0.42156,
+        "width": 0.63991,
+        "height": 0.08995
+      }
+    },
+    "quote:136-he-came-to-watch-our-team-s-presentation-on-social-m": {
+      "page": 184,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.53524,
+        "top": 0.20877,
+        "width": 0.36596,
+        "height": 0.16395
+      }
+    },
+    "quote:137-living-abroad-gave-me-the-opportunity-to-analyze-the": {
+      "page": 184,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12879,
+        "top": 0.27956,
+        "width": 0.35899,
+        "height": 0.14039
+      }
+    },
+    "quote:138-i-had-seen-a-similar-catastrophe-in-the-past-having": {
+      "page": 185,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12879,
+        "top": 0.20877,
+        "width": 0.77244,
+        "height": 0.75222
+      }
+    },
+    "quote:139-the-memories-of-the-past-from-so-many-distant-locati": {
+      "page": 187,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.53662,
+        "top": 0.27949,
+        "width": 0.3683,
+        "height": 0.09326
+      }
+    },
+    "quote:140-it-was-the-physical-archive-on-paper-and-in-photogr": {
+      "page": 187,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12879,
+        "top": 0.44451,
+        "width": 0.34213,
+        "height": 0.0697
+      }
+    },
+    "quote:141-a-translation-of-the-second-poster-appears-below-th": {
+      "page": 191,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12879,
+        "top": 0.27955,
+        "width": 0.62061,
+        "height": 0.20611
+      }
+    },
+    "quote:142-according-to-our-local-guide-satoshi-mimura-a-medi": {
+      "page": 189,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.53487,
+        "top": 0.25584,
+        "width": 0.36952,
+        "height": 0.21108
+      }
+    },
+    "quote:143-our-gis-and-visualization-team-that-consists-of-dav": {
+      "page": 194,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.53523,
+        "top": 0.44439,
+        "width": 0.37103,
+        "height": 0.16415
+      }
+    },
+    "quote:144-following-the-earthquake-many-hospitals-were-overbu": {
+      "page": 194,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12879,
+        "top": 0.44449,
+        "width": 0.36917,
+        "height": 0.16395
+      }
+    },
+    "quote:145-the-openness-of-the-data-remains-an-important-long": {
+      "page": 197,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.53524,
+        "top": 0.18518,
+        "width": 0.36702,
+        "height": 0.0697
+      }
+    },
+    "quote:146-simply-put-it-combines-a-dosimeter-which-measures": {
+      "page": 196,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12841,
+        "top": 0.32668,
+        "width": 0.36975,
+        "height": 0.18752
+      }
+    },
+    "quote:147-in-this-regard-the-bishamon-team-intends-to-provide": {
+      "page": 197,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12879,
+        "top": 0.16161,
+        "width": 0.74367,
+        "height": 0.79938
+      }
+    },
+    "quote:148-all-21-000-residents-were-forced-to-evacuate-shortly": {
+      "page": 200,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12879,
+        "top": 0.39742,
+        "width": 0.36368,
+        "height": 0.11683
+      }
+    },
+    "quote:149-however-i-soon-realized-that-the-clocks-did-not-pow": {
+      "page": 201,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12879,
+        "top": 0.44455,
+        "width": 0.36991,
+        "height": 0.14039
+      }
+    },
+    "quote:150-every-classroom-we-entered-reflected-this-fact-whic": {
+      "page": 201,
+      "matchConfidence": "partial-page",
+      "matchCoverage": 0.07,
+      "rect": {
+        "left": 0.34979,
+        "top": 0.5627,
+        "width": 0.12486,
+        "height": 0.02257
+      }
+    },
+    "quote:151-i-acquired-multiple-perspectives-during-this-tragedy": {
+      "page": 202,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.53524,
+        "top": 0.18514,
+        "width": 0.36912,
+        "height": 0.23464
+      }
+    },
+    "quote:152-back-in-los-angeles-i-continue-to-listen-analyzing": {
+      "page": 202,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.53524,
+        "top": 0.67997,
+        "width": 0.37047,
+        "height": 0.14039
+      }
+    },
+    "quote:153-the-event-has-many-lives-and-afterlives-through-haun": {
+      "page": 202,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.53524,
+        "top": 0.39721,
+        "width": 0.3701,
+        "height": 0.09326
+      }
+    },
+    "quote:154-mapping-is-not-a-one-time-thing-and-maps-are-not-st": {
+      "page": 15,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12957,
+        "top": 0.32672,
+        "width": 0.63557,
+        "height": 0.0697
+      }
+    },
+    "quote:155-as-the-flaneur-walked-along-the-streets-he-was-cond": {
+      "page": 23,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12956,
+        "top": 0.32636,
+        "width": 0.6059,
+        "height": 0.04614
+      }
+    },
+    "quote:156-the-historian-who-maps-the-past-makes-these-ghosts-v": {
+      "page": 69,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12849,
+        "top": 0.87024,
+        "width": 0.36949,
+        "height": 0.04614
+      }
+    },
+    "quote:157-the-second-definition-is-a-story-of-infinite-regress": {
+      "page": 110,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22385,
+        "top": 0.77447,
+        "width": 0.63681,
+        "height": 0.0697
+      }
+    },
+    "quote:158-aligning-one-representation-with-another-representat": {
+      "page": 111,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12956,
+        "top": 0.16172,
+        "width": 0.64461,
+        "height": 0.09326
+      }
+    },
+    "quote:159-the-event-has-no-end-time": {
+      "page": 150,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.22334,
+        "top": 0.63307,
+        "width": 0.30211,
+        "height": 0.02257
+      }
+    },
+    "quote:160-the-event-remains": {
+      "page": 203,
+      "matchConfidence": "high",
+      "matchCoverage": 1,
+      "rect": {
+        "left": 0.12879,
+        "top": 0.44451,
+        "width": 0.1952,
+        "height": 0.02257
+      }
+    }
+  },
+  "unresolved": []
+}

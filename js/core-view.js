@@ -12,22 +12,13 @@ function shortened(title, limit = 28) {
   return title.length > limit ? `${title.slice(0, limit - 1)}…` : title;
 }
 
-function boreFaces(top) {
-  const ring = circularPath(32, 28, 0);
-  return ring.slice(0, -1).map((corner, index) => {
-    const next = ring[index + 1];
-    return { polygon: [
-      [corner[0], corner[1], 0], [next[0], next[1], 0],
-      [next[0], next[1], top], [corner[0], corner[1], top], [corner[0], corner[1], 0]
-    ] };
-  });
-}
-
-function circularPath(radius, segments, z) {
-  return Array.from({ length: segments + 1 }, (_, index) => {
-    const angle = index / segments * Math.PI * 2;
-    return [Math.cos(angle) * radius, Math.sin(angle) * radius, z];
-  });
+function coordinateLabel(core) {
+  if (!core || !Number.isFinite(core.lat) || !Number.isFinite(core.lng)) return "";
+  // deck.gl's compact default glyph atlas is intentionally ASCII-only here.
+  // Keeping this navigational notation plain makes the live readout reliable.
+  const latitude = `${core.lat < 0 ? "S" : "N"} ${Math.abs(core.lat).toFixed(4)}`;
+  const longitude = `${core.lng < 0 ? "W" : "E"} ${Math.abs(core.lng).toFixed(4)}`;
+  return `${latitude} / ${longitude}`;
 }
 
 /*
@@ -192,9 +183,14 @@ export class CoreView {
   fitView() {
     const width = Math.max(this.container.clientWidth, 320);
     const height = Math.max(this.container.clientHeight, 320);
-    const scale = Math.min(width / 720, height / 1680) * 0.9;
+    // Leave real visual air beneath the lower cap for the coordinate readout.
+    // It is part of the drilled location, not a sideways annotation.
+    const baseClearance = 92;
+    const extentMin = -baseClearance;
+    const extentMax = (this.stack?.height || 1540) + 82;
+    const scale = Math.min(width / 720, height / (extentMax - extentMin)) * 0.9;
     return {
-      target: [0, 0, (this.stack?.height + 82) / 2 || 811],
+      target: [0, 0, (extentMin + extentMax) / 2],
       zoom: clamp(Math.log2(scale), -2.5, 0.5),
       rotationX: 58,
       rotationOrbit: 24
@@ -249,6 +245,15 @@ export class CoreView {
       ...this.stack.span,
       position: [this.stack.span.position[0], this.stack.span.position[1], this.stack.span.position[2] * progress]
     };
+    const coreCoordinate = this.core && {
+      // It sits at the visual base of the cylinder: centered below its lower
+      // cap rather than competing with the core itself or the year labels.
+      // OrbitView projects a purely vertical offset slightly to the right at
+      // this fixed viewing angle. The modest x counter-offset centers the
+      // readout beneath the projected lower cap, where the eye reads it.
+      position: [-64, 0, -78],
+      text: coordinateLabel(this.core)
+    };
 
     this.deck.setProps({ layers: [
       new deck.PolygonLayer({
@@ -269,35 +274,25 @@ export class CoreView {
         onClick: (info) => { if (info.object) this.onSelect(info.object.map); },
         onHover: (info) => this.setHover(info)
       }),
-      new deck.PolygonLayer({
-        id: "bore-walls",
-        data: boreFaces(top),
-        // The bore is a continuous, translucent sleeve: it is deliberately
-        // not outlined as if its top and bottom were historical map plates.
-        stroked: false,
+      new deck.ColumnLayer({
+        // A single high-resolution column gives the core true circular caps
+        // and curved walls. It intentionally replaces the former flat strip
+        // and its extra guide lines.
+        id: "bore-cylinder",
+        data: [{ position: [0, 0, 0], elevation: top }],
+        getPosition: (item) => item.position,
+        getElevation: (item) => item.elevation,
+        // A screen-sized radius keeps the well's body legible while leaving
+        // the highly variable map strata visible around the core.
+        radius: 18,
+        radiusUnits: "pixels",
+        diskResolution: 48,
         filled: true,
-        getPolygon: (face) => face.polygon,
-        getFillColor: [109, 38, 34, 96],
+        extruded: true,
+        flatShading: false,
+        getFillColor: [173, 78, 68, 170],
+        material: { ambient: 0.58, diffuse: 0.62, shininess: 34, specularColor: [255, 184, 166] },
         parameters: { depthTest: true }
-      }),
-      new deck.PathLayer({
-        id: "bore-rims",
-        data: [{ path: circularPath(32, 28, 0) }, { path: circularPath(32, 28, top) }],
-        getPath: (ring) => ring.path,
-        getColor: [...RED_BRIGHT, 165],
-        getWidth: 1.2,
-        widthUnits: "pixels",
-        parameters: { depthTest: false }
-      }),
-      new deck.LineLayer({
-        id: "drilled-axis",
-        data: [{ source: [0, 0, 0], target: [0, 0, top] }],
-        getSourcePosition: (line) => line.source,
-        getTargetPosition: (line) => line.target,
-        getColor: [...RED_BRIGHT, 255],
-        getWidth: 6,
-        widthUnits: "pixels",
-        parameters: { depthTest: false }
       }),
       new deck.ScatterplotLayer({
         id: "core-mouth",
@@ -311,6 +306,21 @@ export class CoreView {
         getLineWidth: 2,
         parameters: { depthTest: false }
       }),
+      ...(coreCoordinate?.text ? [new deck.TextLayer({
+        id: "core-coordinate",
+        data: [coreCoordinate],
+        getPosition: (item) => item.position,
+        getText: (item) => item.text,
+        getColor: [...INK, 182],
+        getSize: 9.5,
+        sizeUnits: "pixels",
+        getTextAnchor: "middle",
+        getAlignmentBaseline: "center",
+        billboard: true,
+        fontFamily: "ui-sans-serif, system-ui, sans-serif",
+        fontWeight: "500",
+        parameters: { depthTest: false }
+      })] : []),
       new deck.ScatterplotLayer({
         id: "stratum-anchors",
         data: entries,

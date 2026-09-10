@@ -1,0 +1,258 @@
+{
+  "schemaVersion": "0.3.0-draft",
+  "id": "derives:hyperbook-full-book",
+  "status": "review-required",
+  "purpose": "Auditable conceptual simulations for a future Experience Graph. They are not selection-engine implementation.",
+  "simulations": [
+    {
+      "id": "derive:berlin-timewell",
+      "title": "Berlin: core, descend, alignment, return",
+      "map": {
+        "id": "map:4",
+        "title": "Pharus-Map: Berlin",
+        "place": "Berlin",
+        "year": 1926
+      },
+      "steps": [
+        {
+          "encounterId": "encounter:027",
+          "sourceObjectId": "quote:027-applying-the-theory-of-the-simultaneity-of-the-non-s",
+          "sourcePassageId": "passage:010-berlin-temporal-topographies-and-hypermedia-berlin",
+          "printedPage": 34,
+          "cause": {
+            "kind": "direct-spatial-plus-editorial-interaction",
+            "bookEvidence": "Berlin is named; the encounter literally describes drilling into Berlin layers.",
+            "state": [
+              "core-depth-many",
+              "move-earlier"
+            ]
+          }
+        },
+        {
+          "encounterId": "encounter:042",
+          "sourceObjectId": "quote:042-at-the-same-time-that-he-made-use-of-zoom-benjamin",
+          "sourcePassageId": "passage:015-zoom-and-thickness-as-historical-methods",
+          "printedPage": 56,
+          "cause": {
+            "kind": "cartographic-plus-temporal",
+            "bookEvidence": "The passage concerns zoom and the Pharus map.",
+            "state": [
+              "select-historical-raster",
+              "zoom-change"
+            ]
+          }
+        },
+        {
+          "encounterId": "encounter:158",
+          "sourceObjectId": "quote:158-aligning-one-representation-with-another-representat",
+          "sourcePassageId": "passage:030-georeferencing-turtles-all-the-way-down",
+          "printedPage": 111,
+          "cause": {
+            "kind": "cartographic-resonance",
+            "bookEvidence": "The source discusses alignment and relation.",
+            "state": [
+              "raster-basemap-alignment"
+            ]
+          }
+        },
+        {
+          "encounterId": "encounter:050",
+          "sourceObjectId": "quote:050-in-this-sense-the-time-layers-of-the-anhalter-stati",
+          "sourcePassageId": "passage:017-anhalter-bahnhof-and-historical-disruption",
+          "printedPage": 64,
+          "cause": {
+            "kind": "direct-spatial-plus-revisit",
+            "bookEvidence": "Anhalter is a Berlin passage; its temporal language is literal.",
+            "state": [
+              "return-to-place",
+              "select-temporal-layer"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "derive:los-angeles-network",
+      "title": "Los Angeles: ghosts to civic media",
+      "map": {
+        "id": "map:148",
+        "title": "T-RACES: a Testbed for the Redlining Archives of California's Exclusionary Spaces",
+        "place": "Los Angeles",
+        "year": 1930
+      },
+      "steps": [
+        {
+          "encounterId": "encounter:156",
+          "sourceObjectId": "quote:156-the-historian-who-maps-the-past-makes-these-ghosts-v",
+          "sourcePassageId": "passage:019-ghost-neighborhoods-traces-and-the-archive",
+          "printedPage": 69,
+          "cause": {
+            "kind": "direct-spatial",
+            "bookEvidence": "Ghost Maps is situated in Los Angeles.",
+            "state": [
+              "direct-place-match-only",
+              "select-historical-raster"
+            ]
+          }
+        },
+        {
+          "encounterId": "encounter:056",
+          "sourceObjectId": "quote:056-as-a-work-of-both-interpretive-humanities-and-geogra",
+          "sourcePassageId": "passage:020-ghost-maps-as-historical-argument",
+          "printedPage": 72,
+          "cause": {
+            "kind": "cartographic",
+            "bookEvidence": "The Ghost Map passage names legends, data, and polygons.",
+            "state": [
+              "compare-representations"
+            ]
+          }
+        },
+        {
+          "encounterId": "encounter:058",
+          "sourceObjectId": "quote:058-pdub-was-hypercities-most-in-depth-exploration-of-a",
+          "sourcePassageId": "passage:021-pdub-and-historic-filipinotown",
+          "printedPage": 77,
+          "cause": {
+            "kind": "project-plus-place",
+            "bookEvidence": "PDub is explicitly named as a Los Angeles community project.",
+            "state": [
+              "conceptual-continuity",
+              "novelty-filter"
+            ]
+          }
+        },
+        {
+          "encounterId": "encounter:064",
+          "sourceObjectId": "quote:064-they-form-new-discursive-registers-through-their-int",
+          "sourcePassageId": "passage:023-pdub-mapping-and-mobile-narratives",
+          "printedPage": 82,
+          "cause": {
+            "kind": "cartographic-plus-direct-spatial",
+            "bookEvidence": "The source names the historical-map situation directly.",
+            "state": [
+              "select-historical-raster",
+              "direct-place-match-only"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "derive:wellington-no-geographic-fallback",
+      "title": "Wellington: a non-geographic resonance",
+      "map": {
+        "id": "map:234",
+        "title": "Map of Wellington",
+        "place": "Wellington",
+        "year": 1924
+      },
+      "steps": [
+        {
+          "encounterId": "encounter:014",
+          "sourceObjectId": "quote:014-thick-maps-are-sometimes-called-deep-maps-because-t",
+          "sourcePassageId": "passage:005-thick-mapping-mapping-as-ongoing-practice",
+          "printedPage": 17,
+          "cause": {
+            "kind": "conceptual-plus-temporal",
+            "bookEvidence": "The source names layered historical dynamics.",
+            "state": [
+              "core-depth-many",
+              "select-temporal-layer"
+            ],
+            "geographicClaim": "none"
+          }
+        },
+        {
+          "encounterId": "encounter:157",
+          "sourceObjectId": "quote:157-the-second-definition-is-a-story-of-infinite-regress",
+          "sourcePassageId": "passage:030-georeferencing-turtles-all-the-way-down",
+          "printedPage": 110,
+          "cause": {
+            "kind": "cartographic",
+            "bookEvidence": "The source is explicitly about georeferencing.",
+            "state": [
+              "raster-basemap-alignment"
+            ],
+            "geographicClaim": "none"
+          }
+        },
+        {
+          "encounterId": "encounter:075",
+          "sourceObjectId": "quote:075-one-can-see-a-strikingly-similar-image-upon-zooming",
+          "sourcePassageId": "passage:027-global-totality-code-and-the-geospatial-web",
+          "printedPage": 97,
+          "cause": {
+            "kind": "cartographic-plus-interactional",
+            "bookEvidence": "The source explicitly addresses a zoomed-out view.",
+            "state": [
+              "zoom-change"
+            ],
+            "geographicClaim": "none"
+          }
+        }
+      ]
+    },
+    {
+      "id": "derive:book-led-to-tohoku",
+      "title": "Georeferencing to Tohoku: a book-led crossing",
+      "map": null,
+      "steps": [
+        {
+          "encounterId": "encounter:157",
+          "sourceObjectId": "quote:157-the-second-definition-is-a-story-of-infinite-regress",
+          "sourcePassageId": "passage:030-georeferencing-turtles-all-the-way-down",
+          "printedPage": 110,
+          "cause": {
+            "kind": "cartographic",
+            "bookEvidence": "Georeferencing is literal source content.",
+            "state": [
+              "raster-basemap-alignment"
+            ]
+          }
+        },
+        {
+          "encounterId": "encounter:093",
+          "sourceObjectId": "quote:093-google-maps-makes-choices-about-what-counts-for-accu",
+          "sourcePassageId": "passage:033-ideologies-of-accuracy-and-counter-mapping",
+          "printedPage": 124,
+          "cause": {
+            "kind": "conceptual-continuity",
+            "bookEvidence": "Accuracy and representation follow through a shared source concept.",
+            "state": [
+              "conceptual-continuity"
+            ]
+          }
+        },
+        {
+          "encounterId": "encounter:036",
+          "sourceObjectId": "quote:036-the-project-began-with-the-protests-in-tahrir-square",
+          "sourcePassageId": "passage:013-from-platforms-to-public-participation",
+          "printedPage": 43,
+          "cause": {
+            "kind": "book-inferred-plus-editorial",
+            "bookEvidence": "A source-indexed representation/participation continuity; it is not a geographic equivalence.",
+            "state": [
+              "follow-concept",
+              "novelty-filter"
+            ]
+          }
+        },
+        {
+          "encounterId": "encounter:160",
+          "sourceObjectId": "quote:160-the-event-remains",
+          "sourcePassageId": "passage:056-the-event-remains",
+          "printedPage": 203,
+          "cause": {
+            "kind": "event-witnessing",
+            "bookEvidence": "The source explicitly makes the Tohoku gallery’s event/witness relation.",
+            "state": [
+              "follow-concept",
+              "encounter-voice"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

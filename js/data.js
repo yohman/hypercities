@@ -1,15 +1,12 @@
-const phasePaths = {
-  book: "./data/phase-1-sample/hyperbook.json",
-  entities: "./data/phase-1-sample/entities.json",
-  edges: "./data/phase-1-sample/edges.json",
+const sourcePaths = {
+  book: "./data/hyperbook/hyperbook.json",
+  entities: "./data/hyperbook/entities.json",
+  edges: "./data/hyperbook/edges.json",
+  encounters: "./data/hyperbook/encounters.json",
+  affordances: "./data/hyperbook/experience-affordances.json",
+  bookPages: "./data/book-page-locations.json",
   mapGraph: "./data/hyperbook-graph.json"
 };
-
-const placeAliases = new Map([
-  ["berlin", "place:berlin"], ["los angeles", "place:los-angeles"], ["l.a.", "place:los-angeles"],
-  ["tohoku", "place:tohoku"], ["fukushima", "place:fukushima"], ["sendai", "place:sendai"],
-  ["ishinomaki", "place:ishinomaki"], ["onagawa", "place:onagawa"]
-]);
 
 async function loadJson(path) {
   const response = await fetch(path);
@@ -74,22 +71,32 @@ export function tileDiagnostic(map) {
 }
 
 export async function loadData() {
-  const [book, entityDoc, edgeDoc, mapGraph] = await Promise.all([
-    loadJson(phasePaths.book), loadJson(phasePaths.entities), loadJson(phasePaths.edges), loadJson(phasePaths.mapGraph)
+  const [book, entityDoc, edgeDoc, encounterDoc, affordanceDoc, bookPageDoc, mapGraph] = await Promise.all([
+    loadJson(sourcePaths.book), loadJson(sourcePaths.entities), loadJson(sourcePaths.edges),
+    loadJson(sourcePaths.encounters), loadJson(sourcePaths.affordances), loadJson(sourcePaths.bookPages), loadJson(sourcePaths.mapGraph)
   ]);
   const maps = mapGraph.nodes
     .filter((node) => node.kind === "historical-map" && node.eligibleForCoring !== false)
     .map(normaliseMap).filter(Boolean)
     .sort((a, b) => a.year - b.year || a.title.localeCompare(b.title));
+  const affordancesByEncounter = new Map(encounterDoc.encounters.map((encounter) => [encounter.id, []]));
+  for (const affordance of affordanceDoc.affordances) {
+    if (!affordancesByEncounter.has(affordance.encounterId)) continue;
+    affordancesByEncounter.get(affordance.encounterId).push(affordance);
+  }
   return {
     book,
     entities: new Map(entityDoc.entities.map((entity) => [entity.id, entity])),
     objects: new Map(book.objects.map((object) => [object.id, object])),
     edges: edgeDoc.edges,
+    encounters: new Map(encounterDoc.encounters.map((encounter) => [encounter.id, encounter])),
+    encounterList: encounterDoc.encounters,
+    affordances: affordanceDoc.affordances,
+    affordancesByEncounter,
+    bookPageLocations: bookPageDoc.highlights || {},
     maps
   };
 }
 
-export function phasePlaceId(city) { return placeAliases.get(String(city).trim().toLowerCase()) || null; }
 export function titleFor(data, id) { return data.entities.get(id)?.preferredLabel || data.objects.get(id)?.title || id; }
 export function objectKind(data, id) { return data.entities.get(id)?.type || data.objects.get(id)?.kind || "object"; }

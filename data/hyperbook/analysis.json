@@ -1,0 +1,597 @@
+{
+  "schemaVersion": "0.3.0-draft",
+  "id": "analysis:hyperbook-full-book",
+  "status": "review-required",
+  "generatedAt": "2026-09-10T04:09:31.461Z",
+  "counts": {
+    "sections": 9,
+    "passages": 56,
+    "quotations": 160,
+    "encounterFragments": 291,
+    "figures": 21,
+    "codeFragments": 3,
+    "entities": 138,
+    "entitiesByType": {
+      "concept": 44,
+      "place": 25,
+      "date": 15,
+      "person": 14,
+      "technology": 13,
+      "project": 9,
+      "narrative-voice": 7,
+      "event": 5,
+      "window": 3,
+      "time-range": 3
+    },
+    "edges": 1481,
+    "edgesByAssertion": {
+      "book-explicit": 1140,
+      "book-inferred": 341
+    },
+    "editorialAffordances": 1850,
+    "affordancesByDimension": {
+      "conceptual": 735,
+      "cartographic": 450,
+      "interactional": 271,
+      "temporal": 259,
+      "spatial": 135
+    }
+  },
+  "diversity": {
+    "majorHubs": [
+      {
+        "id": "concept:hypercities",
+        "label": "HyperCities",
+        "incidentEdges": 160
+      },
+      {
+        "id": "concept:thick-mapping",
+        "label": "thick mapping",
+        "incidentEdges": 156
+      },
+      {
+        "id": "concept:digital-humanities",
+        "label": "digital humanities",
+        "incidentEdges": 133
+      },
+      {
+        "id": "concept:social-media",
+        "label": "social media",
+        "incidentEdges": 68
+      },
+      {
+        "id": "concept:event",
+        "label": "event",
+        "incidentEdges": 64
+      },
+      {
+        "id": "concept:multiplicity",
+        "label": "multiplicity",
+        "incidentEdges": 49
+      },
+      {
+        "id": "concept:representation",
+        "label": "representation",
+        "incidentEdges": 44
+      },
+      {
+        "id": "concept:archive",
+        "label": "archive",
+        "incidentEdges": 43
+      },
+      {
+        "id": "passage:040-curation-trust-and-witnessing",
+        "label": "Curation, trust, and witnessing",
+        "incidentEdges": 38
+      },
+      {
+        "id": "passage:013-from-platforms-to-public-participation",
+        "label": "From platforms to public participation",
+        "incidentEdges": 37
+      },
+      {
+        "id": "passage:039-voices-of-january-25th-and-february-17th",
+        "label": "Voices of January 25th and February 17th",
+        "incidentEdges": 35
+      },
+      {
+        "id": "concept:presence",
+        "label": "presence",
+        "incidentEdges": 34
+      },
+      {
+        "id": "concept:memory",
+        "label": "memory",
+        "incidentEdges": 34
+      },
+      {
+        "id": "voice:todd-presner",
+        "label": "Todd Presner",
+        "incidentEdges": 32
+      },
+      {
+        "id": "concept:network",
+        "label": "networks",
+        "incidentEdges": 32
+      },
+      {
+        "id": "concept:scale",
+        "label": "scale",
+        "incidentEdges": 32
+      },
+      {
+        "id": "passage:033-ideologies-of-accuracy-and-counter-mapping",
+        "label": "Ideologies of accuracy and counter-mapping",
+        "incidentEdges": 30
+      },
+      {
+        "id": "passage:041-hypercities-now-events-with-multiple-temporalities",
+        "label": "HyperCities Now: events with multiple temporalities",
+        "incidentEdges": 30
+      }
+    ],
+    "placesByLiteralBookMention": [
+      {
+        "id": "place:berlin",
+        "label": "Berlin",
+        "mentions": 75,
+        "placeScale": "city"
+      },
+      {
+        "id": "place:egypt",
+        "label": "Egypt",
+        "mentions": 43,
+        "placeScale": "country"
+      },
+      {
+        "id": "place:historic-filipinotown",
+        "label": "Historic Filipinotown",
+        "mentions": 32,
+        "placeScale": "district"
+      },
+      {
+        "id": "place:los-angeles",
+        "label": "Los Angeles",
+        "mentions": 29,
+        "placeScale": "city"
+      },
+      {
+        "id": "place:tehran",
+        "label": "Tehran",
+        "mentions": 14,
+        "placeScale": "city"
+      },
+      {
+        "id": "place:libya",
+        "label": "Libya",
+        "mentions": 14,
+        "placeScale": "country"
+      },
+      {
+        "id": "place:fukushima",
+        "label": "Fukushima",
+        "mentions": 13,
+        "placeScale": "region"
+      },
+      {
+        "id": "place:paris",
+        "label": "Paris",
+        "mentions": 12,
+        "placeScale": "city"
+      },
+      {
+        "id": "place:cairo",
+        "label": "Cairo",
+        "mentions": 11,
+        "placeScale": "city"
+      },
+      {
+        "id": "place:niigata",
+        "label": "Niigata",
+        "mentions": 10,
+        "placeScale": "city"
+      },
+      {
+        "id": "place:east-berlin",
+        "label": "East Berlin",
+        "mentions": 8,
+        "placeScale": "district"
+      },
+      {
+        "id": "place:omi",
+        "label": "Ōmi province",
+        "mentions": 7,
+        "placeScale": "region"
+      },
+      {
+        "id": "place:rome",
+        "label": "Rome",
+        "mentions": 6,
+        "placeScale": "city"
+      },
+      {
+        "id": "place:okawa",
+        "label": "Okawa Elementary School",
+        "mentions": 6,
+        "placeScale": "site"
+      },
+      {
+        "id": "place:sendai",
+        "label": "Sendai",
+        "mentions": 6,
+        "placeScale": "city"
+      },
+      {
+        "id": "place:london",
+        "label": "London",
+        "mentions": 6,
+        "placeScale": "city"
+      },
+      {
+        "id": "place:tohoku",
+        "label": "Tohoku",
+        "mentions": 5,
+        "placeScale": "region"
+      },
+      {
+        "id": "place:west-berlin",
+        "label": "West Berlin",
+        "mentions": 4,
+        "placeScale": "district"
+      },
+      {
+        "id": "place:tokyo",
+        "label": "Tokyo",
+        "mentions": 3,
+        "placeScale": "city"
+      },
+      {
+        "id": "place:downtown-los-angeles",
+        "label": "Downtown Los Angeles",
+        "mentions": 2,
+        "placeScale": "district"
+      },
+      {
+        "id": "place:yuriage",
+        "label": "Yuriage",
+        "mentions": 2,
+        "placeScale": "site"
+      },
+      {
+        "id": "place:ishinomaki",
+        "label": "Ishinomaki",
+        "mentions": 2,
+        "placeScale": "city"
+      },
+      {
+        "id": "place:namie",
+        "label": "Namie",
+        "mentions": 2,
+        "placeScale": "city"
+      },
+      {
+        "id": "place:iwaki",
+        "label": "Iwaki",
+        "mentions": 2,
+        "placeScale": "city"
+      },
+      {
+        "id": "place:onagawa",
+        "label": "Onagawa",
+        "mentions": 1,
+        "placeScale": "city"
+      }
+    ],
+    "exactDuplicateQuotationFragments": [],
+    "sourcePassagesWithHighestEncounterSupply": [
+      {
+        "id": "passage:030-georeferencing-turtles-all-the-way-down",
+        "title": "Georeferencing: turtles all the way down",
+        "pages": [
+          110,
+          113
+        ],
+        "encounters": 6
+      },
+      {
+        "id": "passage:005-thick-mapping-mapping-as-ongoing-practice",
+        "title": "Thick Mapping: mapping as ongoing practice",
+        "pages": [
+          15,
+          19
+        ],
+        "encounters": 5
+      },
+      {
+        "id": "passage:007-the-flaneur-and-the-mediated-city",
+        "title": "The flâneur and the mediated city",
+        "pages": [
+          22,
+          24
+        ],
+        "encounters": 5
+      },
+      {
+        "id": "passage:019-ghost-neighborhoods-traces-and-the-archive",
+        "title": "Ghost neighborhoods, traces, and the archive",
+        "pages": [
+          68,
+          71
+        ],
+        "encounters": 5
+      },
+      {
+        "id": "passage:041-hypercities-now-events-with-multiple-temporalities",
+        "title": "HyperCities Now: events with multiple temporalities",
+        "pages": [
+          150,
+          153
+        ],
+        "encounters": 5
+      },
+      {
+        "id": "passage:056-the-event-remains",
+        "title": "The event remains",
+        "pages": [
+          202,
+          203
+        ],
+        "encounters": 5
+      },
+      {
+        "id": "passage:001-hyper-multiplicity-and-digital-mapping",
+        "title": "Hyper, multiplicity, and digital mapping",
+        "pages": [
+          6,
+          7
+        ],
+        "encounters": 4
+      },
+      {
+        "id": "passage:002-methods-embodiment-and-the-scale-of-view",
+        "title": "Methods, embodiment, and the scale of view",
+        "pages": [
+          8,
+          9
+        ],
+        "encounters": 4
+      },
+      {
+        "id": "passage:003-a-polyvocal-book-built-with-digital-forms",
+        "title": "A polyvocal book built with digital forms",
+        "pages": [
+          10,
+          11
+        ],
+        "encounters": 4
+      },
+      {
+        "id": "passage:004-hypercities-narratives-through-place-and-time",
+        "title": "HyperCities: narratives through place and time",
+        "pages": [
+          12,
+          14
+        ],
+        "encounters": 4
+      },
+      {
+        "id": "passage:008-berlin-ruins-and-what-remains",
+        "title": "Berlin, ruins, and what remains",
+        "pages": [
+          25,
+          26
+        ],
+        "encounters": 4
+      },
+      {
+        "id": "passage:009-berlin-as-a-temporal-and-spatial-palimpsest",
+        "title": "Berlin as a temporal and spatial palimpsest",
+        "pages": [
+          27,
+          30
+        ],
+        "encounters": 4
+      }
+    ],
+    "inferredRelationshipReview": [
+      {
+        "entities": [
+          {
+            "id": "concept:digital-humanities",
+            "label": "digital humanities"
+          },
+          {
+            "id": "concept:thick-mapping",
+            "label": "thick mapping"
+          }
+        ],
+        "passageCoarticulations": 32,
+        "reviewNote": "Co-articulation index only. Review before using it as a directed intellectual path."
+      },
+      {
+        "entities": [
+          {
+            "id": "concept:hypercities",
+            "label": "HyperCities"
+          },
+          {
+            "id": "concept:thick-mapping",
+            "label": "thick mapping"
+          }
+        ],
+        "passageCoarticulations": 22,
+        "reviewNote": "Co-articulation index only. Review before using it as a directed intellectual path."
+      },
+      {
+        "entities": [
+          {
+            "id": "concept:digital-humanities",
+            "label": "digital humanities"
+          },
+          {
+            "id": "concept:hypercities",
+            "label": "HyperCities"
+          }
+        ],
+        "passageCoarticulations": 22,
+        "reviewNote": "Co-articulation index only. Review before using it as a directed intellectual path."
+      },
+      {
+        "entities": [
+          {
+            "id": "concept:social-media",
+            "label": "social media"
+          },
+          {
+            "id": "concept:thick-mapping",
+            "label": "thick mapping"
+          }
+        ],
+        "passageCoarticulations": 12,
+        "reviewNote": "Co-articulation index only. Review before using it as a directed intellectual path."
+      },
+      {
+        "entities": [
+          {
+            "id": "concept:event",
+            "label": "event"
+          },
+          {
+            "id": "concept:social-media",
+            "label": "social media"
+          }
+        ],
+        "passageCoarticulations": 10,
+        "reviewNote": "Co-articulation index only. Review before using it as a directed intellectual path."
+      },
+      {
+        "entities": [
+          {
+            "id": "concept:event",
+            "label": "event"
+          },
+          {
+            "id": "concept:hypercities",
+            "label": "HyperCities"
+          }
+        ],
+        "passageCoarticulations": 8,
+        "reviewNote": "Co-articulation index only. Review before using it as a directed intellectual path."
+      },
+      {
+        "entities": [
+          {
+            "id": "concept:hypercities",
+            "label": "HyperCities"
+          },
+          {
+            "id": "concept:social-media",
+            "label": "social media"
+          }
+        ],
+        "passageCoarticulations": 7,
+        "reviewNote": "Co-articulation index only. Review before using it as a directed intellectual path."
+      },
+      {
+        "entities": [
+          {
+            "id": "concept:event",
+            "label": "event"
+          },
+          {
+            "id": "concept:thick-mapping",
+            "label": "thick mapping"
+          }
+        ],
+        "passageCoarticulations": 7,
+        "reviewNote": "Co-articulation index only. Review before using it as a directed intellectual path."
+      },
+      {
+        "entities": [
+          {
+            "id": "concept:hypercities",
+            "label": "HyperCities"
+          },
+          {
+            "id": "concept:representation",
+            "label": "representation"
+          }
+        ],
+        "passageCoarticulations": 7,
+        "reviewNote": "Co-articulation index only. Review before using it as a directed intellectual path."
+      },
+      {
+        "entities": [
+          {
+            "id": "concept:digital-humanities",
+            "label": "digital humanities"
+          },
+          {
+            "id": "concept:social-media",
+            "label": "social media"
+          }
+        ],
+        "passageCoarticulations": 7,
+        "reviewNote": "Co-articulation index only. Review before using it as a directed intellectual path."
+      },
+      {
+        "entities": [
+          {
+            "id": "concept:hypercities",
+            "label": "HyperCities"
+          },
+          {
+            "id": "concept:multiplicity",
+            "label": "multiplicity"
+          }
+        ],
+        "passageCoarticulations": 6,
+        "reviewNote": "Co-articulation index only. Review before using it as a directed intellectual path."
+      },
+      {
+        "entities": [
+          {
+            "id": "concept:network",
+            "label": "networks"
+          },
+          {
+            "id": "concept:thick-mapping",
+            "label": "thick mapping"
+          }
+        ],
+        "passageCoarticulations": 5,
+        "reviewNote": "Co-articulation index only. Review before using it as a directed intellectual path."
+      }
+    ],
+    "passagesWithFewestEncounterObjects": [
+      {
+        "id": "passage:018-los-angeles-ghost-maps-layered-places",
+        "title": "Los Angeles Ghost Maps: layered places",
+        "pages": [
+          66,
+          67
+        ],
+        "encounters": 1
+      },
+      {
+        "id": "passage:044-egypt-a-global-view-of-event-networks",
+        "title": "Egypt: a global view of event networks",
+        "pages": [
+          160,
+          163
+        ],
+        "encounters": 1
+      }
+    ],
+    "reviewPriorities": [
+      "Layout-heavy code and figure pages (38, 42–48, 96, 120–123, 160–171, 180–183) need extra human fragment curation.",
+      "Country-scale entities are tracked as book facts but excluded from spatial activation.",
+      "Quotation strings are normalized PDF extraction, not final typeset transcription."
+    ]
+  },
+  "repetitionPolicy": {
+    "defaultCooldown": "Do not show the same sourcePassageId twice in the previous 8 encounters or the same concept in the previous 3, unless explicitly requested.",
+    "noGeographicFallback": true,
+    "selectionCanReturnNoEncounter": true
+  }
+}

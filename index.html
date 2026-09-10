@@ -20,6 +20,7 @@
       </header>
       <div id="depth-indicator" class="depth-indicator" aria-live="polite" hidden></div>
       <section id="field-prompt" class="field-prompt" aria-live="polite"><p>Move across the field. Press into a place to find its depths.</p></section>
+      <aside id="field-encounter" class="field-encounter" aria-live="polite" hidden></aside>
       <aside id="encounter" class="encounter" aria-live="polite" hidden></aside>
       <div id="journey" class="journey" hidden>
         <button id="journey-toggle" type="button" aria-expanded="false">TRACE</button>
@@ -30,6 +31,10 @@
         <p class="eyebrow">A SMALL GRAMMAR</p>
         <p>Move across the map. Press into a place to cut a time well. Choose a layer; the map will move with it. Follow the thread of an idea, or take a side street.</p>
         <p class="quiet">The map remains free to pan and zoom. Esc returns toward the field. Arrow keys echo the offered movements.</p>
+      </dialog>
+      <dialog id="hyperbook-window" class="hyperbook-window">
+        <button id="hyperbook-window-close" class="window-close" type="button" aria-label="Close Hyperbook Window">×</button>
+        <article id="hyperbook-window-content"></article>
       </dialog>
     </main>
     <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
