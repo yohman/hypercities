@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hypercities.org/schema/hyperbook-graph.schema.json",
+  "title": "HyperCities Hyperbook Graph",
+  "type": "object",
+  "required": ["schemaVersion", "id", "title", "purpose", "sources", "nodes", "edges", "integrity"],
+  "properties": {
+    "schemaVersion": { "const": "0.1.0" },
+    "id": { "type": "string", "pattern": "^graph:" },
+    "title": { "type": "string", "minLength": 1 },
+    "purpose": { "type": "string", "minLength": 1 },
+    "sources": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["id", "title"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^source:" },
+          "title": { "type": "string", "minLength": 1 }
+        },
+        "additionalProperties": true
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/node" }
+    },
+    "edges": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/edge" }
+    },
+    "integrity": {
+      "type": "object",
+      "required": ["bookPageCoverage", "bookPassageCount", "mapRecordCount"],
+      "properties": {
+        "bookPageCoverage": { "$ref": "#/$defs/pageRange" },
+        "bookPassageCount": { "type": "integer", "minimum": 1 },
+        "mapRecordCount": { "type": "integer", "minimum": 1 }
+      },
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "pageRange": {
+      "type": "array",
+      "prefixItems": [{ "type": "integer", "minimum": 1 }, { "type": "integer", "minimum": 1 }],
+      "items": false
+    },
+    "node": {
+      "type": "object",
+      "required": ["id", "kind", "title"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "kind": {
+          "enum": ["work", "book-passage", "concept", "place", "case-study", "proposed-interaction", "historical-map"]
+        },
+        "title": { "type": "string", "minLength": 1 }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "kind": { "const": "book-passage" } } },
+          "then": { "required": ["source", "summary"] }
+        },
+        {
+          "if": { "properties": { "kind": { "const": "historical-map" } } },
+          "then": { "required": ["source", "place", "temporal", "sourceRecord", "eligibleForCoring"] }
+        },
+        {
+          "if": { "properties": { "kind": { "const": "proposed-interaction" } } },
+          "then": { "required": ["status", "description"] }
+        }
+      ],
+      "additionalProperties": true
+    },
+    "edge": {
+      "type": "object",
+      "required": ["id", "from", "predicate", "to", "evidence"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^edge:" },
+        "from": { "type": "string", "minLength": 1 },
+        "predicate": { "type": "string", "minLength": 1 },
+        "to": { "type": "string", "minLength": 1 },
+        "evidence": {
+          "type": "object",
+          "required": ["type"],
+          "properties": { "type": { "type": "string", "minLength": 1 } },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": true
+}

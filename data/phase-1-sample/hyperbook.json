@@ -1,0 +1,282 @@
+{
+  "schemaVersion": "0.2.0-draft",
+  "id": "hyperbook:phase-1-sample",
+  "title": "HyperCities Hyperbook Graph: Phase 1 Review Sample",
+  "status": "review-required",
+  "scope": {
+    "includedRoutes": [
+      "HyperCities and Thick Mapping lexicon",
+      "flaneur and Berlin",
+      "Los Angeles Ghost Maps",
+      "Georeferencing: It is turtles all the way down",
+      "Fukushima, Tohoku, and Mapping Events"
+    ],
+    "excluded": "No full-book extraction, normalized Map Library import, website, search interface, or visual map is part of this sample."
+  },
+  "sourceDocuments": [
+    {
+      "id": "source:hypercities-book-2014",
+      "title": "HyperCities: Thick Mapping in the Digital Humanities",
+      "creators": ["Todd Presner", "David Shepard", "Yoh Kawano"],
+      "publicationYear": 2014,
+      "localFile": "../../eScholarship UC item 3mh5t455.pdf",
+      "sha256": "c4aece7c70f4818a4d75d37ba832d267990a0d1985426d3d68670e6a07332883",
+      "license": "CC BY 4.0",
+      "printedPageRange": [6, 212]
+    }
+  ],
+  "provenanceRule": "Every object below identifies a source document, section, and inclusive printed-page range. Quotes also preserve an exact page and normalized transcription; figures and code fragments preserve their page-local caption or transcription.",
+  "objects": [
+    {
+      "id": "section:lexicon-hypercities",
+      "kind": "section",
+      "title": "Lexicon: HyperCities",
+      "parentTitle": "Lexicon",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:lexicon-hypercities", "printedPages": [12, 14], "locator": "Heading: HyperCities"}
+    },
+    {
+      "id": "section:lexicon-thick-mapping",
+      "kind": "section",
+      "title": "Lexicon: Thick Mapping",
+      "parentTitle": "Lexicon",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:lexicon-thick-mapping", "printedPages": [15, 19], "locator": "Heading: Thick Mapping; conclusion precedes the next lexicon heading on page 19"}
+    },
+    {
+      "id": "section:humanities-digital-humanities",
+      "kind": "section",
+      "title": "The Humanities in the Digital Humanities",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:humanities-digital-humanities", "printedPages": [22, 65], "locator": "Section begins with the flaneur; only pages 22-30 are sampled in Phase 1"}
+    },
+    {
+      "id": "section:window-los-angeles-ghost-maps",
+      "kind": "window",
+      "title": "Los Angeles Ghost Maps",
+      "windowNumber": 1,
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:window-los-angeles-ghost-maps", "printedPages": [66, 73], "locator": "Window 1"}
+    },
+    {
+      "id": "section:georeferencing-turtles",
+      "kind": "section",
+      "title": "Georeferencing: It is turtles all the way down",
+      "parentTitle": "The View from Above / Below",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:georeferencing-turtles", "printedPages": [110, 127], "locator": "Heading: Georeferencing"}
+    },
+    {
+      "id": "section:mapping-events-social-media",
+      "kind": "section",
+      "title": "Mapping Events / Mapping Social Media",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:mapping-events-social-media", "printedPages": [140, 183], "locator": "Section begins with Participatory Digital Humanities"}
+    },
+    {
+      "id": "section:tohoku-gallery",
+      "kind": "gallery",
+      "title": "A Journey through Tohoku, Japan",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:tohoku-gallery", "printedPages": [184, 203], "locator": "Gallery begins with Onagawa, Tohoku"}
+    },
+    {
+      "id": "section:technical-ajax",
+      "kind": "section",
+      "title": "AJAX technical call-out",
+      "parentTitle": "The Humanities in the Digital Humanities",
+      "sampleRole": "technical object-type specimen; not a sixth interpretive route",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:technical-ajax", "printedPages": [38, 39], "locator": "AJAX call-out and adjoining KML/API discussion"}
+    },
+    {
+      "id": "section:brief-history",
+      "kind": "section",
+      "title": "HyperCities: A Very Brief History",
+      "sampleRole": "source locator supporting a controlled concept; its prose is not extracted in this sample",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:brief-history", "printedPages": [31, 48], "locator": "Heading: HyperCities: A Very Brief History"}
+    },
+    {
+      "id": "section:author-key",
+      "kind": "apparatus",
+      "title": "Author Key",
+      "sampleRole": "source locator for the book's recurring narrative-voice abbreviations",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:author-key", "printedPages": [212, 212], "locator": "Credits page, Author Key"}
+    },
+    {
+      "id": "passage:hypercities-open-idea",
+      "kind": "passage",
+      "title": "HyperCities as an open, unrealized idea",
+      "summary": "Imagines a geotemporal way of finding lives, events, historical maps, documents, and futures without reducing HyperCities to a finished platform.",
+      "narrativeVoiceId": "voice:todd-presner",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:lexicon-hypercities", "printedPages": [12, 14], "locator": "Opening HyperCities lexicon entry"}
+    },
+    {
+      "id": "passage:thick-mapping-relations",
+      "kind": "passage",
+      "title": "Mapping as relational, ongoing practice",
+      "summary": "Defines maps as propositions and relations, and frames georeferencing as the keying of one representation to another rather than a correction toward reality.",
+      "narrativeVoiceId": "voice:todd-presner",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:lexicon-thick-mapping", "printedPages": [15, 19], "locator": "Opening of Thick Mapping through transition to Digital Humanities"}
+    },
+    {
+      "id": "passage:flaneur-time-traveler",
+      "kind": "passage",
+      "title": "The flaneur as time-traveler",
+      "summary": "Reads Benjamin's flaneur as a figure who moves on a street while descending into vanished time, making care for muted pasts an interpretive practice.",
+      "narrativeVoiceId": "voice:todd-presner",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:humanities-digital-humanities", "printedPages": [22, 23], "locator": "Opening pages; subsection Legibility / Recognizability begins on page 23"}
+    },
+    {
+      "id": "passage:berlin-simultaneous-pasts",
+      "kind": "passage",
+      "title": "Berlin's coexisting pasts",
+      "summary": "Describes Berlin as overlapping, uneven remains whose pasts coexist in the present rather than lining up as a single chronology.",
+      "narrativeVoiceId": "voice:todd-presner",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:humanities-digital-humanities", "printedPages": [25, 30], "locator": "Berlin discussion leading to film and new media"}
+    },
+    {
+      "id": "passage:ghost-maps-place-reading",
+      "kind": "passage",
+      "title": "Ghost Maps as reading places",
+      "summary": "Presents historical interpretation as reading place, joining cartographic depictions with verbal narratives to make prior actions and their ghosts perceptible.",
+      "narrativeVoiceId": "voice:phil-ethington",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:window-los-angeles-ghost-maps", "printedPages": [68, 71], "locator": "Opening Window 1 through Ghost Map method"}
+    },
+    {
+      "id": "passage:ghost-map-thickness",
+      "kind": "passage",
+      "title": "Ghost map as thick, revisitable document",
+      "summary": "Defines ghost maps as dense composites of archival cartography and digital GIS that reveal time, change, events, and motion without being reducible to illustrations.",
+      "narrativeVoiceId": "voice:phil-ethington",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:window-los-angeles-ghost-maps", "printedPages": [71, 73], "locator": "Ghost map composition and Los Angeles layers"}
+    },
+    {
+      "id": "passage:georeferencing-relations",
+      "kind": "passage",
+      "title": "Georeferencing as a relation among representations",
+      "summary": "Contrasts a normative basemap with infinite regress, then treats alignment as the production of a relation rather than the discovery of a final truth.",
+      "narrativeVoiceId": "voice:todd-presner",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:georeferencing-turtles", "printedPages": [110, 111], "locator": "Opening definitions of georeferencing"}
+    },
+    {
+      "id": "passage:georeferencing-deformance",
+      "kind": "passage",
+      "title": "Spatial deformance and alternative basemaps",
+      "summary": "Uses georectification experiments to make the politics of projections, positional choices, and competing spatial epistemologies available for examination.",
+      "narrativeVoiceId": "voice:todd-presner",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:georeferencing-turtles", "printedPages": [112, 118], "locator": "Omi and Ortelius experiments through Ideologies of Accuracy"}
+    },
+    {
+      "id": "passage:georeferencing-accuracy",
+      "kind": "passage",
+      "title": "Ideologies of accuracy",
+      "summary": "Treats accuracy as purpose-bound and argues for strategic, critical use of dominant mapping platforms that preserves contestation and alternative histories.",
+      "narrativeVoiceId": "voice:todd-presner",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:georeferencing-turtles", "printedPages": [118, 127], "locator": "Ideologies of Accuracy"}
+    },
+    {
+      "id": "passage:events-participation",
+      "kind": "passage",
+      "title": "Participatory digital humanities",
+      "summary": "Frames participation as an aspiration to make cultural-record creation available across differences while remaining attentive to the conditions of access and power.",
+      "narrativeVoiceId": "voice:todd-presner",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:mapping-events-social-media", "printedPages": [140, 149], "locator": "Participatory Digital Humanities"}
+    },
+    {
+      "id": "passage:event-multiple-temporalities",
+      "kind": "passage",
+      "title": "Events, witnesses, and multiple temporalities",
+      "summary": "Develops HyperCities Now through the singular tweet, its historical and networked temporalities, and the ethical distance between observer and witness.",
+      "narrativeVoiceId": "voice:todd-presner",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:mapping-events-social-media", "printedPages": [150, 171], "locator": "On the Event: HyperCities Now (Egypt, Libya, Japan)"}
+    },
+    {
+      "id": "passage:tohoku-social-media",
+      "kind": "passage",
+      "title": "Tohoku, social media, and scale",
+      "summary": "Moves between a plea for help, crisis volunteers, aggregate Twitter analysis, and individual stories after the 2011 earthquake and tsunami.",
+      "narrativeVoiceId": "voice:yoh-kawano",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:mapping-events-social-media", "printedPages": [172, 183], "locator": "The Role of Social Media through emotions charted over time"}
+    },
+    {
+      "id": "passage:tohoku-gallery-witnessing",
+      "kind": "passage",
+      "title": "Tohoku gallery: embodied witnessing",
+      "summary": "Shifts from distant analysis to visits in Tohoku and the Fukushima evacuation zone, ending with an ongoing obligation to witness for witnesses.",
+      "narrativeVoiceId": "voice:yoh-kawano",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:tohoku-gallery", "printedPages": [184, 203], "locator": "A Journey through Tohoku, Japan"}
+    },
+    {
+      "id": "quote:hypercities-unrealized",
+      "kind": "quotation",
+      "text": "HyperCities doesn’t exist. It’s an idea, largely unrealized, perhaps impossible.",
+      "speakerOrVoiceId": "voice:todd-presner",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:lexicon-hypercities", "printedPages": [13, 13], "locator": "Paragraph beginning Alas, HyperCities doesn't exist"}
+    },
+    {
+      "id": "quote:mapping-not-one-time",
+      "kind": "quotation",
+      "text": "Mapping is not a one-time thing.",
+      "speakerOrVoiceId": "voice:todd-presner",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:lexicon-thick-mapping", "printedPages": [15, 15], "locator": "Opening sentence of Thick Mapping"}
+    },
+    {
+      "id": "quote:flaneur-descends",
+      "kind": "quotation",
+      "text": "As the flâneur walked along the streets, he was conducted downward in time.",
+      "speakerOrVoiceId": "voice:todd-presner",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:humanities-digital-humanities", "printedPages": [23, 23], "locator": "Walter Benjamin discussion"}
+    },
+    {
+      "id": "quote:ghosts-visible",
+      "kind": "quotation",
+      "text": "The historian who maps the past makes these ghosts visible.",
+      "speakerOrVoiceId": "voice:phil-ethington",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:window-los-angeles-ghost-maps", "printedPages": [69, 69], "locator": "Ghost Metropolis discussion"}
+    },
+    {
+      "id": "quote:turtles-all-the-way-down",
+      "kind": "quotation",
+      "text": "It is turtles all the way down.",
+      "speakerOrVoiceId": "voice:todd-presner",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:georeferencing-turtles", "printedPages": [110, 110], "locator": "Comparison of ESRI and Geertz definitions"}
+    },
+    {
+      "id": "quote:alignment-produces-relation",
+      "kind": "quotation",
+      "text": "Aligning one representation with another representation does not yield a truth, but produces a relation.",
+      "speakerOrVoiceId": "voice:todd-presner",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:georeferencing-turtles", "printedPages": [111, 111], "locator": "Opening paragraph"}
+    },
+    {
+      "id": "quote:event-no-end",
+      "kind": "quotation",
+      "text": "The event has no end (time).",
+      "speakerOrVoiceId": "voice:todd-presner",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:mapping-events-social-media", "printedPages": [150, 150], "locator": "On the Event epigraph"}
+    },
+    {
+      "id": "quote:event-remains",
+      "kind": "quotation",
+      "text": "The event remains.",
+      "speakerOrVoiceId": "voice:yoh-kawano",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:tohoku-gallery", "printedPages": [203, 203], "locator": "Gallery closing"}
+    },
+    {
+      "id": "figure:ghost-map-title-spread",
+      "kind": "figure",
+      "title": "Ghost Map: Geveronga-Yaanga / El Pueblo de Nuestra Señora Reina de Los Angeles / La Placita",
+      "caption": "Downtown / Los Angeles, California, circa 0 C.E. to 2000 C.E.; cartography and data by Phil Ethington, 2010.",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:window-los-angeles-ghost-maps", "printedPages": [66, 66], "locator": "Window 1 title spread"}
+    },
+    {
+      "id": "figure:fig-14-omi-georectified",
+      "kind": "figure",
+      "title": "Map of Omi province georectified using only a few control points",
+      "figureNumber": 14,
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:georeferencing-turtles", "printedPages": [112, 112], "locator": "Figure 14 caption"}
+    },
+    {
+      "id": "code-fragment:ajax-post",
+      "kind": "code-fragment",
+      "language": "JavaScript",
+      "transcription": "$.post(“./provider/objects/4023”, metadata, _updateReturn, “json”);",
+      "normalizedTranscription": "$.post(\"./provider/objects/4023\", metadata, _updateReturn, \"json\");",
+      "purpose": "Illustrates AJAX posting in the book's technical genealogy of HyperCities.",
+      "provenance": {"sourceDocumentId": "source:hypercities-book-2014", "sectionId": "section:technical-ajax", "printedPages": [38, 38], "locator": "AJAX code call-out"}
+    }
+  ]
+}

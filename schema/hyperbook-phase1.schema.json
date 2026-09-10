@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hypercities.org/schema/hyperbook-phase1.schema.json",
+  "title": "HyperCities Hyperbook Graph: Phase 1 artifact shapes",
+  "description": "Use this schema for a reviewable book graph before importing normalized map records. Cross-file reference integrity is enforced by scripts/validate-phase1-sample.mjs.",
+  "oneOf": [
+    {"$ref": "#/$defs/hyperbookArtifact"},
+    {"$ref": "#/$defs/entityArtifact"},
+    {"$ref": "#/$defs/edgeArtifact"}
+  ],
+  "$defs": {
+    "pageRange": {
+      "type": "array",
+      "prefixItems": [{"type": "integer", "minimum": 1}, {"type": "integer", "minimum": 1}],
+      "items": false
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["sourceDocumentId", "sectionId", "printedPages", "locator"],
+      "properties": {
+        "sourceDocumentId": {"type": "string", "pattern": "^source:"},
+        "sectionId": {"type": "string", "pattern": "^section:"},
+        "printedPages": {"$ref": "#/$defs/pageRange"},
+        "locator": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "bookObject": {
+      "type": "object",
+      "required": ["id", "kind", "provenance"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "kind": {"enum": ["section", "window", "gallery", "apparatus", "passage", "quotation", "figure", "image", "code-fragment"]},
+        "title": {"type": "string", "minLength": 1},
+        "provenance": {"$ref": "#/$defs/provenance"}
+      },
+      "allOf": [
+        {"if": {"properties": {"kind": {"const": "passage"}}}, "then": {"required": ["title", "summary"]}},
+        {"if": {"properties": {"kind": {"const": "quotation"}}}, "then": {"required": ["text", "speakerOrVoiceId"]}},
+        {"if": {"properties": {"kind": {"const": "figure"}}}, "then": {"required": ["title"]}},
+        {"if": {"properties": {"kind": {"const": "code-fragment"}}}, "then": {"required": ["language", "transcription"]}}
+      ],
+      "additionalProperties": true
+    },
+    "entity": {
+      "type": "object",
+      "required": ["id", "type", "preferredLabel", "aliases", "provenance"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z-]+:"},
+        "type": {"enum": ["person", "narrative-voice", "concept", "place", "date", "time-range", "event", "project", "window", "technology"]},
+        "preferredLabel": {"type": "string", "minLength": 1},
+        "aliases": {"type": "array", "items": {"type": "string"}},
+        "assertion": {"enum": ["explicit", "inferred"]},
+        "provenance": {"$ref": "#/$defs/provenance"}
+      },
+      "additionalProperties": true
+    },
+    "edge": {
+      "type": "object",
+      "required": ["id", "from", "to", "relationType", "strength", "confidence", "assertion", "evidence"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^edge:"},
+        "from": {"type": "string", "minLength": 1},
+        "to": {"type": "string", "minLength": 1},
+        "relationType": {"enum": ["contains", "narrated-by", "defines", "develops", "discusses", "resonates-with", "situated-in", "presents", "instantiates", "critiques", "documents", "uses", "quoted-from", "depicts", "illustrates", "occurred-on", "occurred-in", "represents"]},
+        "strength": {"type": "number", "minimum": 0, "maximum": 1},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "assertion": {"enum": ["explicit", "inferred"]},
+        "evidence": {
+          "type": "object",
+          "required": ["sourceDocumentId", "sectionId", "printedPages", "note"],
+          "properties": {
+            "sourceDocumentId": {"type": "string", "pattern": "^source:"},
+            "sectionId": {"type": "string", "pattern": "^section:"},
+            "printedPages": {"$ref": "#/$defs/pageRange"},
+            "note": {"type": "string", "minLength": 1}
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "hyperbookArtifact": {
+      "type": "object",
+      "required": ["schemaVersion", "id", "status", "sourceDocuments", "objects"],
+      "properties": {
+        "schemaVersion": {"const": "0.2.0-draft"},
+        "id": {"const": "hyperbook:phase-1-sample"},
+        "status": {"const": "review-required"},
+        "sourceDocuments": {"type": "array", "minItems": 1},
+        "objects": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/bookObject"}}
+      },
+      "additionalProperties": true
+    },
+    "entityArtifact": {
+      "type": "object",
+      "required": ["schemaVersion", "id", "status", "identityPolicy", "entityTypes", "entities"],
+      "properties": {
+        "schemaVersion": {"const": "0.2.0-draft"},
+        "id": {"const": "vocabulary:hypercities-phase-1-sample"},
+        "status": {"const": "review-required"},
+        "entities": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/entity"}}
+      },
+      "additionalProperties": true
+    },
+    "edgeArtifact": {
+      "type": "object",
+      "required": ["schemaVersion", "id", "status", "edges"],
+      "properties": {
+        "schemaVersion": {"const": "0.2.0-draft"},
+        "id": {"const": "edges:hypercities-phase-1-sample"},
+        "status": {"const": "review-required"},
+        "edges": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/edge"}}
+      },
+      "additionalProperties": true
+    }
+  }
+}
