@@ -11,6 +11,24 @@ function sourceDetails(provenance, tile, relation, movementNote = null) {
 function pathButtons(links = []) {
   return links.map((item) => `<button type="button" data-node="${escapeHtml(item.id)}">${escapeHtml(item.label)} <span aria-hidden="true">→</span></button>`).join("");
 }
+function mapRecord(map) {
+  const record = map?.original?.sourceRecord || {};
+  const fields = [
+    ["Creator", record.creator],
+    ["Publisher", record.publisher],
+    ["Collection", record.collectionSource],
+    ["Scale", record.scale],
+    ["Projection", record.projection]
+  ].filter(([, value]) => value && value !== "N/ATEST");
+  if (!fields.length) return "";
+  return `<details class="map-record"><summary>map record</summary><dl>${fields.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join("")}</dl></details>`;
+}
+function strayCopy(lateral) {
+  if (!lateral) return "";
+  const kind = String(lateral.kind || "book thread").replace(/-/g, " ");
+  const assertion = lateral.edge?.assertion === "book-explicit" ? "book-explicit" : lateral.edge?.assertion === "book-inferred" ? "book-inferred" : "editorial resonance";
+  return `<button class="stray-path" type="button" data-node="${escapeHtml(lateral.id)}" aria-label="Stray through ${escapeHtml(lateral.label)}"><span class="stray-symbol" aria-hidden="true"><i></i><i></i><i></i></span><span class="stray-copy"><small>STRAY</small><strong>through ${escapeHtml(lateral.label)}</strong><em>${escapeHtml(kind)} · ${escapeHtml(assertion)}</em></span><span class="stray-arrow" aria-hidden="true">→</span></button>`;
+}
 
 const BOOK_PAGE_COUNT = 212;
 // The source PDF begins with a few blank publication leaves. READ begins at
@@ -71,6 +89,7 @@ export class Interface {
     this.fieldPrompt = document.querySelector("#field-prompt");
     this.fieldEncounter = document.querySelector("#field-encounter");
     this.encounter = document.querySelector("#encounter");
+    this.encounterContent = document.querySelector("#encounter-content");
     this.takePrompt = document.querySelector("#take-prompt");
     this.takeMap = document.querySelector("#take-map-window");
     this.takeMapContent = document.querySelector("#take-map-window-content");
@@ -458,17 +477,18 @@ export class Interface {
       ? `<button class="fragment-name" type="button" data-aperture="${escapeHtml(fragment.apertureId)}" aria-label="Open the cited book page for ${escapeHtml(fragment.text)}"><span>${escapeHtml(fragment.text)}</span><span class="quote-aperture" aria-hidden="true">read ↗</span></button>`
       : encounter.title && !fragment ? `<button class="fragment-name" type="button" data-aperture="${escapeHtml(encounter.id)}" aria-label="Open the cited book page for ${escapeHtml(encounter.title)}"><span>${escapeHtml(encounter.title)}</span><span class="quote-aperture" aria-hidden="true">read ↗</span></button>` : "";
     const quote = fragment?.kind === "quotation" ? `<button class="fragment-quote" type="button" data-aperture="${escapeHtml(fragment.apertureId)}" aria-label="Open the cited book page for this quotation"><span class="quote-text">“${escapeHtml(fragment.text)}”</span><span class="quote-aperture" aria-hidden="true">read ↗</span></button>` : "";
-    // An encounter offers one direction, not a cluster of decisions. Time is
-    // navigated directly in the well, whose layers already carry the years.
-    const links = !drift && encounter.links?.length ? `<nav class="fragment-paths" aria-label="A related Hyperbook path">${pathButtons(encounter.links.slice(0, 1))}</nav>` : "";
-    const offer = !encounter.links?.length && lateral ? `<button class="lateral-offer" type="button" data-node="${escapeHtml(lateral.id)}">toward ${escapeHtml(lateral.label)} <span aria-hidden="true">→</span></button>` : "";
-    const driftOffer = drift ? `<button class="lateral-offer" type="button" data-drift="${escapeHtml(drift.map.id)}">elsewhere, ${escapeHtml(drift.map.year)} <span aria-hidden="true">→</span></button>` : "";
+    // The offer shown here is exactly the one accepted by keyboard/touch
+    // STRAY. No movement should depend on an invisible alternative link.
+    const offer = !drift ? strayCopy(lateral) : "";
+    const driftOffer = drift ? `<button class="stray-path drift-path" type="button" data-drift="${escapeHtml(drift.map.id)}"><span class="stray-symbol" aria-hidden="true"><i></i><i></i><i></i></span><span class="stray-copy"><small>DRIFT</small><strong>elsewhere, ${escapeHtml(drift.map.year)}</strong><em>temporal juxtaposition · editorial</em></span><span class="stray-arrow" aria-hidden="true">→</span></button>` : "";
     // This is an archival action on the selected object, not another direction
-    // in the dérive. It is therefore always available and deliberately has no arrow.
-    const takeOffer = `<button class="take-map-offer" type="button" data-take-map><i aria-hidden="true"></i><span>Take a map</span></button>`;
+    // in the dérive. It stays with the map identity rather than competing with
+    // the book movement and the visitor's trace.
+    const takeOffer = `<button class="take-map-quiet" type="button" data-take-map><i aria-hidden="true"></i><span>take map</span></button>`;
     this.surface.hidden = false;
-    this.encounter.innerHTML = `<p class="map-marker">${escapeHtml(map.city)} · ${map.year}</p>${title || quote}${links}${driftOffer || offer}${takeOffer}`;
-    this.bindTraversal(this.encounter);
+    const arrival = fragment?.arrival?.label || "a thread in the book";
+    this.encounterContent.innerHTML = `<div class="encounter-flow"><section class="encounter-stage map-stage"><p class="stage-kicker">selected map</p><p class="map-marker">${escapeHtml(map.city)} · ${map.year}</p><div class="map-title-row"><h2>${escapeHtml(map.title)}</h2>${takeOffer}</div>${mapRecord(map)}</section><section class="encounter-stage book-stage"><p class="stage-kicker">the book enters <span>${escapeHtml(arrival)}</span></p>${title || quote}</section>${driftOffer || offer ? `<section class="encounter-stage stray-stage">${driftOffer || offer}</section>` : ""}</div>`;
+    this.bindTraversal(this.encounterContent);
   }
 
   renderTouchNavigation() {

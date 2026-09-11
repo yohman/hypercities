@@ -11,8 +11,23 @@ function metresPerLongitude(latitude) {
   return 111320 * Math.cos(latitude * Math.PI / 180);
 }
 
-function shortened(title, limit = 28) {
-  return title.length > limit ? `${title.slice(0, limit - 1)}…` : title;
+function titleLines(title, target = 24) {
+  const words = String(title || "Untitled historical map").trim().split(/\s+/);
+  const lines = [];
+  let line = "";
+  for (const word of words) {
+    if (line && `${line} ${word}`.length > target) {
+      lines.push(line);
+      line = word;
+    } else line = line ? `${line} ${word}` : word;
+  }
+  if (line) lines.push(line);
+  return lines.join("\n");
+}
+
+function titleSize(title) {
+  const lines = titleLines(title).split("\n").length;
+  return lines > 3 ? 8.5 : lines > 2 ? 9.5 : lines > 1 ? 10.5 : 12;
 }
 
 function coordinateLabel(core) {
@@ -96,9 +111,10 @@ function labelEntries(entries, selectedId, hoverId) {
 }
 
 export class CoreView {
-  constructor({ onSelect, onHover }) {
+  constructor({ onSelect, onHover, onMapGesture }) {
     this.onSelect = onSelect;
     this.onHover = onHover;
+    this.onMapGesture = onMapGesture;
     this.container = document.querySelector("#core-renderer");
     this.caption = document.querySelector("#well-caption");
   }
@@ -172,12 +188,45 @@ export class CoreView {
       viewState: this.viewState,
       layers: []
     });
+    this.installGestureRouting();
     this.resizeObserver = new ResizeObserver(() => {
       if (!this.stack) return;
       this.viewState = this.fitView();
       this.deck.setProps({ viewState: this.viewState });
     });
     this.resizeObserver.observe(this.container);
+  }
+
+  installGestureRouting() {
+    this.canvas = this.container.querySelector("canvas");
+    if (!this.canvas) return;
+    const picked = (event) => {
+      const bounds = this.canvas.getBoundingClientRect();
+      const info = this.deck.pickObject({ x: event.clientX - bounds.left, y: event.clientY - bounds.top, radius: 5 });
+      return Boolean(info?.picked);
+    };
+    const passPointer = (event) => {
+      if (!this.passingGesture && event.type !== "pointerdown") return;
+      this.onMapGesture?.(event);
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      if (event.type === "pointerup" || event.type === "pointercancel") this.passingGesture = false;
+    };
+    this.canvas.addEventListener("pointerdown", (event) => {
+      this.passingGesture = !picked(event);
+      if (this.passingGesture) passPointer(event);
+    }, true);
+    this.canvas.addEventListener("pointermove", (event) => {
+      if (this.passingGesture) passPointer(event);
+    }, true);
+    this.canvas.addEventListener("pointerup", passPointer, true);
+    this.canvas.addEventListener("pointercancel", passPointer, true);
+    this.canvas.addEventListener("wheel", (event) => {
+      if (picked(event)) return;
+      this.onMapGesture?.(event);
+      event.preventDefault();
+      event.stopImmediatePropagation();
+    }, { capture: true, passive: false });
   }
 
   fitView() {
@@ -433,13 +482,14 @@ export class CoreView {
         id: "hovered-stratum",
         data: [selected],
         getPosition: (entry) => [26, 0, entry.z],
-        getText: (entry) => shortened(entry.map.title, 18),
+        getText: (entry) => titleLines(entry.map.title),
         getColor: [...RED_BRIGHT, 255],
-        getSize: 12,
+        getSize: (entry) => titleSize(entry.map.title),
         sizeUnits: "pixels",
         getTextAnchor: "start",
         getAlignmentBaseline: "center",
         billboard: true,
+        lineHeight: 1.08,
         fontFamily: "ui-sans-serif, system-ui, sans-serif",
         parameters: { depthTest: false }
       })] : [])

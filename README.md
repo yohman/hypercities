@@ -11,7 +11,7 @@ This is not a recreation of the original GIS platform or a conventional academic
 - **TAKE A MAP** is an archival action available whenever a historical layer is selected; Explore remains an optional archive-led entrance. Its floating source panel has three focused tabs—an interactive MapLibre map and complete HTML recipe, Google Earth/KML instructions, and QGIS instructions. It never implies a raster download or rights grant.
 - Hovering a location with overlapping maps previews a **TimeWell**; clicking locks a CORE at that coordinate.
 - The **TimeWell** is this prototype's temporal-CORE innovation: a floating three-dimensional cross-section generated when a visitor cuts into a location. Its strata preserve each map's geographic aspect ratio, a central pillar fixes the drilled coordinate, and the vertical axis makes the available dates traversable.
-- Selecting a layer moves the map to that historical map's actual geographic extent and attempts to display its original raster tiles. The map remains freely pannable and zoomable.
+- Selecting a layer moves the map to that historical map's actual geographic extent and attempts to display its original raster tiles. The map remains freely pannable and zoomable: a drag or wheel gesture begun in the TimeWell's transparent surrounding space is passed through to MapLibre, while strata, years, and the core itself remain selectable.
 - The full-book Hyperbook supplies encounters through direct place evidence, cartographic and temporal resonance, visitor actions, concepts, and deliberately labelled editorial routes. It may also remain silent.
 - **READ** opens the book as a 212-page facsimile. Its visible Previous/Next controls and Left/Right keys turn pages. A quotation or title opens this same reader at its cited page; an exact quotation locator is highlighted when one is available.
 - The **TRACE** holds a fading record of the current dérive. Arrow keys mirror the offered movements: Up/Down move through time, Right accepts a lateral route, and Left/Esc returns toward the map. In the book reader, Left/Right instead turn pages.
@@ -32,9 +32,17 @@ Older strata descend into the well; later maps rise toward the present. Large ga
 
 ![Berlin TimeWell showing a drilled coordinate, time strata, selected layer, and a minimal Hyperbook encounter](assets/readme/timewell-core-current.png)
 
+#### TimeWell detail
+
+The selected layer is held against the bore and its complete title wraps beside the current year rather than being clipped. This detail also makes the irregular geographic footprints and expanded temporal gaps legible at close range.
+
+![Cropped TimeWell detail showing the cylindrical core, selected 1990 map, temporal year labels, and varied map strata](assets/readme/timewell-detail.jpg)
+
 ### 3. Hyperbook encounters
 
-A short source-grounded encounter may surface alongside a selected historical layer. The excerpt opens the appropriate page of the book in **READ**; the map remains the primary surface.
+A selected map now begins a single visible movement: map identity, the source-grounded book encounter it evokes, one named **STRAY** route, and the visitor's own TRACE. The selected map shows its location, year, title, and available catalog record; the book fragment opens the appropriate page in **READ**. STRAY names its destination and identifies the kind and evidential status of its source-grounded connection, rather than behaving like an unexplained randomizer.
+
+![Cropped exploration panel showing a selected New York map, its source record, a book encounter, a named STRAY route through GPS, and a seven-step trace](assets/readme/exploration-thread.jpg)
 
 ## Interaction grammar
 
@@ -42,7 +50,7 @@ A short source-grounded encounter may surface alongside a selected historical la
 2. Choose **TAKE A MAP** in Explore to enter an archive-led route: core a place, select a layer, and open its map slip.
 3. Hover over historical-map depth to preview a TimeWell; tap or click to cut a CORE.
 4. Choose a stratum, a year, or use Up/Down to move across available maps in time.
-5. Follow a named idea or accept a quiet lateral invitation; use TRACE to see where the dérive has passed.
+5. Follow the named **STRAY** route—or accept it with Right—to take one source-grounded lateral step; use the attached TRACE to see where the dérive has passed.
 6. Choose **READ** to move through the book page by page, or open a quotation/title to enter READ at its cited page. Esc, the close mark, or clicking outside returns to the map.
 
 The `?` affordance in the prototype keeps this same grammar available without an onboarding sequence. Pointer and touch interactions remain primary; keyboard navigation is an optional echo.

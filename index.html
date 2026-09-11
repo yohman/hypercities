@@ -31,15 +31,17 @@
       <div id="depth-indicator" class="depth-indicator" aria-live="polite" hidden></div>
       <section id="field-prompt" class="field-prompt" aria-live="polite" hidden><p>Move across the map. Press into a place to find its depths.</p></section>
       <aside id="field-encounter" class="field-encounter" aria-live="polite" hidden></aside>
-      <aside id="encounter" class="encounter" aria-live="polite" hidden></aside>
+      <aside id="encounter" class="encounter" aria-live="polite" hidden>
+        <div id="encounter-content"></div>
+        <div id="journey" class="journey" hidden>
+          <button id="journey-toggle" type="button" aria-expanded="false">TRACE</button>
+          <div id="journey-content" class="journey-content" hidden></div>
+        </div>
+      </aside>
       <section id="take-prompt" class="take-prompt" aria-live="polite" hidden>
         <p>TAKE A MAP</p>
         <span>Enter a place. Choose a layer. Carry its trace outward.</span>
       </section>
-      <div id="journey" class="journey" hidden>
-        <button id="journey-toggle" type="button" aria-expanded="false">TRACE</button>
-        <div id="journey-content" class="journey-content" hidden></div>
-      </div>
       <nav id="touch-navigation" class="touch-navigation" aria-label="Move through time and ideas" hidden>
         <button type="button" data-touch-move="newer" aria-label="Move to a later map"><span aria-hidden="true">↑</span></button>
         <button type="button" data-touch-move="back" aria-label="Return to the previous place or map"><span aria-hidden="true">←</span></button>
@@ -48,9 +50,19 @@
       </nav>
       <dialog id="help-dialog" class="help-dialog">
         <button id="help-close" class="dialog-close" type="button" aria-label="Close help">×</button>
-        <p class="eyebrow">A SMALL GRAMMAR</p>
-        <p>Move across the map. Press into a place to cut a time well. Choose a layer; the map will move with it. Follow the thread of an idea, or take a side street.</p>
-        <p class="quiet">The map remains free to pan and zoom. Esc returns toward the map. On touch screens, the four floating arrows echo these movements.</p>
+        <p class="eyebrow">ABOUT THIS PROTOTYPE</p>
+        <h1>HyperCities is a city made thick with time, maps, voices, and possible futures.</h1>
+        <p class="help-overview">This is a static research prototype for experiencing <em>HyperCities: Thick Mapping in the Digital Humanities</em> through the historical Map Library and a source-grounded Hyperbook. It is neither a conventional academic site nor a recreation of the original GIS platform.</p>
+        <dl class="help-ideas">
+          <div><dt>MAP</dt><dd>A dark world field holds the real extents of historical maps.</dd></div>
+          <div><dt>TIMEWELL</dt><dd>Choose a place to drill a temporal CORE: each map stays geographically proportioned while its date rises or descends through the well.</dd></div>
+          <div><dt>HYPERBOOK</dt><dd>Maps and actions may evoke exact book passages, concepts, people, events, and source pages—with provenance retained.</dd></div>
+          <div><dt>TAKE A MAP</dt><dd>A selected layer can travel outward as a live MapLibre example, a Google Earth Network Link, or a QGIS XYZ source.</dd></div>
+        </dl>
+        <p class="help-kicker">A small grammar</p>
+        <p class="help-grammar">Pan and zoom the field. Click or tap to core a place. Move up or down through time. Read the book fragment that enters. Take the named STRAY route when you want a source-grounded lateral turn; TRACE keeps the residue of that dérive. On touch screens, the floating arrows mirror these movements.</p>
+        <p class="quiet">The site remains a simple GitHub Pages build: static files, MapLibre, deck.gl, and no backend.</p>
+        <a class="help-github" href="https://github.com/yohman/hypercities" target="_blank" rel="noreferrer">PROJECT, SOURCE DATA &amp; README ON GITHUB <span aria-hidden="true">↗</span></a>
       </dialog>
       <section id="site-index" class="site-index" role="dialog" aria-modal="true" aria-label="Ways into HyperCities" tabindex="-1" hidden>
         <svg id="index-drift" class="index-drift" aria-hidden="true"></svg>

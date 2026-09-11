@@ -249,7 +249,8 @@ async function start() {
     app.ui.setBookEntryQuotes(app.data);
     app.core = new CoreView({
       onSelect: (map) => selectMap(map),
-      onHover: (map) => app.field.highlightTimewellMap(map)
+      onHover: (map) => app.field.highlightTimewellMap(map),
+      onMapGesture: (event) => app.field.forwardTimewellGesture(event)
     });
     app.field = new MapView({
       maps: app.data.maps,

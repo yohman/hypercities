@@ -115,6 +115,50 @@ export class MapView {
     }
   }
 
+  forwardTimewellGesture(event) {
+    const canvas = this.map?.getCanvas();
+    if (!canvas) return;
+    const common = {
+      bubbles: true,
+      cancelable: true,
+      clientX: event.clientX,
+      clientY: event.clientY,
+      screenX: event.screenX,
+      screenY: event.screenY,
+      ctrlKey: event.ctrlKey,
+      shiftKey: event.shiftKey,
+      altKey: event.altKey,
+      metaKey: event.metaKey
+    };
+    if (event.type === "wheel") {
+      canvas.dispatchEvent(new WheelEvent("wheel", {
+        ...common,
+        deltaX: event.deltaX,
+        deltaY: event.deltaY,
+        deltaZ: event.deltaZ,
+        deltaMode: event.deltaMode
+      }));
+      return;
+    }
+    const pointerInit = {
+      ...common,
+      button: event.button,
+      buttons: event.buttons,
+      pointerId: event.pointerId,
+      pointerType: event.pointerType,
+      isPrimary: event.isPrimary,
+      pressure: event.pressure
+    };
+    canvas.dispatchEvent(new PointerEvent(event.type, pointerInit));
+    // MapLibre's mouse gesture handler remains the reliable route on desktop;
+    // synthetic PointerEvents do not generate the browser's compatibility
+    // MouseEvents by themselves.
+    if (event.pointerType === "mouse") {
+      const mouseType = { pointerdown: "mousedown", pointermove: "mousemove", pointerup: "mouseup", pointercancel: "mouseup" }[event.type];
+      if (mouseType) canvas.dispatchEvent(new MouseEvent(mouseType, pointerInit));
+    }
+  }
+
   renderFootprints() {
     const layers = [new deck.PolygonLayer({
       id: "historical-map-extents", data: this.maps, pickable: true, stroked: true, filled: false,
