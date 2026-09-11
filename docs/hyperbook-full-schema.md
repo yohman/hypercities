@@ -1,6 +1,6 @@
 # Full-book Hyperbook data draft
 
-This is a static, reviewable data layer for *HyperCities: Thick Mapping in the Digital Humanities*. The current prototype reads it to select encounters; source facts, Map Graph records, and editorial activation behavior remain separate.
+This is a static, reviewable data layer for *HyperCities: Thick Mapping in the Digital Humanities*. HyperCities reads it to select encounters; source facts, Map Graph records, and editorial activation behavior remain separate.
 
 ## Artifact boundary
 
@@ -79,7 +79,7 @@ The data has no country or nearest-quotation fallback. Country entities are reta
 
 Future selection should be allowed to return no encounter. It should apply `analysis.json`’s source-passage and concept cooldown policy, then balance direct geography with cartographic, interactional, temporal, conceptual, and deliberately labelled editorial resonances.
 
-The prototype also has one narrow, labelled editorial regional thread: a core coordinate within Japan can activate Yoh Kawano's *Mapping Events* passages, with particular weight for explicit Tohoku/Fukushima passage links. This is not a country-level spatial relation and does not assert that the current historical map depicts Fukushima; the UI and provenance detail identify it as an editorial Japan activation.
+The site also has one narrow, labelled editorial regional thread: a core coordinate within Japan can activate Yoh Kawano's *Mapping Events* passages, with particular weight for explicit Tohoku/Fukushima passage links. This is not a country-level spatial relation and does not assert that the current historical map depicts Fukushima; the UI and provenance detail identify it as an editorial Japan activation.
 
 ## Static source-page reader
 

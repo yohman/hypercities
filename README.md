@@ -1,8 +1,8 @@
 # HyperCities
 
-A static research prototype for experiencing *HyperCities: Thick Mapping in the Digital Humanities* through historical maps, time, and a source-grounded Hyperbook.
+A static HyperCities site for experiencing *HyperCities: Thick Mapping in the Digital Humanities* through historical maps, time, and a source-grounded Hyperbook.
 
-This is not a recreation of the original GIS platform or a conventional academic website. It is an experiment in the HyperCities proposition: a visitor can enter a place, descend through its cartographic past, and encounter ideas, voices, and source pages that the movement itself evokes.
+This is not a recreation of the original GIS platform or a conventional academic website. It realizes the HyperCities proposition: a visitor can enter a place, descend through its cartographic past, and encounter ideas, voices, and source pages that the movement itself evokes.
 
 ## The current build
 
@@ -10,7 +10,7 @@ This is not a recreation of the original GIS platform or a conventional academic
 - The map remains the landing experience. A quiet **EXPLORE** opens a sparse constellation of HyperCities entrances and lays down a different dashed dérive toward one possible future path each time; MAP, READ, and Take a Map are active now, while Windows and Origins remain visibly staged as later phases.
 - **TAKE A MAP** is an archival action available whenever a historical layer is selected; Explore remains an optional archive-led entrance. Its floating source panel has three focused tabs—an interactive MapLibre map and complete HTML recipe, Google Earth/KML instructions, and QGIS instructions. It never implies a raster download or rights grant.
 - Hovering a location with overlapping maps previews a **TimeWell**; clicking locks a CORE at that coordinate.
-- The **TimeWell** is this prototype's temporal-CORE innovation: a floating three-dimensional cross-section generated when a visitor cuts into a location. Its strata preserve each map's geographic aspect ratio, a central pillar fixes the drilled coordinate, and the vertical axis makes the available dates traversable.
+- The **TimeWell** is HyperCities’ temporal-CORE innovation: a floating three-dimensional cross-section generated when a visitor cuts into a location. Its strata preserve each map's geographic aspect ratio, a central pillar fixes the drilled coordinate, and the vertical axis makes the available dates traversable.
 - Selecting a layer moves the map to that historical map's actual geographic extent and attempts to display its original raster tiles. The map remains freely pannable and zoomable: a drag or wheel gesture begun in the TimeWell's transparent surrounding space is passed through to MapLibre, while strata, years, and the core itself remain selectable.
 - The full-book Hyperbook supplies encounters through direct place evidence, cartographic and temporal resonance, visitor actions, concepts, and deliberately labelled editorial routes. It may also remain silent.
 - **READ** opens the book as a 212-page facsimile. Its visible Previous/Next controls and Left/Right keys turn pages. A quotation or title opens this same reader at its cited page; an exact quotation locator is highlighted when one is available.
@@ -53,11 +53,11 @@ A selected map now begins a single visible movement: map identity, the source-gr
 5. Follow the named **STRAY** route—or accept it with Right—to take one source-grounded lateral step; use the attached TRACE to see where the dérive has passed.
 6. Choose **READ** to move through the book page by page, or open a quotation/title to enter READ at its cited page. Esc, the close mark, or clicking outside returns to the map.
 
-The `?` affordance in the prototype keeps this same grammar available without an onboarding sequence. Pointer and touch interactions remain primary; keyboard navigation is an optional echo.
+The `?` affordance keeps this same grammar available without an onboarding sequence. Pointer and touch interactions remain primary; keyboard navigation is an optional echo.
 
 ## Hyperbook data
 
-The prototype is backed by a reviewable, static full-book graph. The scholarly passage stays primary; encounter fragments are smaller source-grounded entrances into passages, quotations, concepts, people, projects, Windows, events, figures, and technical material.
+The site is backed by a reviewable, static full-book graph. The scholarly passage stays primary; encounter fragments are smaller source-grounded entrances into passages, quotations, concepts, people, projects, Windows, events, figures, and technical material.
 
 | Artifact | Purpose |
 | --- | --- |
@@ -79,14 +79,14 @@ See the [full schema and editorial policy](docs/hyperbook-full-schema.md) and [f
 
 ## Static architecture
 
-The prototype is designed to remain publishable from GitHub Pages:
+HyperCities is designed to remain publishable from GitHub Pages:
 
 - HTML, CSS, vanilla JavaScript ES modules, and static JSON
 - MapLibre GL JS for the navigable basemap
 - deck.gl for historical footprints and the TimeWell's three-dimensional layers
 - no database, backend, authentication, framework, or build pipeline
 
-Use GitHub Pages or any local static HTTP server for preview. Do not open `index.html` through `file://`: browsers isolate that origin and block the JSON data reads the prototype needs.
+Use GitHub Pages or any local static HTTP server for preview. Do not open `index.html` through `file://`: browsers isolate that origin and block the JSON data reads the site needs.
 
 ### Taking a map outward
 

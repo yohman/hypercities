@@ -62,7 +62,7 @@ export function tileDiagnostic(map) {
   if (originalProtocol === "http:") {
     return {
       state: "upgraded",
-      message: "Stored as HTTP; this prototype upgrades the same host to HTTPS before loading tiles.",
+      message: "Stored as HTTP; HyperCities upgrades the same host to HTTPS before loading tiles.",
       originalUrl: map.tileBase,
       url: secure
     };

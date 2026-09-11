@@ -158,7 +158,7 @@ function moveToPlace(nodeId, why = null) {
     });
     if (!encounter) return;
     app.activeEncounter = encounter;
-    pushTrail(encounter.title, nodeId, why || `Reached ${label} through the book; no historical map layer is available in this prototype.`);
+    pushTrail(encounter.title, nodeId, why || `Reached ${label} through the book; no historical map layer is available here.`);
     recordEncounter(encounter.fragment);
     render();
     return;
