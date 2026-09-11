@@ -244,7 +244,7 @@ function keyboard(event) {
 
 async function start() {
   try {
-    app.ui = new Interface({ node: followNode, time: moveTime, stray: acceptStray, drift: acceptDrift, aperture: openAperture, read: () => app.ui.openRead(), surface: leaveCore, take: beginTakeMap, takeSelected: openTakeMap, resumeTake: resumeTakeMap, exportMap });
+    app.ui = new Interface({ node: followNode, time: moveTime, stray: acceptStray, drift: acceptDrift, aperture: openAperture, read: () => app.ui.openRead(), surface: leaveCore, back: stepBack, take: beginTakeMap, takeSelected: openTakeMap, resumeTake: resumeTakeMap, exportMap });
     app.data = await loadData();
     app.ui.setBookEntryQuotes(app.data);
     app.core = new CoreView({

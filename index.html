@@ -40,11 +40,17 @@
         <button id="journey-toggle" type="button" aria-expanded="false">TRACE</button>
         <div id="journey-content" class="journey-content" hidden></div>
       </div>
+      <nav id="touch-navigation" class="touch-navigation" aria-label="Move through time and ideas" hidden>
+        <button type="button" data-touch-move="newer" aria-label="Move to a later map"><span aria-hidden="true">↑</span></button>
+        <button type="button" data-touch-move="back" aria-label="Return to the previous place or map"><span aria-hidden="true">←</span></button>
+        <button type="button" data-touch-move="stray" aria-label="Follow the offered lateral path"><span aria-hidden="true">→</span></button>
+        <button type="button" data-touch-move="older" aria-label="Move to an earlier map"><span aria-hidden="true">↓</span></button>
+      </nav>
       <dialog id="help-dialog" class="help-dialog">
         <button id="help-close" class="dialog-close" type="button" aria-label="Close help">×</button>
         <p class="eyebrow">A SMALL GRAMMAR</p>
         <p>Move across the map. Press into a place to cut a time well. Choose a layer; the map will move with it. Follow the thread of an idea, or take a side street.</p>
-        <p class="quiet">The map remains free to pan and zoom. Esc returns toward the map. Arrow keys echo the offered movements.</p>
+        <p class="quiet">The map remains free to pan and zoom. Esc returns toward the map. On touch screens, the four floating arrows echo these movements.</p>
       </dialog>
       <section id="site-index" class="site-index" role="dialog" aria-modal="true" aria-label="Ways into HyperCities" tabindex="-1" hidden>
         <svg id="index-drift" class="index-drift" aria-hidden="true"></svg>

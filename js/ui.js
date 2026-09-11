@@ -78,6 +78,8 @@ export class Interface {
     this.journey = document.querySelector("#journey");
     this.journeyContent = document.querySelector("#journey-content");
     this.journeyToggle = document.querySelector("#journey-toggle");
+    this.touchNavigation = document.querySelector("#touch-navigation");
+    this.touchState = null;
     this.help = document.querySelector("#help-dialog");
     this.index = document.querySelector("#site-index");
     this.indexToggle = document.querySelector("#index-toggle");
@@ -185,10 +187,23 @@ export class Interface {
       this.journeyContent.hidden = !open;
       this.journeyToggle.setAttribute("aria-expanded", String(open));
     });
+    this.touchNavigation.addEventListener("click", (event) => {
+      const button = event.target.closest("button[data-touch-move]");
+      if (!button || button.disabled) return;
+      event.preventDefault();
+      event.stopPropagation();
+      const move = button.dataset.touchMove;
+      if (move === "newer") this.actions.time("newer");
+      if (move === "older") this.actions.time("older");
+      if (move === "stray" && this.touchState?.lateral) this.actions.stray(this.touchState.lateral.id);
+      if (move === "back") this.actions.back();
+    });
     window.addEventListener("resize", () => {
-      if (!this.window.open || !this.bookReader) return;
-      const shouldSpread = this.shouldUseBookSpread();
-      if (shouldSpread !== this.bookReader.isSpread) this.renderBookPage();
+      if (this.window.open && this.bookReader) {
+        const shouldSpread = this.shouldUseBookSpread();
+        if (shouldSpread !== this.bookReader.isSpread) this.renderBookPage();
+      }
+      this.renderTouchNavigation();
     });
   }
 
@@ -309,6 +324,8 @@ export class Interface {
     this.journey.hidden = true;
     this.clearFieldEncounter();
     this.takePrompt.hidden = true;
+    this.touchState = null;
+    this.touchNavigation.hidden = true;
     this.closeTakeMap(false);
   }
 
@@ -320,6 +337,7 @@ export class Interface {
     this.journey.hidden = true;
     this.clearFieldEncounter();
     this.takePrompt.hidden = true;
+    this.touchNavigation.hidden = true;
     this.closeTakeMap(false);
   }
 
@@ -431,6 +449,8 @@ export class Interface {
   renderCore({ map, coreMaps, encounter, tile, lateral, drift }) {
     this.depth.hidden = true;
     this.fieldPrompt.hidden = true;
+    this.touchState = { map, coreMaps, lateral };
+    this.renderTouchNavigation();
     this.encounter.hidden = !encounter;
     if (!encounter) return;
     const fragment = encounter.fragment || encounter.quote || null;
@@ -449,6 +469,28 @@ export class Interface {
     this.surface.hidden = false;
     this.encounter.innerHTML = `<p class="map-marker">${escapeHtml(map.city)} · ${map.year}</p>${title || quote}${links}${driftOffer || offer}${takeOffer}`;
     this.bindTraversal(this.encounter);
+  }
+
+  renderTouchNavigation() {
+    const { map, coreMaps, lateral } = this.touchState || {};
+    const isTouchLayout = window.matchMedia("(max-width: 780px)").matches;
+    if (!isTouchLayout || !map || !coreMaps?.length) {
+      this.touchNavigation.hidden = true;
+      return;
+    }
+    const index = coreMaps.findIndex((candidate) => candidate.id === map.id);
+    const newer = coreMaps[index + 1] || null;
+    const older = coreMaps[index - 1] || null;
+    const laterButton = this.touchNavigation.querySelector('[data-touch-move="newer"]');
+    const earlierButton = this.touchNavigation.querySelector('[data-touch-move="older"]');
+    const strayButton = this.touchNavigation.querySelector('[data-touch-move="stray"]');
+    laterButton.disabled = !newer;
+    laterButton.setAttribute("aria-label", newer ? `Move to later map, ${newer.year}` : "No later map in this TimeWell");
+    earlierButton.disabled = !older;
+    earlierButton.setAttribute("aria-label", older ? `Move to earlier map, ${older.year}` : "No earlier map in this TimeWell");
+    strayButton.hidden = !lateral;
+    if (lateral) strayButton.setAttribute("aria-label", `Stray toward ${lateral.label}`);
+    this.touchNavigation.hidden = false;
   }
 
   bindTraversal(element) {
