@@ -26,8 +26,21 @@
           <button id="index-toggle" class="index-toggle" type="button" aria-haspopup="dialog" aria-controls="site-index" aria-expanded="false">EXPLORE</button>
         </div>
         <button id="surface" class="surface" type="button" hidden>← MAP</button>
-        <button id="help-toggle" class="help-toggle" type="button" aria-haspopup="dialog" aria-controls="help-dialog">?</button>
+        <div class="masthead-actions">
+          <button id="ground-toggle" class="ground-toggle" type="button" aria-controls="ground-control" aria-expanded="false" aria-label="Change map ground"><i aria-hidden="true"></i><span>GROUND</span></button>
+          <button id="help-toggle" class="help-toggle" type="button" aria-haspopup="dialog" aria-controls="help-dialog">?</button>
+        </div>
       </header>
+      <aside id="ground-control" class="ground-control" aria-label="Map ground and historical layer transparency" hidden>
+        <p class="ground-kicker">GROUND</p>
+        <div class="ground-switch" role="group" aria-label="Map ground">
+          <button type="button" data-basemap="dark" aria-pressed="true">DARK</button>
+          <button type="button" data-basemap="satellite" aria-pressed="false">SATELLITE</button>
+        </div>
+        <label class="ground-veil" for="historical-opacity"><span>HISTORICAL VEIL</span><output id="historical-opacity-value" for="historical-opacity">—</output></label>
+        <input id="historical-opacity" class="ground-opacity" type="range" min="0" max="100" value="100" step="1" disabled aria-label="Historical map opacity" />
+        <p id="satellite-credit" class="satellite-credit" hidden>WORLD IMAGERY · © ESRI</p>
+      </aside>
       <div id="depth-indicator" class="depth-indicator" aria-live="polite" hidden></div>
       <section id="field-prompt" class="field-prompt" aria-live="polite" hidden><p>Move across the map. Press into a place to find its depths.</p></section>
       <aside id="field-encounter" class="field-encounter" aria-live="polite" hidden></aside>
@@ -54,10 +67,11 @@
         <h1>HyperCities is a city made thick with time, maps, voices, and possible futures.</h1>
         <p class="help-overview">HyperCities brings <em>HyperCities: Thick Mapping in the Digital Humanities</em>, the historical Map Library, and a source-grounded Hyperbook into one spatial experience. It is neither a conventional academic site nor a recreation of the original GIS platform.</p>
         <dl class="help-ideas">
-          <div><dt>MAP</dt><dd>A dark world field holds the real extents of historical maps.</dd></div>
+          <div><dt>MAP</dt><dd>A dark world field holds the real extents of historical maps; GROUND can reveal the satellite present beneath them.</dd></div>
           <div><dt>TIMEWELL</dt><dd>Choose a place to drill a temporal CORE: each map stays geographically proportioned while its date rises or descends through the well.</dd></div>
           <div><dt>HYPERBOOK</dt><dd>Maps and actions may evoke exact book passages, concepts, people, events, and source pages—with provenance retained.</dd></div>
           <div><dt>TAKE A MAP</dt><dd>A selected layer can travel outward as a live MapLibre example, a Google Earth Network Link, or a QGIS XYZ source.</dd></div>
+          <div><dt>ANNOTATE</dt><dd>Choose a selected map’s annotate mark, place a point on the raster, and leave a public note. Existing notes remain tied to their original layer and coordinate.</dd></div>
         </dl>
         <p class="help-kicker">A small grammar</p>
         <p class="help-grammar">Pan and zoom the field. Click or tap to core a place. Move up or down through time. Read the book fragment that enters. Take the named STRAY route when you want a source-grounded lateral turn; TRACE keeps the residue of that dérive. On touch screens, the floating arrows mirror these movements.</p>
@@ -73,6 +87,7 @@
           <button class="index-route index-route--read" type="button" data-index-read><span>READ</span><small>enter through the book</small></button>
           <p class="index-route index-route--future index-route--windows"><span>WINDOWS</span><small>enter through a project · next</small></p>
           <button class="index-route index-route--take" type="button" data-index-take><span>TAKE A MAP</span><small>enter through the archive</small></button>
+          <a class="index-route index-route--annotations" href="./annotations.html"><span>ANNOTATIONS</span><small>enter through the public margin</small></a>
           <p class="index-route index-route--future index-route--origins"><span>ORIGINS</span><small>how HyperCities began · next</small></p>
         </nav>
       </section>
@@ -87,6 +102,6 @@
     </main>
     <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
     <script src="https://unpkg.com/deck.gl@9.1.8/dist.min.js"></script>
-    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/main.js?v=map-focus-4"></script>
   </body>
 </html>

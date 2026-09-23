@@ -1,11 +1,12 @@
 import { loadData, tileDiagnostic } from "./data.js";
 import { CoreView } from "./core-view.js";
 import { apertureFor, driftOffer, fieldFragment, isPlaceNode, mapContext, mapEncounter, nodeEncounter, strayOffer } from "./graph.js";
-import { MapView } from "./map-view.js";
+import { MapView } from "./map-view.js?v=map-focus-4";
+import { AnnotationStore, annotationContext } from "./annotations.js";
 import { downloadText, kmlFilenameFor, kmlFor } from "./take-map.js";
 import { Interface } from "./ui.js";
 
-const app = { data: null, field: null, core: null, ui: null, coreMaps: [], corePoint: null, selected: null, context: null, bookEncounter: null, activeEncounter: null, tile: null, stray: null, drift: null, takeMode: false, trail: [], history: [], seenEncounterIds: [], seenPassageIds: [], seenNodeIds: [], recentConceptIds: [] };
+const app = { data: null, field: null, core: null, ui: null, annotations: null, mapAnnotations: [], annotationsVisible: true, activeAnnotationId: null, annotationMode: false, annotationFormUrl: null, annotationArrivalFocused: false, coreMaps: [], corePoint: null, selected: null, context: null, bookEncounter: null, activeEncounter: null, tile: null, stray: null, drift: null, takeMode: false, trail: [], history: [], seenEncounterIds: [], seenPassageIds: [], seenNodeIds: [], recentConceptIds: [] };
 
 function pushTrail(label, id, why = null) {
   const last = app.trail.at(-1);
@@ -56,7 +57,38 @@ function selectionOptions(map, interaction) {
 
 function render() {
   if (!app.selected) return;
-  app.ui.renderCore({ map: app.selected, coreMaps: app.coreMaps, encounter: app.activeEncounter || app.bookEncounter, tile: app.tile, lateral: app.stray, drift: app.drift });
+  app.ui.renderCore({ map: app.selected, coreMaps: app.coreMaps, encounter: app.activeEncounter || app.bookEncounter, tile: app.tile, lateral: app.stray, drift: app.drift, annotations: app.mapAnnotations, annotationsVisible: app.annotationsVisible, activeAnnotationId: app.activeAnnotationId, annotationMode: app.annotationMode, annotationFormUrl: app.annotationFormUrl });
+}
+
+async function refreshAnnotations({ force = false } = {}) {
+  if (!app.annotations || !app.selected) return;
+  const selectedId = app.selected.id;
+  try {
+    await app.annotations.refresh({ force });
+  } catch (error) {
+    // A public note feed must never interrupt the map. The selected layer and
+    // its source record remain fully usable if Google Sheets is momentarily
+    // unavailable.
+    console.warn("Could not refresh annotations.", error);
+  }
+  if (!app.selected || app.selected.id !== selectedId) return;
+  app.mapAnnotations = app.annotations.forMap(selectedId);
+  if (!app.mapAnnotations.some((annotation) => annotation.id === app.activeAnnotationId)) {
+    const requested = new URLSearchParams(window.location.search).get("annotation");
+    app.activeAnnotationId = app.mapAnnotations.some((annotation) => annotation.id === requested)
+      ? requested
+      : app.mapAnnotations[0]?.id || null;
+  }
+  const requested = new URLSearchParams(window.location.search).get("annotation");
+  if (requested && !app.annotationArrivalFocused) {
+    const arrival = app.mapAnnotations.find((annotation) => annotation.id === requested);
+    if (arrival) {
+      app.annotationArrivalFocused = true;
+      app.field.focusMap(app.selected, { point: arrival.context.point });
+    }
+  }
+  app.field.setAnnotations(app.mapAnnotations, { visible: app.annotationsVisible, activeId: app.activeAnnotationId });
+  render();
 }
 
 function selectMap(map, { keepEncounter = false, trailWhy = null, focus = true, interaction = "select-map" } = {}) {
@@ -72,11 +104,19 @@ function selectMap(map, { keepEncounter = false, trailWhy = null, focus = true, 
   // Temporal drift is an occasional consequence of a conceptual dérive, not
   // a persistent competing prompt on every historical map layer.
   app.drift = null;
+  app.annotationMode = false;
+  app.annotationFormUrl = null;
+  app.annotationsVisible = true;
+  app.field.setAnnotationMode(false);
+  app.mapAnnotations = app.annotations?.forMap(map.id) || [];
+  if (!app.mapAnnotations.some((annotation) => annotation.id === app.activeAnnotationId)) app.activeAnnotationId = null;
   app.core.select(map, { focus });
   app.field.showRaster(map, { focus });
+  app.field.setAnnotations(app.mapAnnotations, { visible: app.annotationsVisible, activeId: app.activeAnnotationId });
   pushTrail(`${map.city} ${map.year}`, map.id, trailWhy || "Selected from the temporal stack; X/Y remains the map’s geographic footprint and Z is its historical position.");
   recordEncounter(visibleEncounter?.fragment);
   render();
+  refreshAnnotations();
 }
 
 function previewCore(maps, lngLat) {
@@ -194,7 +234,7 @@ function acceptDrift(mapId) {
 }
 
 function leaveCore() {
-  app.core.leave(); app.field.leaveCore(); app.coreMaps = []; app.corePoint = null; app.selected = null; app.context = null; app.bookEncounter = null; app.activeEncounter = null; app.stray = null; app.drift = null; app.takeMode = false; app.history = []; app.ui.clearTakeMap(); app.ui.field();
+  app.core.leave(); app.field.leaveCore(); app.coreMaps = []; app.corePoint = null; app.selected = null; app.context = null; app.bookEncounter = null; app.activeEncounter = null; app.stray = null; app.drift = null; app.takeMode = false; app.annotationMode = false; app.annotationFormUrl = null; app.mapAnnotations = []; app.activeAnnotationId = null; app.history = []; app.ui.clearTakeMap(); app.ui.field();
 }
 
 function beginTakeMap() {
@@ -213,6 +253,61 @@ function resumeTakeMap() { render(); }
 function exportMap(kind) {
   if (!app.selected) return;
   if (kind === "kml") downloadText(kmlFilenameFor(app.selected), kmlFor(app.selected), "application/vnd.google-earth.kml+xml");
+}
+
+function setBasemap(mode) { app.field.setBasemap(mode); }
+
+function setRasterOpacity(opacity) { app.field.setRasterOpacity(opacity); }
+
+function toggleAnnotations() {
+  if (!app.selected || !app.mapAnnotations.length) return;
+  app.annotationsVisible = !app.annotationsVisible;
+  app.field.setAnnotationVisibility(app.annotationsVisible);
+  render();
+}
+
+function toggleAnnotationMode() {
+  if (!app.selected || !app.annotations?.live) return;
+  app.annotationMode = !app.annotationMode;
+  if (app.annotationMode) app.annotationFormUrl = null;
+  app.field.setAnnotationMode(app.annotationMode);
+  render();
+}
+
+function stepAnnotation(direction) {
+  if (!app.mapAnnotations.length) return;
+  const current = app.mapAnnotations.findIndex((annotation) => annotation.id === app.activeAnnotationId);
+  const next = (Math.max(0, current) + direction + app.mapAnnotations.length) % app.mapAnnotations.length;
+  app.activeAnnotationId = app.mapAnnotations[next].id;
+  app.annotationsVisible = true;
+  app.field.setAnnotations(app.mapAnnotations, { visible: true, activeId: app.activeAnnotationId });
+  render();
+}
+
+function selectAnnotation(annotation) {
+  if (!annotation || annotation.context.mapId !== app.selected?.id) return;
+  app.annotationMode = false;
+  app.annotationsVisible = true;
+  app.activeAnnotationId = annotation.id;
+  app.field.setAnnotationMode(false);
+  app.field.setAnnotations(app.mapAnnotations, { visible: true, activeId: annotation.id });
+  render();
+}
+
+function placeAnnotation(point) {
+  if (!app.selected || !app.annotations?.live) return;
+  const url = app.annotations.buildFormUrl(annotationContext({
+    map: app.selected,
+    point,
+    core: app.corePoint,
+    camera: app.field.getAnnotationCamera(),
+    basemap: app.ui.groundState.mode,
+    opacity: app.ui.groundState.opacity
+  }));
+  app.annotationMode = false;
+  app.annotationFormUrl = url || null;
+  app.field.setAnnotationMode(false);
+  render();
 }
 
 function stepBack() {
@@ -235,6 +330,13 @@ function respondToMapGesture(cue) {
 function keyboard(event) {
   if (app.ui.bookEntryIsVisible()) return;
   if (document.querySelector("#help-dialog").open || !document.querySelector("#site-index").hidden || document.querySelector("#hyperbook-window").open || document.querySelector("#take-map-window").open) return;
+  if (app.annotationMode && event.key === "Escape") {
+    event.preventDefault();
+    app.annotationMode = false;
+    app.field.setAnnotationMode(false);
+    render();
+    return;
+  }
   if (event.key === "Escape" || event.key === "ArrowLeft") { event.preventDefault(); stepBack(); return; }
   if (!app.selected) return;
   if (event.key === "ArrowDown") { event.preventDefault(); moveTime("older"); }
@@ -244,8 +346,8 @@ function keyboard(event) {
 
 async function start() {
   try {
-    app.ui = new Interface({ node: followNode, time: moveTime, stray: acceptStray, drift: acceptDrift, aperture: openAperture, read: () => app.ui.openRead(), surface: leaveCore, back: stepBack, take: beginTakeMap, takeSelected: openTakeMap, resumeTake: resumeTakeMap, exportMap });
-    app.data = await loadData();
+    app.ui = new Interface({ node: followNode, time: moveTime, stray: acceptStray, drift: acceptDrift, aperture: openAperture, read: () => app.ui.openRead(), surface: leaveCore, back: stepBack, take: beginTakeMap, takeSelected: openTakeMap, resumeTake: resumeTakeMap, exportMap, basemap: setBasemap, rasterOpacity: setRasterOpacity, annotations: toggleAnnotations, annotate: toggleAnnotationMode, annotationStep: stepAnnotation });
+    [app.data, app.annotations] = await Promise.all([loadData(), AnnotationStore.load()]);
     app.ui.setBookEntryQuotes(app.data);
     app.core = new CoreView({
       onSelect: (map) => selectMap(map),
@@ -259,10 +361,28 @@ async function start() {
       onPreview: previewCore,
       onFieldEncounter: discoverField,
       onInteraction: respondToMapGesture,
-      onTileStatus: (status) => { app.tile = status; render(); }
+      onTileStatus: (status) => { app.tile = status; render(); },
+      onBasemapChange: (state) => app.ui.setGroundState(state),
+      onRasterOpacityChange: (state) => app.ui.setGroundState(state),
+      onAnnotationPlace: placeAnnotation,
+      onAnnotationSelect: selectAnnotation
     });
     await app.field.init();
     app.ui.field();
+    const requestedMapId = new URLSearchParams(window.location.search).get("map");
+    const requestedMap = app.data.maps.find((map) => map.id === requestedMapId);
+    if (requestedMap) {
+      const core = { lng: (requestedMap.bbox[0] + requestedMap.bbox[2]) / 2, lat: (requestedMap.bbox[1] + requestedMap.bbox[3]) / 2 };
+      const layers = app.data.maps.filter((map) => map.bbox[0] <= core.lng && map.bbox[2] >= core.lng && map.bbox[1] <= core.lat && map.bbox[3] >= core.lat)
+        .sort((a, b) => a.year - b.year || a.title.localeCompare(b.title));
+      app.ui.dismissBookEntry();
+      app.corePoint = core;
+      app.coreMaps = layers.length ? layers : [requestedMap];
+      app.field.enterCore(core, app.coreMaps);
+      app.core.enter(app.coreMaps, core);
+      app.ui.lockedCore(app.coreMaps);
+      selectMap(requestedMap, { focus: true, interaction: "annotation-link", trailWhy: "Arrived through a map annotation." });
+    }
     document.addEventListener("keydown", keyboard);
   } catch (error) {
     const directFile = window.location.protocol === "file:";
@@ -276,7 +396,7 @@ async function start() {
 
 // A module should evaluate once, but this guard keeps embedded-browser reload
 // quirks from registering a second set of map and interface listeners.
-if (!window.__hypercitiesPrototypeStarted) {
-  window.__hypercitiesPrototypeStarted = true;
+if (!window.__hypercitiesStarted) {
+  window.__hypercitiesStarted = true;
   start();
 }

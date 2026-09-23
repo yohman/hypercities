@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101111" />
+    <title>HyperCities — Annotations</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="annotations-page">
+    <main class="annotations-shell">
+      <header class="annotations-header">
+        <a class="wordmark" href="./" aria-label="Return to HyperCities">HYPERCITIES</a>
+        <p>ANNOTATIONS</p>
+        <button id="annotations-refresh" type="button">REFRESH</button>
+      </header>
+      <section class="annotations-intro">
+        <p class="annotations-kicker">The public margin</p>
+        <h1>Notes left on the maps.</h1>
+        <p>Each annotation returns to its exact historical layer and coordinate.</p>
+      </section>
+      <section id="annotations-list" class="annotations-list" aria-live="polite">
+        <p class="annotations-state">Opening the annotation stream…</p>
+      </section>
+    </main>
+    <script type="module" src="./js/annotations-page.js"></script>
+  </body>
+</html>

@@ -3,6 +3,7 @@ import { asPolygon, containsCoordinate, tileDiagnostic, tileTemplate } from "./d
 // HyperCities book-cover red, with a quieter shade for unselected extents.
 const RED = [166, 42, 38];
 const RED_BRIGHT = [218, 56, 51];
+const ESRI_WORLD_IMAGERY = "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}";
 
 function grayscale(color, dimming = 0.45) {
   if (typeof color !== "string") return null;
@@ -28,10 +29,14 @@ function grayscale(color, dimming = 0.45) {
 }
 
 export class MapView {
-  constructor({ maps, onCore, onDepth, onPreview, onFieldEncounter, onInteraction, onTileStatus }) {
-    Object.assign(this, { maps, onCore, onDepth, onPreview, onFieldEncounter, onInteraction, onTileStatus, hoverIds: new Set() });
+  constructor({ maps, onCore, onDepth, onPreview, onFieldEncounter, onInteraction, onTileStatus, onBasemapChange, onRasterOpacityChange, onAnnotationPlace, onAnnotationSelect }) {
+    Object.assign(this, { maps, onCore, onDepth, onPreview, onFieldEncounter, onInteraction, onTileStatus, onBasemapChange, onRasterOpacityChange, onAnnotationPlace, onAnnotationSelect, hoverIds: new Set(), annotations: [] });
     this.rasterLayerId = "historical-raster";
     this.rasterSourceId = "historical-raster-source";
+    this.satelliteLayerId = "esri-world-imagery";
+    this.satelliteSourceId = "esri-world-imagery-source";
+    this.basemapMode = "dark";
+    this.rasterOpacity = 1;
   }
 
   async init() {
@@ -45,6 +50,8 @@ export class MapView {
     });
     await new Promise((resolve) => this.map.once("load", resolve));
     this.neutraliseBasemap();
+    this.darkBasemapLayerIds = (this.map.getStyle().layers || []).map((layer) => layer.id);
+    this.installSatelliteBasemap();
     this.overlay = new deck.MapboxOverlay({ interleaved: true, layers: [] });
     this.map.addControl(this.overlay);
     this.map.on("mousemove", (event) => this.handleMove(event.lngLat));
@@ -61,6 +68,52 @@ export class MapView {
       }
     });
     this.renderFootprints();
+    this.onBasemapChange?.({ mode: this.basemapMode });
+    this.onRasterOpacityChange?.({ opacity: this.rasterOpacity, hasHistorical: false });
+  }
+
+  installSatelliteBasemap() {
+    if (!this.map.getSource(this.satelliteSourceId)) {
+      this.map.addSource(this.satelliteSourceId, {
+        type: "raster",
+        tiles: [ESRI_WORLD_IMAGERY],
+        tileSize: 256,
+        maxzoom: 19,
+        attribution: "© Esri"
+      });
+    }
+    if (!this.map.getLayer(this.satelliteLayerId)) {
+      this.map.addLayer({
+        id: this.satelliteLayerId,
+        type: "raster",
+        source: this.satelliteSourceId,
+        layout: { visibility: "none" }
+      });
+    }
+  }
+
+  setBasemap(mode) {
+    if (!this.map || !["dark", "satellite"].includes(mode)) return;
+    const satellite = mode === "satellite";
+    this.darkBasemapLayerIds.forEach((id) => {
+      if (!this.map.getLayer(id)) return;
+      this.map.setLayoutProperty(id, "visibility", satellite ? "none" : "visible");
+    });
+    if (this.map.getLayer(this.satelliteLayerId)) {
+      this.map.setLayoutProperty(this.satelliteLayerId, "visibility", satellite ? "visible" : "none");
+    }
+    this.basemapMode = mode;
+    this.onBasemapChange?.({ mode });
+  }
+
+  setRasterOpacity(opacity) {
+    const next = Math.max(0, Math.min(1, Number(opacity)));
+    if (!Number.isFinite(next)) return;
+    this.rasterOpacity = next;
+    if (this.map?.getLayer(this.rasterLayerId)) {
+      this.map.setPaintProperty(this.rasterLayerId, "raster-opacity", next);
+    }
+    this.onRasterOpacityChange?.({ opacity: next, hasHistorical: Boolean(this.map?.getLayer(this.rasterLayerId)) });
   }
 
   neutraliseBasemap() {
@@ -106,6 +159,10 @@ export class MapView {
   }
 
   handleClick(lngLat) {
+    if (this.coreActive && this.annotationMode) {
+      if (this.selectedMap && containsCoordinate(this.selectedMap, lngLat)) this.onAnnotationPlace?.(lngLat);
+      return;
+    }
     if (!this.coreActive) this.onCore(this.maps.filter((map) => containsCoordinate(map, lngLat)), lngLat);
   }
 
@@ -184,6 +241,23 @@ export class MapView {
         parameters: { depthTest: false }
       }));
     }
+    if (this.annotationsVisible && this.annotations.length) {
+      layers.push(new deck.ScatterplotLayer({
+        id: "map-annotations",
+        data: this.annotations,
+        pickable: true,
+        filled: true,
+        stroked: true,
+        getPosition: (annotation) => [annotation.context.point.lng, annotation.context.point.lat],
+        getRadius: 8,
+        radiusUnits: "pixels",
+        getFillColor: (annotation) => annotation.id === this.activeAnnotationId ? [...RED_BRIGHT, 255] : [239, 233, 220, 235],
+        getLineColor: (annotation) => annotation.id === this.activeAnnotationId ? [255, 250, 240, 255] : [...RED_BRIGHT, 255],
+        getLineWidth: (annotation) => annotation.id === this.activeAnnotationId ? 2.5 : 1.7,
+        onClick: (info) => { if (info.object) this.onAnnotationSelect?.(info.object); },
+        updateTriggers: { getFillColor: [this.activeAnnotationId], getLineColor: [this.activeAnnotationId] }
+      }));
+    }
     this.overlay.setProps({ layers });
   }
 
@@ -206,27 +280,47 @@ export class MapView {
   showRaster(map, { focus = true } = {}) {
     this.removeRaster();
     this.selectedMapId = map.id;
+    this.selectedMap = map;
     this.renderFootprints();
     const diagnostic = tileDiagnostic(map);
     this.activeTile = diagnostic;
     this.onTileStatus(diagnostic);
     const template = tileTemplate(map);
-    if (!template || !this.map.isStyleLoaded()) return;
+    if (!template) {
+      this.onRasterOpacityChange?.({ opacity: this.rasterOpacity, hasHistorical: false });
+      if (focus) this.focusMap(map);
+      return;
+    }
     try {
       this.map.addSource(this.rasterSourceId, {
         type: "raster", tiles: [template], tileSize: 256,
         minzoom: Math.max(0, map.minZoom), maxzoom: Math.max(map.minZoom || 0, map.maxZoom || 22), bounds: map.bbox
       });
-      this.map.addLayer({ id: this.rasterLayerId, type: "raster", source: this.rasterSourceId, paint: { "raster-opacity": 1 } });
-      if (focus) {
-        this.map.fitBounds([[map.bbox[0], map.bbox[1]], [map.bbox[2], map.bbox[3]]], {
-          padding: this.focusPadding(), duration: 620, maxZoom: 13
-        });
-      }
+      this.map.addLayer({ id: this.rasterLayerId, type: "raster", source: this.rasterSourceId, paint: { "raster-opacity": this.rasterOpacity } });
+      this.onRasterOpacityChange?.({ opacity: this.rasterOpacity, hasHistorical: true });
       this.onTileStatus({ ...diagnostic, state: "loading", message: `${diagnostic.message} Browser is requesting secure raster tiles.` });
     } catch (error) {
       this.onTileStatus({ state: "failed", message: `Raster configuration failed: ${error.message}` });
     }
+    // A selection remains a geographic movement even if its archival source
+    // fails. Respect the source minimum: below it, valid tiles stay invisible.
+    if (focus) this.focusMap(map);
+  }
+
+  focusMap(map, { point = null } = {}) {
+    const bounds = [[map.bbox[0], map.bbox[1]], [map.bbox[2], map.bbox[3]]];
+    const padding = this.focusPadding();
+    const camera = this.map.cameraForBounds(bounds, { padding, maxZoom: 19 });
+    if (!camera) return;
+    const minimum = map.tileBase ? Math.max(0, map.minZoom || 0) : 0;
+    const target = point && containsCoordinate(map, point)
+      ? [point.lng, point.lat]
+      : [(map.bbox[0] + map.bbox[2]) / 2, (map.bbox[1] + map.bbox[3]) / 2];
+    const options = { center: target, zoom: Math.max(camera.zoom, minimum), duration: 620 };
+    if (typeof padding !== "number") {
+      options.offset = [(padding.left - padding.right) / 2, (padding.top - padding.bottom) / 2];
+    }
+    this.map.easeTo(options);
   }
 
   focusPadding() {
@@ -244,10 +338,15 @@ export class MapView {
     if (this.map.getLayer(this.rasterLayerId)) this.map.removeLayer(this.rasterLayerId);
     if (this.map.getSource(this.rasterSourceId)) this.map.removeSource(this.rasterSourceId);
     this.activeTile = null;
+    this.onRasterOpacityChange?.({ opacity: this.rasterOpacity, hasHistorical: false });
   }
 
   leaveCore() {
     this.removeRaster();
+    this.setAnnotationMode(false);
+    this.annotations = [];
+    this.annotationsVisible = false;
+    this.activeAnnotationId = null;
     this.coreActive = false;
     this.coreCoordinate = null;
     this.coreIds = null;
@@ -255,5 +354,28 @@ export class MapView {
     this.timewellHoverId = null;
     this.map.getContainer().classList.remove("field-cored");
     this.renderFootprints();
+  }
+
+  setAnnotations(annotations = [], { visible = true, activeId = null } = {}) {
+    this.annotations = Array.isArray(annotations) ? annotations : [];
+    this.annotationsVisible = Boolean(visible);
+    this.activeAnnotationId = activeId || null;
+    this.renderFootprints();
+  }
+
+  setAnnotationVisibility(visible) {
+    this.annotationsVisible = Boolean(visible);
+    this.renderFootprints();
+  }
+
+  setAnnotationMode(active) {
+    this.annotationMode = Boolean(active);
+    this.map?.getContainer().classList.toggle("annotation-mode", this.annotationMode);
+  }
+
+  getAnnotationCamera() {
+    if (!this.map) return null;
+    const center = this.map.getCenter();
+    return { lng: center.lng, lat: center.lat, zoom: this.map.getZoom(), bearing: this.map.getBearing(), pitch: this.map.getPitch() };
   }
 }

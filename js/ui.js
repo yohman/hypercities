@@ -30,6 +30,25 @@ function strayCopy(lateral) {
   return `<button class="stray-path" type="button" data-node="${escapeHtml(lateral.id)}" aria-label="Stray through ${escapeHtml(lateral.label)}"><span class="stray-symbol" aria-hidden="true"><i></i><i></i><i></i></span><span class="stray-copy"><small>STRAY</small><strong>through ${escapeHtml(lateral.label)}</strong><em>${escapeHtml(kind)} · ${escapeHtml(assertion)}</em></span><span class="stray-arrow" aria-hidden="true">→</span></button>`;
 }
 
+function annotationCopy(annotations = [], activeId, visible, placing, formUrl = null) {
+  const count = annotations.length;
+  const currentIndex = Math.max(0, annotations.findIndex((annotation) => annotation.id === activeId));
+  const current = annotations[currentIndex] || annotations[0] || null;
+  const toggle = count
+    ? `<button class="annotation-summary" type="button" data-annotations-toggle aria-pressed="${visible ? "true" : "false"}"><i aria-hidden="true"></i><span>${visible ? "hide notes" : `${count} note${count === 1 ? "" : "s"}`}</span></button>`
+    : "";
+  const place = `<button class="annotation-quiet${placing ? " is-active" : ""}" type="button" data-annotation-place aria-pressed="${placing ? "true" : "false"}"><i aria-hidden="true"></i><span>${placing ? "cancel mark" : "annotate"}</span></button>`;
+  const form = formUrl ? `<a class="annotation-form-link" href="${escapeHtml(formUrl)}" target="_blank" rel="noopener">open annotation form ↗</a>` : "";
+  if (!visible || !current) return { place, body: `${toggle}${form}` };
+  const previousDisabled = count < 2 ? " disabled" : "";
+  const nextDisabled = count < 2 ? " disabled" : "";
+  const tag = current.tag ? `<span class="annotation-tag">#${escapeHtml(current.tag)}</span>` : "";
+  return {
+    place,
+    body: `${toggle}${form}<section class="annotation-peek" aria-live="polite"><p>${escapeHtml(current.text)}</p><nav aria-label="Move through map notes"><button type="button" data-annotation-step="-1" aria-label="Previous annotation"${previousDisabled}>←</button><span>${currentIndex + 1} / ${count}</span><button type="button" data-annotation-step="1" aria-label="Next annotation"${nextDisabled}>→</button>${tag}</nav></section>`
+  };
+}
+
 const BOOK_PAGE_COUNT = 212;
 // The source PDF begins with a few blank publication leaves. READ begins at
 // the printed table of contents, while the previous controls still expose the
@@ -104,6 +123,13 @@ export class Interface {
     this.indexToggle = document.querySelector("#index-toggle");
     this.indexDrift = document.querySelector("#index-drift");
     this.surface = document.querySelector("#surface");
+    this.groundToggle = document.querySelector("#ground-toggle");
+    this.groundControl = document.querySelector("#ground-control");
+    this.groundButtons = [...this.groundControl.querySelectorAll("[data-basemap]")];
+    this.historicalOpacity = document.querySelector("#historical-opacity");
+    this.historicalOpacityValue = document.querySelector("#historical-opacity-value");
+    this.satelliteCredit = document.querySelector("#satellite-credit");
+    this.groundState = { mode: "dark", opacity: 1, hasHistorical: false };
     this.window = document.querySelector("#hyperbook-window");
     this.windowContent = document.querySelector("#hyperbook-window-content");
     this.bookReader = null;
@@ -112,6 +138,13 @@ export class Interface {
     this.renderBookEntryQuote();
     this.bookEntryDismiss.addEventListener("click", () => this.dismissBookEntry());
     this.bookEntryRead.addEventListener("click", () => this.openBookEntryQuote());
+    this.groundToggle.addEventListener("click", () => this.toggleGround());
+    this.groundButtons.forEach((button) => button.addEventListener("click", () => this.actions.basemap(button.dataset.basemap)));
+    this.historicalOpacity.addEventListener("input", () => this.actions.rasterOpacity(Number(this.historicalOpacity.value) / 100));
+    document.addEventListener("pointerdown", (event) => {
+      if (this.groundControl.hidden || this.groundControl.contains(event.target) || this.groundToggle.contains(event.target)) return;
+      this.closeGround();
+    });
     document.querySelector("#help-toggle").addEventListener("click", () => this.help.showModal());
     document.querySelector("#help-close").addEventListener("click", () => this.help.close());
     this.indexToggle.addEventListener("click", () => {
@@ -191,6 +224,12 @@ export class Interface {
         }
         return;
       }
+      if (!this.groundControl.hidden && event.key === "Escape") {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        this.closeGround();
+        return;
+      }
       if (!this.window.open || !this.bookReader) return;
       if (event.key === "ArrowLeft") {
         event.preventDefault();
@@ -228,6 +267,34 @@ export class Interface {
 
   bookEntryIsVisible() {
     return !this.bookEntry.hidden;
+  }
+
+  toggleGround() {
+    if (this.groundControl.hidden) {
+      this.groundControl.hidden = false;
+      this.groundToggle.setAttribute("aria-expanded", "true");
+      return;
+    }
+    this.closeGround();
+  }
+
+  closeGround() {
+    this.groundControl.hidden = true;
+    this.groundToggle.setAttribute("aria-expanded", "false");
+  }
+
+  setGroundState(next = {}) {
+    this.groundState = { ...this.groundState, ...next };
+    const { mode, opacity, hasHistorical } = this.groundState;
+    this.groundButtons.forEach((button) => {
+      const selected = button.dataset.basemap === mode;
+      button.setAttribute("aria-pressed", String(selected));
+    });
+    this.groundControl.dataset.mode = mode;
+    this.historicalOpacity.value = String(Math.round(opacity * 100));
+    this.historicalOpacity.disabled = !hasHistorical;
+    this.historicalOpacityValue.textContent = hasHistorical ? `${Math.round(opacity * 100)}%` : "—";
+    this.satelliteCredit.hidden = mode !== "satellite";
   }
 
   setBookEntryQuotes(data) {
@@ -465,7 +532,7 @@ export class Interface {
     this.fieldEncounter.replaceChildren();
   }
 
-  renderCore({ map, coreMaps, encounter, tile, lateral, drift }) {
+  renderCore({ map, coreMaps, encounter, tile, lateral, drift, annotations = [], annotationsVisible = true, activeAnnotationId = null, annotationMode = false, annotationFormUrl = null }) {
     this.depth.hidden = true;
     this.fieldPrompt.hidden = true;
     this.touchState = { map, coreMaps, lateral };
@@ -485,9 +552,10 @@ export class Interface {
     // in the dérive. It stays with the map identity rather than competing with
     // the book movement and the visitor's trace.
     const takeOffer = `<button class="take-map-quiet" type="button" data-take-map><i aria-hidden="true"></i><span>take map</span></button>`;
+    const notes = annotationCopy(annotations, activeAnnotationId, annotationsVisible, annotationMode, annotationFormUrl);
     this.surface.hidden = false;
     const arrival = fragment?.arrival?.label || "a thread in the book";
-    this.encounterContent.innerHTML = `<div class="encounter-flow"><section class="encounter-stage map-stage"><p class="stage-kicker">selected map</p><p class="map-marker">${escapeHtml(map.city)} · ${map.year}</p><div class="map-title-row"><h2>${escapeHtml(map.title)}</h2>${takeOffer}</div>${mapRecord(map)}</section><section class="encounter-stage book-stage"><p class="stage-kicker">the book enters <span>${escapeHtml(arrival)}</span></p>${title || quote}</section>${driftOffer || offer ? `<section class="encounter-stage stray-stage">${driftOffer || offer}</section>` : ""}</div>`;
+    this.encounterContent.innerHTML = `<div class="encounter-flow"><section class="encounter-stage map-stage"><p class="stage-kicker">selected map</p><p class="map-marker">${escapeHtml(map.city)} · ${map.year}</p><div class="map-title-row"><h2>${escapeHtml(map.title)}</h2><span class="map-quiet-actions">${notes.place}${takeOffer}</span></div>${mapRecord(map)}${notes.body ? `<div class="map-annotations">${notes.body}</div>` : ""}</section><section class="encounter-stage book-stage"><p class="stage-kicker">the book enters <span>${escapeHtml(arrival)}</span></p>${title || quote}</section>${driftOffer || offer ? `<section class="encounter-stage stray-stage">${driftOffer || offer}</section>` : ""}</div>`;
     this.bindTraversal(this.encounterContent);
   }
 
@@ -518,6 +586,9 @@ export class Interface {
     element.querySelectorAll("[data-aperture]").forEach((button) => button.addEventListener("click", () => this.actions.aperture(button.dataset.aperture)));
     element.querySelectorAll("[data-drift]").forEach((button) => button.addEventListener("click", () => this.actions.drift(button.dataset.drift)));
     element.querySelectorAll("[data-take-map]").forEach((button) => button.addEventListener("click", () => this.actions.takeSelected()));
+    element.querySelectorAll("[data-annotations-toggle]").forEach((button) => button.addEventListener("click", () => this.actions.annotations()));
+    element.querySelectorAll("[data-annotation-place]").forEach((button) => button.addEventListener("click", () => this.actions.annotate()));
+    element.querySelectorAll("[data-annotation-step]").forEach((button) => button.addEventListener("click", () => this.actions.annotationStep(Number(button.dataset.annotationStep))));
   }
 
   openAperture(aperture) {
