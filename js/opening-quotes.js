@@ -1,6 +1,18 @@
-// A local fall-back corpus keeps the opening legible when the site is opened
-// directly from disk. The loaded Hyperbook enlarges this to the full 40-quote
-// selection and adds exact page-highlight rectangles.
+// A small local fall-back keeps the opening legible before the Hyperbook loads.
+// The curated source selection below spans every major section, including the
+// project Windows. Numbers refer to exact quotation objects in hyperbook.json;
+// no opening passage is rewritten or detached from its printed page.
+export const openingQuoteGroups = Object.freeze([
+  { section: "section:preface", numbers: [1, 7] },
+  { section: "section:lexicon", numbers: [10, 11, 12, 13, 14, 16, 154] },
+  { section: "section:humanities-digital-humanities", numbers: [18, 19, 21, 29, 36, 42, 47, 48, 49, 50, 155] },
+  { section: "section:windows-los-angeles", numbers: [51, 52, 53, 61, 62, 156] },
+  { section: "section:view-above-below", numbers: [67, 77, 79, 81, 83, 86, 90, 93, 94, 157, 158] },
+  { section: "section:windows-rome-tehran", numbers: [96, 99, 100, 104, 105] },
+  { section: "section:mapping-events", numbers: [111, 112, 115, 119, 125, 126, 130, 134, 159] },
+  { section: "section:gallery-tohoku", numbers: [138, 139, 149, 151, 152, 153, 160] }
+]);
+
 export const openingQuotes = Object.freeze([
   { id: "quote:001-a-hypercity-is-a-real-city-overlaid-with-thick-infor", page: 6, text: "A HyperCity is a real city overlaid with thick information networks that not only catalyze the present but also go back in time to document the past and go forward to project future possibilities." },
   { id: "quote:009-the-book-also-features-contributions-written-and-des", page: 10, text: "The book also features contributions written and designed by project leaders that open up as“windows” onto the HyperCities idea and digital cultural mapping more generally." },

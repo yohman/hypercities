@@ -1,6 +1,6 @@
 import { tileTemplate } from "./data.js";
 import { hostedNetworkKmlUrlFor, mapLibreSnippetFor } from "./take-map.js";
-import { openingQuotes } from "./opening-quotes.js";
+import { openingQuotes, openingQuoteGroups } from "./opening-quotes.js";
 
 function escapeHtml(value) { return String(value ?? "").replace(/[&<>'"]/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" }[char])); }
 function pages(provenance) { if (!provenance?.printedPages) return ""; const [start, end] = provenance.printedPages; return start === end ? `book p. ${start}` : `book pp. ${start}–${end}`; }
@@ -55,13 +55,6 @@ const BOOK_PAGE_COUNT = 212;
 // complete scanned sequence.
 const BOOK_READ_START_PAGE = 5;
 const SVG_NS = "http://www.w3.org/2000/svg";
-const BOOK_ENTRY_QUOTE_IDS = Object.freeze([
-  "quote:001-a-hypercity-is-a-real-city-overlaid-with-thick-infor", "quote:002-hyper-adds-to-extends-and-proliferates-many-tex", "quote:003-to-address-the-first-question-the-book-brings-toget", "quote:006-as-the-book-progresses-the-long-form-narratives-bre", "quote:009-the-book-also-features-contributions-written-and-des",
-  "quote:011-every-story-matters-every-voice-can-be-heard-every", "quote:012-imagine-a-search-and-discovery-tool-for-this-web-in", "quote:010-in-this-respect-hypercities-are-much-larger-than-tw", "quote:154-mapping-is-not-a-one-time-thing-and-maps-are-not-st", "quote:014-thick-maps-are-sometimes-called-deep-maps-because-t", "quote:013-thick-maps-are-not-simply-more-data-on-maps-but-in", "quote:016-this-is-why-hypercities-is-not-primarily-a-technolog",
-  "quote:019-in-other-words-maybe-the-past-is-always-there-quiet", "quote:155-as-the-flaneur-walked-along-the-streets-he-was-cond", "quote:018-i-wonder-what-would-it-mean-to-drive-downward-into", "quote:024-that-s-because-all-of-these-pasts-co-exist-in-vario", "quote:029-but-rather-than-taking-chronology-as-the-sole-organi", "quote:030-through-the-google-maps-and-earth-apis-hypercities",
-  "quote:036-the-project-began-with-the-protests-in-tahrir-square", "quote:038-this-shifted-the-problem-of-preservation-from-one-of", "quote:044-instead-they-offer-various-optics-for-seeing-remem", "quote:048-thick-mapping-begins-to-look-like-an-ever-expanding", "quote:156-the-historian-who-maps-the-past-makes-these-ghosts-v", "quote:090-as-much-as-thick-mapping-is-interested-in-denatural", "quote:093-google-maps-makes-choices-about-what-counts-for-accu", "quote:096-from-its-inception-the-dynamic-hypercities-platform", "quote:099-looking-forward-it-is-not-enough-to-fly-from-paragr",
-  "quote:105-many-are-very-hard-to-watch-as-they-are-maps-of-eve", "quote:112-these-archives-are-not-simply-documents-of-the-past", "quote:159-the-event-has-no-end-time", "quote:119-events-are-ever-thicker-networks-of-events-no-matte", "quote:123-the-database-of-tweets-thus-represents-a-geographica", "quote:126-in-every-case-the-archive-is-less-than-the-event-a", "quote:130-it-is-no-longer-a-question-of-whether-or-not-social", "quote:132-at-the-same-time-the-team-used-the-perspectives-and", "quote:137-living-abroad-gave-me-the-opportunity-to-analyze-the", "quote:139-the-memories-of-the-past-from-so-many-distant-locati", "quote:145-the-openness-of-the-data-remains-an-important-long", "quote:153-the-event-has-many-lives-and-afterlives-through-haun", "quote:160-the-event-remains"
-]);
 
 function randomBetween(min, max) { return min + Math.random() * (max - min); }
 function sourceQuoteText(text) {
@@ -105,6 +98,8 @@ export class Interface {
     this.bookEntryCopy = document.querySelector(".book-entry-copy");
     this.bookEntryQuote = document.querySelector("#book-entry-quote");
     this.bookEntryRead = document.querySelector("#book-entry-read");
+    this.bookEntryNext = document.querySelector("#book-entry-next");
+    this.bookEntryEnter = document.querySelector("#book-entry-enter");
     this.fieldPrompt = document.querySelector("#field-prompt");
     this.fieldEncounter = document.querySelector("#field-encounter");
     this.encounter = document.querySelector("#encounter");
@@ -138,6 +133,8 @@ export class Interface {
     this.renderBookEntryQuote();
     this.bookEntryDismiss.addEventListener("click", () => this.dismissBookEntry());
     this.bookEntryRead.addEventListener("click", () => this.openBookEntryQuote());
+    this.bookEntryNext.addEventListener("click", () => this.renderBookEntryQuote(this.currentBookEntryQuote?.id));
+    this.bookEntryEnter.addEventListener("click", () => this.dismissBookEntry());
     this.groundToggle.addEventListener("click", () => this.toggleGround());
     this.groundButtons.forEach((button) => button.addEventListener("click", () => this.actions.basemap(button.dataset.basemap)));
     this.historicalOpacity.addEventListener("input", () => this.actions.rasterOpacity(Number(this.historicalOpacity.value) / 100));
@@ -209,6 +206,7 @@ export class Interface {
     });
     document.addEventListener("keydown", (event) => {
       if (!this.bookEntry.hidden) {
+        if (this.bookEntryCopy.contains(document.activeElement) && ["Enter", " "].includes(event.key)) return;
         if (["Enter", " ", "Escape"].includes(event.key)) {
           event.preventDefault();
           event.stopImmediatePropagation();
@@ -298,13 +296,17 @@ export class Interface {
   }
 
   setBookEntryQuotes(data) {
-    const quotes = BOOK_ENTRY_QUOTE_IDS
-      .map((id) => data.objects.get(id))
+    const quoteByNumber = new Map([...data.objects.values()]
+      .filter((object) => object.kind === "quotation")
+      .map((quote) => [Number(quote.id.slice(6, 9)), quote]));
+    const quotes = openingQuoteGroups
+      .flatMap((group) => group.numbers.map((number) => quoteByNumber.get(number)))
       .filter((quote) => quote?.kind === "quotation" && quote.provenance?.printedPages?.[0])
       .map((quote) => ({
         id: quote.id,
         page: quote.provenance.printedPages[0],
         text: sourceQuoteText(quote.text),
+        section: quote.provenance.sectionId,
         pageLocation: data.bookPageLocations?.[quote.id] || null
       }));
     if (!quotes.length) return;
@@ -313,11 +315,20 @@ export class Interface {
   }
 
   renderBookEntryQuote(avoidId = null) {
-    let previousId = null;
-    try { previousId = sessionStorage.getItem("hypercities-book-entry-quote"); } catch { /* file origins may deny storage */ }
-    const choices = this.bookEntryQuotes.filter((quote) => quote.id !== previousId && quote.id !== avoidId);
-    const quote = choices[Math.floor(Math.random() * choices.length)] || this.bookEntryQuotes[0];
-    try { sessionStorage.setItem("hypercities-book-entry-quote", quote.id); } catch { /* the current quotation is still usable */ }
+    let recent = [];
+    try { recent = JSON.parse(sessionStorage.getItem("hypercities-book-entry-recent") || "[]"); } catch { /* file origins may deny storage */ }
+    if (!Array.isArray(recent)) recent = [];
+    const currentSection = this.currentBookEntryQuote?.section;
+    const fresh = this.bookEntryQuotes.filter((quote) => !recent.includes(quote.id) && quote.id !== avoidId);
+    const differentSection = fresh.filter((quote) => quote.section !== currentSection);
+    const choices = differentSection.length ? differentSection : fresh.length ? fresh : this.bookEntryQuotes.filter((quote) => quote.id !== avoidId);
+    // Give each part of the book an equal opening, even when one chapter has
+    // many more quotable passages than a Window or the Tohoku gallery.
+    const sections = [...new Set(choices.map((candidate) => candidate.section))];
+    const section = sections[Math.floor(Math.random() * sections.length)];
+    const inSection = choices.filter((candidate) => candidate.section === section);
+    const quote = inSection[Math.floor(Math.random() * inSection.length)] || this.bookEntryQuotes[0];
+    try { sessionStorage.setItem("hypercities-book-entry-recent", JSON.stringify([...recent, quote.id].slice(-12))); } catch { /* the current quotation is still usable */ }
     this.currentBookEntryQuote = quote;
     this.bookEntryCopy.dataset.sourceQuote = quote.id;
     this.bookEntryQuote.textContent = `“${sourceQuoteText(quote.text)}”`;
