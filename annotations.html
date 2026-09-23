@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#101111" />
     <title>HyperCities — Annotations</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=annotation-density-1" />
   </head>
   <body class="annotations-page">
     <main class="annotations-shell">
       <header class="annotations-header">
-        <a class="wordmark" href="./" aria-label="Return to HyperCities">HYPERCITIES</a>
+        <div class="annotations-header-left"><a class="wordmark" href="./?enter=map" aria-label="Return to the HyperCities map">HYPERCITIES</a><a class="annotations-back" href="./?enter=map">← MAP</a></div>
         <p>ANNOTATIONS</p>
         <button id="annotations-refresh" type="button">REFRESH</button>
       </header>
@@ -18,11 +18,14 @@
         <p class="annotations-kicker">The public margin</p>
         <h1>Notes left on the maps.</h1>
         <p>Each annotation returns to its exact historical layer and coordinate.</p>
+        <p id="annotations-simulation" class="annotations-simulation" hidden></p>
+        <label class="annotations-search-label" for="annotations-search">FIND A MAP OR NOTE</label>
+        <input id="annotations-search" class="annotations-search" type="search" placeholder="Place, map, word, or tag" autocomplete="off" />
       </section>
       <section id="annotations-list" class="annotations-list" aria-live="polite">
         <p class="annotations-state">Opening the annotation stream…</p>
       </section>
     </main>
-    <script type="module" src="./js/annotations-page.js"></script>
+    <script type="module" src="./js/annotations-page.js?v=annotation-density-1"></script>
   </body>
 </html>

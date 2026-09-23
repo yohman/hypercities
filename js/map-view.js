@@ -4,6 +4,8 @@ import { asPolygon, containsCoordinate, tileDiagnostic, tileTemplate } from "./d
 const RED = [166, 42, 38];
 const RED_BRIGHT = [218, 56, 51];
 const ESRI_WORLD_IMAGERY = "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}";
+const NOTE_ICON = `data:image/svg+xml;charset=utf-8,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="40" height="48" viewBox="0 0 40 48"><path d="M20 2c-10 0-18 8-18 18 0 13 18 26 18 26s18-13 18-26C38 10 30 2 20 2Z" fill="#da3833" stroke="#f5eee4" stroke-width="2"/><path d="M12 15h16M12 20h16M12 25h11" stroke="#fffaf0" stroke-width="2" stroke-linecap="round"/></svg>')}`;
+const NOTE_ICON_PENDING = `data:image/svg+xml;charset=utf-8,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="40" height="48" viewBox="0 0 40 48"><path d="M20 2c-10 0-18 8-18 18 0 13 18 26 18 26s18-13 18-26C38 10 30 2 20 2Z" fill="#111212" stroke="#da3833" stroke-width="2"/><path d="M12 15h16M12 20h16M12 25h11" stroke="#fffaf0" stroke-width="2" stroke-linecap="round"/></svg>')}`;
 
 function grayscale(color, dimming = 0.45) {
   if (typeof color !== "string") return null;
@@ -29,8 +31,8 @@ function grayscale(color, dimming = 0.45) {
 }
 
 export class MapView {
-  constructor({ maps, onCore, onDepth, onPreview, onFieldEncounter, onInteraction, onTileStatus, onBasemapChange, onRasterOpacityChange, onAnnotationPlace, onAnnotationSelect }) {
-    Object.assign(this, { maps, onCore, onDepth, onPreview, onFieldEncounter, onInteraction, onTileStatus, onBasemapChange, onRasterOpacityChange, onAnnotationPlace, onAnnotationSelect, hoverIds: new Set(), annotations: [] });
+  constructor({ maps, onCore, onDepth, onPreview, onFieldEncounter, onInteraction, onTileStatus, onBasemapChange, onRasterOpacityChange, onAnnotationPlace, onAnnotationSelect, onAnnotationViewMove }) {
+    Object.assign(this, { maps, onCore, onDepth, onPreview, onFieldEncounter, onInteraction, onTileStatus, onBasemapChange, onRasterOpacityChange, onAnnotationPlace, onAnnotationSelect, onAnnotationViewMove, hoverIds: new Set(), annotations: [] });
     this.rasterLayerId = "historical-raster";
     this.rasterSourceId = "historical-raster-source";
     this.satelliteLayerId = "esri-world-imagery";
@@ -55,7 +57,16 @@ export class MapView {
     this.overlay = new deck.MapboxOverlay({ interleaved: true, layers: [] });
     this.map.addControl(this.overlay);
     this.map.on("mousemove", (event) => this.handleMove(event.lngLat));
-    this.map.on("click", (event) => this.handleClick(event.lngLat));
+    this.map.on("click", (event) => { if (!this.annotationMode) this.handleClick(event.lngLat); });
+    // A note is placed on the visible raster, so use the canvas's own click
+    // coordinates while this mode is armed. It remains reliable when a deck.gl
+    // layer is present and avoids treating a map pan as a placement.
+    this.map.getCanvas().addEventListener("click", (event) => {
+      if (!this.annotationMode) return;
+      const bounds = this.map.getCanvas().getBoundingClientRect();
+      this.handleClick(this.map.unproject([event.clientX - bounds.left, event.clientY - bounds.top]));
+    }, true);
+    this.map.on("move", () => this.onAnnotationViewMove?.());
     this.map.on("zoomstart", (event) => { this.visitorZooming = Boolean(event.originalEvent); });
     this.map.on("zoomend", () => {
       if (this.coreActive && this.visitorZooming) this.onInteraction?.("zoom-change");
@@ -160,7 +171,7 @@ export class MapView {
 
   handleClick(lngLat) {
     if (this.coreActive && this.annotationMode) {
-      if (this.selectedMap && containsCoordinate(this.selectedMap, lngLat)) this.onAnnotationPlace?.(lngLat);
+      if (this.selectedMap) this.onAnnotationPlace?.(lngLat);
       return;
     }
     if (!this.coreActive) this.onCore(this.maps.filter((map) => containsCoordinate(map, lngLat)), lngLat);
@@ -242,20 +253,33 @@ export class MapView {
       }));
     }
     if (this.annotationsVisible && this.annotations.length) {
-      layers.push(new deck.ScatterplotLayer({
+      const crowded = this.annotations.length >= 50;
+      const noteSize = crowded ? 18 : this.annotations.length >= 20 ? 21 : 26;
+      layers.push(new deck.IconLayer({
         id: "map-annotations",
         data: this.annotations,
-        pickable: true,
-        filled: true,
-        stroked: true,
+        pickable: !this.annotationMode,
         getPosition: (annotation) => [annotation.context.point.lng, annotation.context.point.lat],
-        getRadius: 8,
-        radiusUnits: "pixels",
-        getFillColor: (annotation) => annotation.id === this.activeAnnotationId ? [...RED_BRIGHT, 255] : [239, 233, 220, 235],
-        getLineColor: (annotation) => annotation.id === this.activeAnnotationId ? [255, 250, 240, 255] : [...RED_BRIGHT, 255],
-        getLineWidth: (annotation) => annotation.id === this.activeAnnotationId ? 2.5 : 1.7,
+        getIcon: () => ({ url: NOTE_ICON, width: 40, height: 48, anchorX: 20, anchorY: 46 }),
+        getSize: (annotation) => annotation.id === this.activeAnnotationId || annotation.id === this.hoverAnnotationId ? noteSize + 7 : noteSize,
+        sizeUnits: "pixels",
+        onHover: (info) => {
+          const next = info.object?.id || null;
+          if (next === this.hoverAnnotationId) return;
+          this.hoverAnnotationId = next;
+          this.map.getCanvas().style.cursor = next ? "pointer" : "";
+          this.renderFootprints();
+        },
         onClick: (info) => { if (info.object) this.onAnnotationSelect?.(info.object); },
-        updateTriggers: { getFillColor: [this.activeAnnotationId], getLineColor: [this.activeAnnotationId] }
+        updateTriggers: { getSize: [this.activeAnnotationId, this.hoverAnnotationId, noteSize] }
+      }));
+    }
+    if (this.pendingAnnotationPoint) {
+      layers.push(new deck.IconLayer({
+        id: "pending-map-annotation", data: [this.pendingAnnotationPoint], pickable: false,
+        getPosition: (point) => [point.lng, point.lat],
+        getIcon: () => ({ url: NOTE_ICON_PENDING, width: 40, height: 48, anchorX: 20, anchorY: 46 }),
+        getSize: 32, sizeUnits: "pixels"
       }));
     }
     this.overlay.setProps({ layers });
@@ -345,6 +369,7 @@ export class MapView {
     this.removeRaster();
     this.setAnnotationMode(false);
     this.annotations = [];
+    this.pendingAnnotationPoint = null;
     this.annotationsVisible = false;
     this.activeAnnotationId = null;
     this.coreActive = false;
@@ -360,17 +385,30 @@ export class MapView {
     this.annotations = Array.isArray(annotations) ? annotations : [];
     this.annotationsVisible = Boolean(visible);
     this.activeAnnotationId = activeId || null;
+    this.hoverAnnotationId = null;
+    if (this.map) this.map.getCanvas().style.cursor = "";
     this.renderFootprints();
   }
 
   setAnnotationVisibility(visible) {
     this.annotationsVisible = Boolean(visible);
+    if (!visible) { this.hoverAnnotationId = null; this.map?.getCanvas().style.setProperty("cursor", ""); }
     this.renderFootprints();
   }
 
   setAnnotationMode(active) {
     this.annotationMode = Boolean(active);
+    if (active) { this.hoverAnnotationId = null; this.map?.getCanvas().style.setProperty("cursor", ""); }
     this.map?.getContainer().classList.toggle("annotation-mode", this.annotationMode);
+  }
+
+  setPendingAnnotation(point = null) {
+    this.pendingAnnotationPoint = point;
+    this.renderFootprints();
+  }
+
+  projectPoint(point) {
+    return this.map?.project(point) || null;
   }
 
   getAnnotationCamera() {

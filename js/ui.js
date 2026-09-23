@@ -30,23 +30,15 @@ function strayCopy(lateral) {
   return `<button class="stray-path" type="button" data-node="${escapeHtml(lateral.id)}" aria-label="Stray through ${escapeHtml(lateral.label)}"><span class="stray-symbol" aria-hidden="true"><i></i><i></i><i></i></span><span class="stray-copy"><small>STRAY</small><strong>through ${escapeHtml(lateral.label)}</strong><em>${escapeHtml(kind)} · ${escapeHtml(assertion)}</em></span><span class="stray-arrow" aria-hidden="true">→</span></button>`;
 }
 
-function annotationCopy(annotations = [], activeId, visible, placing, formUrl = null) {
+function annotationCopy(annotations = [], visible, placing, simulated = false) {
   const count = annotations.length;
-  const currentIndex = Math.max(0, annotations.findIndex((annotation) => annotation.id === activeId));
-  const current = annotations[currentIndex] || annotations[0] || null;
   const toggle = count
-    ? `<button class="annotation-summary" type="button" data-annotations-toggle aria-pressed="${visible ? "true" : "false"}"><i aria-hidden="true"></i><span>${visible ? "hide notes" : `${count} note${count === 1 ? "" : "s"}`}</span></button>`
+    ? `<button class="annotation-summary" type="button" data-annotations-toggle aria-pressed="${visible ? "true" : "false"}"><i aria-hidden="true"></i><span>${count} ${simulated ? "simulated " : ""}note${count === 1 ? "" : "s"} ${visible ? "shown" : "hidden"}</span></button>`
     : "";
-  const place = `<button class="annotation-quiet${placing ? " is-active" : ""}" type="button" data-annotation-place aria-pressed="${placing ? "true" : "false"}"><i aria-hidden="true"></i><span>${placing ? "cancel mark" : "annotate"}</span></button>`;
-  const form = formUrl ? `<a class="annotation-form-link" href="${escapeHtml(formUrl)}" target="_blank" rel="noopener">open annotation form ↗</a>` : "";
-  if (!visible || !current) return { place, body: `${toggle}${form}` };
-  const previousDisabled = count < 2 ? " disabled" : "";
-  const nextDisabled = count < 2 ? " disabled" : "";
-  const tag = current.tag ? `<span class="annotation-tag">#${escapeHtml(current.tag)}</span>` : "";
-  return {
-    place,
-    body: `${toggle}${form}<section class="annotation-peek" aria-live="polite"><p>${escapeHtml(current.text)}</p><nav aria-label="Move through map notes"><button type="button" data-annotation-step="-1" aria-label="Previous annotation"${previousDisabled}>←</button><span>${currentIndex + 1} / ${count}</span><button type="button" data-annotation-step="1" aria-label="Next annotation"${nextDisabled}>→</button>${tag}</nav></section>`
-  };
+  const open = count ? `<button class="annotation-open" type="button" data-annotations-open>READ NOTES ↗</button>` : "";
+  const place = `<button class="annotation-switch${placing ? " is-active" : ""}" type="button" role="switch" data-annotation-place aria-checked="${placing ? "true" : "false"}"${simulated ? ' disabled title="Leave the simulation to add a real note"' : ""}><i class="note-glyph" aria-hidden="true"><b></b><b></b><b></b></i><span>${placing ? "PLACING A NOTE" : "ADD A NOTE"}</span><em aria-hidden="true">${simulated ? "SIMULATION" : placing ? "ON" : "OFF"}</em></button>`;
+  const instruction = placing ? `<p class="annotation-mode-prompt">Choose a point on this map. You can confirm it before opening the form.</p>` : "";
+  return { place, body: `${count ? `<div class="annotation-note-controls">${toggle}${open}</div>` : ""}${instruction}` };
 }
 
 const BOOK_PAGE_COUNT = 212;
@@ -104,6 +96,7 @@ export class Interface {
     this.fieldEncounter = document.querySelector("#field-encounter");
     this.encounter = document.querySelector("#encounter");
     this.encounterContent = document.querySelector("#encounter-content");
+    this.annotationFloat = document.querySelector("#annotation-float");
     this.takePrompt = document.querySelector("#take-prompt");
     this.takeMap = document.querySelector("#take-map-window");
     this.takeMapContent = document.querySelector("#take-map-window-content");
@@ -135,6 +128,16 @@ export class Interface {
     this.bookEntryRead.addEventListener("click", () => this.openBookEntryQuote());
     this.bookEntryNext.addEventListener("click", () => this.renderBookEntryQuote(this.currentBookEntryQuote?.id));
     this.bookEntryEnter.addEventListener("click", () => this.dismissBookEntry());
+    this.annotationFloat.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-note-action]");
+      if (!button) return;
+      const action = button.dataset.noteAction;
+      if (action === "close") this.actions.closeAnnotation();
+      if (action === "change") this.actions.changeAnnotationPoint();
+      if (action === "previous") this.actions.annotationStep(-1);
+      if (action === "next") this.actions.annotationStep(1);
+      if (action === "confirm") window.setTimeout(() => this.actions.confirmAnnotation(), 0);
+    });
     this.groundToggle.addEventListener("click", () => this.toggleGround());
     this.groundButtons.forEach((button) => button.addEventListener("click", () => this.actions.basemap(button.dataset.basemap)));
     this.historicalOpacity.addEventListener("input", () => this.actions.rasterOpacity(Number(this.historicalOpacity.value) / 100));
@@ -543,7 +546,43 @@ export class Interface {
     this.fieldEncounter.replaceChildren();
   }
 
-  renderCore({ map, coreMaps, encounter, tile, lateral, drift, annotations = [], annotationsVisible = true, activeAnnotationId = null, annotationMode = false, annotationFormUrl = null }) {
+  positionAnnotationFloat(point) {
+    if (!point || this.annotationFloat.hidden) return;
+    if (window.matchMedia("(max-width: 780px)").matches) {
+      Object.assign(this.annotationFloat.style, { left: "16px", top: "auto", bottom: "74px" });
+      return;
+    }
+    const width = Math.min(340, window.innerWidth - 36);
+    const left = Math.max(18, Math.min(point.x + 24, window.innerWidth - width - 18));
+    const besidePoint = point.y > window.innerHeight * .42 ? point.y - 210 : point.y + 22;
+    const top = Math.max(80, Math.min(besidePoint, window.innerHeight - 290));
+    Object.assign(this.annotationFloat.style, { left: `${left}px`, top: `${top}px`, bottom: "auto" });
+  }
+
+  showAnnotationNote({ annotation, index, count, point, map }) {
+    const tag = annotation.tag ? `<span class="annotation-float-tag">#${escapeHtml(annotation.tag)}</span>` : "";
+    this.annotationFloat.innerHTML = `<div class="annotation-float-head"><span class="note-glyph" aria-hidden="true"><b></b><b></b><b></b></span><span>${annotation.simulated ? "SIMULATION · " : ""}NOTE ${index + 1} OF ${count}</span><button type="button" data-note-action="close" aria-label="Close annotation">×</button></div><p class="annotation-float-map">${escapeHtml(map.city)} · ${map.year}</p><blockquote>${escapeHtml(annotation.text)}</blockquote><div class="annotation-float-foot">${tag}<nav aria-label="Move through annotations"><button type="button" data-note-action="previous" aria-label="Previous annotation"${count < 2 ? " disabled" : ""}>←</button><button type="button" data-note-action="next" aria-label="Next annotation"${count < 2 ? " disabled" : ""}>→</button></nav></div>`;
+    this.annotationFloat.hidden = false;
+    this.positionAnnotationFloat(point);
+  }
+
+  showAnnotationDraft({ point, screenPoint, map, formUrl }) {
+    this.annotationFloat.innerHTML = `<div class="annotation-float-head"><span class="note-glyph" aria-hidden="true"><b></b><b></b><b></b></span><span>POINT CHOSEN</span><button type="button" data-note-action="close" aria-label="Cancel annotation">×</button></div><p class="annotation-float-map">${escapeHtml(map.city)} · ${map.year}</p><p class="annotation-float-title">${escapeHtml(map.title)}</p><p class="annotation-float-coordinate">${Math.abs(point.lat).toFixed(4)}° ${point.lat < 0 ? "S" : "N"} · ${Math.abs(point.lng).toFixed(4)}° ${point.lng < 0 ? "W" : "E"}</p><p class="annotation-float-hint">This point will be attached to the selected historical map.</p><div class="annotation-float-foot"><button type="button" data-note-action="change">CHOOSE AGAIN</button><a href="${escapeHtml(formUrl)}" target="_blank" rel="noopener" data-note-action="confirm">CONFIRM · OPEN FORM ↗</a></div>`;
+    this.annotationFloat.hidden = false;
+    this.positionAnnotationFloat(screenPoint);
+  }
+
+  hideAnnotationFloat() {
+    this.annotationFloat.hidden = true;
+    this.annotationFloat.replaceChildren();
+  }
+
+  annotationPlacementHint(message) {
+    const prompt = this.encounterContent.querySelector(".annotation-mode-prompt");
+    if (prompt) prompt.textContent = message;
+  }
+
+  renderCore({ map, coreMaps, encounter, tile, lateral, drift, annotations = [], annotationsVisible = true, annotationMode = false, annotationSimulation = false }) {
     this.depth.hidden = true;
     this.fieldPrompt.hidden = true;
     this.touchState = { map, coreMaps, lateral };
@@ -563,10 +602,10 @@ export class Interface {
     // in the dérive. It stays with the map identity rather than competing with
     // the book movement and the visitor's trace.
     const takeOffer = `<button class="take-map-quiet" type="button" data-take-map><i aria-hidden="true"></i><span>take map</span></button>`;
-    const notes = annotationCopy(annotations, activeAnnotationId, annotationsVisible, annotationMode, annotationFormUrl);
+    const notes = annotationCopy(annotations, annotationsVisible, annotationMode, annotationSimulation);
     this.surface.hidden = false;
     const arrival = fragment?.arrival?.label || "a thread in the book";
-    this.encounterContent.innerHTML = `<div class="encounter-flow"><section class="encounter-stage map-stage"><p class="stage-kicker">selected map</p><p class="map-marker">${escapeHtml(map.city)} · ${map.year}</p><div class="map-title-row"><h2>${escapeHtml(map.title)}</h2><span class="map-quiet-actions">${notes.place}${takeOffer}</span></div>${mapRecord(map)}${notes.body ? `<div class="map-annotations">${notes.body}</div>` : ""}</section><section class="encounter-stage book-stage"><p class="stage-kicker">the book enters <span>${escapeHtml(arrival)}</span></p>${title || quote}</section>${driftOffer || offer ? `<section class="encounter-stage stray-stage">${driftOffer || offer}</section>` : ""}</div>`;
+    this.encounterContent.innerHTML = `<div class="encounter-flow"><section class="encounter-stage map-stage"><p class="stage-kicker">selected map</p><p class="map-marker">${escapeHtml(map.city)} · ${map.year}</p><div class="map-title-row"><h2>${escapeHtml(map.title)}</h2><span class="map-quiet-actions">${takeOffer}</span></div><div class="map-annotations">${notes.place}${notes.body}</div>${mapRecord(map)}</section><section class="encounter-stage book-stage"><p class="stage-kicker">the book enters <span>${escapeHtml(arrival)}</span></p>${title || quote}</section>${driftOffer || offer ? `<section class="encounter-stage stray-stage">${driftOffer || offer}</section>` : ""}</div>`;
     this.bindTraversal(this.encounterContent);
   }
 
@@ -598,6 +637,7 @@ export class Interface {
     element.querySelectorAll("[data-drift]").forEach((button) => button.addEventListener("click", () => this.actions.drift(button.dataset.drift)));
     element.querySelectorAll("[data-take-map]").forEach((button) => button.addEventListener("click", () => this.actions.takeSelected()));
     element.querySelectorAll("[data-annotations-toggle]").forEach((button) => button.addEventListener("click", () => this.actions.annotations()));
+    element.querySelectorAll("[data-annotations-open]").forEach((button) => button.addEventListener("click", () => this.actions.openAnnotations()));
     element.querySelectorAll("[data-annotation-place]").forEach((button) => button.addEventListener("click", () => this.actions.annotate()));
     element.querySelectorAll("[data-annotation-step]").forEach((button) => button.addEventListener("click", () => this.actions.annotationStep(Number(button.dataset.annotationStep))));
   }

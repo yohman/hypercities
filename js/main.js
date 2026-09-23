@@ -1,12 +1,17 @@
-import { loadData, tileDiagnostic } from "./data.js";
+import { containsCoordinate, loadData, tileDiagnostic } from "./data.js";
 import { CoreView } from "./core-view.js";
 import { apertureFor, driftOffer, fieldFragment, isPlaceNode, mapContext, mapEncounter, nodeEncounter, strayOffer } from "./graph.js";
-import { MapView } from "./map-view.js?v=map-focus-4";
-import { AnnotationStore, annotationContext } from "./annotations.js";
+import { MapView } from "./map-view.js?v=annotation-density-1";
+import { AnnotationStore, annotationContext } from "./annotations.js?v=annotation-density-1";
+import { annotationSimulationRequest, simulatedAnnotations } from "./annotations-simulation.js";
 import { downloadText, kmlFilenameFor, kmlFor } from "./take-map.js";
-import { Interface } from "./ui.js";
+import { Interface } from "./ui.js?v=annotation-density-1";
 
-const app = { data: null, field: null, core: null, ui: null, annotations: null, mapAnnotations: [], annotationsVisible: true, activeAnnotationId: null, annotationMode: false, annotationFormUrl: null, annotationArrivalFocused: false, coreMaps: [], corePoint: null, selected: null, context: null, bookEncounter: null, activeEncounter: null, tile: null, stray: null, drift: null, takeMode: false, trail: [], history: [], seenEncounterIds: [], seenPassageIds: [], seenNodeIds: [], recentConceptIds: [] };
+const app = { data: null, field: null, core: null, ui: null, annotations: null, simulation: null, simulatedNotes: [], mapAnnotations: [], annotationsVisible: true, activeAnnotationId: null, annotationMode: false, annotationDraft: null, annotationFloatOpen: false, annotationArrivalFocused: false, coreMaps: [], corePoint: null, selected: null, context: null, bookEncounter: null, activeEncounter: null, tile: null, stray: null, drift: null, takeMode: false, trail: [], history: [], seenEncounterIds: [], seenPassageIds: [], seenNodeIds: [], recentConceptIds: [] };
+
+function annotationsForMap(mapId) {
+  return app.simulation?.mapId === mapId ? app.simulatedNotes : app.annotations?.forMap(mapId) || [];
+}
 
 function pushTrail(label, id, why = null) {
   const last = app.trail.at(-1);
@@ -57,7 +62,20 @@ function selectionOptions(map, interaction) {
 
 function render() {
   if (!app.selected) return;
-  app.ui.renderCore({ map: app.selected, coreMaps: app.coreMaps, encounter: app.activeEncounter || app.bookEncounter, tile: app.tile, lateral: app.stray, drift: app.drift, annotations: app.mapAnnotations, annotationsVisible: app.annotationsVisible, activeAnnotationId: app.activeAnnotationId, annotationMode: app.annotationMode, annotationFormUrl: app.annotationFormUrl });
+  app.ui.renderCore({ map: app.selected, coreMaps: app.coreMaps, encounter: app.activeEncounter || app.bookEncounter, tile: app.tile, lateral: app.stray, drift: app.drift, annotations: app.mapAnnotations, annotationsVisible: app.annotationsVisible, annotationMode: app.annotationMode, annotationSimulation: app.simulation?.mapId === app.selected.id });
+}
+
+function showActiveAnnotation() {
+  if (!app.annotationFloatOpen || !app.selected || !app.field) return;
+  const index = app.mapAnnotations.findIndex((annotation) => annotation.id === app.activeAnnotationId);
+  if (index < 0) { app.ui.hideAnnotationFloat(); return; }
+  const annotation = app.mapAnnotations[index];
+  app.ui.showAnnotationNote({ annotation, index, count: app.mapAnnotations.length, point: app.field.projectPoint(annotation.context.point), map: app.selected });
+}
+
+function moveAnnotationFloatWithMap() {
+  const point = app.annotationDraft?.point || (app.annotationFloatOpen && app.mapAnnotations.find((annotation) => annotation.id === app.activeAnnotationId)?.context.point);
+  if (point) app.ui.positionAnnotationFloat(app.field.projectPoint(point));
 }
 
 async function refreshAnnotations({ force = false } = {}) {
@@ -72,7 +90,7 @@ async function refreshAnnotations({ force = false } = {}) {
     console.warn("Could not refresh annotations.", error);
   }
   if (!app.selected || app.selected.id !== selectedId) return;
-  app.mapAnnotations = app.annotations.forMap(selectedId);
+  app.mapAnnotations = annotationsForMap(selectedId);
   if (!app.mapAnnotations.some((annotation) => annotation.id === app.activeAnnotationId)) {
     const requested = new URLSearchParams(window.location.search).get("annotation");
     app.activeAnnotationId = app.mapAnnotations.some((annotation) => annotation.id === requested)
@@ -85,10 +103,12 @@ async function refreshAnnotations({ force = false } = {}) {
     if (arrival) {
       app.annotationArrivalFocused = true;
       app.field.focusMap(app.selected, { point: arrival.context.point });
+      app.annotationFloatOpen = true;
     }
   }
   app.field.setAnnotations(app.mapAnnotations, { visible: app.annotationsVisible, activeId: app.activeAnnotationId });
   render();
+  showActiveAnnotation();
 }
 
 function selectMap(map, { keepEncounter = false, trailWhy = null, focus = true, interaction = "select-map" } = {}) {
@@ -105,10 +125,13 @@ function selectMap(map, { keepEncounter = false, trailWhy = null, focus = true, 
   // a persistent competing prompt on every historical map layer.
   app.drift = null;
   app.annotationMode = false;
-  app.annotationFormUrl = null;
+  app.annotationDraft = null;
+  app.annotationFloatOpen = false;
+  app.ui.hideAnnotationFloat();
+  app.field.setPendingAnnotation(null);
   app.annotationsVisible = true;
   app.field.setAnnotationMode(false);
-  app.mapAnnotations = app.annotations?.forMap(map.id) || [];
+  app.mapAnnotations = annotationsForMap(map.id);
   if (!app.mapAnnotations.some((annotation) => annotation.id === app.activeAnnotationId)) app.activeAnnotationId = null;
   app.core.select(map, { focus });
   app.field.showRaster(map, { focus });
@@ -234,7 +257,8 @@ function acceptDrift(mapId) {
 }
 
 function leaveCore() {
-  app.core.leave(); app.field.leaveCore(); app.coreMaps = []; app.corePoint = null; app.selected = null; app.context = null; app.bookEncounter = null; app.activeEncounter = null; app.stray = null; app.drift = null; app.takeMode = false; app.annotationMode = false; app.annotationFormUrl = null; app.mapAnnotations = []; app.activeAnnotationId = null; app.history = []; app.ui.clearTakeMap(); app.ui.field();
+  closeAnnotation();
+  app.core.leave(); app.field.leaveCore(); app.coreMaps = []; app.corePoint = null; app.selected = null; app.context = null; app.bookEncounter = null; app.activeEncounter = null; app.stray = null; app.drift = null; app.takeMode = false; app.annotationMode = false; app.mapAnnotations = []; app.activeAnnotationId = null; app.history = []; app.ui.clearTakeMap(); app.ui.field();
 }
 
 function beginTakeMap() {
@@ -262,14 +286,29 @@ function setRasterOpacity(opacity) { app.field.setRasterOpacity(opacity); }
 function toggleAnnotations() {
   if (!app.selected || !app.mapAnnotations.length) return;
   app.annotationsVisible = !app.annotationsVisible;
+  if (!app.annotationsVisible) { app.annotationFloatOpen = false; app.ui.hideAnnotationFloat(); }
   app.field.setAnnotationVisibility(app.annotationsVisible);
   render();
+}
+
+function openAnnotations() {
+  if (!app.selected || !app.mapAnnotations.length) return;
+  app.activeAnnotationId = app.mapAnnotations.some((annotation) => annotation.id === app.activeAnnotationId)
+    ? app.activeAnnotationId : app.mapAnnotations[0].id;
+  app.annotationFloatOpen = true;
+  app.annotationsVisible = true;
+  app.field.setAnnotations(app.mapAnnotations, { visible: true, activeId: app.activeAnnotationId });
+  render();
+  showActiveAnnotation();
 }
 
 function toggleAnnotationMode() {
   if (!app.selected || !app.annotations?.live) return;
   app.annotationMode = !app.annotationMode;
-  if (app.annotationMode) app.annotationFormUrl = null;
+  app.annotationDraft = null;
+  app.annotationFloatOpen = false;
+  app.ui.hideAnnotationFloat();
+  app.field.setPendingAnnotation(null);
   app.field.setAnnotationMode(app.annotationMode);
   render();
 }
@@ -280,22 +319,31 @@ function stepAnnotation(direction) {
   const next = (Math.max(0, current) + direction + app.mapAnnotations.length) % app.mapAnnotations.length;
   app.activeAnnotationId = app.mapAnnotations[next].id;
   app.annotationsVisible = true;
+  app.annotationFloatOpen = true;
   app.field.setAnnotations(app.mapAnnotations, { visible: true, activeId: app.activeAnnotationId });
   render();
+  showActiveAnnotation();
 }
 
 function selectAnnotation(annotation) {
   if (!annotation || annotation.context.mapId !== app.selected?.id) return;
+  closeAnnotation();
   app.annotationMode = false;
   app.annotationsVisible = true;
   app.activeAnnotationId = annotation.id;
+  app.annotationFloatOpen = true;
   app.field.setAnnotationMode(false);
   app.field.setAnnotations(app.mapAnnotations, { visible: true, activeId: annotation.id });
   render();
+  showActiveAnnotation();
 }
 
 function placeAnnotation(point) {
   if (!app.selected || !app.annotations?.live) return;
+  if (!containsCoordinate(app.selected, point)) {
+    app.ui.annotationPlacementHint("Choose a point inside the selected historical map.");
+    return;
+  }
   const url = app.annotations.buildFormUrl(annotationContext({
     map: app.selected,
     point,
@@ -304,11 +352,30 @@ function placeAnnotation(point) {
     basemap: app.ui.groundState.mode,
     opacity: app.ui.groundState.opacity
   }));
+  if (!url) return;
   app.annotationMode = false;
-  app.annotationFormUrl = url || null;
+  app.annotationDraft = { point, url };
   app.field.setAnnotationMode(false);
+  app.field.setPendingAnnotation(point);
+  render();
+  app.ui.showAnnotationDraft({ point, screenPoint: app.field.projectPoint(point), map: app.selected, formUrl: url });
+}
+
+function closeAnnotation() {
+  app.annotationFloatOpen = false;
+  app.annotationDraft = null;
+  app.field?.setPendingAnnotation(null);
+  app.ui.hideAnnotationFloat();
+}
+
+function changeAnnotationPoint() {
+  closeAnnotation();
+  app.annotationMode = true;
+  app.field.setAnnotationMode(true);
   render();
 }
+
+function confirmAnnotation() { closeAnnotation(); }
 
 function stepBack() {
   const previous = app.history.pop();
@@ -330,6 +397,11 @@ function respondToMapGesture(cue) {
 function keyboard(event) {
   if (app.ui.bookEntryIsVisible()) return;
   if (document.querySelector("#help-dialog").open || !document.querySelector("#site-index").hidden || document.querySelector("#hyperbook-window").open || document.querySelector("#take-map-window").open) return;
+  if ((app.annotationDraft || app.annotationFloatOpen) && event.key === "Escape") {
+    event.preventDefault();
+    closeAnnotation();
+    return;
+  }
   if (app.annotationMode && event.key === "Escape") {
     event.preventDefault();
     app.annotationMode = false;
@@ -346,8 +418,15 @@ function keyboard(event) {
 
 async function start() {
   try {
-    app.ui = new Interface({ node: followNode, time: moveTime, stray: acceptStray, drift: acceptDrift, aperture: openAperture, read: () => app.ui.openRead(), surface: leaveCore, back: stepBack, take: beginTakeMap, takeSelected: openTakeMap, resumeTake: resumeTakeMap, exportMap, basemap: setBasemap, rasterOpacity: setRasterOpacity, annotations: toggleAnnotations, annotate: toggleAnnotationMode, annotationStep: stepAnnotation });
+    app.ui = new Interface({ node: followNode, time: moveTime, stray: acceptStray, drift: acceptDrift, aperture: openAperture, read: () => app.ui.openRead(), surface: leaveCore, back: stepBack, take: beginTakeMap, takeSelected: openTakeMap, resumeTake: resumeTakeMap, exportMap, basemap: setBasemap, rasterOpacity: setRasterOpacity, annotations: toggleAnnotations, openAnnotations, annotate: toggleAnnotationMode, annotationStep: stepAnnotation, closeAnnotation, changeAnnotationPoint, confirmAnnotation });
+    const pageParams = new URLSearchParams(window.location.search);
+    if (pageParams.get("enter") === "map") app.ui.dismissBookEntry();
     [app.data, app.annotations] = await Promise.all([loadData(), AnnotationStore.load()]);
+    app.simulation = annotationSimulationRequest(window.location.search);
+    if (app.simulation) {
+      const simulationMap = app.data.maps.find((map) => map.id === app.simulation.mapId);
+      if (simulationMap) app.simulatedNotes = simulatedAnnotations(simulationMap, app.simulation.count);
+    }
     app.ui.setBookEntryQuotes(app.data);
     app.core = new CoreView({
       onSelect: (map) => selectMap(map),
@@ -365,11 +444,12 @@ async function start() {
       onBasemapChange: (state) => app.ui.setGroundState(state),
       onRasterOpacityChange: (state) => app.ui.setGroundState(state),
       onAnnotationPlace: placeAnnotation,
-      onAnnotationSelect: selectAnnotation
+      onAnnotationSelect: selectAnnotation,
+      onAnnotationViewMove: moveAnnotationFloatWithMap
     });
     await app.field.init();
     app.ui.field();
-    const requestedMapId = new URLSearchParams(window.location.search).get("map");
+    const requestedMapId = pageParams.get("map");
     const requestedMap = app.data.maps.find((map) => map.id === requestedMapId);
     if (requestedMap) {
       const core = { lng: (requestedMap.bbox[0] + requestedMap.bbox[2]) / 2, lat: (requestedMap.bbox[1] + requestedMap.bbox[3]) / 2 };

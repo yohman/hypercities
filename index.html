@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#101111" />
     <title>HyperCities — Thick Mapping</title>
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=annotation-density-1" />
   </head>
   <body>
     <main id="app" aria-label="HyperCities map">
@@ -29,8 +29,8 @@
           <a class="wordmark" href="./" aria-label="Return to the world map">HYPERCITIES</a>
           <button id="index-toggle" class="index-toggle" type="button" aria-haspopup="dialog" aria-controls="site-index" aria-expanded="false">EXPLORE</button>
         </div>
-        <button id="surface" class="surface" type="button" hidden>← MAP</button>
         <div class="masthead-actions">
+          <button id="surface" class="surface" type="button" hidden>← MAP</button>
           <button id="ground-toggle" class="ground-toggle" type="button" aria-controls="ground-control" aria-expanded="false" aria-label="Change map ground"><i aria-hidden="true"></i><span>GROUND</span></button>
           <button id="help-toggle" class="help-toggle" type="button" aria-haspopup="dialog" aria-controls="help-dialog">?</button>
         </div>
@@ -41,7 +41,7 @@
           <button type="button" data-basemap="dark" aria-pressed="true">DARK</button>
           <button type="button" data-basemap="satellite" aria-pressed="false">SATELLITE</button>
         </div>
-        <label class="ground-veil" for="historical-opacity"><span>HISTORICAL VEIL</span><output id="historical-opacity-value" for="historical-opacity">—</output></label>
+        <label class="ground-veil" for="historical-opacity"><span>MAP OPACITY</span><output id="historical-opacity-value" for="historical-opacity">—</output></label>
         <input id="historical-opacity" class="ground-opacity" type="range" min="0" max="100" value="100" step="1" disabled aria-label="Historical map opacity" />
         <p id="satellite-credit" class="satellite-credit" hidden>WORLD IMAGERY · © ESRI</p>
       </aside>
@@ -55,6 +55,7 @@
           <div id="journey-content" class="journey-content" hidden></div>
         </div>
       </aside>
+      <aside id="annotation-float" class="annotation-float" aria-live="polite" hidden></aside>
       <section id="take-prompt" class="take-prompt" aria-live="polite" hidden>
         <p>TAKE A MAP</p>
         <span>Enter a place. Choose a layer. Carry its trace outward.</span>
@@ -106,6 +107,6 @@
     </main>
     <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
     <script src="https://unpkg.com/deck.gl@9.1.8/dist.min.js"></script>
-    <script type="module" src="./js/main.js?v=map-focus-4"></script>
+    <script type="module" src="./js/main.js?v=annotation-density-1"></script>
   </body>
 </html>
