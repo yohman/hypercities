@@ -37,7 +37,7 @@ function annotationCopy(annotations = [], visible, placing, simulated = false) {
     : "";
   const open = count ? `<button class="annotation-open" type="button" data-annotations-open>READ NOTES ↗</button>` : "";
   const place = `<button class="annotation-switch${placing ? " is-active" : ""}" type="button" role="switch" data-annotation-place aria-checked="${placing ? "true" : "false"}"${simulated ? ' disabled title="Leave the simulation to add a real note"' : ""}><i class="note-glyph" aria-hidden="true"><b></b><b></b><b></b></i><span>${placing ? "PLACING A NOTE" : "ADD A NOTE"}</span><em aria-hidden="true">${simulated ? "SIMULATION" : placing ? "ON" : "OFF"}</em></button>`;
-  const instruction = placing ? `<p class="annotation-mode-prompt">Choose a point on this map. You can confirm it before opening the form.</p>` : "";
+  const instruction = placing ? `<p class="annotation-mode-prompt">Choose a point on this map to leave a note.</p>` : "";
   return { place, body: `${count ? `<div class="annotation-note-controls">${toggle}${open}</div>` : ""}${instruction}` };
 }
 
@@ -137,7 +137,41 @@ export class Interface {
       if (action === "change") this.actions.changeAnnotationPoint();
       if (action === "previous") this.actions.annotationStep(-1);
       if (action === "next") this.actions.annotationStep(1);
-      if (action === "confirm") window.setTimeout(() => this.actions.confirmAnnotation(), 0);
+    });
+    this.annotationFloat.addEventListener("submit", async (event) => {
+      if (!event.target.matches(".annotation-compose")) return;
+      event.preventDefault();
+      const form = event.target;
+      const fields = new FormData(form);
+      const values = {
+        text: String(fields.get(form.querySelector("textarea").name) || ""),
+        name: String(fields.get(form.querySelector('input[required]').name) || ""),
+        tag: String(fields.get(form.querySelector('input[placeholder]').name) || "")
+      };
+      const submit = form.querySelector('button[type="submit"]');
+      submit.disabled = true;
+      submit.textContent = "SENDING…";
+      try {
+        // A simple cross-origin form POST can be sent from a static site.
+        // The opaque response cannot confirm publication; the Sheet poll does.
+        await fetch(form.action, {
+          method: "POST", mode: "no-cors", credentials: "omit",
+          body: new URLSearchParams(fields)
+        });
+        this.actions.confirmAnnotation(values);
+      } catch (error) {
+        submit.disabled = false;
+        submit.textContent = "PUBLISH NOTE";
+        let status = form.querySelector(".annotation-submit-error");
+        if (!status) {
+          status = document.createElement("p");
+          status.className = "annotation-compose-help annotation-submit-error";
+          status.setAttribute("role", "alert");
+          form.append(status);
+        }
+        status.textContent = "The note could not be sent. Please try again.";
+        console.warn("Annotation submission failed.", error);
+      }
     });
     this.groundToggle.addEventListener("click", () => this.toggleGround());
     this.groundButtons.forEach((button) => button.addEventListener("click", () => this.actions.basemap(button.dataset.basemap)));
@@ -568,24 +602,34 @@ export class Interface {
     const width = Math.min(340, window.innerWidth - 36);
     const left = Math.max(18, Math.min(point.x + 24, window.innerWidth - width - 18));
     const besidePoint = point.y > window.innerHeight * .42 ? point.y - 210 : point.y + 22;
-    const top = Math.max(80, Math.min(besidePoint, window.innerHeight - 290));
+    const composing = this.annotationFloat.classList.contains("is-composing");
+    const availableHeight = Math.min(composing ? 560 : 430, window.innerHeight - 100);
+    const top = Math.max(70, Math.min(besidePoint, window.innerHeight - availableHeight - 20));
     Object.assign(this.annotationFloat.style, { left: `${left}px`, top: `${top}px`, bottom: "auto" });
   }
 
   showAnnotationNote({ annotation, index, count, point, map }) {
-    const tag = annotation.tag ? `<span class="annotation-float-tag">#${escapeHtml(annotation.tag)}</span>` : "";
-    this.annotationFloat.innerHTML = `<div class="annotation-float-head"><span class="note-glyph" aria-hidden="true"><b></b><b></b><b></b></span><span>${annotation.simulated ? "SIMULATION · " : ""}NOTE ${index + 1} OF ${count}</span><button type="button" data-note-action="close" aria-label="Close annotation">×</button></div><p class="annotation-float-map">${escapeHtml(map.city)} · ${map.year}</p><blockquote>${escapeHtml(annotation.text)}</blockquote><div class="annotation-float-foot">${tag}<nav aria-label="Move through annotations"><button type="button" data-note-action="previous" aria-label="Previous annotation"${count < 2 ? " disabled" : ""}>←</button><button type="button" data-note-action="next" aria-label="Next annotation"${count < 2 ? " disabled" : ""}>→</button></nav></div>`;
+    this.annotationFloat.classList.remove("is-composing");
+    const tags = (annotation.tags || (annotation.tag ? annotation.tag.split(",") : [])).map((tag) => tag.trim().replace(/^#+/, "")).filter(Boolean);
+    const tagCopy = tags.map((tag) => `<span class="annotation-float-tag">#${escapeHtml(tag)}</span>`).join(" ");
+    const byline = annotation.name ? `<span class="annotation-float-byline">${escapeHtml(annotation.name)}</span>` : "";
+    const status = annotation.unconfirmed ? "NOT YET PUBLIC · " : annotation.pending ? "PUBLISHING · " : annotation.simulated ? "SIMULATION · " : "";
+    const pendingHint = annotation.unconfirmed ? `<p class="annotation-compose-help">This note has not appeared in the public feed. Please check again later before resubmitting.</p>` : "";
+    this.annotationFloat.innerHTML = `<div class="annotation-float-head"><span class="note-glyph" aria-hidden="true"><b></b><b></b><b></b></span><span>${status}NOTE ${index + 1} OF ${count}</span><button type="button" data-note-action="close" aria-label="Close annotation">×</button></div><p class="annotation-float-map">${escapeHtml(map.city)} · ${map.year}</p><blockquote>${escapeHtml(annotation.text)}</blockquote>${byline}${pendingHint}<div class="annotation-float-foot"><span>${tagCopy}</span><nav aria-label="Move through annotations"><button type="button" data-note-action="previous" aria-label="Previous annotation"${count < 2 ? " disabled" : ""}>←</button><button type="button" data-note-action="next" aria-label="Next annotation"${count < 2 ? " disabled" : ""}>→</button></nav></div>`;
     this.annotationFloat.hidden = false;
     this.positionAnnotationFloat(point);
   }
 
-  showAnnotationDraft({ point, screenPoint, map, formUrl }) {
-    this.annotationFloat.innerHTML = `<div class="annotation-float-head"><span class="note-glyph" aria-hidden="true"><b></b><b></b><b></b></span><span>POINT CHOSEN</span><button type="button" data-note-action="close" aria-label="Cancel annotation">×</button></div><p class="annotation-float-map">${escapeHtml(map.city)} · ${map.year}</p><p class="annotation-float-title">${escapeHtml(map.title)}</p><p class="annotation-float-coordinate">${Math.abs(point.lat).toFixed(4)}° ${point.lat < 0 ? "S" : "N"} · ${Math.abs(point.lng).toFixed(4)}° ${point.lng < 0 ? "W" : "E"}</p><p class="annotation-float-hint">This point will be attached to the selected historical map.</p><div class="annotation-float-foot"><button type="button" data-note-action="change">CHOOSE AGAIN</button><a href="${escapeHtml(formUrl)}" target="_blank" rel="noopener" data-note-action="confirm">CONFIRM · OPEN FORM ↗</a></div>`;
+  showAnnotationDraft({ point, screenPoint, map, submission }) {
+    this.annotationFloat.classList.add("is-composing");
+    const { entries } = submission;
+    this.annotationFloat.innerHTML = `<div class="annotation-float-head"><span class="note-glyph" aria-hidden="true"><b></b><b></b><b></b></span><span>LEAVE A NOTE</span><button type="button" data-note-action="close" aria-label="Cancel annotation">×</button></div><p class="annotation-float-map">${escapeHtml(map.city)} · ${map.year}</p><p class="annotation-float-title">${escapeHtml(map.title)}</p><p class="annotation-float-coordinate">${Math.abs(point.lat).toFixed(4)}° ${point.lat < 0 ? "S" : "N"} · ${Math.abs(point.lng).toFixed(4)}° ${point.lng < 0 ? "W" : "E"}</p><form class="annotation-compose" action="${escapeHtml(submission.action)}" method="POST"><input type="hidden" name="${escapeHtml(entries.context)}" value="${escapeHtml(submission.context)}"><label>Your note<textarea name="${escapeHtml(entries.annotation)}" maxlength="1200" required></textarea></label><label>Name or alias<input name="${escapeHtml(entries.name)}" maxlength="80" required></label><p class="annotation-compose-help">Displayed publicly with your note; not a verified identity.</p><label>Tags <span>(optional)</span><input name="${escapeHtml(entries.tag)}" maxlength="80" placeholder="memory, railway, neighborhood"></label><p class="annotation-compose-help">Separate multiple tags with commas.</p><div class="annotation-float-foot"><button type="button" data-note-action="change">CHOOSE AGAIN</button><button type="submit">PUBLISH NOTE</button></div></form>`;
     this.annotationFloat.hidden = false;
     this.positionAnnotationFloat(screenPoint);
   }
 
   hideAnnotationFloat() {
+    this.annotationFloat.classList.remove("is-composing");
     this.annotationFloat.hidden = true;
     this.annotationFloat.replaceChildren();
   }

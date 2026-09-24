@@ -109,6 +109,8 @@ function normaliseRow(row, labels) {
   if (!context || !text) return null;
   const timestamp = String(row[labels.timestamp] || "");
   const tag = cleanText(row[labels.tag], 80).replace(/^#+/, "");
+  const tags = tag.split(",").map((item) => item.trim().replace(/^#+/, "")).filter(Boolean).slice(0, 8);
+  const name = cleanText(row[labels.name], 80);
   const fallback = `${context.mapId}-${timestamp}-${text}`.replace(/[^a-zA-Z0-9_-]/g, "").slice(0, 120);
   return {
     id: context.id || fallback,
@@ -116,6 +118,8 @@ function normaliseRow(row, labels) {
     timestampValue: toTimestamp(timestamp),
     text,
     tag,
+    tags,
+    name,
     context
   };
 }
@@ -162,7 +166,9 @@ export class AnnotationStore {
   async refresh({ force = false } = {}) {
     if (!this.live) return this.annotations;
     if (!force && Date.now() - this.lastFetchedAt < 20_000) return this.annotations;
-    const response = await fetch(this.config.sheet.feedUrl, { cache: "no-store" });
+    const feedUrl = new URL(this.config.sheet.feedUrl);
+    if (force) feedUrl.searchParams.set("_hypercities", String(Date.now()));
+    const response = await fetch(feedUrl, { cache: "no-store" });
     if (!response.ok) throw new Error(`The annotations feed returned ${response.status}.`);
     const rows = decodeFeed(await response.text());
     const labels = this.config.labels || {};
@@ -184,6 +190,17 @@ export class AnnotationStore {
     url.searchParams.set("usp", "pp_url");
     url.searchParams.set(entries.context, contextParam(context));
     return url.toString();
+  }
+
+  buildFormSubmission(context) {
+    if (!this.live) return null;
+    const entries = this.config.form?.entries || {};
+    if (!this.config.form?.submitUrl || !entries.annotation || !entries.tag || !entries.name || !entries.context) return null;
+    return {
+      action: this.config.form.submitUrl,
+      entries,
+      context: contextParam(context)
+    };
   }
 }
 

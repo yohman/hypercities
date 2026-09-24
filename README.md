@@ -16,6 +16,7 @@ This is not a recreation of the original GIS platform or a conventional academic
 - The full-book Hyperbook supplies encounters through direct place evidence, cartographic and temporal resonance, visitor actions, concepts, and deliberately labelled editorial routes. It may also remain silent.
 - **READ** opens the book as a 212-page facsimile. Its visible Previous/Next controls and Left/Right keys turn pages. A quotation or title opens this same reader at its cited page; an exact quotation locator is highlighted when one is available.
 - The **TRACE** holds a fading record of the current dérive. Arrow keys mirror the offered movements: Up/Down move through time, Right accepts a lateral route, and Left/Esc returns toward the map. In the book reader, Left/Right instead turn pages.
+- A selected historical map can hold public annotations. Choosing a point opens a small on-map note composer: map and coordinates are fixed context, while visitors supply a note, a required public name or alias, and optional comma-separated tags. Google Forms receives the submission; the published Sheet supplies the public notes. An alias is a display name, not a verified account.
 
 ## Screens
 
@@ -85,7 +86,7 @@ HyperCities is designed to remain publishable from GitHub Pages:
 - HTML, CSS, vanilla JavaScript ES modules, and static JSON
 - MapLibre GL JS for the navigable basemap
 - deck.gl for historical footprints and the TimeWell's three-dimensional layers
-- no database, backend, authentication, framework, or build pipeline
+- no database, site backend, authentication, framework, or build pipeline; annotations use Google Forms and a published Sheets feed
 
 Use GitHub Pages or any local static HTTP server for preview. Do not open `index.html` through `file://`: browsers isolate that origin and block the JSON data reads the site needs.
 

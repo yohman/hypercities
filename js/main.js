@@ -2,15 +2,18 @@ import { containsCoordinate, loadData, tileDiagnostic } from "./data.js";
 import { CoreView } from "./core-view.js?v=timewell-no-turtle-1";
 import { apertureFor, driftOffer, fieldFragment, isPlaceNode, mapContext, mapEncounter, nodeEncounter, strayOffer } from "./graph.js";
 import { MapView } from "./map-view.js?v=notes-navigation-1";
-import { AnnotationStore, annotationContext } from "./annotations.js?v=annotation-density-1";
+import { AnnotationStore, annotationContext } from "./annotations.js?v=note-autoshow-1";
 import { annotationSimulationRequest, simulatedAnnotations } from "./annotations-simulation.js";
 import { downloadText, kmlFilenameFor, kmlFor } from "./take-map.js";
-import { Interface } from "./ui.js?v=notes-navigation-1";
+import { Interface } from "./ui.js?v=quiet-note-1";
 
-const app = { data: null, field: null, core: null, ui: null, annotations: null, simulation: null, simulatedNotes: [], mapAnnotations: [], annotationsVisible: true, timewellExpanded: false, activeAnnotationId: null, annotationMode: false, annotationDraft: null, annotationFloatOpen: false, annotationArrivalFocused: false, coreMaps: [], corePoint: null, selected: null, context: null, bookEncounter: null, activeEncounter: null, tile: null, stray: null, drift: null, takeMode: false, trail: [], history: [], seenEncounterIds: [], seenPassageIds: [], seenNodeIds: [], recentConceptIds: [] };
+const app = { data: null, field: null, core: null, ui: null, annotations: null, simulation: null, simulatedNotes: [], pendingAnnotations: [], mapAnnotations: [], annotationsVisible: true, timewellExpanded: false, activeAnnotationId: null, annotationMode: false, annotationDraft: null, annotationFloatOpen: false, annotationArrivalFocused: false, coreMaps: [], corePoint: null, selected: null, context: null, bookEncounter: null, activeEncounter: null, tile: null, stray: null, drift: null, takeMode: false, trail: [], history: [], seenEncounterIds: [], seenPassageIds: [], seenNodeIds: [], recentConceptIds: [] };
 
 function annotationsForMap(mapId) {
-  return app.simulation?.mapId === mapId ? app.simulatedNotes : app.annotations?.forMap(mapId) || [];
+  if (app.simulation?.mapId === mapId) return app.simulatedNotes;
+  const published = app.annotations?.forMap(mapId) || [];
+  const pending = app.pendingAnnotations.filter((note) => note.context.mapId === mapId && !published.some((live) => live.id === note.id));
+  return [...pending, ...published];
 }
 
 function pushTrail(label, id, why = null) {
@@ -98,6 +101,7 @@ async function refreshAnnotations({ force = false } = {}) {
   const selectedId = app.selected.id;
   try {
     await app.annotations.refresh({ force });
+    app.pendingAnnotations = app.pendingAnnotations.filter((note) => !app.annotations.annotations.some((live) => live.id === note.id));
   } catch (error) {
     // A public note feed must never interrupt the map. The selected layer and
     // its source record remain fully usable if Google Sheets is momentarily
@@ -377,7 +381,7 @@ function placeAnnotation(point) {
     app.ui.annotationPlacementHint("Choose a point inside the selected historical map.");
     return;
   }
-  const url = app.annotations.buildFormUrl(annotationContext({
+  const submission = app.annotations.buildFormSubmission(annotationContext({
     map: app.selected,
     point,
     core: app.corePoint,
@@ -385,14 +389,14 @@ function placeAnnotation(point) {
     basemap: app.ui.groundState.mode,
     opacity: app.ui.groundState.opacity
   }));
-  if (!url) return;
+  if (!submission) return;
   app.annotationMode = false;
   app.core.setPassThrough(false);
-  app.annotationDraft = { point, url };
+  app.annotationDraft = { point, submission };
   app.field.setAnnotationMode(false);
   app.field.setPendingAnnotation(point);
   render();
-  app.ui.showAnnotationDraft({ point, screenPoint: app.field.projectPoint(point), map: app.selected, formUrl: url });
+  app.ui.showAnnotationDraft({ point, screenPoint: app.field.projectPoint(point), map: app.selected, submission });
 }
 
 function closeAnnotation() {
@@ -414,7 +418,45 @@ function changeAnnotationPoint() {
   render();
 }
 
-function confirmAnnotation() { closeAnnotation(); }
+function confirmAnnotation({ text, name, tag }) {
+  const draft = app.annotationDraft;
+  if (!draft || !app.selected) return;
+  const id = new URLSearchParams(draft.submission.context).get("id");
+  if (!id) return;
+  const note = {
+    id, text: text.trim(), name: name.trim(), tag: tag.trim(),
+    tags: tag.split(",").map((part) => part.trim().replace(/^#+/, "")).filter(Boolean).slice(0, 8),
+    timestamp: new Date().toISOString(), timestampValue: Date.now(),
+    context: { mapId: app.selected.id, point: draft.point }, pending: true
+  };
+  app.pendingAnnotations.unshift(note);
+  app.annotationDraft = null;
+  app.annotationFloatOpen = true;
+  app.annotationsVisible = true;
+  app.activeAnnotationId = id;
+  app.field.setPendingAnnotation(null);
+  app.mapAnnotations = annotationsForMap(app.selected.id);
+  app.field.setAnnotations(app.mapAnnotations, { visible: true, activeId: id });
+  render();
+  showActiveAnnotation();
+  pollSubmittedNote(id);
+}
+
+function pollSubmittedNote(id, attempts = 0) {
+  window.setTimeout(async () => {
+    await refreshAnnotations({ force: true });
+    if (app.annotations?.annotations.some((note) => note.id === id)) return;
+    const pending = app.pendingAnnotations.find((note) => note.id === id);
+    if (!pending) return;
+    if (attempts < 17) { pollSubmittedNote(id, attempts + 1); return; }
+    pending.unconfirmed = true;
+    if (app.selected?.id === pending.context.mapId) {
+      app.mapAnnotations = annotationsForMap(app.selected.id);
+      render();
+      showActiveAnnotation();
+    }
+  }, attempts === 0 ? 2000 : 5000);
+}
 
 function stepBack() {
   const previous = app.history.pop();
@@ -441,6 +483,7 @@ function keyboard(event) {
     closeAnnotation();
     return;
   }
+  if (event.target instanceof Element && event.target.closest("input, textarea, select, [contenteditable]")) return;
   if (app.annotationMode && event.key === "Escape") {
     event.preventDefault();
     app.annotationMode = false;

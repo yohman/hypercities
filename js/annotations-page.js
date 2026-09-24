@@ -1,4 +1,4 @@
-import { AnnotationStore, annotationDeepLink } from "./annotations.js?v=annotation-density-1";
+import { AnnotationStore, annotationDeepLink } from "./annotations.js?v=note-autoshow-1";
 import { annotationSimulationRequest, simulatedAnnotations } from "./annotations-simulation.js";
 import { loadData } from "./data.js";
 
@@ -54,7 +54,7 @@ function render(store, maps) {
     const city = map?.city || notes[0].context.city || "Unplaced";
     const year = map?.year || notes[0].context.year || "";
     const mapMatch = `${title} ${city} ${year}`.toLocaleLowerCase().includes(term);
-    const filtered = !term || mapMatch ? notes : notes.filter((note) => `${note.text} ${note.tag}`.toLocaleLowerCase().includes(term));
+    const filtered = !term || mapMatch ? notes : notes.filter((note) => `${note.text} ${note.tag} ${note.name || ""}`.toLocaleLowerCase().includes(term));
     return { id, title, city, year, notes: filtered, total: notes.length, latest: notes[0].timestampValue };
   }).filter((group) => group.notes.length).sort((a, b) => b.latest - a.latest || a.title.localeCompare(b.title));
   if (!matches.length) {
@@ -66,8 +66,10 @@ function render(store, maps) {
   list.innerHTML = visible.map((group) => {
     const limit = shownNotes.get(group.id) || 8;
     const noteRows = group.notes.slice(0, limit).map((annotation) => {
-      const tag = annotation.tag ? `<span class="annotations-tag">#${escapeHtml(annotation.tag)}</span>` : "";
-      return `<article class="annotation-card"><blockquote>${escapeHtml(annotation.text)}</blockquote><footer><span>${escapeHtml(noteDate(annotation.timestamp))}</span><span>${escapeHtml(pointLabel(annotation.context.point))}</span>${tag}<a href="${escapeHtml(annotationDeepLink(annotation))}">OPEN MAP <span aria-hidden="true">↗</span></a></footer></article>`;
+      const tags = (annotation.tags || (annotation.tag ? annotation.tag.split(",") : [])).map((tag) => tag.trim().replace(/^#+/, "")).filter(Boolean);
+      const tagCopy = tags.map((tag) => `<span class="annotations-tag">#${escapeHtml(tag)}</span>`).join("");
+      const byline = annotation.name ? `<span>${escapeHtml(annotation.name)}</span>` : "";
+      return `<article class="annotation-card"><blockquote>${escapeHtml(annotation.text)}</blockquote><footer>${byline}<span>${escapeHtml(noteDate(annotation.timestamp))}</span><span>${escapeHtml(pointLabel(annotation.context.point))}</span>${tagCopy}<a href="${escapeHtml(annotationDeepLink(annotation))}">OPEN MAP <span aria-hidden="true">↗</span></a></footer></article>`;
     }).join("");
     const more = group.notes.length > limit ? `<button class="annotations-more" type="button" data-more-notes="${escapeHtml(group.id)}">SHOW ${Math.min(8, group.notes.length - limit)} MORE NOTES ↓</button>` : "";
     return `<section class="annotation-group"><details data-map-group="${escapeHtml(group.id)}"${expanded.has(group.id) ? " open" : ""}><summary><span class="annotation-group-identity"><small>${escapeHtml(group.city)}${group.year ? ` · ${escapeHtml(group.year)}` : ""}</small><strong>${escapeHtml(group.title)}</strong></span><span class="annotation-group-count">${group.total} NOTE${group.total === 1 ? "" : "S"} <i aria-hidden="true">↓</i></span></summary><div class="annotation-group-notes">${noteRows}${more}</div></details></section>`;

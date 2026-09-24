@@ -4,9 +4,11 @@
   "form": {
     "editUrl": "https://docs.google.com/forms/d/1fUz4nGR_SoeVxF9ICMVur1HOL2rE_my3stpXC9Jj3Y4/edit",
     "viewUrl": "https://docs.google.com/forms/d/e/1FAIpQLSflPZ_TGL-YeUoEgK2GOoQcsxXIcd19URUho57HRZyZ9LpDrA/viewform",
+    "submitUrl": "https://docs.google.com/forms/d/e/1FAIpQLSflPZ_TGL-YeUoEgK2GOoQcsxXIcd19URUho57HRZyZ9LpDrA/formResponse",
     "entries": {
       "annotation": "entry.1738114668",
       "tag": "entry.172926311",
+      "name": "entry.1553831224",
       "context": "entry.503052454"
     }
   },
@@ -19,6 +21,7 @@
     "timestamp": "タイムスタンプ",
     "annotation": "Annotation",
     "tag": "Tag (optional)",
+    "name": "Name or alias",
     "context": "Map context (pre-filled)"
   }
 }
