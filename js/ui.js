@@ -33,7 +33,7 @@ function strayCopy(lateral) {
 function annotationCopy(annotations = [], visible, placing, simulated = false) {
   const count = annotations.length;
   const toggle = count
-    ? `<button class="annotation-summary" type="button" data-annotations-toggle aria-pressed="${visible ? "true" : "false"}"><i aria-hidden="true"></i><span>${count} ${simulated ? "simulated " : ""}note${count === 1 ? "" : "s"} ${visible ? "shown" : "hidden"}</span></button>`
+    ? `<button class="annotation-summary" type="button" role="switch" data-annotations-toggle aria-checked="${visible ? "true" : "false"}" aria-label="Show map notes"><i aria-hidden="true"></i><span>NOTES <small>${count}</small></span><em>${visible ? "ON" : "OFF"}</em></button>`
     : "";
   const open = count ? `<button class="annotation-open" type="button" data-annotations-open>READ NOTES ↗</button>` : "";
   const place = `<button class="annotation-switch${placing ? " is-active" : ""}" type="button" role="switch" data-annotation-place aria-checked="${placing ? "true" : "false"}"${simulated ? ' disabled title="Leave the simulation to add a real note"' : ""}><i class="note-glyph" aria-hidden="true"><b></b><b></b><b></b></i><span>${placing ? "PLACING A NOTE" : "ADD A NOTE"}</span><em aria-hidden="true">${simulated ? "SIMULATION" : placing ? "ON" : "OFF"}</em></button>`;
@@ -117,6 +117,7 @@ export class Interface {
     this.historicalOpacity = document.querySelector("#historical-opacity");
     this.historicalOpacityValue = document.querySelector("#historical-opacity-value");
     this.satelliteCredit = document.querySelector("#satellite-credit");
+    this.googleCredit = document.querySelector("#google-credit");
     this.groundState = { mode: "dark", opacity: 1, hasHistorical: false };
     this.window = document.querySelector("#hyperbook-window");
     this.windowContent = document.querySelector("#hyperbook-window-content");
@@ -271,6 +272,10 @@ export class Interface {
   }
 
   toggleGround() {
+    if (this.groundState.hasHistorical) {
+      this.showGroundForMap();
+      return;
+    }
     if (this.groundControl.hidden) {
       this.groundControl.hidden = false;
       this.groundToggle.setAttribute("aria-expanded", "true");
@@ -279,9 +284,16 @@ export class Interface {
     this.closeGround();
   }
 
-  closeGround() {
+  closeGround(force = false) {
+    if (this.groundState.hasHistorical && !force) return;
     this.groundControl.hidden = true;
     this.groundToggle.setAttribute("aria-expanded", "false");
+  }
+
+  showGroundForMap() {
+    if (!this.groundState.hasHistorical) return;
+    this.groundControl.hidden = false;
+    this.groundToggle.setAttribute("aria-expanded", "true");
   }
 
   setGroundState(next = {}) {
@@ -296,6 +308,7 @@ export class Interface {
     this.historicalOpacity.disabled = !hasHistorical;
     this.historicalOpacityValue.textContent = hasHistorical ? `${Math.round(opacity * 100)}%` : "—";
     this.satelliteCredit.hidden = mode !== "satellite";
+    this.googleCredit.hidden = mode !== "google";
   }
 
   setBookEntryQuotes(data) {
@@ -582,7 +595,7 @@ export class Interface {
     if (prompt) prompt.textContent = message;
   }
 
-  renderCore({ map, coreMaps, encounter, tile, lateral, drift, annotations = [], annotationsVisible = true, annotationMode = false, annotationSimulation = false }) {
+  renderCore({ map, coreMaps, encounter, tile, lateral, drift, annotations = [], annotationsVisible = true, annotationMode = false, annotationCompact = false, annotationOpen = false, annotationSimulation = false }) {
     this.depth.hidden = true;
     this.fieldPrompt.hidden = true;
     this.touchState = { map, coreMaps, lateral };
@@ -604,6 +617,8 @@ export class Interface {
     const takeOffer = `<button class="take-map-quiet" type="button" data-take-map><i aria-hidden="true"></i><span>take map</span></button>`;
     const notes = annotationCopy(annotations, annotationsVisible, annotationMode, annotationSimulation);
     this.surface.hidden = false;
+    this.encounter.classList.toggle("is-note-mode", annotationCompact || (annotationsVisible && annotations.length > 0));
+    this.encounter.classList.toggle("is-note-open", annotationOpen);
     const arrival = fragment?.arrival?.label || "a thread in the book";
     this.encounterContent.innerHTML = `<div class="encounter-flow"><section class="encounter-stage map-stage"><p class="stage-kicker">selected map</p><p class="map-marker">${escapeHtml(map.city)} · ${map.year}</p><div class="map-title-row"><h2>${escapeHtml(map.title)}</h2><span class="map-quiet-actions">${takeOffer}</span></div><div class="map-annotations">${notes.place}${notes.body}</div>${mapRecord(map)}</section><section class="encounter-stage book-stage"><p class="stage-kicker">the book enters <span>${escapeHtml(arrival)}</span></p>${title || quote}</section>${driftOffer || offer ? `<section class="encounter-stage stray-stage">${driftOffer || offer}</section>` : ""}</div>`;
     this.bindTraversal(this.encounterContent);

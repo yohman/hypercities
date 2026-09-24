@@ -6,12 +6,13 @@
     <meta name="theme-color" content="#101111" />
     <title>HyperCities — Thick Mapping</title>
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
-    <link rel="stylesheet" href="./styles.css?v=annotation-density-1" />
+    <link rel="stylesheet" href="./styles.css?v=mini-label-1" />
   </head>
   <body>
     <main id="app" aria-label="HyperCities map">
       <div id="map" aria-label="World map with historical map extents"></div>
       <div id="core-renderer" aria-label="Three-dimensional historical time core"></div>
+      <button id="timewell-size" class="timewell-size" type="button" hidden aria-label="Expand TimeWell">EXPAND TIMEWELL ↗</button>
       <p id="well-caption" class="well-caption" hidden></p>
       <section id="book-entry" class="book-entry" aria-label="A passage from HyperCities">
         <button id="book-entry-dismiss" class="book-entry-dismiss" type="button" aria-label="Enter the map by clicking the background"></button>
@@ -40,10 +41,12 @@
         <div class="ground-switch" role="group" aria-label="Map ground">
           <button type="button" data-basemap="dark" aria-pressed="true">DARK</button>
           <button type="button" data-basemap="satellite" aria-pressed="false">SATELLITE</button>
+          <button type="button" data-basemap="google" aria-pressed="false">GOOGLE</button>
         </div>
         <label class="ground-veil" for="historical-opacity"><span>MAP OPACITY</span><output id="historical-opacity-value" for="historical-opacity">—</output></label>
         <input id="historical-opacity" class="ground-opacity" type="range" min="0" max="100" value="100" step="1" disabled aria-label="Historical map opacity" />
         <p id="satellite-credit" class="satellite-credit" hidden>WORLD IMAGERY · © ESRI</p>
+        <p id="google-credit" class="satellite-credit" hidden>MAP DATA · © GOOGLE</p>
       </aside>
       <div id="depth-indicator" class="depth-indicator" aria-live="polite" hidden></div>
       <section id="field-prompt" class="field-prompt" aria-live="polite" hidden><p>Move across the map. Press into a place to find its depths.</p></section>
@@ -107,6 +110,6 @@
     </main>
     <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
     <script src="https://unpkg.com/deck.gl@9.1.8/dist.min.js"></script>
-    <script type="module" src="./js/main.js?v=annotation-density-1"></script>
+    <script type="module" src="./js/main.js?v=notes-navigation-1"></script>
   </body>
 </html>

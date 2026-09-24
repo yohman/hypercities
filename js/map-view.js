@@ -4,7 +4,9 @@ import { asPolygon, containsCoordinate, tileDiagnostic, tileTemplate } from "./d
 const RED = [166, 42, 38];
 const RED_BRIGHT = [218, 56, 51];
 const ESRI_WORLD_IMAGERY = "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}";
+const GOOGLE_ROAD_MAP = "https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}";
 const NOTE_ICON = `data:image/svg+xml;charset=utf-8,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="40" height="48" viewBox="0 0 40 48"><path d="M20 2c-10 0-18 8-18 18 0 13 18 26 18 26s18-13 18-26C38 10 30 2 20 2Z" fill="#da3833" stroke="#f5eee4" stroke-width="2"/><path d="M12 15h16M12 20h16M12 25h11" stroke="#fffaf0" stroke-width="2" stroke-linecap="round"/></svg>')}`;
+const NOTE_ICON_ACTIVE = `data:image/svg+xml;charset=utf-8,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="40" height="48" viewBox="0 0 40 48"><path d="M20 2c-10 0-18 8-18 18 0 13 18 26 18 26s18-13 18-26C38 10 30 2 20 2Z" fill="#fffaf0" stroke="#da3833" stroke-width="3"/><path d="M12 15h16M12 20h16M12 25h11" stroke="#a62a26" stroke-width="2.4" stroke-linecap="round"/></svg>')}`;
 const NOTE_ICON_PENDING = `data:image/svg+xml;charset=utf-8,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="40" height="48" viewBox="0 0 40 48"><path d="M20 2c-10 0-18 8-18 18 0 13 18 26 18 26s18-13 18-26C38 10 30 2 20 2Z" fill="#111212" stroke="#da3833" stroke-width="2"/><path d="M12 15h16M12 20h16M12 25h11" stroke="#fffaf0" stroke-width="2" stroke-linecap="round"/></svg>')}`;
 
 function grayscale(color, dimming = 0.45) {
@@ -37,6 +39,8 @@ export class MapView {
     this.rasterSourceId = "historical-raster-source";
     this.satelliteLayerId = "esri-world-imagery";
     this.satelliteSourceId = "esri-world-imagery-source";
+    this.googleLayerId = "google-road-map";
+    this.googleSourceId = "google-road-map-source";
     this.basemapMode = "dark";
     this.rasterOpacity = 1;
   }
@@ -54,6 +58,7 @@ export class MapView {
     this.neutraliseBasemap();
     this.darkBasemapLayerIds = (this.map.getStyle().layers || []).map((layer) => layer.id);
     this.installSatelliteBasemap();
+    this.installGoogleBasemap();
     this.overlay = new deck.MapboxOverlay({ interleaved: true, layers: [] });
     this.map.addControl(this.overlay);
     this.map.on("mousemove", (event) => this.handleMove(event.lngLat));
@@ -103,15 +108,39 @@ export class MapView {
     }
   }
 
+  installGoogleBasemap() {
+    if (!this.map.getSource(this.googleSourceId)) {
+      this.map.addSource(this.googleSourceId, {
+        type: "raster",
+        tiles: [GOOGLE_ROAD_MAP],
+        tileSize: 256,
+        maxzoom: 21,
+        attribution: "Map data © Google"
+      });
+    }
+    if (!this.map.getLayer(this.googleLayerId)) {
+      this.map.addLayer({
+        id: this.googleLayerId,
+        type: "raster",
+        source: this.googleSourceId,
+        layout: { visibility: "none" }
+      });
+    }
+  }
+
   setBasemap(mode) {
-    if (!this.map || !["dark", "satellite"].includes(mode)) return;
+    if (!this.map || !["dark", "satellite", "google"].includes(mode)) return;
     const satellite = mode === "satellite";
+    const google = mode === "google";
     this.darkBasemapLayerIds.forEach((id) => {
       if (!this.map.getLayer(id)) return;
-      this.map.setLayoutProperty(id, "visibility", satellite ? "none" : "visible");
+      this.map.setLayoutProperty(id, "visibility", satellite || google ? "none" : "visible");
     });
     if (this.map.getLayer(this.satelliteLayerId)) {
       this.map.setLayoutProperty(this.satelliteLayerId, "visibility", satellite ? "visible" : "none");
+    }
+    if (this.map.getLayer(this.googleLayerId)) {
+      this.map.setLayoutProperty(this.googleLayerId, "visibility", google ? "visible" : "none");
     }
     this.basemapMode = mode;
     this.onBasemapChange?.({ mode });
@@ -208,6 +237,10 @@ export class MapView {
       }));
       return;
     }
+    if (event.type === "click") {
+      canvas.dispatchEvent(new MouseEvent("click", common));
+      return;
+    }
     const pointerInit = {
       ...common,
       button: event.button,
@@ -229,7 +262,9 @@ export class MapView {
 
   renderFootprints() {
     const layers = [new deck.PolygonLayer({
-      id: "historical-map-extents", data: this.maps, pickable: true, stroked: true, filled: false,
+      // Once a raster is selected, only its own footprint remains. The other
+      // archival extents return when the visitor surfaces to the map field.
+      id: "historical-map-extents", data: this.selectedMapId ? [this.selectedMap] : this.maps, pickable: true, stroked: true, filled: false,
       getPolygon: (map) => asPolygon(map),
       getLineColor: (map) => map.id === this.timewellHoverId
           ? [...RED_BRIGHT, 230]
@@ -255,13 +290,15 @@ export class MapView {
     if (this.annotationsVisible && this.annotations.length) {
       const crowded = this.annotations.length >= 50;
       const noteSize = crowded ? 18 : this.annotations.length >= 20 ? 21 : 26;
+      const active = this.annotations.find((annotation) => annotation.id === this.activeAnnotationId);
       layers.push(new deck.IconLayer({
         id: "map-annotations",
-        data: this.annotations,
+        data: active ? this.annotations.filter((annotation) => annotation.id !== active.id) : this.annotations,
         pickable: !this.annotationMode,
         getPosition: (annotation) => [annotation.context.point.lng, annotation.context.point.lat],
         getIcon: () => ({ url: NOTE_ICON, width: 40, height: 48, anchorX: 20, anchorY: 46 }),
-        getSize: (annotation) => annotation.id === this.activeAnnotationId || annotation.id === this.hoverAnnotationId ? noteSize + 7 : noteSize,
+        getSize: (annotation) => annotation.id === this.hoverAnnotationId ? noteSize + 5 : noteSize,
+        getColor: () => active ? [255, 255, 255, 175] : [255, 255, 255, 255],
         sizeUnits: "pixels",
         onHover: (info) => {
           const next = info.object?.id || null;
@@ -271,8 +308,23 @@ export class MapView {
           this.renderFootprints();
         },
         onClick: (info) => { if (info.object) this.onAnnotationSelect?.(info.object); },
-        updateTriggers: { getSize: [this.activeAnnotationId, this.hoverAnnotationId, noteSize] }
+        updateTriggers: { getSize: [this.hoverAnnotationId, noteSize], getColor: [this.activeAnnotationId] }
       }));
+      if (active) {
+        layers.push(new deck.ScatterplotLayer({
+          id: "active-annotation-halo", data: [active], pickable: false, filled: true, stroked: true,
+          getPosition: (annotation) => [annotation.context.point.lng, annotation.context.point.lat],
+          getRadius: noteSize + 15, radiusUnits: "pixels", getFillColor: [8, 9, 9, 95],
+          getLineColor: [255, 250, 240, 245], getLineWidth: 2.5, lineWidthUnits: "pixels"
+        }));
+        layers.push(new deck.IconLayer({
+          id: "active-map-annotation", data: [active], pickable: !this.annotationMode,
+          getPosition: (annotation) => [annotation.context.point.lng, annotation.context.point.lat],
+          getIcon: () => ({ url: NOTE_ICON_ACTIVE, width: 40, height: 48, anchorX: 20, anchorY: 46 }),
+          getSize: noteSize + 14, sizeUnits: "pixels",
+          onClick: (info) => { if (info.object) this.onAnnotationSelect?.(info.object); }
+        }));
+      }
     }
     if (this.pendingAnnotationPoint) {
       layers.push(new deck.IconLayer({
@@ -376,6 +428,7 @@ export class MapView {
     this.coreCoordinate = null;
     this.coreIds = null;
     this.selectedMapId = null;
+    this.selectedMap = null;
     this.timewellHoverId = null;
     this.map.getContainer().classList.remove("field-cored");
     this.renderFootprints();
@@ -409,6 +462,12 @@ export class MapView {
 
   projectPoint(point) {
     return this.map?.project(point) || null;
+  }
+
+  focusAnnotation(point) {
+    if (!this.map || !point) return;
+    const width = this.map.getContainer().clientWidth;
+    this.map.easeTo({ center: [point.lng, point.lat], offset: [-Math.min(155, width * .16), 0], duration: 520 });
   }
 
   getAnnotationCamera() {

@@ -117,7 +117,22 @@ export class CoreView {
     this.onMapGesture = onMapGesture;
     this.container = document.querySelector("#core-renderer");
     this.caption = document.querySelector("#well-caption");
+    this.compact = false;
   }
+
+  setCompact(compact) {
+    const next = Boolean(compact && this.locked);
+    const changed = next !== this.compact || this.container.classList.contains("is-compact") !== next;
+    this.compact = next;
+    this.container.classList.toggle("is-compact", next);
+    if (changed && this.stack && this.deck) {
+      this.viewState = this.fitView();
+      this.deck.setProps({ viewState: this.viewState });
+      this.render();
+    }
+  }
+
+  setPassThrough(passThrough) { this.passThrough = Boolean(passThrough); }
 
   preview(maps, core) {
     if (this.locked) return;
@@ -201,6 +216,7 @@ export class CoreView {
     this.canvas = this.container.querySelector("canvas");
     if (!this.canvas) return;
     const picked = (event) => {
+      if (this.passThrough) return false;
       const bounds = this.canvas.getBoundingClientRect();
       const info = this.deck.pickObject({ x: event.clientX - bounds.left, y: event.clientY - bounds.top, radius: 5 });
       return Boolean(info?.picked);
@@ -221,6 +237,12 @@ export class CoreView {
     }, true);
     this.canvas.addEventListener("pointerup", passPointer, true);
     this.canvas.addEventListener("pointercancel", passPointer, true);
+    this.canvas.addEventListener("click", (event) => {
+      if (picked(event)) return;
+      this.onMapGesture?.(event);
+      event.preventDefault();
+      event.stopImmediatePropagation();
+    }, true);
     this.canvas.addEventListener("wheel", (event) => {
       if (picked(event)) return;
       this.onMapGesture?.(event);
@@ -230,17 +252,17 @@ export class CoreView {
   }
 
   fitView() {
-    const width = Math.max(this.container.clientWidth, 320);
-    const height = Math.max(this.container.clientHeight, 320);
+    const width = Math.max(this.container.clientWidth, this.compact ? 160 : 320);
+    const height = Math.max(this.container.clientHeight, this.compact ? 200 : 320);
     // Leave real visual air beneath the lower cap for the coordinate readout.
     // It is part of the drilled location, not a sideways annotation.
     const baseClearance = 92;
     const extentMin = -baseClearance;
     const extentMax = (this.stack?.height || 1540) + 82;
-    const scale = Math.min(width / 720, height / (extentMax - extentMin)) * 0.9;
+    const scale = Math.min(width / (this.compact ? 470 : 720), height / (extentMax - extentMin)) * (this.compact ? .98 : .9);
     return {
       target: [0, 0, (extentMin + extentMax) / 2],
-      zoom: clamp(Math.log2(scale), -2.5, 0.5),
+      zoom: clamp(Math.log2(scale), this.compact ? -4.5 : -2.5, 0.5),
       rotationX: 58,
       rotationOrbit: 24
     };
@@ -291,6 +313,7 @@ export class CoreView {
       z: entry.z * progress,
       polygon: entry.polygon.map(([x, y, z]) => [x, y, z * progress])
     }));
+    if (this.compact) { this.renderCompact(entries, top); return; }
     const labels = labelEntries(entries, this.selectedId, this.hoverId);
     const selected = entries.find((entry) => entry.map.id === focusId);
     const labelX = 154;
@@ -318,7 +341,7 @@ export class CoreView {
       new deck.PolygonLayer({
         id: "historical-strata",
         data: entries,
-        pickable: true,
+        pickable: false,
         stroked: true,
         filled: true,
         getPolygon: (entry) => entry.polygon,
@@ -332,6 +355,14 @@ export class CoreView {
         parameters: { depthTest: true },
         onClick: (info) => { if (info.object) this.onSelect(info.object.map); },
         onHover: (info) => this.setHover(info)
+      }),
+      new deck.PathLayer({
+        id: "strata-edge-hit-zones", data: entries, pickable: true,
+        getPath: (entry) => entry.polygon, getColor: [RED_BRIGHT[0], RED_BRIGHT[1], RED_BRIGHT[2], 1],
+        getWidth: 5, widthUnits: "pixels",
+        onClick: (info) => { if (info.object) this.onSelect(info.object.map); },
+        onHover: (info) => this.setHover(info),
+        parameters: { depthTest: false }
       }),
       new deck.ColumnLayer({
         // A single high-resolution column gives the core true circular caps
@@ -496,12 +527,54 @@ export class CoreView {
     ] });
   }
 
+  renderCompact(entries, top) {
+    const selected = entries.find((entry) => entry.map.id === this.selectedId);
+    const bounds = [entries[0], entries.at(-1)].filter(Boolean);
+    this.deck.setProps({ layers: [
+      new deck.PolygonLayer({
+        id: "mini-strata", data: entries, pickable: false, stroked: true, filled: true,
+        getPolygon: (entry) => entry.polygon,
+        getLineColor: (entry) => entry.map.id === this.selectedId ? [...INK, 235] : [...RED_BRIGHT, 170],
+        getFillColor: (entry) => entry.map.id === this.selectedId ? [...RED_BRIGHT, 70] : [...RED, 28],
+        getLineWidth: (entry) => entry.map.id === this.selectedId ? 2 : 1,
+        lineWidthUnits: "pixels", parameters: { depthTest: false }
+      }),
+      new deck.ColumnLayer({
+        id: "mini-bore", data: [{ position: [0, 0, 0], elevation: top }],
+        getPosition: (item) => item.position, getElevation: (item) => item.elevation,
+        radius: 10, radiusUnits: "pixels", diskResolution: 40,
+        filled: true, extruded: true, getFillColor: [...RED_BRIGHT, 205],
+        parameters: { depthTest: false }
+      }),
+      new deck.ScatterplotLayer({
+        id: "mini-anchors", data: entries, pickable: false,
+        getPosition: (entry) => [0, 0, entry.z],
+        getRadius: (entry) => entry.map.id === this.selectedId ? 6 : 2.5,
+        radiusUnits: "pixels",
+        getFillColor: (entry) => entry.map.id === this.selectedId ? [...INK, 255] : [...RED_LIGHT, 185],
+        parameters: { depthTest: false }
+      }),
+      new deck.TextLayer({
+        id: "mini-years", data: selected && !bounds.some((entry) => entry.map.id === selected.map.id) ? [...bounds, selected] : bounds,
+        getPosition: (entry) => [95, 0, entry.z], getText: (entry) => String(entry.map.year),
+        getColor: (entry) => entry.map.id === this.selectedId ? [...INK, 255] : [...INK, 175],
+        getSize: (entry) => entry.map.id === this.selectedId ? 12 : 9,
+        sizeUnits: "pixels", getTextAnchor: "start", getAlignmentBaseline: "center",
+        billboard: true, fontFamily: "Palatino Linotype, Georgia, serif",
+        parameters: { depthTest: false }
+      })
+    ] });
+  }
+
   leave() {
     if (this.appearanceFrame) cancelAnimationFrame(this.appearanceFrame);
     this.appearanceFrame = null;
     this.locked = false;
+    this.compact = false;
+    this.passThrough = false;
     this.container.classList.remove("is-active");
     this.container.classList.remove("is-preview");
+    this.container.classList.remove("is-compact");
     this.caption.hidden = true;
     this.onHover?.(null);
     if (this.deck) this.deck.setProps({ layers: [] });
