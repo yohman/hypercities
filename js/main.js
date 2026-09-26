@@ -5,15 +5,48 @@ import { MapView } from "./map-view.js?v=dark-start-1";
 import { AnnotationStore, annotationContext } from "./annotations.js?v=note-autoshow-1";
 import { annotationSimulationRequest, simulatedAnnotations } from "./annotations-simulation.js";
 import { downloadText, kmlFilenameFor, kmlFor } from "./take-map.js";
-import { Interface } from "./ui.js?v=windows-compact-2";
+import { Interface } from "./ui.js?v=class-note-filters-1";
 
-const app = { data: null, field: null, core: null, ui: null, annotations: null, simulation: null, simulatedNotes: [], pendingAnnotations: [], mapAnnotations: [], annotationsVisible: true, timewellExpanded: false, activeAnnotationId: null, annotationMode: false, annotationDraft: null, annotationFloatOpen: false, annotationArrivalFocused: false, coreMaps: [], corePoint: null, selected: null, context: null, bookEncounter: null, activeEncounter: null, tile: null, stray: null, drift: null, takeMode: false, trail: [], history: [], seenEncounterIds: [], seenPassageIds: [], seenNodeIds: [], recentConceptIds: [] };
+const app = { data: null, field: null, core: null, ui: null, annotations: null, simulation: null, simulatedNotes: [], pendingAnnotations: [], allMapAnnotations: [], mapAnnotations: [], annotationFilter: { search: "", alias: "" }, annotationsVisible: true, timewellExpanded: false, activeAnnotationId: null, annotationMode: false, annotationDraft: null, annotationFloatOpen: false, annotationArrivalFocused: false, coreMaps: [], corePoint: null, selected: null, context: null, bookEncounter: null, activeEncounter: null, tile: null, stray: null, drift: null, takeMode: false, trail: [], history: [], seenEncounterIds: [], seenPassageIds: [], seenNodeIds: [], recentConceptIds: [] };
 
 function annotationsForMap(mapId) {
   if (app.simulation?.mapId === mapId) return app.simulatedNotes;
   const published = app.annotations?.forMap(mapId) || [];
   const pending = app.pendingAnnotations.filter((note) => note.context.mapId === mapId && !published.some((live) => live.id === note.id));
   return [...pending, ...published];
+}
+
+function filteredAnnotations(annotations = []) {
+  const search = app.annotationFilter.search.trim().toLocaleLowerCase();
+  const alias = app.annotationFilter.alias;
+  return annotations.filter((annotation) => {
+    if (alias && annotation.name !== alias) return false;
+    if (!search) return true;
+    return `${annotation.name || ""} ${annotation.text || ""} ${(annotation.tags || []).join(" ")} ${annotation.tag || ""}`.toLocaleLowerCase().includes(search);
+  });
+}
+
+function setMapAnnotationSet(mapId) {
+  app.allMapAnnotations = annotationsForMap(mapId);
+  app.mapAnnotations = filteredAnnotations(app.allMapAnnotations);
+  if (!app.mapAnnotations.some((annotation) => annotation.id === app.activeAnnotationId)) {
+    app.activeAnnotationId = app.mapAnnotations[0]?.id || null;
+    app.annotationFloatOpen = false;
+  }
+}
+
+function filterAnnotations(filter) {
+  app.annotationFilter = { search: filter.search || "", alias: filter.alias || "" };
+  if (!app.selected) return;
+  const openId = app.annotationFloatOpen ? app.activeAnnotationId : null;
+  setMapAnnotationSet(app.selected.id);
+  if (openId && !app.mapAnnotations.some((note) => note.id === openId)) {
+    app.annotationFloatOpen = false;
+    app.ui.hideAnnotationFloat();
+  }
+  app.field.setAnnotations(app.mapAnnotations, { visible: app.annotationsVisible, activeId: app.annotationFloatOpen ? app.activeAnnotationId : null });
+  render();
+  showActiveAnnotation();
 }
 
 function pushTrail(label, id, why = null) {
@@ -66,7 +99,7 @@ function selectionOptions(map, interaction) {
 function render() {
   if (!app.selected) return;
   syncTimewellSize();
-  app.ui.renderCore({ map: app.selected, coreMaps: app.coreMaps, encounter: app.activeEncounter || app.bookEncounter, tile: app.tile, lateral: app.stray, drift: app.drift, annotations: app.mapAnnotations, annotationsVisible: app.annotationsVisible, annotationMode: app.annotationMode, annotationCompact: app.annotationMode || Boolean(app.annotationDraft), annotationOpen: app.annotationFloatOpen, annotationSimulation: app.simulation?.mapId === app.selected.id });
+  app.ui.renderCore({ map: app.selected, coreMaps: app.coreMaps, encounter: app.activeEncounter || app.bookEncounter, tile: app.tile, lateral: app.stray, drift: app.drift, annotations: app.allMapAnnotations, filteredAnnotations: app.mapAnnotations, annotationFilter: app.annotationFilter, annotationsVisible: app.annotationsVisible, annotationMode: app.annotationMode, annotationCompact: app.annotationMode || Boolean(app.annotationDraft), annotationOpen: app.annotationFloatOpen, annotationSimulation: app.simulation?.mapId === app.selected.id });
 }
 
 function syncTimewellSize() {
@@ -110,7 +143,7 @@ async function refreshAnnotations({ force = false } = {}) {
     console.warn("Could not refresh annotations.", error);
   }
   if (!app.selected || app.selected.id !== selectedId) return;
-  app.mapAnnotations = annotationsForMap(selectedId);
+  setMapAnnotationSet(selectedId);
   if (!app.mapAnnotations.some((annotation) => annotation.id === app.activeAnnotationId)) {
     const requested = new URLSearchParams(window.location.search).get("annotation");
     app.activeAnnotationId = app.mapAnnotations.some((annotation) => annotation.id === requested)
@@ -147,13 +180,13 @@ function selectMap(map, { keepEncounter = false, trailWhy = null, focus = true, 
   app.annotationMode = false;
   app.annotationDraft = null;
   app.annotationFloatOpen = false;
+  app.annotationFilter = { search: "", alias: "" };
   app.ui.hideAnnotationFloat();
   app.field.setPendingAnnotation(null);
   app.annotationsVisible = true;
   app.field.setAnnotationMode(false);
   app.core.setPassThrough(false);
-  app.mapAnnotations = annotationsForMap(map.id);
-  if (!app.mapAnnotations.some((annotation) => annotation.id === app.activeAnnotationId)) app.activeAnnotationId = null;
+  setMapAnnotationSet(map.id);
   app.core.select(map, { focus });
   app.field.showRaster(map, { focus });
   app.ui.showGroundForMap();
@@ -285,7 +318,7 @@ function leaveCore() {
   closeAnnotation();
   app.ui.closeGround(true);
   app.timewellExpanded = null;
-  app.core.leave(); app.field.leaveCore(); app.coreMaps = []; app.corePoint = null; app.selected = null; app.context = null; app.bookEncounter = null; app.activeEncounter = null; app.stray = null; app.drift = null; app.takeMode = false; app.annotationMode = false; app.mapAnnotations = []; app.activeAnnotationId = null; app.history = []; app.ui.clearTakeMap(); app.ui.field();
+  app.core.leave(); app.field.leaveCore(); app.coreMaps = []; app.corePoint = null; app.selected = null; app.context = null; app.bookEncounter = null; app.activeEncounter = null; app.stray = null; app.drift = null; app.takeMode = false; app.annotationMode = false; app.allMapAnnotations = []; app.mapAnnotations = []; app.activeAnnotationId = null; app.history = []; app.ui.clearTakeMap(); app.ui.field();
   syncTimewellSize();
 }
 
@@ -436,7 +469,8 @@ function confirmAnnotation({ text, name, tag }) {
   app.annotationsVisible = true;
   app.activeAnnotationId = id;
   app.field.setPendingAnnotation(null);
-  app.mapAnnotations = annotationsForMap(app.selected.id);
+  app.annotationFilter = { search: "", alias: "" };
+  setMapAnnotationSet(app.selected.id);
   app.field.setAnnotations(app.mapAnnotations, { visible: true, activeId: id });
   render();
   showActiveAnnotation();
@@ -452,7 +486,7 @@ function pollSubmittedNote(id, attempts = 0) {
     if (attempts < 17) { pollSubmittedNote(id, attempts + 1); return; }
     pending.unconfirmed = true;
     if (app.selected?.id === pending.context.mapId) {
-      app.mapAnnotations = annotationsForMap(app.selected.id);
+      setMapAnnotationSet(app.selected.id);
       render();
       showActiveAnnotation();
     }
@@ -513,7 +547,7 @@ async function start() {
     syncTimewellSize();
   });
   try {
-    app.ui = new Interface({ node: followNode, time: moveTime, stray: acceptStray, drift: acceptDrift, aperture: openAperture, read: () => app.ui.openRead(), surface: leaveCore, back: stepBack, take: beginTakeMap, takeSelected: openTakeMap, resumeTake: resumeTakeMap, exportMap, basemap: setBasemap, rasterOpacity: setRasterOpacity, annotations: toggleAnnotations, openAnnotations, annotate: toggleAnnotationMode, annotationStep: stepAnnotation, closeAnnotation, changeAnnotationPoint, confirmAnnotation });
+    app.ui = new Interface({ node: followNode, time: moveTime, stray: acceptStray, drift: acceptDrift, aperture: openAperture, read: () => app.ui.openRead(), surface: leaveCore, back: stepBack, take: beginTakeMap, takeSelected: openTakeMap, resumeTake: resumeTakeMap, exportMap, basemap: setBasemap, rasterOpacity: setRasterOpacity, annotations: toggleAnnotations, openAnnotations, annotate: toggleAnnotationMode, annotationStep: stepAnnotation, filterAnnotations, closeAnnotation, changeAnnotationPoint, confirmAnnotation });
     document.querySelector("#timewell-size").addEventListener("click", () => {
       app.timewellExpanded = app.core.compact;
       syncTimewellSize();

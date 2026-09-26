@@ -210,6 +210,6 @@ export function annotationContext({ map, point, core, camera, basemap, opacity }
 
 export function annotationDeepLink(annotation) {
   const params = new URLSearchParams({ map: annotation.context.mapId, annotation: annotation.id });
-  if (annotation.simulated) params.set("simulateNotes", "60");
+  if (annotation.simulated) params.set("simulateNotes", String(annotation.simulationCount || 60));
   return `./?${params.toString()}`;
 }

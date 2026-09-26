@@ -32,15 +32,18 @@ function strayCopy(lateral) {
   return `<button class="stray-path" type="button" data-node="${escapeHtml(lateral.id)}" aria-label="Stray through ${escapeHtml(lateral.label)}"><span class="stray-symbol" aria-hidden="true"><i></i><i></i><i></i></span><span class="stray-copy"><small>STRAY</small><strong>through ${escapeHtml(lateral.label)}</strong><em>${escapeHtml(kind)} · ${escapeHtml(assertion)}</em></span><span class="stray-arrow" aria-hidden="true">→</span></button>`;
 }
 
-function annotationCopy(annotations = [], visible, placing, simulated = false) {
+function annotationCopy(annotations = [], filteredAnnotations = annotations, visible, placing, simulated = false, filter = {}) {
   const count = annotations.length;
+  const visibleCount = filteredAnnotations.length;
+  const aliases = [...new Set(annotations.map((annotation) => annotation.name).filter(Boolean))].sort((a, b) => a.localeCompare(b));
   const toggle = count
-    ? `<button class="annotation-summary" type="button" role="switch" data-annotations-toggle aria-checked="${visible ? "true" : "false"}" aria-label="Show map notes"><i aria-hidden="true"></i><span>NOTES <small>${count}</small></span><em>${visible ? "ON" : "OFF"}</em></button>`
+    ? `<button class="annotation-summary" type="button" role="switch" data-annotations-toggle aria-checked="${visible ? "true" : "false"}" aria-label="Show map notes"><i aria-hidden="true"></i><span>NOTES <small>${visibleCount}${visibleCount !== count ? ` / ${count}` : ""}</small></span><em>${visible ? "ON" : "OFF"}</em></button>`
     : "";
   const open = count ? `<button class="annotation-open" type="button" data-annotations-open>READ NOTES ↗</button>` : "";
+  const filters = count && visible ? `<div class="annotation-filters" aria-label="Filter map notes"><select data-note-alias aria-label="Filter notes by alias"><option value="">ALL ALIASES · ${aliases.length}</option>${aliases.map((alias) => `<option value="${escapeHtml(alias)}"${filter.alias === alias ? " selected" : ""}>${escapeHtml(alias)}</option>`).join("")}</select><input data-note-search type="search" aria-label="Search notes" placeholder="Search notes…" value="${escapeHtml(filter.search || "")}" autocomplete="off"></div>${simulated ? `<p class="annotation-simulation-label">SIMULATED CLASS · 20 ALIASES · NOT PUBLIC SUBMISSIONS</p>` : ""}` : "";
   const place = `<button class="annotation-switch${placing ? " is-active" : ""}" type="button" role="switch" data-annotation-place aria-checked="${placing ? "true" : "false"}"${simulated ? ' disabled title="Leave the simulation to add a real note"' : ""}><i class="note-glyph" aria-hidden="true"><b></b><b></b><b></b></i><span>${placing ? "PLACING A NOTE" : "ADD A NOTE"}</span><em aria-hidden="true">${simulated ? "SIMULATION" : placing ? "ON" : "OFF"}</em></button>`;
   const instruction = placing ? `<p class="annotation-mode-prompt">Choose a point on this map to leave a note.</p>` : "";
-  return { place, body: `${count ? `<div class="annotation-note-controls">${toggle}${open}</div>` : ""}${instruction}` };
+  return { place, body: `${count ? `<div class="annotation-note-controls">${toggle}${open}</div>${filters}` : ""}${instruction}` };
 }
 
 const BOOK_PAGE_COUNT = 212;
@@ -99,6 +102,17 @@ export class Interface {
     this.fieldPrompt = document.querySelector("#field-prompt");
     this.fieldEncounter = document.querySelector("#field-encounter");
     this.encounter = document.querySelector("#encounter");
+    this.mobileMapId = null;
+    this.mobileDetailsExpanded = false;
+    this.encounter.addEventListener("click", (event) => {
+      const disclosure = event.target.closest("[data-mobile-map-details]");
+      if (!disclosure) return;
+      this.mobileDetailsExpanded = !this.mobileDetailsExpanded;
+      this.encounter.classList.toggle("is-mobile-expanded", this.mobileDetailsExpanded);
+      document.body.classList.toggle("mobile-map-info-open", this.mobileDetailsExpanded);
+      disclosure.setAttribute("aria-expanded", String(this.mobileDetailsExpanded));
+      disclosure.textContent = this.mobileDetailsExpanded ? "LESS ↑" : "MAP DETAILS ↓";
+    });
     this.encounterContent = document.querySelector("#encounter-content");
     this.annotationFloat = document.querySelector("#annotation-float");
     this.takePrompt = document.querySelector("#take-prompt");
@@ -692,13 +706,28 @@ export class Interface {
     if (prompt) prompt.textContent = message;
   }
 
-  renderCore({ map, coreMaps, encounter, tile, lateral, drift, annotations = [], annotationsVisible = true, annotationMode = false, annotationCompact = false, annotationOpen = false, annotationSimulation = false }) {
+  renderCore({ map, coreMaps, encounter, tile, lateral, drift, annotations = [], filteredAnnotations = annotations, annotationFilter = {}, annotationsVisible = true, annotationMode = false, annotationCompact = false, annotationOpen = false, annotationSimulation = false }) {
+    const focusedFilter = document.activeElement?.matches?.("[data-note-search], [data-note-alias]") ? document.activeElement : null;
+    const filterSelector = focusedFilter?.matches("[data-note-search]") ? "[data-note-search]" : focusedFilter ? "[data-note-alias]" : null;
+    const selection = focusedFilter?.matches("[data-note-search]") ? [focusedFilter.selectionStart, focusedFilter.selectionEnd] : null;
     this.depth.hidden = true;
     this.fieldPrompt.hidden = true;
     this.touchState = { map, coreMaps, lateral };
     this.renderTouchNavigation();
     this.encounter.hidden = !encounter;
-    if (!encounter) return;
+    if (!encounter) {
+      this.mobileMapId = null;
+      this.mobileDetailsExpanded = false;
+      this.encounter.classList.remove("is-mobile-expanded");
+      document.body.classList.remove("mobile-map-info-open");
+      return;
+    }
+    if (this.mobileMapId !== map.id) {
+      this.mobileMapId = map.id;
+      this.mobileDetailsExpanded = false;
+      this.encounter.classList.remove("is-mobile-expanded");
+      document.body.classList.remove("mobile-map-info-open");
+    }
     const fragment = encounter.fragment || encounter.quote || null;
     const title = fragment && fragment.kind !== "quotation"
       ? `<button class="fragment-name" type="button" data-aperture="${escapeHtml(fragment.apertureId)}" aria-label="Open the cited book page for ${escapeHtml(fragment.text)}"><span>${escapeHtml(fragment.text)}</span><span class="quote-aperture" aria-hidden="true">read ↗</span></button>`
@@ -712,12 +741,19 @@ export class Interface {
     // in the dérive. It stays with the map identity rather than competing with
     // the book movement and the visitor's trace.
     const takeOffer = `<button class="take-map-quiet" type="button" data-take-map><i aria-hidden="true"></i><span>take map</span></button>`;
-    const notes = annotationCopy(annotations, annotationsVisible, annotationMode, annotationSimulation);
+    const notes = annotationCopy(annotations, filteredAnnotations, annotationsVisible, annotationMode, annotationSimulation, annotationFilter);
     this.surface.hidden = false;
     this.encounter.classList.toggle("is-note-mode", annotationCompact || (annotationsVisible && annotations.length > 0));
     this.encounter.classList.toggle("is-note-open", annotationOpen);
     const arrival = fragment?.arrival?.label || "a thread in the book";
-    this.encounterContent.innerHTML = `<div class="encounter-flow"><section class="encounter-stage map-stage"><p class="stage-kicker">selected map</p><p class="map-marker">${escapeHtml(map.city)} · ${map.year}</p><div class="map-title-row"><h2>${escapeHtml(map.title)}</h2><span class="map-quiet-actions">${takeOffer}</span></div><div class="map-annotations">${notes.place}${notes.body}</div>${mapRecord(map)}</section><section class="encounter-stage book-stage"><p class="stage-kicker">the book enters <span>${escapeHtml(arrival)}</span></p>${title || quote}</section>${driftOffer || offer ? `<section class="encounter-stage stray-stage">${driftOffer || offer}</section>` : ""}</div>`;
+    this.encounterContent.innerHTML = `<div class="encounter-flow"><section class="encounter-stage map-stage"><p class="stage-kicker">selected map</p><p class="map-marker">${escapeHtml(map.city)} · ${map.year}</p><div class="map-title-row"><h2>${escapeHtml(map.title)}</h2><span class="map-quiet-actions">${takeOffer}</span></div><button class="mobile-map-details" type="button" data-mobile-map-details aria-expanded="${this.mobileDetailsExpanded}">${this.mobileDetailsExpanded ? "LESS ↑" : "MAP DETAILS ↓"}</button><div class="map-annotations">${notes.place}${notes.body}</div>${mapRecord(map)}</section><section class="encounter-stage book-stage"><p class="stage-kicker">the book enters <span>${escapeHtml(arrival)}</span></p>${title || quote}</section>${driftOffer || offer ? `<section class="encounter-stage stray-stage">${driftOffer || offer}</section>` : ""}</div>`;
+    this.encounter.classList.toggle("is-mobile-expanded", this.mobileDetailsExpanded);
+    document.body.classList.toggle("mobile-map-info-open", this.mobileDetailsExpanded);
+    if (filterSelector) {
+      const restored = this.encounterContent.querySelector(filterSelector);
+      restored?.focus({ preventScroll: true });
+      if (selection && restored?.setSelectionRange) restored.setSelectionRange(...selection);
+    }
     this.bindTraversal(this.encounterContent);
   }
 
@@ -752,6 +788,8 @@ export class Interface {
     element.querySelectorAll("[data-annotations-open]").forEach((button) => button.addEventListener("click", () => this.actions.openAnnotations()));
     element.querySelectorAll("[data-annotation-place]").forEach((button) => button.addEventListener("click", () => this.actions.annotate()));
     element.querySelectorAll("[data-annotation-step]").forEach((button) => button.addEventListener("click", () => this.actions.annotationStep(Number(button.dataset.annotationStep))));
+    element.querySelector("[data-note-search]")?.addEventListener("input", (event) => this.actions.filterAnnotations({ search: event.currentTarget.value, alias: element.querySelector("[data-note-alias]")?.value || "" }));
+    element.querySelector("[data-note-alias]")?.addEventListener("change", (event) => this.actions.filterAnnotations({ search: element.querySelector("[data-note-search]")?.value || "", alias: event.currentTarget.value }));
   }
 
   openAperture(aperture) {
