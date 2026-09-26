@@ -1,11 +1,11 @@
 import { containsCoordinate, loadData, tileDiagnostic } from "./data.js";
-import { CoreView } from "./core-view.js?v=timewell-no-turtle-1";
+import { CoreView } from "./core-view.js?v=well-controls-2";
 import { apertureFor, driftOffer, fieldFragment, isPlaceNode, mapContext, mapEncounter, nodeEncounter, strayOffer } from "./graph.js";
-import { MapView } from "./map-view.js?v=notes-navigation-1";
+import { MapView } from "./map-view.js?v=dark-start-1";
 import { AnnotationStore, annotationContext } from "./annotations.js?v=note-autoshow-1";
 import { annotationSimulationRequest, simulatedAnnotations } from "./annotations-simulation.js";
 import { downloadText, kmlFilenameFor, kmlFor } from "./take-map.js";
-import { Interface } from "./ui.js?v=origins-2";
+import { Interface } from "./ui.js?v=windows-compact-2";
 
 const app = { data: null, field: null, core: null, ui: null, annotations: null, simulation: null, simulatedNotes: [], pendingAnnotations: [], mapAnnotations: [], annotationsVisible: true, timewellExpanded: false, activeAnnotationId: null, annotationMode: false, annotationDraft: null, annotationFloatOpen: false, annotationArrivalFocused: false, coreMaps: [], corePoint: null, selected: null, context: null, bookEncounter: null, activeEncounter: null, tile: null, stray: null, drift: null, takeMode: false, trail: [], history: [], seenEncounterIds: [], seenPassageIds: [], seenNodeIds: [], recentConceptIds: [] };
 
@@ -72,14 +72,15 @@ function render() {
 function syncTimewellSize() {
   const button = document.querySelector("#timewell-size");
   const addingNote = app.annotationMode || Boolean(app.annotationDraft);
-  const canShrink = Boolean(app.selected && (addingNote || (app.annotationsVisible && app.mapAnnotations.length)));
-  const compact = canShrink && (addingNote || !app.timewellExpanded);
+  const canShrink = Boolean(app.selected);
+  const preferMini = window.matchMedia("(max-width: 780px)").matches || (app.annotationsVisible && app.mapAnnotations.length > 0);
+  const compact = canShrink && (addingNote || !(app.timewellExpanded ?? !preferMini));
   app.core?.setCompact(compact);
   button.hidden = !canShrink;
   button.classList.toggle("is-compact", compact);
   button.innerHTML = compact
     ? `<span>EXPAND ↗</span>`
-    : "SHRINK TIMEWELL ↘";
+    : "MINIMIZE ↘";
   button.setAttribute("aria-label", compact ? "Expand TimeWell" : "Shrink TimeWell");
 }
 
@@ -178,7 +179,7 @@ function discoverField(maps, point, lngLat) {
 
 function enterCore(maps, lngLat) {
   if (!maps.length) { app.ui.field("No sampled historical layer holds this point. Keep moving; the map remains open."); return; }
-  app.timewellExpanded = false;
+  app.timewellExpanded = null;
   app.history.push({ type: "field" });
   app.corePoint = lngLat;
   app.coreMaps = [...maps].sort((a, b) => a.year - b.year || a.title.localeCompare(b.title));
@@ -254,7 +255,7 @@ function moveToPlace(nodeId, why = null) {
   app.core.leave();
   app.field.leaveCore();
   app.coreMaps = layers.length ? layers : [seed];
-  app.timewellExpanded = false;
+  app.timewellExpanded = null;
   app.corePoint = core;
   app.field.enterCore(core, app.coreMaps);
   app.core.enter(app.coreMaps, core);
@@ -273,7 +274,7 @@ function acceptDrift(mapId) {
   const layers = app.data.maps.filter((candidate) => candidate.bbox[0] <= core.lng && candidate.bbox[2] >= core.lng && candidate.bbox[1] <= core.lat && candidate.bbox[3] >= core.lat)
     .sort((a, b) => a.year - b.year || a.title.localeCompare(b.title));
   app.coreMaps = layers.length ? layers : [map];
-  app.timewellExpanded = false;
+  app.timewellExpanded = null;
   app.corePoint = core;
   app.field.enterCore(core, app.coreMaps);
   app.core.enter(app.coreMaps, core);
@@ -283,7 +284,7 @@ function acceptDrift(mapId) {
 function leaveCore() {
   closeAnnotation();
   app.ui.closeGround(true);
-  app.timewellExpanded = false;
+  app.timewellExpanded = null;
   app.core.leave(); app.field.leaveCore(); app.coreMaps = []; app.corePoint = null; app.selected = null; app.context = null; app.bookEncounter = null; app.activeEncounter = null; app.stray = null; app.drift = null; app.takeMode = false; app.annotationMode = false; app.mapAnnotations = []; app.activeAnnotationId = null; app.history = []; app.ui.clearTakeMap(); app.ui.field();
   syncTimewellSize();
 }
@@ -476,7 +477,7 @@ function respondToMapGesture(cue) {
 }
 
 function keyboard(event) {
-  if (document.querySelector("#origins-window").open) return;
+  if (document.querySelector("#origins-window").open || document.querySelector("#stories-window").open) return;
   if (app.ui.bookEntryIsVisible()) return;
   if (document.querySelector("#help-dialog").open || !document.querySelector("#site-index").hidden || document.querySelector("#hyperbook-window").open || document.querySelector("#take-map-window").open) return;
   if ((app.annotationDraft || app.annotationFloatOpen) && event.key === "Escape") {
@@ -506,10 +507,15 @@ function keyboard(event) {
 }
 
 async function start() {
+  app.timewellExpanded = null;
+  window.matchMedia("(max-width: 780px)").addEventListener("change", () => {
+    app.timewellExpanded = null;
+    syncTimewellSize();
+  });
   try {
     app.ui = new Interface({ node: followNode, time: moveTime, stray: acceptStray, drift: acceptDrift, aperture: openAperture, read: () => app.ui.openRead(), surface: leaveCore, back: stepBack, take: beginTakeMap, takeSelected: openTakeMap, resumeTake: resumeTakeMap, exportMap, basemap: setBasemap, rasterOpacity: setRasterOpacity, annotations: toggleAnnotations, openAnnotations, annotate: toggleAnnotationMode, annotationStep: stepAnnotation, closeAnnotation, changeAnnotationPoint, confirmAnnotation });
     document.querySelector("#timewell-size").addEventListener("click", () => {
-      app.timewellExpanded = !app.timewellExpanded;
+      app.timewellExpanded = app.core.compact;
       syncTimewellSize();
     });
     const pageParams = new URLSearchParams(window.location.search);

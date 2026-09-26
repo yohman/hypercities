@@ -8,7 +8,7 @@ This is not a recreation of the original GIS platform or a conventional academic
 
 - A dark, label-free world map reveals the real extents of historical maps as restrained red traces.
 - A single **GROUND** opener shifts the field between its default dark map and Esri World Imagery. When an original historical raster is present, its **HISTORICAL VEIL** slider lets the visitor compare the map with the present beneath it.
-- The map remains the landing experience. A quiet **EXPLORE** opens a sparse constellation of HyperCities entrances and lays down a different dashed dérive toward one possible future path each time; MAP, READ, Take a Map, and ORIGINS are active, while Windows remains a later phase.
+- The map remains the landing experience. A quiet **EXPLORE** opens READ, WINDOWS, ANNOTATIONS, and ORIGINS with a dashed dérive between entrances. Return to the map through the header; Take a Map remains attached to the selected historical map.
 - **TAKE A MAP** is an archival action available whenever a historical layer is selected; Explore remains an optional archive-led entrance. Its floating source panel has three focused tabs—an interactive MapLibre map and complete HTML recipe, Google Earth/KML instructions, and QGIS instructions. It never implies a raster download or rights grant.
 - Hovering a location with overlapping maps previews a **TimeWell**; clicking locks a CORE at that coordinate.
 - The **TimeWell** is HyperCities’ temporal-CORE innovation: a floating three-dimensional cross-section generated when a visitor cuts into a location. Its strata preserve each map's geographic aspect ratio, a central pillar fixes the drilled coordinate, and the vertical axis makes the available dates traversable.
@@ -68,6 +68,10 @@ Playback uses an ordinary YouTube embed with optional API diagnostics. The playe
 ## Hyperbook data
 
 The site is backed by a reviewable, static full-book graph. The scholarly passage stays primary; encounter fragments are smaller source-grounded entrances into passages, quotations, concepts, people, projects, Windows, events, figures, and technical material.
+
+### Windows: four independent stories
+
+**WINDOWS** opens the book's Los Angeles Ghost Maps (pp. 66–73), PDub Productions: Mapping HiFi (74–83), Rome: Jumping Over the Line (128–133), and Mapping the 2009 Election Protests in Tehran (134–139). Each entrance leads to a bounded reader preserving the original pages and illustrations, with facing pages on wide screens, single pages on narrow screens, and a route into READ at the current page. Short introductions are editorial summaries, not quotations. [Source ranges and reading behavior](docs/windows.md).
 
 | Artifact | Purpose |
 | --- | --- |

@@ -46,16 +46,19 @@ export class MapView {
   }
 
   async init() {
+    // Prepare the final palette before MapLibre can render its first frame.
+    const response = await fetch("https://basemaps.cartocdn.com/gl/dark-matter-nolabels-gl-style/style.json");
+    if (!response.ok) throw new Error(`Basemap style could not load (${response.status}).`);
+    const style = this.neutraliseBasemap(await response.json());
     this.map = new maplibregl.Map({
       container: "map",
-      style: "https://basemaps.cartocdn.com/gl/dark-matter-nolabels-gl-style/style.json",
+      style,
       center: [10, 27], zoom: 1.7, minZoom: 1.25, attributionControl: false,
       // Arrow keys belong to HyperCities: up/down move through the TimeWell
       // and left/right follow the current conceptual path, never the basemap.
       keyboard: false
     });
     await new Promise((resolve) => this.map.once("load", resolve));
-    this.neutraliseBasemap();
     this.darkBasemapLayerIds = (this.map.getStyle().layers || []).map((layer) => layer.id);
     this.installSatelliteBasemap();
     this.installGoogleBasemap();
@@ -156,7 +159,7 @@ export class MapView {
     this.onRasterOpacityChange?.({ opacity: next, hasHistorical: Boolean(this.map?.getLayer(this.rasterLayerId)) });
   }
 
-  neutraliseBasemap() {
+  neutraliseBasemap(style) {
     const colorProperties = {
       background: ["background-color"],
       fill: ["fill-color", "fill-outline-color"],
@@ -164,24 +167,26 @@ export class MapView {
       circle: ["circle-color", "circle-stroke-color"],
       symbol: ["text-color", "icon-color"]
     };
-    for (const layer of this.map.getStyle().layers || []) {
+    for (const layer of style.layers || []) {
+      const paint = layer.paint ||= {};
       // Carto defines the most visible country line as a zoom-stop expression,
       // not a literal color. Handle that pair explicitly so it cannot bypass
       // the generic colour neutralisation below.
       if (layer.id === "boundary_country_outline" || layer.id === "boundary_country_inner") {
-        this.map.setPaintProperty(layer.id, "line-color", "rgb(48, 48, 48)");
-        this.map.setPaintProperty(layer.id, "line-opacity", layer.id === "boundary_country_inner" ? 0.34 : 0.16);
+        paint["line-color"] = "rgb(48, 48, 48)";
+        paint["line-opacity"] = layer.id === "boundary_country_inner" ? 0.34 : 0.16;
         continue;
       }
       for (const property of colorProperties[layer.type] || []) {
         // Country and administrative boundary lines are context, never a
         // competing graphic system. Keep fills unchanged, but dim linework
         // more strongly than the rest of the neutral basemap.
-        const neutral = grayscale(this.map.getPaintProperty(layer.id, property), layer.type === "line" ? 0.24 : 0.45);
-        if (neutral) this.map.setPaintProperty(layer.id, property, neutral);
+        const neutral = grayscale(paint[property], layer.type === "line" ? 0.24 : 0.45);
+        if (neutral) paint[property] = neutral;
       }
-      if (layer.type === "raster") this.map.setPaintProperty(layer.id, "raster-saturation", -1);
+      if (layer.type === "raster") paint["raster-saturation"] = -1;
     }
+    return style;
   }
 
   handleMove(lngLat) {

@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#101111" />
     <title>HyperCities — Thick Mapping</title>
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
-    <link rel="stylesheet" href="./styles.css?v=origins-2" />
+    <link rel="stylesheet" href="./styles.css?v=windows-compact-2" />
   </head>
   <body>
     <main id="app" aria-label="HyperCities map">
@@ -28,7 +28,15 @@
       <header class="masthead">
         <div class="masthead-left">
           <a class="wordmark" href="./" aria-label="Return to the world map">HYPERCITIES</a>
-          <button id="index-toggle" class="index-toggle" type="button" aria-haspopup="dialog" aria-controls="site-index" aria-expanded="false">EXPLORE</button>
+          <div class="explore-access">
+            <button id="index-toggle" class="index-toggle" type="button" aria-haspopup="dialog" aria-controls="site-index" aria-expanded="false">EXPLORE <span aria-hidden="true">›</span></button>
+            <nav class="explore-shortcuts" aria-label="Explore shortcuts" inert>
+              <button type="button" data-shortcut="read">READ</button>
+              <button type="button" data-shortcut="windows">WINDOWS</button>
+              <a href="./annotations.html">ANNOTATIONS</a>
+              <button type="button" data-shortcut="origins">ORIGINS</button>
+            </nav>
+          </div>
         </div>
         <div class="masthead-actions">
           <button id="surface" class="surface" type="button" hidden>← MAP</button>
@@ -91,14 +99,16 @@
         <nav class="site-index-nav" aria-label="Ways into HyperCities">
           <button id="index-close" class="index-close" type="button" aria-label="Close Explore">×</button>
           <p class="index-intro">Ways into HyperCities</p>
-          <button class="index-route index-route--field" type="button" data-index-field><span>MAP</span><small>enter through place and time</small></button>
           <button class="index-route index-route--read" type="button" data-index-read><span>READ</span><small>enter through the book</small></button>
-          <p class="index-route index-route--future index-route--windows"><span>WINDOWS</span><small>enter through a project · next</small></p>
-          <button class="index-route index-route--take" type="button" data-index-take><span>TAKE A MAP</span><small>enter through the archive</small></button>
+          <button class="index-route index-route--windows" type="button" data-index-windows><span>WINDOWS</span><small>four stories from the book</small></button>
           <a class="index-route index-route--annotations" href="./annotations.html"><span>ANNOTATIONS</span><small>enter through the public margin</small></a>
           <button class="index-route index-route--origins" type="button" data-index-origins><span>ORIGINS</span><small>follow the original platform’s traces</small></button>
         </nav>
       </section>
+      <dialog id="stories-window" class="stories-window" aria-labelledby="windows-title">
+        <button class="windows-close" type="button" data-stories-close aria-label="Close Windows and return to map">← MAP</button>
+        <div data-stories-content></div>
+      </dialog>
       <dialog id="origins-window" class="origins-window" aria-labelledby="origins-title">
         <header class="origins-header">
           <div><p class="origins-kicker">HYPERCITIES · THE MOVING ARCHIVE</p><h1 id="origins-title">Origins</h1></div>
@@ -119,6 +129,6 @@
     </main>
     <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
     <script src="https://unpkg.com/deck.gl@9.1.8/dist.min.js"></script>
-    <script type="module" src="./js/main.js?v=origins-2"></script>
+    <script type="module" src="./js/main.js?v=windows-compact-2"></script>
   </body>
 </html>

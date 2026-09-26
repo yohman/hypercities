@@ -137,6 +137,8 @@ export class CoreView {
   preview(maps, core) {
     if (this.locked) return;
     if (!maps.length) { this.clearPreview(); return; }
+    this.compact = window.matchMedia("(max-width: 780px)").matches;
+    this.container.classList.toggle("is-compact", this.compact);
     const signature = maps.map((map) => map.id).join(",");
     const changedWell = signature !== this.previewSignature;
     this.core = core;
@@ -201,6 +203,7 @@ export class CoreView {
       views: new deck.OrbitView({ id: "time-well" }),
       controller: false,
       viewState: this.viewState,
+      onAfterRender: () => this.positionSizeControl(),
       layers: []
     });
     this.installGestureRouting();
@@ -210,6 +213,24 @@ export class CoreView {
       this.deck.setProps({ viewState: this.viewState });
     });
     this.resizeObserver.observe(this.container);
+  }
+
+  positionSizeControl() {
+    const button = document.querySelector("#timewell-size");
+    if (!button) return;
+    if (this.compact || !this.locked) {
+      button.style.removeProperty("left");
+      button.style.removeProperty("top");
+      return;
+    }
+    const viewport = this.deck?.getViewports()[0];
+    if (!viewport) return;
+    // Attach to the projected coordinate label, not the canvas's empty corner.
+    const [x, y] = viewport.project([-64, 0, -78]);
+    const rect = this.container.getBoundingClientRect();
+    const halfWidth = button.offsetWidth / 2;
+    button.style.left = `${Math.max(halfWidth + 8, Math.min(window.innerWidth - halfWidth - 8, rect.left + x))}px`;
+    button.style.top = `${Math.min(window.innerHeight - 52, rect.top + y + 12)}px`;
   }
 
   installGestureRouting() {

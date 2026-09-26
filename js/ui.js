@@ -2,6 +2,7 @@ import { tileTemplate } from "./data.js";
 import { hostedNetworkKmlUrlFor, mapLibreSnippetFor } from "./take-map.js";
 import { openingQuotes, openingQuoteGroups } from "./opening-quotes.js";
 import { Origins } from "./origins.js?v=origins-2";
+import { Windows } from "./windows.js";
 
 function escapeHtml(value) { return String(value ?? "").replace(/[&<>'"]/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" }[char])); }
 function pages(provenance) { if (!provenance?.printedPages) return ""; const [start, end] = provenance.printedPages; return start === end ? `book p. ${start}` : `book pp. ${start}–${end}`; }
@@ -86,6 +87,7 @@ export class Interface {
   constructor(actions) {
     this.actions = actions;
     this.origins = new Origins();
+    this.windows = new Windows({ read: page => this.openRead(page) });
     this.depth = document.querySelector("#depth-indicator");
     this.bookEntry = document.querySelector("#book-entry");
     this.bookEntryDismiss = document.querySelector("#book-entry-dismiss");
@@ -185,28 +187,53 @@ export class Interface {
     document.querySelector("#help-toggle").addEventListener("click", () => this.help.showModal());
     document.querySelector("#help-close").addEventListener("click", () => this.help.close());
     this.indexToggle.addEventListener("click", () => {
-      // Some embedded browsers replay the opener's click when a fullscreen
-      // layer takes focus. Keep that replay from immediately closing Explore.
-      const now = performance.now();
-      const previous = Number(this.indexToggle.dataset.lastToggleAt || 0);
-      if (now - previous < 300) return;
-      this.indexToggle.dataset.lastToggleAt = String(now);
+      this.dismissBookEntry();
+      this.hideShortcuts();
       this.toggleIndex();
+    });
+    this.exploreAccess = document.querySelector(".explore-access");
+    this.shortcuts = document.querySelector(".explore-shortcuts");
+    this.exploreAccess.addEventListener("pointerenter", event => {
+      if (event.pointerType !== "mouse") return;
+      clearTimeout(this.shortcutTimer);
+      if (!this.index.hidden) return;
+      this.shortcuts.inert = false;
+      this.exploreAccess.classList.add("is-revealed");
+    });
+    this.exploreAccess.addEventListener("pointerleave", () => {
+      this.shortcutTimer = setTimeout(() => {
+        if (!this.shortcuts.contains(document.activeElement)) this.hideShortcuts();
+      }, 240);
+    });
+    this.exploreAccess.addEventListener("focusout", event => {
+      if (!this.exploreAccess.contains(event.relatedTarget)) this.hideShortcuts();
+    });
+    this.indexToggle.addEventListener("keydown", event => {
+      if (event.key !== "ArrowRight") return;
+      event.preventDefault();
+      this.shortcuts.inert = false;
+      this.exploreAccess.classList.add("is-revealed");
+      this.shortcuts.querySelector("button").focus();
+    });
+    document.querySelector(".masthead").addEventListener("keydown", event => {
+      event.stopPropagation();
+      if (event.key === "Escape") { this.hideShortcuts(); this.closeIndex(); this.closeGround(); }
+    });
+    this.shortcuts.addEventListener("click", event => {
+      const route = event.target.closest("[data-shortcut]")?.dataset.shortcut;
+      if (!route) return;
+      this.dismissBookEntry();
+      this.hideShortcuts();
+      this.closeIndex();
+      this.closeGround();
+      if (route === "read") this.actions.read();
+      if (route === "origins") this.origins.open(this.indexToggle);
+      if (route === "windows") this.windows.open(this.indexToggle);
     });
     document.querySelector("#index-close").addEventListener("click", (event) => {
       event.preventDefault();
       event.stopPropagation();
       this.closeIndexAfterPointer();
-    });
-    this.index.querySelector("[data-index-field]").addEventListener("click", (event) => {
-      event.preventDefault();
-      event.stopPropagation();
-      this.closeIndexAfterPointer(() => this.actions.surface());
-    });
-    this.index.querySelector("[data-index-take]").addEventListener("click", (event) => {
-      event.preventDefault();
-      event.stopPropagation();
-      this.closeIndexAfterPointer(() => this.actions.take());
     });
     this.index.querySelector("[data-index-read]").addEventListener("click", (event) => {
       event.preventDefault();
@@ -214,6 +241,14 @@ export class Interface {
       this.closeIndexAfterPointer(() => this.actions.read());
     });
     document.querySelector("#hyperbook-window-close").addEventListener("click", () => this.window.close());
+    this.index.querySelector("[data-index-windows]").addEventListener("click", event => {
+      event.preventDefault();
+      event.stopPropagation();
+      this.closeIndexAfterPointer(() => {
+        this.closeGround();
+        this.windows.open(this.indexToggle);
+      });
+    });
     this.index.querySelector("[data-index-origins]").addEventListener("click", (event) => {
       event.preventDefault();
       event.stopPropagation();
@@ -253,8 +288,8 @@ export class Interface {
       if (resume) this.actions.resumeTake();
     });
     document.addEventListener("keydown", (event) => {
-      if (this.origins.dialog.open) return;
-      if (!this.bookEntry.hidden) {
+      if (this.origins.dialog.open || this.windows.dialog.open) return;
+      if (!this.bookEntry.hidden && !this.window.open && !this.takeMap.open && !this.help.open && this.groundControl.hidden) {
         if (this.bookEntryCopy.contains(document.activeElement) && ["Enter", " "].includes(event.key)) return;
         if (["Enter", " ", "Escape"].includes(event.key)) {
           event.preventDefault();
@@ -416,6 +451,13 @@ export class Interface {
     }, 720);
   }
 
+  hideShortcuts() {
+    clearTimeout(this.shortcutTimer);
+    if (!this.shortcuts) return;
+    this.exploreAccess.classList.remove("is-revealed");
+    this.shortcuts.inert = true;
+  }
+
   toggleIndex() {
     // Explore is an opener, not a toggle: its own close mark and Escape are
     // the stable ways back. This also makes an opener-click replay harmless.
@@ -454,8 +496,8 @@ export class Interface {
   }
 
   drawIndexDrift() {
-    const field = this.index.querySelector("[data-index-field]");
-    const destinations = [...this.index.querySelectorAll(".index-route--future")];
+    const field = this.index.querySelector("[data-index-read]");
+    const destinations = [...this.index.querySelectorAll(".index-route:not(.index-route--read)")];
     if (!field || !destinations.length) return;
     const from = field.getBoundingClientRect();
     const target = destinations[Math.floor(Math.random() * destinations.length)].getBoundingClientRect();
