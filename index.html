@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#101111" />
     <title>HyperCities — Thick Mapping</title>
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
-    <link rel="stylesheet" href="./styles.css?v=mini-label-1" />
+    <link rel="stylesheet" href="./styles.css?v=origins-2" />
   </head>
   <body>
     <main id="app" aria-label="HyperCities map">
@@ -96,9 +96,18 @@
           <p class="index-route index-route--future index-route--windows"><span>WINDOWS</span><small>enter through a project · next</small></p>
           <button class="index-route index-route--take" type="button" data-index-take><span>TAKE A MAP</span><small>enter through the archive</small></button>
           <a class="index-route index-route--annotations" href="./annotations.html"><span>ANNOTATIONS</span><small>enter through the public margin</small></a>
-          <p class="index-route index-route--future index-route--origins"><span>ORIGINS</span><small>how HyperCities began · next</small></p>
+          <button class="index-route index-route--origins" type="button" data-index-origins><span>ORIGINS</span><small>follow the original platform’s traces</small></button>
         </nav>
       </section>
+      <dialog id="origins-window" class="origins-window" aria-labelledby="origins-title">
+        <header class="origins-header">
+          <div><p class="origins-kicker">HYPERCITIES · THE MOVING ARCHIVE</p><h1 id="origins-title">Origins</h1></div>
+          <button type="button" data-origins-close aria-label="Close Origins and return to the map">← MAP</button>
+        </header>
+        <p class="origins-intro">Cities, lives, and layers from the original HyperCities. Find a place, listen to a voice, or explore a connection across the archive.</p>
+        <div class="origins-content" data-origins-content></div>
+        <footer class="origins-colophon">Source titles preserved. Places and topics are editorial browsing guides. <a href="https://www.youtube.com/@hypercitiesproject/videos" target="_blank" rel="noopener">ORIGINAL YOUTUBE CHANNEL ↗</a></footer>
+      </dialog>
       <dialog id="hyperbook-window" class="hyperbook-window" aria-label="Read HyperCities">
         <button id="hyperbook-window-close" class="window-close" type="button" aria-label="Close book">×</button>
         <article id="hyperbook-window-content"></article>
@@ -110,6 +119,6 @@
     </main>
     <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
     <script src="https://unpkg.com/deck.gl@9.1.8/dist.min.js"></script>
-    <script type="module" src="./js/main.js?v=quiet-note-1"></script>
+    <script type="module" src="./js/main.js?v=origins-2"></script>
   </body>
 </html>

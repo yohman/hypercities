@@ -8,7 +8,7 @@ This is not a recreation of the original GIS platform or a conventional academic
 
 - A dark, label-free world map reveals the real extents of historical maps as restrained red traces.
 - A single **GROUND** opener shifts the field between its default dark map and Esri World Imagery. When an original historical raster is present, its **HISTORICAL VEIL** slider lets the visitor compare the map with the present beneath it.
-- The map remains the landing experience. A quiet **EXPLORE** opens a sparse constellation of HyperCities entrances and lays down a different dashed dérive toward one possible future path each time; MAP, READ, and Take a Map are active now, while Windows and Origins remain visibly staged as later phases.
+- The map remains the landing experience. A quiet **EXPLORE** opens a sparse constellation of HyperCities entrances and lays down a different dashed dérive toward one possible future path each time; MAP, READ, Take a Map, and ORIGINS are active, while Windows remains a later phase.
 - **TAKE A MAP** is an archival action available whenever a historical layer is selected; Explore remains an optional archive-led entrance. Its floating source panel has three focused tabs—an interactive MapLibre map and complete HTML recipe, Google Earth/KML instructions, and QGIS instructions. It never implies a raster download or rights grant.
 - Hovering a location with overlapping maps previews a **TimeWell**; clicking locks a CORE at that coordinate.
 - The **TimeWell** is HyperCities’ temporal-CORE innovation: a floating three-dimensional cross-section generated when a visitor cuts into a location. Its strata preserve each map's geographic aspect ratio, a central pillar fixes the drilled coordinate, and the vertical axis makes the available dates traversable.
@@ -56,6 +56,14 @@ A selected map now begins a single visible movement: map identity, the source-gr
 6. Choose **READ** to move through the book page by page, or open a quotation/title to enter READ at its cited page. Esc, the close mark, or clicking outside returns to the map.
 
 The `?` affordance keeps this same grammar available without an onboarding sequence. Pointer and touch interactions remain primary; keyboard navigation is an optional echo.
+
+## Origins: the moving archive
+
+**EXPLORE → ORIGINS** opens a searchable catalogue of all 49 public recordings listed by the [original HyperCities channel](https://www.youtube.com/@hypercitiesproject/videos) on 26 September 2026. Browse by place, topic, or time; the Time menu distinguishes historical subjects from YouTube upload years. Short stories, longer collections, variant edits, and technical recordings retain their original titles.
+
+The charcoal window, serif titles, cover-red dotted trail, and dimmed map continue the site's visual language. Previous/Next move through the filtered results; related recordings show their destination title and the reason for the connection (same place or shared topic). These are editorial browsing links, not claimed historical relationships. On phones, the catalogue folds away after choosing a film and can be reopened. Escape, the backdrop, and **← MAP** preserve the map beneath.
+
+Playback uses an ordinary YouTube embed with optional API diagnostics. The player is never covered by a readiness timeout; reload and direct YouTube links remain available. YouTube restrictions can still prevent a video playing inside the site (the Tehran recording is age-restricted). Closing or changing films removes the player and stops sound. Catalogue records live in [data/origins-videos.json](data/origins-videos.json), with the interface in [js/origins.js](js/origins.js). See [the archive notes](docs/origins.md) for evidence and limitations.
 
 ## Hyperbook data
 

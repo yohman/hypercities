@@ -1,6 +1,7 @@
 import { tileTemplate } from "./data.js";
 import { hostedNetworkKmlUrlFor, mapLibreSnippetFor } from "./take-map.js";
 import { openingQuotes, openingQuoteGroups } from "./opening-quotes.js";
+import { Origins } from "./origins.js?v=origins-2";
 
 function escapeHtml(value) { return String(value ?? "").replace(/[&<>'"]/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" }[char])); }
 function pages(provenance) { if (!provenance?.printedPages) return ""; const [start, end] = provenance.printedPages; return start === end ? `book p. ${start}` : `book pp. ${start}–${end}`; }
@@ -84,6 +85,7 @@ function meanderingPath(start, end) {
 export class Interface {
   constructor(actions) {
     this.actions = actions;
+    this.origins = new Origins();
     this.depth = document.querySelector("#depth-indicator");
     this.bookEntry = document.querySelector("#book-entry");
     this.bookEntryDismiss = document.querySelector("#book-entry-dismiss");
@@ -212,6 +214,14 @@ export class Interface {
       this.closeIndexAfterPointer(() => this.actions.read());
     });
     document.querySelector("#hyperbook-window-close").addEventListener("click", () => this.window.close());
+    this.index.querySelector("[data-index-origins]").addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      this.closeIndexAfterPointer(() => {
+        this.closeGround();
+        this.origins.open(this.indexToggle);
+      });
+    });
     document.querySelector("#take-map-window-close").addEventListener("click", () => this.closeTakeMap(true));
     // Native dialogs already close on Escape. Treat a click on the backdrop as
     // the same gentle return to the dérive, while preserving clicks inside the
@@ -243,6 +253,7 @@ export class Interface {
       if (resume) this.actions.resumeTake();
     });
     document.addEventListener("keydown", (event) => {
+      if (this.origins.dialog.open) return;
       if (!this.bookEntry.hidden) {
         if (this.bookEntryCopy.contains(document.activeElement) && ["Enter", " "].includes(event.key)) return;
         if (["Enter", " ", "Escape"].includes(event.key)) {

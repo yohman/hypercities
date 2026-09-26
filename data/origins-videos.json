@@ -1,0 +1,795 @@
+{
+  "schemaVersion": 1,
+  "source": "https://www.youtube.com/@hypercitiesproject/videos",
+  "catalogued": "2026-09-26",
+  "notes": "49 public recordings listed by the channel. Titles retained verbatim, including variants and technical recordings. Upload years are not historical or recording dates. Places and topics are conservative editorial browsing aids; blank place means not verified.",
+  "videos": [
+    {
+      "id": "Krwl3ZtMZHk",
+      "title": "Tale of Two Castles Test v2",
+      "duration": 486,
+      "durationLabel": "8 minutes, 6 seconds",
+      "place": "",
+      "topics": [
+        "Reconstruction"
+      ],
+      "subjectPeriod": "",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=Krwl3ZtMZHk",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "FILhZIjBoAk",
+      "title": "HyperCities - A Tale Of Two Castles",
+      "duration": 353,
+      "durationLabel": "5 minutes, 53 seconds",
+      "place": "",
+      "topics": [
+        "Reconstruction"
+      ],
+      "subjectPeriod": "",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=FILhZIjBoAk",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "Yp39GNsytoA",
+      "title": "HolocaustSurvivorDorothyG",
+      "duration": 217,
+      "durationLabel": "3 minutes, 37 seconds",
+      "place": "",
+      "topics": [
+        "Testimony and memory"
+      ],
+      "subjectPeriod": "Holocaust and remembrance",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=Yp39GNsytoA",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "U3jJLUXs6_k",
+      "title": "Teran HyperCities",
+      "duration": 4980,
+      "durationLabel": "1 hour, 23 minutes",
+      "place": "Tehran",
+      "topics": [
+        "Events and protest"
+      ],
+      "subjectPeriod": "2009",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=U3jJLUXs6_k",
+      "classification": "Place normalized from the source title Teran; topic and year supported by the video description. YouTube labels this video age-restricted.",
+      "embedRestriction": "age-restricted",
+      "description": "Day-by-day mapping of the 2009 election protests using social media and protestor reports."
+    },
+    {
+      "id": "NRjAD7jOwXM",
+      "title": "HolocaustSurvivorEva",
+      "duration": 216,
+      "durationLabel": "3 minutes, 36 seconds",
+      "place": "",
+      "topics": [
+        "Testimony and memory"
+      ],
+      "subjectPeriod": "Holocaust and remembrance",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=NRjAD7jOwXM",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "Blo9NaJsXAg",
+      "title": "HolocaustSurvivorAllen",
+      "duration": 161,
+      "durationLabel": "2 minutes, 41 seconds",
+      "place": "",
+      "topics": [
+        "Testimony and memory"
+      ],
+      "subjectPeriod": "Holocaust and remembrance",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=Blo9NaJsXAg",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "P6qN-x_T2aU",
+      "title": "HolocaustSurvivorHelenFreedman",
+      "duration": 177,
+      "durationLabel": "2 minutes, 57 seconds",
+      "place": "",
+      "topics": [
+        "Testimony and memory"
+      ],
+      "subjectPeriod": "Holocaust and remembrance",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=P6qN-x_T2aU",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "Iq3ofqD17d0",
+      "title": "HolocaustSurvivorGitta",
+      "duration": 217,
+      "durationLabel": "3 minutes, 37 seconds",
+      "place": "",
+      "topics": [
+        "Testimony and memory"
+      ],
+      "subjectPeriod": "Holocaust and remembrance",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=Iq3ofqD17d0",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "wlDf4McgmsU",
+      "title": "HolocaustSurvivorRichardB",
+      "duration": 313,
+      "durationLabel": "5 minutes, 13 seconds",
+      "place": "",
+      "topics": [
+        "Testimony and memory"
+      ],
+      "subjectPeriod": "Holocaust and remembrance",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=wlDf4McgmsU",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "u8UPhTITSfc",
+      "title": "HolocaustSurvivorStella",
+      "duration": 182,
+      "durationLabel": "3 minutes, 2 seconds",
+      "place": "",
+      "topics": [
+        "Testimony and memory"
+      ],
+      "subjectPeriod": "Holocaust and remembrance",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=u8UPhTITSfc",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "L9MkzAhNZwA",
+      "title": "HolocaustSurvivorRitaSerena",
+      "duration": 412,
+      "durationLabel": "6 minutes, 52 seconds",
+      "place": "",
+      "topics": [
+        "Testimony and memory"
+      ],
+      "subjectPeriod": "Holocaust and remembrance",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=L9MkzAhNZwA",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "y2vyXvkOZeY",
+      "title": "Allen Greenstein's Story v2",
+      "duration": 115,
+      "durationLabel": "1 minute, 55 seconds",
+      "place": "",
+      "topics": [
+        "Testimony and memory"
+      ],
+      "subjectPeriod": "Holocaust and remembrance",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=y2vyXvkOZeY",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "wQIC0U-xoWk",
+      "title": "The Berlin Palace Reconstructions Project",
+      "duration": 665,
+      "durationLabel": "11 minutes, 5 seconds",
+      "place": "Berlin",
+      "topics": [
+        "Reconstruction"
+      ],
+      "subjectPeriod": "",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=wQIC0U-xoWk",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "hZH9t1CnJXs",
+      "title": "HolocaustSurvivorZinn",
+      "duration": 182,
+      "durationLabel": "3 minutes, 2 seconds",
+      "place": "",
+      "topics": [
+        "Testimony and memory"
+      ],
+      "subjectPeriod": "Holocaust and remembrance",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=hZH9t1CnJXs",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "gdrnf-EyRrI",
+      "title": "Rita and Serena's Story v2",
+      "duration": 324,
+      "durationLabel": "5 minutes, 24 seconds",
+      "place": "",
+      "topics": [
+        "Testimony and memory"
+      ],
+      "subjectPeriod": "Holocaust and remembrance",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=gdrnf-EyRrI",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "-2mSDRlgEHo",
+      "title": "Vancouver HyperCities",
+      "duration": 960,
+      "durationLabel": "16 minutes",
+      "place": "Vancouver",
+      "topics": [
+        "City tours"
+      ],
+      "subjectPeriod": "",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=-2mSDRlgEHo",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "PYr6uQHDZQM",
+      "title": "HiFi Caregiver Short",
+      "duration": 393,
+      "durationLabel": "6 minutes, 33 seconds",
+      "place": "Los Angeles",
+      "topics": [
+        "Neighborhood voices"
+      ],
+      "subjectPeriod": "",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=PYr6uQHDZQM",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "V5WlVq6slDE",
+      "title": "HiFi YouthShort",
+      "duration": 313,
+      "durationLabel": "5 minutes, 13 seconds",
+      "place": "Los Angeles",
+      "topics": [
+        "Neighborhood voices"
+      ],
+      "subjectPeriod": "",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=V5WlVq6slDE",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "pn3bNNVILc4",
+      "title": "VisualTours Montreal",
+      "duration": 115,
+      "durationLabel": "1 minute, 55 seconds",
+      "place": "Montréal",
+      "topics": [
+        "City tours"
+      ],
+      "subjectPeriod": "",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=pn3bNNVILc4",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "zdGOg2EG8kk",
+      "title": "VisualTours Miami",
+      "duration": 90,
+      "durationLabel": "1 minute, 30 seconds",
+      "place": "Miami",
+      "topics": [
+        "City tours"
+      ],
+      "subjectPeriod": "",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=zdGOg2EG8kk",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "8Rb_A-i2rOI",
+      "title": "VisualTours BuenosAires",
+      "duration": 358,
+      "durationLabel": "5 minutes, 58 seconds",
+      "place": "Buenos Aires",
+      "topics": [
+        "City tours"
+      ],
+      "subjectPeriod": "",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=8Rb_A-i2rOI",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "-3J8uSRHwX8",
+      "title": "HyperCities NewYorkCollection",
+      "duration": 1320,
+      "durationLabel": "22 minutes",
+      "place": "New York",
+      "topics": [
+        "City tours"
+      ],
+      "subjectPeriod": "",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=-3J8uSRHwX8",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "qZbB5VIRGng",
+      "title": "HiFi What is Historic Filipino Town pt2",
+      "duration": 960,
+      "durationLabel": "16 minutes",
+      "place": "Los Angeles",
+      "topics": [
+        "Neighborhood voices"
+      ],
+      "subjectPeriod": "",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=qZbB5VIRGng",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "th0WllGefhI",
+      "title": "HiFi What is Historic Philipino Town",
+      "duration": 826,
+      "durationLabel": "13 minutes, 46 seconds",
+      "place": "Los Angeles",
+      "topics": [
+        "Neighborhood voices"
+      ],
+      "subjectPeriod": "",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=th0WllGefhI",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "l6ivs6amm48",
+      "title": "HiFiYouth",
+      "duration": 362,
+      "durationLabel": "6 minutes, 2 seconds",
+      "place": "Los Angeles",
+      "topics": [
+        "Neighborhood voices"
+      ],
+      "subjectPeriod": "",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=l6ivs6amm48",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "S52-Q3u5r2Q",
+      "title": "InscriptionsSpatialContextBroken",
+      "duration": 93,
+      "durationLabel": "1 minute, 33 seconds",
+      "place": "",
+      "topics": [
+        "Inscriptions"
+      ],
+      "subjectPeriod": "",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=S52-Q3u5r2Q",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "Nm8WuVlwWRI",
+      "title": "Historic Filipino Town Collection",
+      "duration": 1560,
+      "durationLabel": "26 minutes",
+      "place": "Los Angeles",
+      "topics": [
+        "Neighborhood voices"
+      ],
+      "subjectPeriod": "",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=Nm8WuVlwWRI",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "OcSy8iqFSJc",
+      "title": "Gita Ginsberg's Story",
+      "duration": 173,
+      "durationLabel": "2 minutes, 53 seconds",
+      "place": "",
+      "topics": [
+        "Testimony and memory"
+      ],
+      "subjectPeriod": "Holocaust and remembrance",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=OcSy8iqFSJc",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "DfyNXL9aG4k",
+      "title": "Helen Freedman's Story v2",
+      "duration": 121,
+      "durationLabel": "2 minutes, 1 second",
+      "place": "",
+      "topics": [
+        "Testimony and memory"
+      ],
+      "subjectPeriod": "Holocaust and remembrance",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=DfyNXL9aG4k",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "IysAGsh-coU",
+      "title": "HiFi Veteran Story",
+      "duration": 186,
+      "durationLabel": "3 minutes, 6 seconds",
+      "place": "Los Angeles",
+      "topics": [
+        "Neighborhood voices"
+      ],
+      "subjectPeriod": "",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=IysAGsh-coU",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "288fFgRa8xg",
+      "title": "HiFi Sanchez Family",
+      "duration": 310,
+      "durationLabel": "5 minutes, 10 seconds",
+      "place": "Los Angeles",
+      "topics": [
+        "Neighborhood voices"
+      ],
+      "subjectPeriod": "",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=288fFgRa8xg",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "rioZ-aY2a3U",
+      "title": "HiFi Remaining Collections",
+      "duration": 457,
+      "durationLabel": "7 minutes, 37 seconds",
+      "place": "Los Angeles",
+      "topics": [
+        "Neighborhood voices"
+      ],
+      "subjectPeriod": "",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=rioZ-aY2a3U",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "EOAqEIXRiyw",
+      "title": "HiFi GubatanFamily Short",
+      "duration": 291,
+      "durationLabel": "4 minutes, 51 seconds",
+      "place": "Los Angeles",
+      "topics": [
+        "Neighborhood voices"
+      ],
+      "subjectPeriod": "",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=EOAqEIXRiyw",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "8Y-p3UQGApo",
+      "title": "HiFi CarleneStory Short",
+      "duration": 215,
+      "durationLabel": "3 minutes, 35 seconds",
+      "place": "Los Angeles",
+      "topics": [
+        "Neighborhood voices"
+      ],
+      "subjectPeriod": "",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=8Y-p3UQGApo",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "pSWPMcfjNT4",
+      "title": "HiFi History by Place",
+      "duration": 1140,
+      "durationLabel": "19 minutes",
+      "place": "Los Angeles",
+      "topics": [
+        "Neighborhood voices"
+      ],
+      "subjectPeriod": "",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=pSWPMcfjNT4",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "PEjnZflO9V4",
+      "title": "HiFi Youth Stories",
+      "duration": 2460,
+      "durationLabel": "41 minutes",
+      "place": "Los Angeles",
+      "topics": [
+        "Neighborhood voices"
+      ],
+      "subjectPeriod": "",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=PEjnZflO9V4",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "u5Uu0lqF9eY",
+      "title": "Haynes LA Election and Meeting Data",
+      "duration": 279,
+      "durationLabel": "4 minutes, 39 seconds",
+      "place": "Los Angeles",
+      "topics": [
+        "Civic life"
+      ],
+      "subjectPeriod": "",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=u5Uu0lqF9eY",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "cuHl9qpZqjc",
+      "title": "Dorothy Greenstein v2",
+      "duration": 83,
+      "durationLabel": "1 minute, 23 seconds",
+      "place": "",
+      "topics": [
+        "Testimony and memory"
+      ],
+      "subjectPeriod": "Holocaust and remembrance",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=cuHl9qpZqjc",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "Op7MqzQvk4k",
+      "title": "Richard and Engelina Billauer v2",
+      "duration": 145,
+      "durationLabel": "2 minutes, 25 seconds",
+      "place": "",
+      "topics": [
+        "Testimony and memory"
+      ],
+      "subjectPeriod": "Holocaust and remembrance",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=Op7MqzQvk4k",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "Aa1ss4ts09A",
+      "title": "Stella Esformes v2",
+      "duration": 83,
+      "durationLabel": "1 minute, 23 seconds",
+      "place": "",
+      "topics": [
+        "Testimony and memory"
+      ],
+      "subjectPeriod": "Holocaust and remembrance",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=Aa1ss4ts09A",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "curul2YPVDs",
+      "title": "EvaBrettler v2",
+      "duration": 130,
+      "durationLabel": "2 minutes, 10 seconds",
+      "place": "",
+      "topics": [
+        "Testimony and memory"
+      ],
+      "subjectPeriod": "Holocaust and remembrance",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=curul2YPVDs",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "1dgdlzlFeVI",
+      "title": "HaynesGISLayers",
+      "duration": 165,
+      "durationLabel": "2 minutes, 45 seconds",
+      "place": "Los Angeles",
+      "topics": [
+        "Map layers"
+      ],
+      "subjectPeriod": "",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=1dgdlzlFeVI",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "p2yaTlMAa7A",
+      "title": "Ritual Experience - Inscriptions",
+      "duration": 436,
+      "durationLabel": "7 minutes, 16 seconds",
+      "place": "Rome",
+      "topics": [
+        "Inscriptions"
+      ],
+      "subjectPeriod": "Late antiquity",
+      "uploadedYear": 2016,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=p2yaTlMAa7A",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty.",
+      "description": "Gregor Kalas and PI Diane Favro's 4D project visualizes statues and inscriptions in the late antique Roman Forum."
+    },
+    {
+      "id": "xbVTDpi0G8Q",
+      "title": "Carlene Sobrino Bonnivier_Harmony House.avi",
+      "duration": 106,
+      "durationLabel": "1 minute, 46 seconds",
+      "place": "Los Angeles",
+      "topics": [
+        "Neighborhood voices"
+      ],
+      "subjectPeriod": "",
+      "uploadedYear": 2010,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=xbVTDpi0G8Q",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "dgrPSSRT0fo",
+      "title": "Carlene Sobrino Bonnivier_Dentist.mov",
+      "duration": 114,
+      "durationLabel": "1 minute, 54 seconds",
+      "place": "Los Angeles",
+      "topics": [
+        "Neighborhood voices"
+      ],
+      "subjectPeriod": "",
+      "uploadedYear": 2010,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=dgrPSSRT0fo",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "ryZd0cZqvPU",
+      "title": "Carlene Sobrino Bonnivier Bittermelon4",
+      "duration": 89,
+      "durationLabel": "1 minute, 29 seconds",
+      "place": "Los Angeles",
+      "topics": [
+        "Neighborhood voices"
+      ],
+      "subjectPeriod": "",
+      "uploadedYear": 2010,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=ryZd0cZqvPU",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "ERHF0mYH2Ls",
+      "title": "Carlene Sobrino Bonnivier_Dancing For Manongs.mov",
+      "duration": 98,
+      "durationLabel": "1 minute, 38 seconds",
+      "place": "Los Angeles",
+      "topics": [
+        "Neighborhood voices"
+      ],
+      "subjectPeriod": "",
+      "uploadedYear": 2010,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=ERHF0mYH2Ls",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "FhOAPv0HoxQ",
+      "title": "Carlene Sobrino Bonnivier_Bittermelon.mov",
+      "duration": 87,
+      "durationLabel": "1 minute, 27 seconds",
+      "place": "Los Angeles",
+      "topics": [
+        "Neighborhood voices"
+      ],
+      "subjectPeriod": "",
+      "uploadedYear": 2010,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=FhOAPv0HoxQ",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    },
+    {
+      "id": "d9hO2uakwAs",
+      "title": "Carlene Sobrino Bonnivier_101.mov",
+      "duration": 88,
+      "durationLabel": "1 minute, 28 seconds",
+      "place": "Los Angeles",
+      "topics": [
+        "Neighborhood voices"
+      ],
+      "subjectPeriod": "",
+      "uploadedYear": 2010,
+      "uploadEvidence": "Year inferred from latest-sorted channel order bounded by individually verified uploads on 2016-11-02 and 2010-07-07; not a recording or subject date.",
+      "recordingDate": null,
+      "source": "https://www.youtube.com/watch?v=d9hO2uakwAs",
+      "classification": "Editorial browsing tags based on source title/collection; unknown geography left empty."
+    }
+  ]
+}

@@ -5,7 +5,7 @@ import { MapView } from "./map-view.js?v=notes-navigation-1";
 import { AnnotationStore, annotationContext } from "./annotations.js?v=note-autoshow-1";
 import { annotationSimulationRequest, simulatedAnnotations } from "./annotations-simulation.js";
 import { downloadText, kmlFilenameFor, kmlFor } from "./take-map.js";
-import { Interface } from "./ui.js?v=quiet-note-1";
+import { Interface } from "./ui.js?v=origins-2";
 
 const app = { data: null, field: null, core: null, ui: null, annotations: null, simulation: null, simulatedNotes: [], pendingAnnotations: [], mapAnnotations: [], annotationsVisible: true, timewellExpanded: false, activeAnnotationId: null, annotationMode: false, annotationDraft: null, annotationFloatOpen: false, annotationArrivalFocused: false, coreMaps: [], corePoint: null, selected: null, context: null, bookEncounter: null, activeEncounter: null, tile: null, stray: null, drift: null, takeMode: false, trail: [], history: [], seenEncounterIds: [], seenPassageIds: [], seenNodeIds: [], recentConceptIds: [] };
 
@@ -476,6 +476,7 @@ function respondToMapGesture(cue) {
 }
 
 function keyboard(event) {
+  if (document.querySelector("#origins-window").open) return;
   if (app.ui.bookEntryIsVisible()) return;
   if (document.querySelector("#help-dialog").open || !document.querySelector("#site-index").hidden || document.querySelector("#hyperbook-window").open || document.querySelector("#take-map-window").open) return;
   if ((app.annotationDraft || app.annotationFloatOpen) && event.key === "Escape") {
