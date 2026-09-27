@@ -1,7 +1,7 @@
 import { containsCoordinate, loadData, tileDiagnostic } from "./data.js";
-import { CoreView } from "./core-view.js?v=well-controls-2";
+import { CoreView } from "./core-view.js?v=well-controls-3";
 import { apertureFor, driftOffer, fieldFragment, isPlaceNode, mapContext, mapEncounter, nodeEncounter, strayOffer } from "./graph.js";
-import { MapView } from "./map-view.js?v=dark-start-1";
+import { MapView } from "./map-view.js?v=map-focus-layout-2";
 import { AnnotationStore, annotationContext } from "./annotations.js?v=note-autoshow-1";
 import { annotationSimulationRequest, simulatedAnnotations } from "./annotations-simulation.js";
 import { downloadText, kmlFilenameFor, kmlFor } from "./take-map.js";
@@ -188,12 +188,13 @@ function selectMap(map, { keepEncounter = false, trailWhy = null, focus = true, 
   app.core.setPassThrough(false);
   setMapAnnotationSet(map.id);
   app.core.select(map, { focus });
-  app.field.showRaster(map, { focus });
+  app.field.showRaster(map, { focus: false });
   app.ui.showGroundForMap();
   app.field.setAnnotations(app.mapAnnotations, { visible: app.annotationsVisible, activeId: null });
   pushTrail(`${map.city} ${map.year}`, map.id, trailWhy || "Selected from the temporal stack; X/Y remains the map’s geographic footprint and Z is its historical position.");
   recordEncounter(visibleEncounter?.fragment);
   render();
+  if (focus) app.field.focusMap(map);
   refreshAnnotations();
 }
 

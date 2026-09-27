@@ -393,25 +393,42 @@ export class MapView {
     const padding = this.focusPadding();
     const camera = this.map.cameraForBounds(bounds, { padding, maxZoom: 19 });
     if (!camera) return;
-    const minimum = map.tileBase ? Math.max(0, map.minZoom || 0) : 0;
-    const target = point && containsCoordinate(map, point)
-      ? [point.lng, point.lat]
-      : [(map.bbox[0] + map.bbox[2]) / 2, (map.bbox[1] + map.bbox[3]) / 2];
-    const options = { center: target, zoom: Math.max(camera.zoom, minimum), duration: 620 };
-    if (typeof padding !== "number") {
+    const pointTarget = point && containsCoordinate(map, point) ? [point.lng, point.lat] : null;
+    const target = pointTarget || camera.center;
+    // The footprint is the primary spatial promise of a map selection: always
+    // fit its complete bounds into the unobscured viewport. Raster minzoom is
+    // a tile-service hint and must not zoom past the map's geographic extent.
+    const options = { center: target, zoom: camera.zoom, duration: 620 };
+    if (pointTarget) {
       options.offset = [(padding.left - padding.right) / 2, (padding.top - padding.bottom) / 2];
     }
     this.map.easeTo(options);
   }
 
   focusPadding() {
-    if (!this.coreActive) return 70;
-    const { clientWidth, clientHeight } = this.map.getContainer();
-    if (window.matchMedia("(max-width: 780px)").matches) {
-      return { top: 70, right: 44, bottom: Math.round(clientHeight * 0.7) + 32, left: 44 };
-    }
-    const timeWellWidth = Math.min(Math.max(clientWidth * 0.48, 420), 680);
-    return { top: 70, right: Math.round(timeWellWidth) + 66, bottom: 70, left: 70 };
+    const mapRect = this.map.getContainer().getBoundingClientRect();
+    const visibleRect = (selector) => {
+      const element = document.querySelector(selector);
+      if (!element || element.hidden || getComputedStyle(element).display === "none") return null;
+      const rect = element.getBoundingClientRect();
+      return rect.width > 0 && rect.height > 0 ? rect : null;
+    };
+    const overlapsRight = (rect) => rect && rect.right > mapRect.left && rect.left < mapRect.right
+      ? Math.max(0, mapRect.right - Math.max(mapRect.left, rect.left))
+      : 0;
+    const well = visibleRect("#core-renderer");
+    const ground = visibleRect(".ground-control");
+    const encounter = visibleRect(".encounter");
+    const masthead = visibleRect(".masthead");
+    const right = Math.ceil(Math.max(overlapsRight(well), overlapsRight(ground)) + 28);
+    const top = Math.ceil(Math.max(52, masthead ? masthead.bottom - mapRect.top + 18 : 52));
+    // The map footprint can occupy the large open field above the selected-map
+    // card. Reserving that card's vertical band keeps every selected boundary
+    // visible without wasting map area to its left/right footprint.
+    const bottom = encounter && encounter.bottom > mapRect.top && encounter.top < mapRect.bottom
+      ? Math.ceil(Math.max(36, mapRect.bottom - encounter.top + 24))
+      : 48;
+    return { top, right, bottom, left: 32 };
   }
 
   removeRaster() {
