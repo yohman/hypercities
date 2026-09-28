@@ -25,6 +25,7 @@ const previewStatus = document.querySelector("#preview-status");
 const previewCoordinates = document.querySelector("#preview-coordinates");
 const selectedTitle = document.querySelector("#selected-title");
 const selectedSummary = document.querySelector("#selected-summary");
+const mapInHypercities = document.querySelector("#map-in-hypercities");
 const submit = document.querySelector("#submit-edit");
 const recordIdLabel = document.querySelector("#record-id");
 const selectedByQuery = new URLSearchParams(location.search).get("map");
@@ -103,6 +104,8 @@ function selectRecord(record) {
   recordIdLabel.textContent = `#${record.id}`;
   selectedTitle.textContent = title(record);
   selectedSummary.textContent = `${record.city || "Unplaced"} · ${year(record)}${record.tileUrl ? ` · ${record.tileUrl}` : " · no tile endpoint"}`;
+  mapInHypercities.href = `./?map=${encodeURIComponent(`map:${record.id}`)}`;
+  mapInHypercities.hidden = false;
   drawList();
   drawForm();
   setPreview(record);

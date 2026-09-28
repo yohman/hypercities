@@ -7,7 +7,7 @@
     <title>Map Record Editor — HyperCities</title>
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
     <link rel="stylesheet" href="./styles.css?v=metadata-read-controls-1" />
-    <link rel="stylesheet" href="./styles/map-editor.css?v=1" />
+    <link rel="stylesheet" href="./styles/map-editor.css?v=2" />
   </head>
   <body class="map-editor-page">
     <header class="map-editor-header">
@@ -26,7 +26,7 @@
       </aside>
       <section class="map-editor-workspace">
         <div class="map-editor-selected">
-          <div><p class="map-editor-kicker">SELECTED RECORD <span id="record-id"></span></p><h2 id="selected-title">Choose a map</h2><p id="selected-summary"></p></div>
+          <div><p class="map-editor-kicker">SELECTED RECORD <span id="record-id"></span></p><h2 id="selected-title">Choose a map</h2><p id="selected-summary"></p><a id="map-in-hypercities" class="map-editor-live-link" href="./" hidden>VIEW IN HYPERCITIES ↗</a></div>
           <p id="submit-status" class="map-editor-status" role="status"></p>
         </div>
         <div class="map-editor-preview-wrap">
@@ -42,6 +42,6 @@
       </section>
     </main>
     <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-    <script type="module" src="./js/map-editor.js?v=2"></script>
+    <script type="module" src="./js/map-editor.js?v=3"></script>
   </body>
 </html>
