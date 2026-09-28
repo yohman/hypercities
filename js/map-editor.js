@@ -117,7 +117,7 @@ function selectRecord(record) {
 }
 function issueUrl(changes) {
   const payload = { mapId: String(selected.id), changes };
-  const issueBody = `Requested by @yohman. Only the allowlisted Map Library editor account can publish metadata changes.\n\n<!-- hypercities-map-edit:start -->\n\n\`\`\`json\n${JSON.stringify(payload, null, 2)}\n\`\`\`\n\n<!-- hypercities-map-edit:end -->`;
+  const issueBody = `Requested via the HyperCities Map Library editor. The issue author must be an allowlisted account for changes to publish.\n\n<!-- hypercities-map-edit:start -->\n\n\`\`\`json\n${JSON.stringify(payload, null, 2)}\n\`\`\`\n\n<!-- hypercities-map-edit:end -->`;
   const query = new URLSearchParams({ title: `[Map metadata] ${selected.city || "Unplaced"} · ${title(selected).slice(0, 90)} (#${selected.id})`, body: issueBody });
   return `https://github.com/yohman/maplibrary/issues/new?${query}`;
 }
