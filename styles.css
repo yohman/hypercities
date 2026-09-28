@@ -330,14 +330,14 @@ button:focus-visible,a:focus-visible { outline:1px solid var(--ink); outline-off
 .book-page-viewer { position:relative; height:100%; margin:0; }
 .book-page-viewport { position:absolute; inset:0; overflow:hidden; touch-action:none; user-select:none; }
 .book-page-spread { display:flex; align-items:stretch; justify-content:center; width:100%; height:100%; gap:1px; }
-.book-page-spread[data-book-page-spread] { transform-origin:center center; transition:transform 160ms ease; will-change:transform; }
+.book-page-spread[data-book-page-spread] { transform-origin:center center; transition:transform 100ms ease-out; will-change:transform; }
 .book-page-spread.is-zoomed { cursor:grab; }
 .book-page-viewport.is-panning .book-page-spread { transition:none; }
 .book-page-viewport.is-panning { cursor:grabbing; }
 .book-page-frame { position:relative; width:100%; height:100%; max-width:100%; min-height:0; aspect-ratio:2 / 3; margin:auto; background:#f7f1e5; box-shadow:0 8px 30px rgba(0,0,0,.38); }
 .book-page-viewer.is-spread .book-page-frame { flex:0 0 auto; width:auto; min-width:0; }
 .book-page-viewer.is-spread .book-page-frame + .book-page-frame { box-shadow:8px 8px 30px rgba(0,0,0,.38); }
-.book-page-frame img { display:block; width:100%; height:100%; object-fit:contain; }
+.book-page-frame img { display:block; width:100%; height:100%; object-fit:contain; pointer-events:none; user-select:none; -webkit-user-drag:none; }
 .book-page-highlight { position:absolute; z-index:1; left:var(--highlight-left); top:var(--highlight-top); width:var(--highlight-width); height:var(--highlight-height); box-sizing:border-box; border:1.5px solid rgba(218,56,51,.95); background:rgba(218,56,51,.26); box-shadow:0 0 0 1px rgba(255,239,211,.5) inset; pointer-events:none; }
 .book-page-controls { position:absolute; z-index:3; bottom:-39px; left:50%; display:flex; align-items:center; justify-content:center; gap:15px; width:max-content; margin:0; color:rgba(239,233,220,.9); font-family:ui-sans-serif,system-ui,sans-serif; transform:translateX(-50%); }
 .book-page-controls p { min-width:54px; margin:0; color:rgba(239,233,220,.82); font-size:10px; letter-spacing:.14em; line-height:1; text-align:center; }

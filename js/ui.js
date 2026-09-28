@@ -811,7 +811,7 @@ export class Interface {
   openRead(page = BOOK_READ_START_PAGE, aperture = null) {
     const startingPage = Math.max(1, Math.min(BOOK_PAGE_COUNT, Number(page) || BOOK_READ_START_PAGE));
     this.window.classList.add("is-book-page");
-    this.bookReader = { aperture, page: startingPage, zoom: 1, panX: 0, panY: 0 };
+    this.bookReader = { aperture, page: startingPage, zoom: 1, panX: 0, panY: 0, pointers: new Map() };
     this.renderBookPage();
     if (!this.window.open) this.window.showModal();
   }
@@ -834,7 +834,7 @@ export class Interface {
       ? `<span class="book-page-highlight" aria-label="The selected quotation on this page" style="--highlight-left:${rect.left * 100}%;--highlight-top:${rect.top * 100}%;--highlight-width:${rect.width * 100}%;--highlight-height:${rect.height * 100}%"></span>`
       : "";
     const image = `./assets/book-pages/page-${String(page).padStart(3, "0")}.webp`;
-    return `<div class="book-page-frame"><img src="${image}" alt="Scanned book page ${escapeHtml(page)} of ${BOOK_PAGE_COUNT} from HyperCities: Thick Mapping in the Digital Humanities">${highlight}</div>`;
+    return `<div class="book-page-frame"><img draggable="false" src="${image}" alt="Scanned book page ${escapeHtml(page)} of ${BOOK_PAGE_COUNT} from HyperCities: Thick Mapping in the Digital Humanities">${highlight}</div>`;
   }
 
   renderBookPage() {
@@ -865,29 +865,79 @@ export class Interface {
       this.jumpBookPage(jump.value);
     });
     const viewport = this.windowContent.querySelector("[data-book-page-viewport]");
+    const pointPair = () => [...reader.pointers.values()].slice(0, 2);
+    const distanceBetween = ([a, b]) => Math.hypot(b.x - a.x, b.y - a.y);
     viewport.addEventListener("pointerdown", (event) => {
-      if (reader.zoom <= 1 || event.button !== 0) return;
-      reader.drag = { id: event.pointerId, x: event.clientX, y: event.clientY, panX: reader.panX, panY: reader.panY };
+      if (event.pointerType === "mouse" && event.button !== 0) return;
+      event.preventDefault();
       viewport.setPointerCapture(event.pointerId);
+      reader.pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+      if (reader.pointers.size >= 2) {
+        const [a, b] = pointPair();
+        const rect = viewport.getBoundingClientRect();
+        reader.pinch = {
+          distance: Math.max(1, distanceBetween([a, b])), zoom: reader.zoom,
+          panX: reader.panX, panY: reader.panY,
+          midX: (a.x + b.x) / 2 - rect.left - rect.width / 2,
+          midY: (a.y + b.y) / 2 - rect.top - rect.height / 2
+        };
+        reader.drag = null;
+      } else {
+        reader.drag = { id: event.pointerId, x: event.clientX, y: event.clientY, panX: reader.panX, panY: reader.panY };
+      }
       viewport.classList.add("is-panning");
     });
     viewport.addEventListener("pointermove", (event) => {
-      if (reader.drag?.id !== event.pointerId) return;
-      const spread = this.windowContent.querySelector("[data-book-page-spread]");
-      const maxX = Math.max(0, (spread.offsetWidth * reader.zoom - viewport.clientWidth) / 2);
-      const maxY = Math.max(0, (spread.offsetHeight * reader.zoom - viewport.clientHeight) / 2);
-      reader.panX = Math.max(-maxX, Math.min(maxX, reader.drag.panX + event.clientX - reader.drag.x));
-      reader.panY = Math.max(-maxY, Math.min(maxY, reader.drag.panY + event.clientY - reader.drag.y));
+      if (!reader.pointers.has(event.pointerId)) return;
+      reader.pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+      if (reader.pointers.size >= 2 && reader.pinch) {
+        const [a, b] = pointPair();
+        const rect = viewport.getBoundingClientRect();
+        const anchorX = (a.x + b.x) / 2 - rect.left - rect.width / 2;
+        const anchorY = (a.y + b.y) / 2 - rect.top - rect.height / 2;
+        const zoom = Math.max(1, Math.min(4, reader.pinch.zoom * distanceBetween([a, b]) / reader.pinch.distance));
+        reader.zoom = zoom;
+        reader.panX = anchorX - ((reader.pinch.midX - reader.pinch.panX) / reader.pinch.zoom) * zoom;
+        reader.panY = anchorY - ((reader.pinch.midY - reader.pinch.panY) / reader.pinch.zoom) * zoom;
+        this.clampBookPan(viewport);
+        this.applyBookTransform();
+        return;
+      }
+      if (reader.drag?.id !== event.pointerId || reader.zoom <= 1) return;
+      reader.panX = reader.drag.panX + event.clientX - reader.drag.x;
+      reader.panY = reader.drag.panY + event.clientY - reader.drag.y;
+      this.clampBookPan(viewport);
       this.applyBookTransform();
     });
-    const finishPan = (event) => {
-      if (reader.drag?.id !== event.pointerId) return;
-      reader.drag = null;
-      viewport.classList.remove("is-panning");
+    const finishPointer = (event) => {
+      if (!reader.pointers.has(event.pointerId)) return;
+      reader.pointers.delete(event.pointerId);
       if (viewport.hasPointerCapture(event.pointerId)) viewport.releasePointerCapture(event.pointerId);
+      if (reader.pointers.size >= 2) {
+        const [a, b] = pointPair();
+        const rect = viewport.getBoundingClientRect();
+        reader.pinch = {
+          distance: Math.max(1, distanceBetween([a, b])), zoom: reader.zoom,
+          panX: reader.panX, panY: reader.panY,
+          midX: (a.x + b.x) / 2 - rect.left - rect.width / 2,
+          midY: (a.y + b.y) / 2 - rect.top - rect.height / 2
+        };
+      } else {
+        reader.pinch = null;
+        const [remainingId, point] = reader.pointers.entries().next().value || [];
+        reader.drag = remainingId === undefined ? null : { id: remainingId, x: point.x, y: point.y, panX: reader.panX, panY: reader.panY };
+        if (!reader.pointers.size) viewport.classList.remove("is-panning");
+      }
     };
-    viewport.addEventListener("pointerup", finishPan);
-    viewport.addEventListener("pointercancel", finishPan);
+    viewport.addEventListener("pointerup", finishPointer);
+    viewport.addEventListener("pointercancel", finishPointer);
+    viewport.addEventListener("lostpointercapture", finishPointer);
+    viewport.addEventListener("wheel", (event) => {
+      event.preventDefault();
+      const rect = viewport.getBoundingClientRect();
+      const anchor = { x: event.clientX - rect.left - rect.width / 2, y: event.clientY - rect.top - rect.height / 2 };
+      this.setBookZoom(0, anchor, reader.zoom * Math.exp(-event.deltaY * 0.0015));
+    }, { passive: false });
   }
 
   applyBookTransform() {
@@ -900,11 +950,25 @@ export class Interface {
     if (zoomLabel) zoomLabel.textContent = `${Math.round(reader.zoom * 100)}%`;
   }
 
-  setBookZoom(direction) {
+  clampBookPan(viewport = this.windowContent.querySelector("[data-book-page-viewport]")) {
+    const reader = this.bookReader;
+    const spread = this.windowContent.querySelector("[data-book-page-spread]");
+    if (!reader || !spread || !viewport) return;
+    const maxX = Math.max(0, (spread.offsetWidth * reader.zoom - viewport.clientWidth) / 2);
+    const maxY = Math.max(0, (spread.offsetHeight * reader.zoom - viewport.clientHeight) / 2);
+    reader.panX = Math.max(-maxX, Math.min(maxX, reader.panX));
+    reader.panY = Math.max(-maxY, Math.min(maxY, reader.panY));
+  }
+
+  setBookZoom(direction, anchor = { x: 0, y: 0 }, targetZoom = null) {
     const reader = this.bookReader;
     if (!reader) return;
-    reader.zoom = Math.max(1, Math.min(3, Math.round((reader.zoom + direction * 0.25) * 100) / 100));
+    const previousZoom = reader.zoom;
+    reader.zoom = Math.max(1, Math.min(4, targetZoom ?? Math.round((reader.zoom + direction * 0.25) * 100) / 100));
+    reader.panX = anchor.x - ((anchor.x - reader.panX) / previousZoom) * reader.zoom;
+    reader.panY = anchor.y - ((anchor.y - reader.panY) / previousZoom) * reader.zoom;
     if (reader.zoom === 1) reader.panX = reader.panY = 0;
+    this.clampBookPan();
     this.applyBookTransform();
   }
 
