@@ -1,6 +1,6 @@
 import { AnnotationStore, annotationDeepLink } from "./annotations.js?v=annotation-note-filters-2";
 import { annotationSimulationRequest, simulatedAnnotations } from "./annotations-simulation.js";
-import { loadData } from "./data.js";
+import { loadData } from "./data.js?v=live-map-csv-1";
 
 const list = document.querySelector("#annotations-list");
 const refresh = document.querySelector("#annotations-refresh");

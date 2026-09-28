@@ -1,4 +1,4 @@
-import { tileTemplate } from "./data.js";
+import { tileTemplate } from "./data.js?v=live-map-csv-1";
 
 // Downloads may be opened from a local file, so their KML NetworkLink needs a
 // stable HTTPS address that Google Earth can resolve independently of the app.

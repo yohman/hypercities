@@ -1,3 +1,5 @@
+import { loadMapLibraryRows, nodeFromMapRecord } from "./map-library.js?v=live-map-csv-1";
+
 const sourcePaths = {
   book: "./data/hyperbook/hyperbook.json",
   entities: "./data/hyperbook/entities.json",
@@ -71,11 +73,18 @@ export function tileDiagnostic(map) {
 }
 
 export async function loadData() {
-  const [book, entityDoc, edgeDoc, encounterDoc, affordanceDoc, bookPageDoc, mapGraph] = await Promise.all([
+  const [book, entityDoc, edgeDoc, encounterDoc, affordanceDoc, bookPageDoc, mapGraph, liveMapRows] = await Promise.all([
     loadJson(sourcePaths.book), loadJson(sourcePaths.entities), loadJson(sourcePaths.edges),
-    loadJson(sourcePaths.encounters), loadJson(sourcePaths.affordances), loadJson(sourcePaths.bookPages), loadJson(sourcePaths.mapGraph)
+    loadJson(sourcePaths.encounters), loadJson(sourcePaths.affordances), loadJson(sourcePaths.bookPages), loadJson(sourcePaths.mapGraph),
+    loadMapLibraryRows().catch(() => null)
   ]);
-  const maps = mapGraph.nodes
+  const liveById = new Map((liveMapRows || []).map((record) => [String(record.id), record]));
+  const currentMapNodes = mapGraph.nodes.map((node) => {
+    if (node.kind !== "historical-map") return node;
+    const row = liveById.get(String(node.source?.sourceRecordId || ""));
+    return row ? nodeFromMapRecord(row, node) : node;
+  });
+  const maps = currentMapNodes
     .filter((node) => node.kind === "historical-map" && node.eligibleForCoring !== false)
     .map(normaliseMap).filter(Boolean)
     .sort((a, b) => a.year - b.year || a.title.localeCompare(b.title));
@@ -103,8 +112,14 @@ export async function loadData() {
 export async function loadMapById(id) {
   const graph = await loadJson(sourcePaths.mapGraph);
   const node = graph.nodes.find((candidate) => candidate.id === id && candidate.kind === "historical-map");
-  return node ? normaliseMap(node) : null;
+  if (!node) return null;
+  const sourceRecordId = String(node.source?.sourceRecordId || "");
+  const rows = await loadMapLibraryRows().catch(() => null);
+  const row = rows?.find((record) => String(record.id) === sourceRecordId);
+  return normaliseMap(row ? nodeFromMapRecord(row, node) : node);
 }
+
+export { loadMapLibraryRows };
 
 export function titleFor(data, id) { return data.entities.get(id)?.preferredLabel || data.objects.get(id)?.title || id; }
 export function objectKind(data, id) { return data.entities.get(id)?.type || data.objects.get(id)?.kind || "object"; }

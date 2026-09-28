@@ -1,4 +1,4 @@
-import { tileTemplate } from "./data.js";
+import { tileTemplate } from "./data.js?v=live-map-csv-1";
 import { hostedNetworkKmlUrlFor, mapLibreSnippetFor } from "./take-map.js";
 import { openingQuotes, openingQuoteGroups } from "./opening-quotes.js";
 import { Origins } from "./origins.js?v=origins-2";
@@ -15,15 +15,18 @@ function pathButtons(links = []) {
 }
 function mapRecord(map) {
   const record = map?.original?.sourceRecord || {};
+  const fullTitle = String(map?.title || record.title || "");
   const fields = [
+    ...(fullTitle.length > 64 ? [["Full title", fullTitle]] : []),
     ["Creator", record.creator],
     ["Publisher", record.publisher],
     ["Collection", record.collectionSource],
     ["Scale", record.scale],
     ["Projection", record.projection]
   ].filter(([, value]) => value && value !== "N/ATEST");
-  if (!fields.length) return "";
-  return `<details class="map-record"><summary>map record</summary><dl>${fields.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join("")}</dl></details>`;
+  const editLink = map?.sourceId ? `<a class="map-record-edit" href="./map-editor.html?map=${encodeURIComponent(map.sourceId)}">edit map record ↗</a>` : "";
+  if (!fields.length) return editLink ? `<p class="map-record-edit-wrap">${editLink}</p>` : "";
+  return `<details class="map-record"><summary>map record</summary><dl>${fields.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join("")}</dl>${editLink}</details>`;
 }
 function strayCopy(lateral) {
   if (!lateral) return "";
@@ -131,6 +134,7 @@ export class Interface {
     this.surface = document.querySelector("#surface");
     this.groundToggle = document.querySelector("#ground-toggle");
     this.groundControl = document.querySelector("#ground-control");
+    this.groundMinimized = false;
     this.groundButtons = [...this.groundControl.querySelectorAll("[data-basemap]")];
     this.historicalOpacity = document.querySelector("#historical-opacity");
     this.historicalOpacityValue = document.querySelector("#historical-opacity-value");
@@ -366,26 +370,21 @@ export class Interface {
   }
 
   toggleGround() {
-    if (this.groundState.hasHistorical) {
-      this.showGroundForMap();
-      return;
-    }
-    if (this.groundControl.hidden) {
-      this.groundControl.hidden = false;
-      this.groundToggle.setAttribute("aria-expanded", "true");
-      return;
-    }
-    this.closeGround();
+    const opening = this.groundControl.hidden;
+    this.groundControl.hidden = !opening;
+    this.groundToggle.setAttribute("aria-expanded", String(opening));
+    if (this.groundState.hasHistorical) this.groundMinimized = !opening;
   }
 
   closeGround(force = false) {
     if (this.groundState.hasHistorical && !force) return;
     this.groundControl.hidden = true;
     this.groundToggle.setAttribute("aria-expanded", "false");
+    if (force) this.groundMinimized = false;
   }
 
   showGroundForMap() {
-    if (!this.groundState.hasHistorical) return;
+    if (!this.groundState.hasHistorical || this.groundMinimized) return;
     this.groundControl.hidden = false;
     this.groundToggle.setAttribute("aria-expanded", "true");
   }
@@ -746,7 +745,7 @@ export class Interface {
     this.encounter.classList.toggle("is-note-mode", annotationCompact || (annotationsVisible && annotations.length > 0));
     this.encounter.classList.toggle("is-note-open", annotationOpen);
     const arrival = fragment?.arrival?.label || "a thread in the book";
-    this.encounterContent.innerHTML = `<div class="encounter-flow"><section class="encounter-stage map-stage"><p class="stage-kicker">selected map</p><p class="map-marker">${escapeHtml(map.city)} · ${map.year}</p><div class="map-title-row"><h2>${escapeHtml(map.title)}</h2><span class="map-quiet-actions">${takeOffer}</span></div><button class="mobile-map-details" type="button" data-mobile-map-details aria-expanded="${this.mobileDetailsExpanded}">${this.mobileDetailsExpanded ? "LESS ↑" : "MAP DETAILS ↓"}</button><div class="map-annotations">${notes.place}${notes.body}</div>${mapRecord(map)}</section><section class="encounter-stage book-stage"><p class="stage-kicker">the book enters <span>${escapeHtml(arrival)}</span></p>${title || quote}</section>${driftOffer || offer ? `<section class="encounter-stage stray-stage">${driftOffer || offer}</section>` : ""}</div>`;
+    this.encounterContent.innerHTML = `<div class="encounter-flow"><section class="encounter-stage map-stage"><p class="stage-kicker">selected map</p><p class="map-marker">${escapeHtml(map.city)} · ${map.year}</p><div class="map-title-row"><h2 title="${escapeHtml(map.title)}">${escapeHtml(map.title)}</h2><span class="map-quiet-actions">${takeOffer}</span></div><button class="mobile-map-details" type="button" data-mobile-map-details aria-expanded="${this.mobileDetailsExpanded}">${this.mobileDetailsExpanded ? "LESS ↑" : "MAP DETAILS ↓"}</button><div class="map-annotations">${notes.place}${notes.body}</div>${mapRecord(map)}</section><section class="encounter-stage book-stage"><p class="stage-kicker">the book enters <span>${escapeHtml(arrival)}</span></p>${title || quote}</section>${driftOffer || offer ? `<section class="encounter-stage stray-stage">${driftOffer || offer}</section>` : ""}</div>`;
     this.encounter.classList.toggle("is-mobile-expanded", this.mobileDetailsExpanded);
     document.body.classList.toggle("mobile-map-info-open", this.mobileDetailsExpanded);
     if (filterSelector) {
@@ -812,7 +811,7 @@ export class Interface {
   openRead(page = BOOK_READ_START_PAGE, aperture = null) {
     const startingPage = Math.max(1, Math.min(BOOK_PAGE_COUNT, Number(page) || BOOK_READ_START_PAGE));
     this.window.classList.add("is-book-page");
-    this.bookReader = { aperture, page: startingPage };
+    this.bookReader = { aperture, page: startingPage, zoom: 1, panX: 0, panY: 0 };
     this.renderBookPage();
     if (!this.window.open) this.window.showModal();
   }
@@ -850,10 +849,75 @@ export class Interface {
     const nextDisabled = lastPage === BOOK_PAGE_COUNT ? " disabled" : "";
     reader.isSpread = isSpread;
     this.window.classList.toggle("is-book-spread", isSpread);
-    this.windowContent.innerHTML = `<section class="book-page-viewer${isSpread ? " is-spread" : ""}" aria-label="HyperCities book ${isSpread ? "pages" : "page"} ${escapeHtml(pageLabel)} of ${BOOK_PAGE_COUNT}"><div class="book-page-spread">${spreadPages.map((item) => this.bookPageFrame(item, aperture)).join("")}</div><nav class="book-page-controls" aria-label="Turn book ${isSpread ? "spreads" : "pages"}"><button class="book-page-turn" type="button" data-book-page="-1" aria-label="Previous ${isSpread ? "spread" : "page"}"${previousDisabled}><span aria-hidden="true">←</span><small>PREV</small></button><p aria-live="polite">${escapeHtml(pageLabel)} <span>/</span> ${BOOK_PAGE_COUNT}</p><button class="book-page-turn book-page-turn--next" type="button" data-book-page="1" aria-label="Next ${isSpread ? "spread" : "page"}"${nextDisabled}><small>NEXT</small><span aria-hidden="true">→</span></button></nav></section>`;
+    this.windowContent.innerHTML = `<section class="book-page-viewer${isSpread ? " is-spread" : ""}" aria-label="HyperCities book ${isSpread ? "pages" : "page"} ${escapeHtml(pageLabel)} of ${BOOK_PAGE_COUNT}"><div class="book-page-viewport" data-book-page-viewport><div class="book-page-spread" data-book-page-spread>${spreadPages.map((item) => this.bookPageFrame(item, aperture)).join("")}</div></div><div class="book-page-zoom" aria-label="Page magnification"><button type="button" data-book-zoom="-1" aria-label="Zoom out">−</button><output data-book-zoom-label>100%</output><button type="button" data-book-zoom="1" aria-label="Zoom in">+</button></div><nav class="book-page-controls" aria-label="Turn book ${isSpread ? "spreads" : "pages"}"><button class="book-page-turn" type="button" data-book-page="-1" aria-label="Previous ${isSpread ? "spread" : "page"}"${previousDisabled}><span aria-hidden="true">←</span><small>PREV</small></button><label class="book-page-jump"><span>PAGE</span><input data-book-page-jump type="number" min="1" max="${BOOK_PAGE_COUNT}" step="1" value="${page}" aria-label="Jump to book page"><span>/ ${BOOK_PAGE_COUNT}</span><button type="button" data-book-page-go>GO</button></label><button class="book-page-turn book-page-turn--next" type="button" data-book-page="1" aria-label="Next ${isSpread ? "spread" : "page"}"${nextDisabled}><small>NEXT</small><span aria-hidden="true">→</span></button></nav></section>`;
+    this.applyBookTransform();
     this.windowContent.querySelectorAll("[data-book-page]").forEach((button) => {
       button.addEventListener("click", () => this.turnBookPage(Number(button.dataset.bookPage)));
     });
+    this.windowContent.querySelectorAll("[data-book-zoom]").forEach((button) => {
+      button.addEventListener("click", () => this.setBookZoom(Number(button.dataset.bookZoom)));
+    });
+    const jump = this.windowContent.querySelector("[data-book-page-jump]");
+    this.windowContent.querySelector("[data-book-page-go]").addEventListener("click", () => this.jumpBookPage(jump.value));
+    jump.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter") return;
+      event.preventDefault();
+      this.jumpBookPage(jump.value);
+    });
+    const viewport = this.windowContent.querySelector("[data-book-page-viewport]");
+    viewport.addEventListener("pointerdown", (event) => {
+      if (reader.zoom <= 1 || event.button !== 0) return;
+      reader.drag = { id: event.pointerId, x: event.clientX, y: event.clientY, panX: reader.panX, panY: reader.panY };
+      viewport.setPointerCapture(event.pointerId);
+      viewport.classList.add("is-panning");
+    });
+    viewport.addEventListener("pointermove", (event) => {
+      if (reader.drag?.id !== event.pointerId) return;
+      const spread = this.windowContent.querySelector("[data-book-page-spread]");
+      const maxX = Math.max(0, (spread.offsetWidth * reader.zoom - viewport.clientWidth) / 2);
+      const maxY = Math.max(0, (spread.offsetHeight * reader.zoom - viewport.clientHeight) / 2);
+      reader.panX = Math.max(-maxX, Math.min(maxX, reader.drag.panX + event.clientX - reader.drag.x));
+      reader.panY = Math.max(-maxY, Math.min(maxY, reader.drag.panY + event.clientY - reader.drag.y));
+      this.applyBookTransform();
+    });
+    const finishPan = (event) => {
+      if (reader.drag?.id !== event.pointerId) return;
+      reader.drag = null;
+      viewport.classList.remove("is-panning");
+      if (viewport.hasPointerCapture(event.pointerId)) viewport.releasePointerCapture(event.pointerId);
+    };
+    viewport.addEventListener("pointerup", finishPan);
+    viewport.addEventListener("pointercancel", finishPan);
+  }
+
+  applyBookTransform() {
+    const reader = this.bookReader;
+    const spread = this.windowContent.querySelector("[data-book-page-spread]");
+    const zoomLabel = this.windowContent.querySelector("[data-book-zoom-label]");
+    if (!reader || !spread) return;
+    spread.style.transform = `translate3d(${reader.panX}px, ${reader.panY}px, 0) scale(${reader.zoom})`;
+    spread.classList.toggle("is-zoomed", reader.zoom > 1);
+    if (zoomLabel) zoomLabel.textContent = `${Math.round(reader.zoom * 100)}%`;
+  }
+
+  setBookZoom(direction) {
+    const reader = this.bookReader;
+    if (!reader) return;
+    reader.zoom = Math.max(1, Math.min(3, Math.round((reader.zoom + direction * 0.25) * 100) / 100));
+    if (reader.zoom === 1) reader.panX = reader.panY = 0;
+    this.applyBookTransform();
+  }
+
+  jumpBookPage(value) {
+    const reader = this.bookReader;
+    if (String(value).trim() === "") return;
+    const page = Number(value);
+    if (!reader || !Number.isFinite(page)) return;
+    const next = Math.max(1, Math.min(BOOK_PAGE_COUNT, Math.round(page)));
+    if (next === reader.page) return;
+    reader.page = next;
+    reader.panX = reader.panY = 0;
+    this.renderBookPage();
   }
 
   turnBookPage(direction) {
@@ -862,6 +926,7 @@ export class Interface {
     const nextPage = Math.max(1, Math.min(BOOK_PAGE_COUNT, reader.page + direction * (reader.isSpread ? 2 : 1)));
     if (nextPage === reader.page) return;
     reader.page = nextPage;
+    reader.panX = reader.panY = 0;
     this.renderBookPage();
   }
 

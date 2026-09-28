@@ -1,4 +1,4 @@
-import { objectKind, titleFor } from "./data.js";
+import { objectKind, titleFor } from "./data.js?v=live-map-csv-1";
 
 const LINK_KINDS = new Set(["concept", "person", "project", "window", "event", "place", "technology", "date", "time-range"]);
 const STRENGTH = { strong: 1, moderate: 0.66, light: 0.34 };

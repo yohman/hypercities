@@ -102,6 +102,10 @@ HyperCities is designed to remain publishable from GitHub Pages:
 
 Use GitHub Pages or any local static HTTP server for preview. Do not open `index.html` through `file://`: browsers isolate that origin and block the JSON data reads the site needs.
 
+### Editing map records
+
+Expand a selected map's **Map record** in the lower-left encounter panel and choose **Edit map record**. The editor reads the Map Library's public CSV, previews the raster in MapLibre, and prepares a GitHub Issue containing only changed fields. Submitting that issue requires a GitHub account; a repository Action validates edits by `yohman`, updates the Map Library CSV, regenerates its companion JSON, and publishes directly to `main`. No repository collaborator access or second review is needed for that allowlisted account. The map layer fields on this site read the CSV directly, so changes become visible after the public file/cache updates; the Hyperbook relationship graph remains the committed graph. Setup and constraints are documented in the [Map Library editing guide](https://github.com/yohman/maplibrary/blob/main/METADATA-EDITING.md).
+
 ### Taking a map outward
 
 Take a Map is a full floating panel rather than a small map-corner export menu. It separates three realistic routes into tabs and exposes only transfer paths that preserve what the collection actually supplies:

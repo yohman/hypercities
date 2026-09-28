@@ -1,11 +1,11 @@
-import { containsCoordinate, loadData, tileDiagnostic } from "./data.js";
+import { containsCoordinate, loadData, tileDiagnostic } from "./data.js?v=live-map-csv-1";
 import { CoreView } from "./core-view.js?v=well-controls-3";
 import { apertureFor, driftOffer, fieldFragment, isPlaceNode, mapContext, mapEncounter, nodeEncounter, strayOffer } from "./graph.js";
-import { MapView } from "./map-view.js?v=map-focus-layout-2";
+import { MapView } from "./map-view.js?v=map-focus-layout-3";
 import { AnnotationStore, annotationContext } from "./annotations.js?v=note-autoshow-1";
 import { annotationSimulationRequest, simulatedAnnotations } from "./annotations-simulation.js";
 import { downloadText, kmlFilenameFor, kmlFor } from "./take-map.js";
-import { Interface } from "./ui.js?v=class-note-filters-1";
+import { Interface } from "./ui.js?v=metadata-read-controls-1";
 
 const app = { data: null, field: null, core: null, ui: null, annotations: null, simulation: null, simulatedNotes: [], pendingAnnotations: [], allMapAnnotations: [], mapAnnotations: [], annotationFilter: { search: "", alias: "" }, annotationsVisible: true, timewellExpanded: false, activeAnnotationId: null, annotationMode: false, annotationDraft: null, annotationFloatOpen: false, annotationArrivalFocused: false, coreMaps: [], corePoint: null, selected: null, context: null, bookEncounter: null, activeEncounter: null, tile: null, stray: null, drift: null, takeMode: false, trail: [], history: [], seenEncounterIds: [], seenPassageIds: [], seenNodeIds: [], recentConceptIds: [] };
 

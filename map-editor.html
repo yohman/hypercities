@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101111" />
+    <title>Map Record Editor — HyperCities</title>
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
+    <link rel="stylesheet" href="./styles.css?v=metadata-read-controls-1" />
+    <link rel="stylesheet" href="./styles/map-editor.css?v=1" />
+  </head>
+  <body class="map-editor-page">
+    <header class="map-editor-header">
+      <a class="wordmark" href="./">HYPERCITIES</a>
+      <p>MAP LIBRARY · RECORD EDITOR</p>
+      <a href="./" class="map-editor-return">← MAP</a>
+    </header>
+    <main class="map-editor-layout">
+      <aside class="map-editor-browser" aria-label="Map Library records">
+        <p class="map-editor-kicker">THE MAP LIBRARY</p>
+        <h1>Find a map</h1>
+        <label class="map-editor-filter">Place<select id="place-filter"><option value="">All places</option></select></label>
+        <label class="map-editor-filter">Search<input id="record-search" type="search" placeholder="Title, maker, year…" autocomplete="off" /></label>
+        <p id="record-count" class="map-editor-count" aria-live="polite"></p>
+        <nav id="record-list" class="map-editor-list" aria-label="Choose a map record"></nav>
+      </aside>
+      <section class="map-editor-workspace">
+        <div class="map-editor-selected">
+          <div><p class="map-editor-kicker">SELECTED RECORD <span id="record-id"></span></p><h2 id="selected-title">Choose a map</h2><p id="selected-summary"></p></div>
+          <p id="submit-status" class="map-editor-status" role="status"></p>
+        </div>
+        <div class="map-editor-preview-wrap">
+          <div id="map-editor-preview" aria-label="MapLibre preview of historical map tiles"></div>
+          <p id="preview-status" class="map-editor-preview-status" role="status">Choose a record to preview its tiles.</p>
+          <div class="map-editor-coordinates" id="preview-coordinates"></div>
+        </div>
+        <form id="record-form" class="map-editor-form">
+          <div class="map-editor-form-heading"><div><p class="map-editor-kicker">RECORD METADATA</p><p>Change the fields that need correction. Empty fields are allowed.</p></div><button id="submit-edit" type="submit" disabled>SUBMIT EDIT ↗</button></div>
+          <p class="map-editor-publish-note">Submitting opens a GitHub issue under your account. Edits from <code>yohman</code> publish directly to the Map Library; no second review is required. Other accounts cannot publish changes.</p>
+          <div id="record-fields"></div>
+        </form>
+      </section>
+    </main>
+    <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+    <script type="module" src="./js/map-editor.js?v=1"></script>
+  </body>
+</html>

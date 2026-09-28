@@ -1,4 +1,4 @@
-import { loadMapById, tileTemplate } from "./data.js";
+import { loadMapById, tileTemplate } from "./data.js?v=live-map-csv-1";
 
 const status = document.querySelector("#preview-status");
 const mapId = new URLSearchParams(window.location.search).get("map");

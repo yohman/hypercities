@@ -1,4 +1,4 @@
-import { asPolygon, containsCoordinate, tileDiagnostic, tileTemplate } from "./data.js";
+import { asPolygon, containsCoordinate, tileDiagnostic, tileTemplate } from "./data.js?v=live-map-csv-1";
 
 // HyperCities book-cover red, with a quieter shade for unselected extents.
 const RED = [166, 42, 38];
@@ -53,7 +53,7 @@ export class MapView {
     this.map = new maplibregl.Map({
       container: "map",
       style,
-      center: [10, 27], zoom: 1.7, minZoom: 1.25, attributionControl: false,
+      center: [10, 27], zoom: 1.7, minZoom: 0, attributionControl: false,
       // Arrow keys belong to HyperCities: up/down move through the TimeWell
       // and left/right follow the current conceptual path, never the basemap.
       keyboard: false
@@ -398,7 +398,9 @@ export class MapView {
     // The footprint is the primary spatial promise of a map selection: always
     // fit its complete bounds into the unobscured viewport. Raster minzoom is
     // a tile-service hint and must not zoom past the map's geographic extent.
-    const options = { center: target, zoom: camera.zoom, duration: 620 };
+    // Leave a little air around the record after fitting, especially for
+    // unusually wide or tall archival sheets.
+    const options = { center: target, zoom: Math.max(0, camera.zoom - 0.12), duration: 620 };
     if (pointTarget) {
       options.offset = [(padding.left - padding.right) / 2, (padding.top - padding.bottom) / 2];
     }
