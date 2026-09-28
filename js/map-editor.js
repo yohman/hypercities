@@ -9,6 +9,11 @@ const fields = [
   ["Map time span", ["mapping.dateFrom.date", "mapping.dateFrom.timezone_type", "mapping.dateFrom.timezone", "mapping.dateTo.date", "mapping.dateTo.timezone_type", "mapping.dateTo.timezone"]],
   ["Additional map metadata", ["mapping.kml", "mapping.view", "mapping.zoom", "mapping.markerType", "mapping.markerState", "mapping.isNetworkLink", "mapping.isCollection", "mapping.georeferences", "mapping.id", "publicationDate.date", "publicationDate.timezone_type", "publicationDate.timezone"]]
 ];
+const fieldLabels = {
+  city: "Place / city",
+  title: "Original title",
+  titleEn: "English title · shown on HyperCities"
+};
 const fieldNames = fields.flatMap(([, names]) => names).concat(["id"]);
 const list = document.querySelector("#record-list");
 const form = document.querySelector("#record-form");
@@ -46,7 +51,7 @@ function drawList() {
   list.innerHTML = shown.map((record) => `<button type="button" data-record-id="${esc(record.id)}" aria-current="${selected?.id === record.id ? "true" : "false"}"><strong>${esc(title(record))}</strong><span>${esc(record.city)} · ${esc(year(record))} · #${esc(record.id)}</span></button>`).join("");
 }
 function inputFor(key) {
-  const label = key.replace(/^mapping\./, "").replace(/^publicationDate\./, "publication date · ").replaceAll(".", " · ").replace(/([a-z])([A-Z])/g, "$1 $2");
+  const label = fieldLabels[key] || key.replace(/^mapping\./, "").replace(/^publicationDate\./, "publication date · ").replaceAll(".", " · ").replace(/([a-z])([A-Z])/g, "$1 $2");
   const value = selected?.[key] ?? "";
   const disabled = key === "id" ? " disabled" : "";
   const long = /description|caption|georeferences|kml|view/i.test(key) || String(value).length > 115;
